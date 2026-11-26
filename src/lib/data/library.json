@@ -1652,7 +1652,9 @@
 			"publishers": [
 				"D. Van Norstrand Company"
 			],
-			"tags": [],
+			"tags": [
+				"Visual Fundamentals"
+			],
 			"year": "1965",
 			"isbn10": "0442111053",
 			"isbn13": "9780442111052",
@@ -6756,7 +6758,8 @@
 				"Princeton Architectural Press"
 			],
 			"tags": [
-				"Graphic Design"
+				"Graphic Design",
+				"Visual Fundamentals"
 			],
 			"year": "2015",
 			"isbn10": "161689332X",
@@ -6791,7 +6794,8 @@
 			],
 			"tags": [
 				"Typography",
-				"Graphic Design"
+				"Graphic Design",
+				"Visual Fundamentals"
 			],
 			"year": "2008",
 			"isbn10": "1568987021",
@@ -8112,7 +8116,8 @@
 				"Font Bureau"
 			],
 			"tags": [
-				"Typography"
+				"Typography",
+				"Visual Fundamentals"
 			],
 			"year": "2012",
 			"isbn10": "0965472205",
@@ -13255,7 +13260,8 @@
 				"Rockport Publishers"
 			],
 			"tags": [
-				"Graphic Design"
+				"Graphic Design",
+				"Visual Fundamentals"
 			],
 			"year": "2003",
 			"isbn10": "1592535879",
