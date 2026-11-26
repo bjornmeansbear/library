@@ -1,0 +1,134 @@
+# Snapshot of the shelved books in "The Library of KB" (Notion), 2026-11-26.
+# Used only when NOTION_TOKEN isn't set. Private fields (Borrower, On loan,
+# email-notes links) were never copied here.
+# id|title|subtitle|author ids|publisher ids|year|isbn|where|notes
+14955aa28d7180d69224fed325d600f4|Caps Lock||14955aa28d7180a98e43d42b057bf32d||||GD Office|
+14a55aa28d718100a717c1403e94ec64|Design Like You Give a Damn||14a55aa28d7181298a3ef8aa6893cbaa|14a55aa28d71812899d4f5c8bdc3d041|2006|9781933045252|GD Office|
+14a55aa28d718100b0d1c71f4322620b|Ecological Design||14a55aa28d7181d08ca5f81c5006f367,14a55aa28d7181f1803ae0aa9dd158ab|14a55aa28d7181c9932ad97a4d1c658f|2007|978||
+14a55aa28d7181079a15faeebdb5ad4e|Cathedral & The Bazaar, The||14a55aa28d7181d8a054deb2240b5ba9|14a55aa28d718168b256dbfac4ba0ca1|1999|780596001087|GD Office|
+14a55aa28d718109a278fdc1e68c7c2d|Creating Motion Graphics with After Effects||14a55aa28d71819a9657da0fd18326c9|14a55aa28d7181479ce3d8e7dadbbda7|0||GD Office|
+14a55aa28d71810d84aad442939b0e6b|Art of the Printed Book: 1455-1955|||14a55aa28d71811fb2fdd21696bbacf5|1973||GD Office|
+14a55aa28d71810fb37afd75d9fb0fcc|Autobiografia Conocimentos Y Recuerdos Sobre El Arte De La Encuadernacion||15255aa28d7180469a1be6fc31e5ff23||1986|8450550874|GD Office|Autobiografía. Conocimientos y recuerdos sobre el arte de la encuadernación. Palomino Olalla, Antolín. Publicado por Imprenta Artesanal del Ayuntamiento de Madrid, Madrid (1986)
+14a55aa28d718112b97df3be8f4c2e00|A Sand Country Almanac||14a55aa28d7181ce8384e50e6ea2cc60|14a55aa28d7181b4a7a5d2ae41485fcb|1966|35345053|GD Office|
+14a55aa28d718116859fc841f9bcf6ea|Autobiography of Thomas Jefferson||14a55aa28d7181f4b73cda9a3cf32f8d|14a55aa28d71813cb900c03425fd67ab,14a55aa28d7181619c6ee27037070f61|1821|9780486442891|GD Office|
+14a55aa28d71811abc97e6389f4dbeab|Bicycling Science||14a55aa28d7181d787cdd06a4a97e132|14a55aa28d7181ffbdf8ca574a6efec8|2004|9780262232371|GD Office|
+14a55aa28d71811e8a5cfaab60a19348|BIG: Bjarke Ingels Group|||14a55aa28d7181d8b169ec533ef915eb|2011|9780983820406|GD Office|
+14a55aa28d71811ea414e7e2e03198cc|Eco-Economy||14a55aa28d71818db910d66f71ec7850|14a55aa28d7181609572c6f4abd23a1f|2001|9708393320937||
+14a55aa28d71811ea564cb934807e7ee|Designing for Social Change||14a55aa28d7181d08d1dce02c0c5b5a9,14a55aa28d7181b2ae83c5901532675a,14a55aa28d7181a39decf5237cb16f40|14a55aa28d718121bf7fc835dab761f7|2012|9781616890476|GD Office|
+14a55aa28d7181298090c05e311437ce|Cradle to Cradle: Remaking the Way We Make Things||14a55aa28d71819f85c1c3dd7b50e4a3,14a55aa28d71814fbce4f50a7206cce5|14a55aa28d718123a581f7f3e7d58957|2002|9780865475878|GD Office|
+14a55aa28d71812c8161d3030192b338|Dialectic|||14a55aa28d7181948dc3dd388736fbae|2016||GD Office|
+14a55aa28d71812e8054f87e3746ae40|Culture||14a55aa28d7181bd9036d484a7e06d06|14a55aa28d718132980efb792e818342|2010|9781906863289|GD Office|
+14a55aa28d71812f901ac19a832e5d81|Comics And Sequential Art||14a55aa28d71817a9db5e018f160b84b|14a55aa28d71817495e7c504426ff1c8|0||GD Office|
+14a55aa28d7181378b94c8b9b5b12ccc|Cartographies of Time: A History of the Timeline||14a55aa28d71814889a6d1da222cc78f,14a55aa28d7181529c7de3ed0695b2e6|14a55aa28d718121bf7fc835dab761f7|2012|9781616890582|GD Office|
+14a55aa28d7181389371e97a077c9e3f|The Art of Computer Designing: A Black and White Approach||14a55aa28d7181308b2ac00bcf8e70af|14a55aa28d7181018e41c19c8e53ceff,14a55aa28d7181d8a512d8de29b70369|1993|9784766107364|GD Office|
+14a55aa28d718138a719ccf0fc8752ca|Beautiful Evidence||14a55aa28d71819caa2ad368ad6b95ea|14a55aa28d71810bbf3bc23dcc79be8c|2006|9780961392178|GD Office|
+14a55aa28d71813daff2d0377ada9ad4|Dirty Furniture 1: Couch|When Design Leaves the Showroom|||0|20557051|GD Office|
+14a55aa28d718141a213d57ae9db80e8|American Signs: Form and Meaning on Route 66||14a55aa28d7181a8955ad1adb5ffdb39|14a55aa28d7181659486c5c6e3f26b3c|2002|9781580931199|GD Office|
+14a55aa28d7181458a38fa5f1722f2d8|Design is the Problem: The Future of Design Must be Sustainable||14a55aa28d71816b841fdf1b2e09975f|14a55aa28d718102a8cee651facbdea2|2009|9781933820002|GD Office|
+14a55aa28d718149a41ce7d0ccec270c|Cancer Edipemiology in Older Adolecents and Young Adults 15 to 29 Years of Age||14a55aa28d7181e58011c4b01286de81|14a55aa28d7181908adcd0a03a6e3a0a|2006||GD Office|
+14a55aa28d71814bb28bcf0830cb4b8e|Designing with Type: A Basic Course in Typography||14a55aa28d7181f1ac8aee44b2e4f4a1|14a55aa28d7181d3b9c9cb6a925dfaf6|1971|9780823013050|GD Office|
+14a55aa28d71814c8ce8ff393de15179|Biomimicry: Innovation Inspired by Nature||14a55aa28d7181bdaf0ac9b49b93e76d|14a55aa28d7181d5a59ce3d4fac4a77a|1997|9780688136918|GD Office|
+14a55aa28d71814e96c4ee5c0f408ff7|Design Writing Research: Writing on Graphic Design||14a55aa28d7181a39decf5237cb16f40,14a55aa28d718185908dd26695b83e9a|14a55aa28d7181d99d83f155d2490648,14a55aa28d71812a9f1fd15ca7a42eac,14a55aa28d718145bc7ad82400f22392|1999|714838519|GD Office|
+14a55aa28d71815082ecdb4e386426bf|Codex: The Journal of Letterforms, Fall 2012|||14a55aa28d7181cfa431ddf3ce1c21af|2012|97722186094005|GD Office|
+14a55aa28d71815195b0f1645d0bd88d|Economies of Design||14a55aa28d718190b0fbdff92df9a91a|14a55aa28d71810eb92be60090e732f6|2017|9781473918863||
+14a55aa28d718154a9b7ccfb58c81970|A Field Guide to Patricia Johanson's Works||14a55aa28d718144b4e6f8ebf3d09ce9|14a55aa28d718157b531ed6bb888f7c5|2012|9780970098627|GD Office|
+14a55aa28d7181569a80e3857c49b390|American Architecture Since 1970: A Guide to the Styles||14a55aa28d7181a89a30d48a08146142|14a55aa28d7181ffbdf8ca574a6efec8|1969||GD Office|
+14a55aa28d718156ba78e12dfa0314af|Bricks from the Kiln|||14a55aa28d718192ae0fc92eac5d373e|2016||GD Office|
+14a55aa28d718159b934d5d1be473736|Design as Art||14a55aa28d7181af9f12cc19a3030050|14a55aa28d7181c5a8bbe965c01baaab,14a55aa28d7181d8a512d8de29b70369|1966|9780141035819|GD Office|
+14a55aa28d71815a90e2f4ba3d61bba7|An Inconvenient Truth||14a55aa28d7181cb95d2f80ed08b34a8|14a55aa28d718180826eebae347467a7|2006|9781594865671|GD Office|
+14a55aa28d71815fa654c347642de321|Digital Design Theory: Readings from the Field||14a55aa28d718158ac30c93c3ca7c8f5|14a55aa28d718121bf7fc835dab761f7|2016|9781616893088|GD Office|
+14a55aa28d7181609caad39f11ed5506|Bricks from the Kiln|||14a55aa28d7181baafe9cd0d46efe497|2015||GD Office|
+14a55aa28d718160bc28c8c7b4fedd4f|de Bono's Thinking Course||14a55aa28d718147be49d5328291bad3|14a55aa28d718174a686ca115c511162,14a55aa28d71811f8a54e54725b18e6b|1982|816013802|GD Office|
+14a55aa28d7181669be1fc51d52d45a9|American Modernism: Graphic Design, 1920 to 1960||14a55aa28d71817c8d50f9fa711216f0|14a55aa28d718184bc90f20566c771c6|2003|3000098162|GD Office|
+14a55aa28d7181678b9eeabc42cf7f48|Blue Guide: Venice|||14a55aa28d7181c2ab44e543e764c41f|1980|9780393330076|GD Office|
+14a55aa28d71816bbca1f767c1679cd0|ABC's of the Bauhaus and Design Theory, The||14a55aa28d7181a39decf5237cb16f40,14a55aa28d718185908dd26695b83e9a|14a55aa28d718121bf7fc835dab761f7|1993|9781878271426|GD Office|
+14a55aa28d7181739cc8cc4cd7d1b975|Basic Television: Principles and Servicing|||14a55aa28d718116afc4dd3cb0d8efdd|0||GD Office|
+14a55aa28d718177bfa7c8a4bd0c8140|The Art of Construction||14a55aa28d7181b0b053e1faa5eed91c|14a55aa28d718162a646e9c3494156ca|1990|9781556520808|GD Office|
+14a55aa28d718179b357fc60e5a23d74|Eats Shoots & Leaves: The Zero Tolerance Approach to Punctuation||14a55aa28d718165bcebd564b4edf695|14a55aa28d718104a00fcbc8f4cb1aa9|2003|9781592400874||
+14a55aa28d71817bae09d9b9cefc5842|Design is a Job||14a55aa28d718173bda2c0410db9c40b|14a55aa28d718105b535efcca8478aba|2012|9781937557041|GD Office|
+14a55aa28d71817da2e6f4e9a93b8b5f|Design Anarchy||14a55aa28d71816a973fdac3021b719c|14a55aa28d71818cbb96c26c7bb104ee|2006|974680095|GD Office|
+14a55aa28d718182a8b8c5f870f98e77|Dieter Rams: As Little Design as Possible||14a55aa28d71812d9a71f7911baa6443|14a55aa28d7181d99d83f155d2490648|2011|9780714849188|GD Office|
+14a55aa28d718182b32ae88907eecb5a|Draw it with Your Eyes Closed: The Art of the Art Assignment||14a55aa28d7181158d97cf8da025ca3f,14a55aa28d71818299c3def4f3e2857b|14a55aa28d7181cea263dc8d679486ad|2012|9780979757549|GD Office|
+14a55aa28d718182b55fc77df4b83e0c|Art History: Revised Edition||14a55aa28d7181d18b6ddc64cc0ba940|14a55aa28d7181f5a1c6e08597b2880f,14a55aa28d7181619c6ee27037070f61|1995|9780130825827|GD Office|
+14a55aa28d7181838218dd64f87c61dd|Codex: The Journal of Letterforms, Summer 2013|||14a55aa28d7181cfa431ddf3ce1c21af|2013|97721886094005|GD Office|
+14a55aa28d71818385b9fd56d3fb628b|Affluent Society, The||14a55aa28d71811a90e7dbc66e8285da|14a55aa28d7181c5a8bbe965c01baaab,14a55aa28d7181d8a512d8de29b70369|1958||GD Office|
+14a55aa28d718186a616eadcd9654626|Design of Everyday Things, The||14a55aa28d7181a1a57affccdd8245a7|14a55aa28d7181ce959cc9310bc75556|1988|9780465067107|GD Office|
+14a55aa28d718188877bfef78257bc09|30 Joyas Bibliográficas en la Colección Borbón - Lorenzana|||14a55aa28d7181c58057c12d53d36935|2008|9788477885351|GD Office|
+14a55aa28d71818895c0c4a6a2a93586|Distributed Work||14a55aa28d7181528435e9de03d08645,14a55aa28d7181519c71cc55dec3d03a|14a55aa28d7181ffbdf8ca574a6efec8|2002|978026208358|GD Office|
+14a55aa28d71818fb261e49cd2144ff0|Architecture Drafting and Design|||14a55aa28d718116afc4dd3cb0d8efdd|0||GD Office|
+14a55aa28d71818fb814ea5087732438|Designing with Web Standards||14a55aa28d7181d795a1eb88e2a25e0a|14a55aa28d71816582cac225ab84991f|2003|9780321616951|GD Office|
+14a55aa28d718191ab1dc467df95d23e|Aquinas||14a55aa28d71812883f9ebd0d887a6b6|14a55aa28d7181178ea1fae29fe15582|2009|9781851686902|GD Office|
+14a55aa28d718196a102e140aa50af6f|Change by Design||14a55aa28d71812ea8a7c3cd5c020abc,14a55aa28d7181a2b009d95a7a0f0ebb|14a55aa28d7181f7bcaffcffbf6b5e1d|2009|9780061766084|GD Office|
+14a55aa28d71819886e2f92228738c79|Energy Alternatives||14a55aa28d718151a3eed7a379606e5d|14a55aa28d71810a848bc11d6b5282c0,14a55aa28d7181619c6ee27037070f61|1982|89434946||
+14a55aa28d718199bff8f66121ede355|Codex: The Journal of Typography, Spring 2011|||14a55aa28d7181cfa431ddf3ce1c21af|2011|9772186094005|GD Office|
+14a55aa28d71819eace5e1056d2c6aaa|The Architecture of Happiness||14a55aa28d7181aea0d9edd36923bb26|afb816887ab64b29b36325a61c9ca4ba|2006|9780307277244|GD Office|
+14a55aa28d71819eb412f94e779677b2|Distinction: A Social Critique of the Judgement of Taste||14a55aa28d7181e5bcc2f9a6c0a3ecfc|14a55aa28d71811e9be7eae2195a0541|0|674212770|GD Office|
+14a55aa28d7181a4965ee359c204dbf9|Complexity and Contradiction in Architecture||14a55aa28d7181619ccecde4af9d68d4|14a55aa28d7181cdbd6aeec19fbce3bb|1966|870702823|GD Office|
+14a55aa28d7181a59204caeeafe044a0|Deep Economy: The Wealth of Communities and the Durable Furture||14a55aa28d7181728bdbf03a9b23f396|14a55aa28d718119acbbf0cb46d9c866|2007|9780805087222|GD Office|
+14a55aa28d7181a5bc34d4c562c5b220|Aesthetics of Sustainable Architecture||14a55aa28d7181c2b067d5eb0c2d4a9b|14a55aa28d71817e8c85f47d9c4931c8|2011|9789064507526|GD Office|
+14a55aa28d7181a689e3d42b4ae486e9|America (The Book): A Citizens Guide to Democracy Inaction||14a55aa28d7181269b86cb6ae7687751,14a55aa28d718120938edc521eb15039,14a55aa28d718154b58ff485f894fdd8|14a55aa28d71811999e6cbb3aa262a6a|2004|446532681|GD Office|
+14a55aa28d7181a69b88f9205f362687|Alphabeta: How 26 Letters Shaped the Western World||14a55aa28d7181958cdbc2548cad7a4e|14a55aa28d7181c98429db0ca29c5284,14a55aa28d7181619c6ee27037070f61|2000|9780471415749|GD Office|
+14a55aa28d7181a6ab0bcc61709af689|Do It! Scenarios of the Revolution||14a55aa28d718135b365d0fcd06f929d,14a55aa28d71818386bbce011e2fb221|14a55aa28d71813abf54e44cd89e5fad|0|345020383125|GD Office|
+14a55aa28d7181a79673dc53504442ba|Designing Design||14a55aa28d7181089133f1fbc40c5767|14a55aa28d71814cbe17ef005e1f82ff|2007|9783037781050|GD Office|
+14a55aa28d7181a8938edb292019720c|Dirty Furniture 3: Toilet|When Design Leaves the Showroom||14a55aa28d7181b5a277cc80d2be73c6|2018|9780993351129|GD Office|
+14a55aa28d7181a8b4dae11845900544|Design for the Enviornment||14a55aa28d7181a8a69ec17be28fad63|14a55aa28d718115b9facbdecbba3bb9|1991|847813908|GD Office|
+14a55aa28d7181aaaf81f15143e24357|A Field Guide to Patricia Johanson's Works||14a55aa28d718144b4e6f8ebf3d09ce9|14a55aa28d718157b531ed6bb888f7c5|2012|9780970098627|GD Office|
+14a55aa28d7181ac8cd9f06fe765f004|Design for an Empathetic World||14a55aa28d7181d08ca5f81c5006f367|14a55aa28d7181c9932ad97a4d1c658f|2013|978|GD Office|
+14a55aa28d7181afb2e7c1f08c7d5de8|365: AIGA Annual Design Competitions, 365: AIGA Year in Design 28, 50 Books/50 Covers|||14a55aa28d7181bc9e52d2b05d1289ff|0||GD Office|
+14a55aa28d7181afb33cf40089a1e1aa|Don't Make Me Think: A Common Sense Approach to Web Usability||14a55aa28d718120b41cf96de1158942|14a55aa28d71816582cac225ab84991f|2000|9780789723109|GD Office|
+14a55aa28d7181b0bb43e4d6725abe31|American Environmentalism: The U.S. Environmental Movement, 1970–1990||14a55aa28d7181bfbc45c528f6236f6a,14a55aa28d7181789d90e28c09ae2b16|14a55aa28d7181f2884fd72a7bf5f6dc|1992|844817309|GD Office|
+14a55aa28d7181b29c6cca51e564bd97|Bauhaus||14a55aa28d7181369e16da5580546c2a|14a55aa28d718121855bd406846136ec|1984|500201935|GD Office|
+14a55aa28d7181b4aab5c00074b9fc0f|Designing Sustainable Packaging||14a55aa28d71813d9d32f9d1edff749c|14a55aa28d71813eb26cf9e0d6a329ad|2009|9781856695978|GD Office|
+14a55aa28d7181b58a2bdcf7a5bf4018|Best Face Forward: WHy Companies Must Improve Their Service Interfaces with Customers||14a55aa28d7181d88955fc5e28d25508,14a55aa28d7181538ff8ea3a84bc7660|14a55aa28d71811f98e6c2bf9c28f20f|2005|9780875848679|GD Office|
+14a55aa28d7181b6b0b4dd1063887421|Canterbury Tales: A Selection||14a55aa28d7181eca34de9374685ede1|14a55aa28d7181c5a8bbe965c01baaab|1998|9780140622072|GD Office|
+14a55aa28d7181b79849c5118c91a235|2600: The Hacker Quarterly||||0||GD Office|
+14a55aa28d7181b7aba5c9ebbc94f98d|By Design: Why there are no locks on the bathroom doors in the hotel louis xiv and other object lessons||14a55aa28d71811c82eef81c5b319a20|14a55aa28d71813a8aa7fc42a8b60592,14a55aa28d7181619c6ee27037070f61|2005|1563673495|GD Office|Cover is somehow backwards/upside down?
+14a55aa28d7181b89c5bf003857ba38d|D.I.Y.: Design it Yourself||14a55aa28d7181a39decf5237cb16f40|14a55aa28d718121bf7fc835dab761f7|2006|9781568985527|GD Office|
+14a55aa28d7181bbbc26f835f3e71337|Basic Design: The Dynamics of Visual Form||14a55aa28d718133adf4e0acee57f2b3|14a55aa28d71818d8f18d48ca5eb6ecd|1965|442111053|GD Office|
+14a55aa28d7181bc87cbdf55ed23916a|Common Wealth: Economics for a Crowded Planet||14a55aa28d71812ca690fbfb3c6ce4c1|14a55aa28d7181c5a8bbe965c01baaab,14a55aa28d7181d8a512d8de29b70369|2008|9781594201271|GD Office|
+14a55aa28d7181be95e6fd8f92e324c1|Aristotle for Everybody||14a55aa28d71818bb030fa1d6562db71|14a55aa28d7181a5842ee9dfefedb2aa|1978|25031007|GD Office|
+14a55aa28d7181bfa069fa5e51680f6d|Design Studies: Theory and Research in Graphic Design, A Reader||14a55aa28d7181eca3fae4f70b1fb04a|14a55aa28d718121bf7fc835dab761f7|2006|9781658985862|GD Office|
+14a55aa28d7181bfa94ee954184ab430|Design By Numbers||14a55aa28d7181c0ab2bf81f2a5b3634|14a55aa28d7181ffbdf8ca574a6efec8|0||GD Office|
+14a55aa28d7181c8a395dd6e7c2e705a|Beyond Engineering: Essays and Other Attempts to Figure Without Equations||14a55aa28d71815b81e3c14af7e78634|14a55aa28d71817cbd8ccfa98233a8aa|1986|312077858|GD Office|
+14a55aa28d7181ca9df3e007202d93ad|Design Elements: A Graphic Style Manual, Understanding the Rules and Knowing when to Break Them||14a55aa28d7181dcb6c5c7136bb4b623|14a55aa28d718101a07fdbeb7860f278,14a55aa28d71811f8a54e54725b18e6b|2007|9781592532612|GD Office|
+14a55aa28d7181cb80aacc264a1b0aee|Design for Society||14a55aa28d71813db6ecf334aecb8b2f|14a55aa28d7181b59407e8a6f85e0c02,14a55aa28d7181d8a512d8de29b70369|1993|9780948462474|GD Office|
+14a55aa28d7181cb8d77ed4e6a09d34c|Business Model Generation||14a55aa28d71814cb388f1dd51213088,14a55aa28d71818c96c1f57fa61745d0|14a55aa28d7181c98429db0ca29c5284,14a55aa28d7181619c6ee27037070f61|2010|9780470876411|GD Office|
+14a55aa28d7181d0be0dd0cb9b4ee377|20 Years: Contemporary Museum||14a55aa28d7181c99892c767e0c89551,14a55aa28d7181c1899ac8cfd08e1d26|14a55aa28d718157b531ed6bb888f7c5|2011|9780970098610|GD Office|
+14a55aa28d7181d2ac84d37d0b7e99f1|Art on the Edge and Over||14a55aa28d7181569c20d5fe443a42dc|14a55aa28d718124b47fd945a7aa2a03,14a55aa28d71813dbec1e58b402f2bab|1996|9780965198813|GD Office|
+14a55aa28d7181d2bf1cd17cd1204366|Design for the Real World||14a55aa28d718103a903dc9b91bb9861|14a55aa28d7181ae913fdc8e98e130c7|1971|394470362|GD Office|
+14a55aa28d7181d5901bc767326f151a|Design Encyclopedia, The||14a55aa28d71815b9aadf3c56813ab2c|14a55aa28d7181cdbd6aeec19fbce3bb|1994|87070012|GD Office|
+14a55aa28d7181d59d0fc3b4ae77e2fe|A Country of Cities: A Manifesto for an Urban America||14a55aa28d718133bd9ef0e00bf96467|14a55aa28d71812899d4f5c8bdc3d041|2013|9781935202172|GD Office|
+14a55aa28d7181d686c5de6351162317|Dirty Furniture 4: closet|When Design Leaves the Showroom||14a55aa28d7181b5a277cc80d2be73c6|2018|9780993351136|GD Office|
+14a55aa28d7181db9848f90870dfbb28|Design: The Invention of Desire||14a55aa28d7181e18047c2633b765bea|14a55aa28d718184bc90f20566c771c6|2016|9780300205091|GD Office|
+14a55aa28d7181dc85e6d486af2110cf|A Golden Thread: 2500 Years of Solar Architecture and Tecnology||14a55aa28d7181b7a2d1f077cfc2edf4,14a55aa28d7181a9a36bdb2d9d5cfaed|14a55aa28d71812fab51c0911eb5b8d0|1980|917352076|GD Office|
+14a55aa28d7181dd8db1e966e10972c6|The Assault on Reason||14a55aa28d7181cb95d2f80ed08b34a8|14a55aa28d7181c5a8bbe965c01baaab,14a55aa28d7181d8a512d8de29b70369|2007|9781594201226|GD Office|
+14a55aa28d7181dfb3dbf8e9409188ce|A History of Visual Communication||14a55aa28d718106ba88cfb5d1eaafac|14a55aa28d71816c9f82f3d3fa459f08|1971||GD Office|
+14a55aa28d7181e3aef6e313d8bb6817|Cancer Edipemiology in Older Adolecents and Young Adults 15 to 29 Years of Age||14a55aa28d7181e58011c4b01286de81|14a55aa28d7181908adcd0a03a6e3a0a|2006||GD Office|
+14a55aa28d7181e4b864cdb710581172|Design of the Unix Operating System, the||14a55aa28d7181dc96b0cf76839a6113|14a55aa28d718117aa24f04587ae5b04|1986|132017997025|GD Office|
+14a55aa28d7181e5a647f80953fe3cd6|Design Futuring: Sustainablity, Ethics, and New Practice||14a55aa28d7181fd8c9feaf7de2dfd80|14a55aa28d7181829532c328bf6b1245|2009|9781847882172|GD Office|
+14a55aa28d7181e8a599c1242243f7f1|Abstract City||14a55aa28d718111983bd3d7449468d6|14a55aa28d718172a5a9e26ab8834fed|2012|9781419702075|GD Office|
+14a55aa28d7181e984eeca0967c0e303|Cancionero y Romancero de Ausencias||14a55aa28d7181f59557dbb564988f4a|14a55aa28d71813fa4f7dae7f08e9c89|1958||GD Office|
+14a55aa28d7181ec87fbd013f8cdc83a|A Pattern Language||14a55aa28d718153a57decf75d5f893e,14a55aa28d718110b5b0f404de640fc8,14a55aa28d7181d78444cf482c721f42|14a55aa28d7181b4a7a5d2ae41485fcb|1977|9780195019193|GD Office|
+14a55aa28d7181ef8cf0d254ab3d6dda|Death and Life of Great American Cities, The||14a55aa28d7181e1ba3decbe378785a8|afb816887ab64b29b36325a61c9ca4ba|1961|9780679741954|GD Office|
+14a55aa28d7181f0bd8fe8771547249d|An Essay on Typography||14a55aa28d718108b0dff9f998c20703|14a55aa28d7181ab868ee77eed403de1|1931|9780879239503|GD Office|
+14a55aa28d7181f3a34ac6df758b6087|A History of Graphic Design||14a55aa28d71813b856cdacc7925b04b|14a55aa28d7181c98429db0ca29c5284,14a55aa28d7181619c6ee27037070f61|1989|471291986|GD Office|
+14a55aa28d7181f4b8a5c333feffeb1a|Condiment: Adventures in Food and Form: Questionable Taste|||14a55aa28d7181ba952ecced39e558ea|2010||GD Office|
+14a55aa28d7181fa9b8bcabb95530bde|An Outline of European Architecture||14a55aa28d718112a5eed01fd411654b|14a55aa28d7181c5a8bbe965c01baaab,14a55aa28d7181d8a512d8de29b70369|1943||GD Office|
+14b55aa28d718096974bd561ac2ecc95|Conscious Capitalism|Liberating the Heroic Spirit Of Business|14b55aa28d718073bcd4d4a2a2c5f4af,14b55aa28d7180aabb87d88ffd416795||||GD Office|
+14b55aa28d71809a963ec10530cd9323|A Guide To Teaching Art at the College Level||14b55aa28d718099aa8ad7588ec7db67||||GD Office|
+14b55aa28d7180a298a0cdb060c6b5d2|A New Program for Graphic Design||14b55aa28d71802ead9cf61ea0df9294||||GD Office|
+15055aa28d7180a4ad64cc7eba338a58|Every Farm a Factory||15055aa28d718009826fe1644053c1ab||2003||N/A|
+15e55aa28d718024974de940739fddbb|Are.na Annual 2021|||||||GD Office|
+15e55aa28d71804fb0b2f457a5b3e4aa|Are.na Annual 2024|||||||GD Office|
+15e55aa28d71806fad1fe1178135fb09|Dirty Furniture 5: Phone|When Design Leaves the Showroom||||||
+15e55aa28d71808aacd7d69854f5944f|About Face|The Essentials of Interaction Design|15e55aa28d71803b9cbbeefe81e05ced,15e55aa28d7180bda6eaefcdbb27d4f6,15e55aa28d718068b339e49676251f08,15e55aa28d7180798719e393d7696888,15e55aa28d718076906de37fc88ad22b,15e55aa28d7180d1afacdedfc3ce74d9||||GD Office|
+15e55aa28d71808db2b1c022d3766f23|Critical Response Process|A method for getting useful feedback on anything you make, from dance to dessert|15e55aa28d7180ada73afc63a0d4a2ac,15e55aa28d71806391b6c3b994957e64||||GD Office|
+15e55aa28d71809b8773edb43a0a719c|Dirty Furniture 2: Table|||||||
+15e55aa28d7180a1af91c1086a7dc937|Are.na Annual 2022|||||||GD Office|
+15e55aa28d7180a28c90d910f4f540da|Dirty Furniture 6: Bed|When Design Leaves the Showroom||14a55aa28d7181b5a277cc80d2be73c6|||||
+15e55aa28d7180b39e4cf3ccd0a16e58|Blank Canvas, the|Inviting the Muse|15e55aa28d71804f8915ea1fecd406b4||||GD Office|
+15e55aa28d7180c1b9ccf24ff3404b16|Blueprint for Counter Education|||||||GD Office|
+15e55aa28d7180c4b8d1d2d535c5d81a|Design With Nature||15e55aa28d71800b9e49f382a67b6c88||||GD Office|
+15e55aa28d7180d0bd00c19ed375de37|The Art of Activism|Your All Purpose Guide to Making the Impossible Possible|15e55aa28d71802b8924ffce51809009,15e55aa28d7180ee9ddde6b29c6b4616||||GD Office|
+15e55aa28d7180e589a9fca0dca119d0|Design, When Everybody Design|An Introduction to DEsign for Social Innovation|15e55aa28d7180fc9688e24f7c6f993a||||GD Office|
+15e55aa28d7180f98426ca362f2b4441|Are.na Annual 2023|||||||GD Office|

@@ -1,0 +1,244 @@
+@import 'tailwindcss';
+
+/* Spine typefaces, one weight each, self-hosted through Fontsource (the
+   browser only fetches the Latin file of the ones on screen). Basteleur
+   isn't on Fontsource; it's the same file oblique ships. All OFL. */
+@import '@fontsource/work-sans/600.css';
+@import '@fontsource/libre-franklin/600.css';
+@import '@fontsource/gentium-book-plus/700.css';
+@import '@fontsource/eb-garamond/600.css';
+@import '@fontsource/crimson-pro/600.css';
+@import '@fontsource/newsreader/600.css';
+@import '@fontsource/ibm-plex-mono/500.css';
+@import '@fontsource/league-gothic/400.css';
+@import '@fontsource/young-serif/400.css';
+@import '@fontsource/space-mono/700.css';
+@import '@fontsource/bricolage-grotesque/600.css';
+@import '@fontsource/fraunces/600.css';
+
+@font-face {
+	font-family: 'Basteleur';
+	src: url('/fonts/Basteleur-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-display: swap;
+}
+
+/* kit.css is copied verbatim from ~/Code/color-system-and-guidelines.
+   Layered as base so Tailwind utilities still win over its element rules.
+   Dark mode comes from the kit; nothing here overrides it. */
+@import '../lib/kit.css' layer(base);
+
+/* Tailwind reads the kit's tokens instead of its own palette. Defaults are
+   cleared so only kit colors, type steps and breakpoints exist as utilities.
+   (RULES.md "Using the kit with Tailwind (v4)", as in wjeather.) */
+@theme {
+	--color-*: initial;
+	--font-*: initial;
+	--text-*: initial;
+	--breakpoint-*: initial;
+
+	--breakpoint-tablet: 40rem;
+	--breakpoint-desktop: 55rem;
+	--container-tablet: 40rem;
+	--container-desktop: 55rem;
+
+	/* p-1 = 6px, p-4 = 24px: spacing rides the same rhythm as the type. */
+	--spacing: 0.375rem;
+}
+
+@theme inline reference {
+	--color-bg: var(--color-bg);
+	--color-text: var(--color-text);
+	--color-text-muted: var(--color-text-muted);
+	--color-text-subtle: var(--color-text-subtle);
+	--color-border: var(--color-border);
+	--color-accent: var(--color-accent);
+	--color-accent-hover: var(--color-accent-hover);
+
+	--font-sans: var(--font-sans);
+	--font-display: var(--font-display);
+	--font-mono: var(--font-mono);
+
+	--text-2xs: var(--text-2xs);
+	--text-2xs--line-height: var(--leading-2xs);
+	--text-xs: var(--text-xs);
+	--text-xs--line-height: var(--leading-xs);
+	--text-sm: var(--text-sm);
+	--text-sm--line-height: var(--leading-sm);
+	--text-base: var(--text-base);
+	--text-base--line-height: var(--leading-base);
+	--text-md: var(--text-md);
+	--text-md--line-height: var(--leading-md);
+	--text-lg: var(--text-lg);
+	--text-lg--line-height: var(--leading-lg);
+	--text-xl: var(--text-xl);
+	--text-xl--line-height: var(--leading-xl);
+	--text-2xl: var(--text-2xl);
+	--text-2xl--line-height: var(--leading-2xl);
+	--text-3xl: var(--text-3xl);
+	--text-3xl--line-height: var(--leading-3xl);
+}
+
+a {
+	color: inherit;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.2em;
+}
+a:hover {
+	color: var(--color-accent-hover);
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip-path: inset(50%);
+	white-space: nowrap;
+}
+
+/* ---- The bookcase ------------------------------------------------------
+   Taken from bjornmeansbook's shelf (bjook.css): one flex row that wraps,
+   each book carrying its own piece of board, so a board appears under every
+   row however many books fit across, and the empty last item runs the last
+   board to the wall. No breakpoints: a 44-book shelf is one board on a wide
+   screen and four or five on a phone.
+
+   A board is a plank seen from a little above: a thin lighter strip, the top
+   the books stand on, over a thick dark front face. Dark brown on the light
+   ground; two lighter browns in dark mode, where no dark brown shows against
+   brown-9. */
+.bookcase {
+	--inch: clamp(1.75rem, 1rem + 2.4vw, 3rem); /* one inch of a real book */
+	--board: clamp(0.875rem, 0.5rem + 1.2vw, 1.5rem);
+	--board-face: light-dark(var(--wjerk-brown), var(--brown-5));
+	--board-top: light-dark(var(--brown-5), var(--brown-3));
+}
+/* Every book lays its own board, running far off to the right; the next
+   book's board covers it, so the last book in a row carries the board to
+   the wall. The list clips the overrun sideways only. It has to be
+   `overflow-x: clip`, not clip-path: clip-path hides the overrun but the
+   page still counts it as width, and scrolls sideways. A focused spine
+   inverts as well as showing the ring, so an edge spine stays obvious. */
+.board {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	overflow-x: clip;
+	/* The boards sit at z-index -1, behind the books. Without a stacking
+	   context of their own they'd drop behind the page's ground and vanish. */
+	isolation: isolate;
+}
+.board > li {
+	position: relative;
+	flex: 0 0 auto;
+	display: flex;
+	flex-direction: column;
+	padding-top: 1.5rem;
+	padding-bottom: var(--board);
+}
+.board > li::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100vw;
+	height: var(--board);
+	box-sizing: border-box;
+	background: var(--board-face);
+	border-top: calc(var(--board) * 0.3) solid var(--board-top);
+	z-index: -1;
+}
+.board > .rest {
+	flex: 1 0 1.5rem;
+}
+
+/* ---- A spine -------------------------------------------------------------
+   Drawn to scale: --h and --t are the book's height and thickness in inches.
+   Title and author run top to bottom, the way English-language spines read.
+   Its own paper and ink in both modes, as an object would keep them: every
+   tint is a kit 1–3 step, Wjerk Black on each measured 7.15:1 or better
+   (pink-3 6.30:1). Thin pamphlets are widened to 24px so the link is still a
+   WCAG 2.5.8 target and the type stays readable. */
+.spine {
+	--w: max(1.5rem, calc(var(--t) * var(--inch)));
+	box-sizing: border-box;
+	width: var(--w);
+	height: calc(var(--h) * var(--inch));
+	/* In vertical-rl the inline axis runs down the spine, so a flex *row*
+	   stacks title above author, top to bottom. */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0.75rem;
+	padding: 0.625rem 0;
+	writing-mode: vertical-rl;
+	background: var(--tint);
+	color: var(--wjerk-black);
+	border: 2px solid var(--wjerk-black);
+	border-bottom: 0;
+	margin-right: -2px; /* neighbours share one rule, like books pressed together */
+	text-decoration: none;
+	overflow: hidden;
+	/* type scales with the spine but never under 12px */
+	--size: clamp(0.75rem, calc(var(--w) * 0.4), 1rem);
+	font-size: var(--size);
+	line-height: 1.2;
+}
+.spine:hover,
+.spine:active,
+.spine:focus-visible,
+.spine[aria-current='page'] {
+	background: var(--wjerk-black);
+	color: var(--tint);
+}
+.spine:focus-visible {
+	position: relative;
+	z-index: 1;
+}
+.spine-title,
+.spine-author {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.spine-title {
+	font-family: var(--spine-font, inherit);
+	font-weight: var(--spine-weight, 600);
+	font-size: calc(1em * var(--spine-scale, 1));
+	flex: 0 1 auto;
+	min-width: 0;
+}
+
+/* Each face at the one weight loaded above. --spine-scale evens out how big
+   they set at the same size: League Gothic is narrow and small on its body,
+   Basteleur and Young Serif run large. */
+.face-work-sans { --spine-font: 'Work Sans', sans-serif; --spine-weight: 600; }
+.face-libre-franklin { --spine-font: 'Libre Franklin', sans-serif; --spine-weight: 600; }
+.face-gentium { --spine-font: 'Gentium Book Plus', serif; --spine-weight: 700; }
+.face-eb-garamond { --spine-font: 'EB Garamond', serif; --spine-weight: 600; --spine-scale: 1.1; }
+.face-crimson-pro { --spine-font: 'Crimson Pro', serif; --spine-weight: 600; --spine-scale: 1.1; }
+.face-newsreader { --spine-font: 'Newsreader', serif; --spine-weight: 600; --spine-scale: 1.05; }
+.face-plex-mono { --spine-font: 'IBM Plex Mono', monospace; --spine-weight: 500; --spine-scale: 0.95; }
+.face-league-gothic { --spine-font: 'League Gothic', sans-serif; --spine-weight: 400; --spine-scale: 1.35; }
+.face-young-serif { --spine-font: 'Young Serif', serif; --spine-weight: 400; --spine-scale: 0.95; }
+.face-space-mono { --spine-font: 'Space Mono', monospace; --spine-weight: 700; --spine-scale: 0.9; }
+.face-bricolage { --spine-font: 'Bricolage Grotesque', sans-serif; --spine-weight: 600; }
+.face-fraunces { --spine-font: 'Fraunces', serif; --spine-weight: 600; }
+.face-basteleur { --spine-font: 'Basteleur', serif; --spine-weight: 700; --spine-scale: 0.9; }
+
+/* A face's name in the colophon, set in the face. */
+.spine-credit {
+	font-family: var(--spine-font);
+	font-weight: var(--spine-weight);
+	font-size: calc(1em * var(--spine-scale, 1));
+}
+.spine-author {
+	flex: 0 0 auto;
+	max-inline-size: 40%;
+	font-size: max(0.75rem, calc(var(--size) * 0.85));
+}

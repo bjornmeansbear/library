@@ -1,0 +1,86 @@
+# Publishers referenced by the seed books. id|name
+# Names with a stray " were split at a comma by the original import; data.mjs glues them back.
+14a55aa28d71812899d4f5c8bdc3d041|Metropolis Books
+14a55aa28d7181c9932ad97a4d1c658f|Island Press
+14a55aa28d718168b256dbfac4ba0ca1|O'Reilley
+14a55aa28d7181479ce3d8e7dadbbda7|Focal Press
+14a55aa28d71811fb2fdd21696bbacf5|The Pierpont Morgan Library
+14a55aa28d7181b4a7a5d2ae41485fcb|Oxford University Press
+14a55aa28d71813cb900c03425fd67ab|"Dover Publications
+14a55aa28d7181619c6ee27037070f61|Inc."
+14a55aa28d7181ffbdf8ca574a6efec8|The MIT Press
+14a55aa28d7181d8b169ec533ef915eb|CLOG
+14a55aa28d7181609572c6f4abd23a1f|W.W. Norton
+14a55aa28d718121bf7fc835dab761f7|Princeton Architectural Press
+14a55aa28d718123a581f7f3e7d58957|North Point Press
+14a55aa28d7181948dc3dd388736fbae|Michigan Publishing
+14a55aa28d718132980efb792e818342|Fiell
+14a55aa28d71817495e7c504426ff1c8|Poorhouse Press
+14a55aa28d7181018e41c19c8e53ceff|"Graphic-sha Publishing Company
+14a55aa28d7181d8a512d8de29b70369|Ltd."
+14a55aa28d71810bbf3bc23dcc79be8c|Graphics Press LLC
+14a55aa28d7181659486c5c6e3f26b3c|The Monacelli Press
+14a55aa28d718102a8cee651facbdea2|Rosenfeld Media
+14a55aa28d7181908adcd0a03a6e3a0a|NIH Publishers
+14a55aa28d7181d3b9c9cb6a925dfaf6|Watson-Guptail Publications
+14a55aa28d7181d5a59ce3d4fac4a77a|William Morrow & Company
+14a55aa28d7181d99d83f155d2490648|Phaidon
+14a55aa28d71812a9f1fd15ca7a42eac|Phaidon Press Limited
+14a55aa28d718145bc7ad82400f22392|Phaidon Press Inc.
+14a55aa28d7181cfa431ddf3ce1c21af|ILT Publishing
+14a55aa28d71810eb92be60090e732f6|Sage Publishing
+14a55aa28d718157b531ed6bb888f7c5|Contemporary Museum
+14a55aa28d718192ae0fc92eac5d373e|BFTK
+14a55aa28d7181c5a8bbe965c01baaab|Penguin Books
+14a55aa28d718180826eebae347467a7|Rodale
+14a55aa28d7181baafe9cd0d46efe497|TTC-090
+14a55aa28d718174a686ca115c511162|Facts on File
+14a55aa28d71811f8a54e54725b18e6b|Inc.
+14a55aa28d718184bc90f20566c771c6|Yale University Press
+14a55aa28d7181c2ab44e543e764c41f|Somerset Norton
+14a55aa28d718116afc4dd3cb0d8efdd|McGraw Hill
+14a55aa28d718162a646e9c3494156ca|Chicago Review Press
+14a55aa28d718104a00fcbc8f4cb1aa9|Gotham Books
+14a55aa28d718105b535efcca8478aba|A Book Apart
+14a55aa28d71818cbb96c26c7bb104ee|Adbusters
+14a55aa28d7181cea263dc8d679486ad|Paper Monument
+14a55aa28d7181f5a1c6e08597b2880f|"Harry N. Abrams
+14a55aa28d7181ce959cc9310bc75556|Basic Book
+14a55aa28d7181c58057c12d53d36935|Castilla-La Mancha
+14a55aa28d71816582cac225ab84991f|New Riders Publishing
+14a55aa28d7181178ea1fae29fe15582|Oneworld Oxford
+14a55aa28d7181f7bcaffcffbf6b5e1d|Harper Buisness
+14a55aa28d71810a848bc11d6b5282c0|"Time-Life Books
+afb816887ab64b29b36325a61c9ca4ba|Vintage Books
+14a55aa28d71811e9be7eae2195a0541|Harvard University Press
+14a55aa28d7181cdbd6aeec19fbce3bb|The Museum of Modern Art
+14a55aa28d718119acbbf0cb46d9c866|Holt Paperback
+14a55aa28d71817e8c85f47d9c4931c8|010 Publishers
+14a55aa28d71811999e6cbb3aa262a6a|Warner Books
+14a55aa28d7181c98429db0ca29c5284|"John Wiley & Sons
+14a55aa28d71813abf54e44cd89e5fad|Bantam Books
+14a55aa28d71814cbe17ef005e1f82ff|Lars Müller Publishers
+14a55aa28d7181b5a277cc80d2be73c6|Dirty Furniture
+14a55aa28d718115b9facbdecbba3bb9|Rizzoli
+14a55aa28d7181bc9e52d2b05d1289ff|AIGA
+14a55aa28d7181f2884fd72a7bf5f6dc|Taylor & Francis
+14a55aa28d718121855bd406846136ec|Thames & Hudson
+14a55aa28d71813eb26cf9e0d6a329ad|Laurence King Publishing
+14a55aa28d71811f98e6c2bf9c28f20f|Harvard Business School Press
+14a55aa28d71813a8aa7fc42a8b60592|"Fairchild Publications
+14a55aa28d71818d8f18d48ca5eb6ecd|D. Van Norstrand Company
+14a55aa28d7181a5842ee9dfefedb2aa|Macmillan
+14a55aa28d71817cbd8ccfa98233a8aa|St. Martin's Press
+14a55aa28d718101a07fdbeb7860f278|Rockport Publishers
+14a55aa28d7181b59407e8a6f85e0c02|"Reaktion Books
+14a55aa28d718124b47fd945a7aa2a03|"Art Insights Inc.
+14a55aa28d71813dbec1e58b402f2bab|Publishers"
+14a55aa28d7181ae913fdc8e98e130c7|Pantheon Books
+14a55aa28d71812fab51c0911eb5b8d0|Cheshire Books
+14a55aa28d71816c9f82f3d3fa459f08|Hastings House
+14a55aa28d718117aa24f04587ae5b04|Prentice-Hall, Inc.
+14a55aa28d7181829532c328bf6b1245|Berg
+14a55aa28d718172a5a9e26ab8834fed|Abrams
+14a55aa28d71813fa4f7dae7f08e9c89|Michael Woolworth Publication
+14a55aa28d7181ab868ee77eed403de1|David R. Godine
+14a55aa28d7181ba952ecced39e558ea|Food and Form

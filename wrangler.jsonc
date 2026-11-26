@@ -1,0 +1,17 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "wjerk-library",
+	// The OOKB account, where wjerk.shop's DNS lives.
+	"account_id": "04b8381616db8b4cf5ca0bac4f1f675a",
+	"compatibility_date": "2026-11-26",
+	"compatibility_flags": ["nodejs_als"],
+	"main": ".svelte-kit/cloudflare/_worker.js",
+	"assets": {
+		"binding": "ASSETS",
+		"directory": ".svelte-kit/cloudflare"
+	},
+	// Cloudflare adds the DNS record for this itself on deploy.
+	"routes": [{ "pattern": "library.wjerk.shop", "custom_domain": true }],
+	"workers_dev": true,
+	"preview_urls": true
+}

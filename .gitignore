@@ -1,0 +1,36 @@
+node_modules
+
+# Output
+.output
+.vercel
+.netlify
+.wrangler
+.cloudflare
+/.svelte-kit
+/build
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.test
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+
+# Local Cloudflare secrets
+.dev.vars
+.dev.vars.*
+
+# Personal to-do lists that link into Notion (rebuilt by scripts/isbn-fixes.mjs)
+ISBN-FIXES.md
+data/isbn-fixes.json
+
+# Kept in git on purpose, though generated: src/lib/data/library.json (the
+# site is built from it, without a Notion token) and data/openlibrary.json
+# (the Open Library cache, so rebuilds don't re-ask about every book).
