@@ -35,6 +35,12 @@ running = "running.txt"  # one line of type across the top of every spread
 running_caps = false
 back   = ["essay.md", "index", "images/62835_book.png", "colophon.md"]
 
+[riso]                  # two drums: black, and green after Agel and Fiore's I Seem to Be a Verb
+second = "#00A95C"      # riso Green, as near as a screen gets; the quote, the mark and the engraving
+name   = "green"
+french_fold = true
+paper  = ["12in", "18in"]   # the MICA riso's largest sheet
+
 [cover]
 text   = "cover.md"     # the card on the back cover
 bleed  = "0.125in"
