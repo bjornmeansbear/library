@@ -14,7 +14,11 @@
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "wrangler types --check && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"gen": "wrangler types"
+		"gen": "wrangler types",
+		"sync": "node scripts/data.mjs",
+		"fill": "node scripts/fill.mjs",
+		"add": "node scripts/add.mjs",
+		"isbn-fixes": "node scripts/isbn-fixes.mjs"
 	},
 	"devDependencies": {
 		"@fontsource/bricolage-grotesque": "^5.3.0",

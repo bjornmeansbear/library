@@ -20,6 +20,35 @@ snapshot of it, `src/lib/data/library.json`, which is kept in git.
 cached in `data/openlibrary.json`. Without a token it builds from the small
 seed in `data/seed/`.
 
+A GitHub Action (`.github/workflows/notion-sync.yml`) does the same every
+night at about 3–4 a.m. Eastern and commits only when Notion changed; run it
+by hand from the Actions tab. It needs the `NOTION_TOKEN` repository secret.
+
+## Add books
+
+    npm run add -- 9780262019842 0195019199          # ISBN-10 or -13, typed or scanned
+    npm run add -- 9780262019842 --where "GD Office"  # set Where
+    npm run add -- … --dry-run                       # show, change nothing
+
+Looks each one up on Open Library and creates the Notion page, reusing
+existing author and publisher pages. It won't add a book that's already
+there, by ISBN or by a matching title (then it points at the existing page);
+`--force` overrides. A book needs a publisher: from Open Library, or
+`--publisher "…"`. When Open Library doesn't know the book, add `--title "…"`.
+
+## Fill in what's missing
+
+    npm run fill                 # writes FILL-PLAN.md: what it would add
+    npm run fill -- --apply      # writes exactly that plan to Notion
+
+Fills only empty Subtitle, Year, Author, Publisher and LOC Call Number
+fields from Open Library, by ISBN-13; never changes what you typed. To leave
+a change out, delete it from `data/fill-plan.json` before applying.
+
+In Notion, the **🔎 Needs info** view lists books missing an ISBN-13,
+author, publisher or year; **📏 To measure** lists books without caliper
+measurements, A–Z like the shelves.
+
 ## In Notion
 
 - **ISBN-13** (text) is the ISBN the site uses. The old number **ISBN**

@@ -34,3 +34,7 @@ data/isbn-fixes.json
 # Kept in git on purpose, though generated: src/lib/data/library.json (the
 # site is built from it, without a Notion token) and data/openlibrary.json
 # (the Open Library cache, so rebuilds don't re-ask about every book).
+
+# The fill plan (rebuilt by npm run fill)
+FILL-PLAN.md
+data/fill-plan.json
