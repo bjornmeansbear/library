@@ -9491,6 +9491,34 @@
 			"face": "bricolage"
 		},
 		{
+			"id": "42455aa28d7181e4bdc5d1f491051088",
+			"slug": "speed-and-scale",
+			"title": "Speed and Scale",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"John Doerr"
+			],
+			"publishers": [
+				"Penguin Books"
+			],
+			"tags": [],
+			"year": "2021",
+			"isbn10": "0241537770",
+			"isbn13": "9780241537770",
+			"where": null,
+			"notes": null,
+			"pages": 176,
+			"height": 8.84,
+			"thickness": 0.59,
+			"measured": false,
+			"sized": "pages",
+			"tint": "goldenrod-3",
+			"shelf": null,
+			"position": null,
+			"face": "space-mono"
+		},
+		{
 			"id": "14a55aa28d7181dbbceaf7785f185b81",
 			"slug": "the-spell-of-the-sensuous",
 			"title": "The Spell of the Sensuous",
@@ -9516,7 +9544,7 @@
 			"tint": "yellow-1",
 			"shelf": null,
 			"position": null,
-			"face": "space-mono"
+			"face": "libre-franklin"
 		},
 		{
 			"id": "14a55aa28d7181858d75dc70a857b90d",
