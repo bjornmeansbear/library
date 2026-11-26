@@ -191,8 +191,8 @@ a:hover {
    left, above the title, so the way back is always in reach while you
    scroll a filtered shelf. Wjerk Goldenrod on Wjerk Black, 6.50:1 (AA):
    the vote results' best-liked accent (94% yes) on their best-liked dark
-   ground. Paper and ink stay the same in dark mode, like the spines. Press
-   inverts. Reduced motion: it simply appears. */
+   ground. Paper and ink stay the same in dark mode, like the spines. Hover
+   and press invert it (goldenrod ground, black ink); the tilt never moves. Reduced motion: it simply appears. */
 .stamp-all {
 	position: fixed;
 	top: clamp(0.75rem, 2vw, 1.5rem);
@@ -211,9 +211,7 @@ a:hover {
 	cursor: pointer;
 	animation: stamp-in 150ms ease-out;
 }
-.stamp-all:hover {
-	transform: rotate(-6deg) scale(1.03);
-}
+.stamp-all:hover,
 .stamp-all:active {
 	background: var(--wjerk-goldenrod);
 	color: var(--wjerk-black);
@@ -232,9 +230,6 @@ a:hover {
 @media (prefers-reduced-motion: reduce) {
 	.stamp-all {
 		animation: none;
-	}
-	.stamp-all:hover {
-		transform: rotate(-8deg);
 	}
 }
 
