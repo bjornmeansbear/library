@@ -737,7 +737,11 @@
 			"tags": [
 				"Sustainabilitist",
 				"Graphic Design",
-				"Architecture"
+				"Architecture",
+				"Signs Signaling",
+				"Branding",
+				"Design Theory",
+				"History"
 			],
 			"year": "2002",
 			"isbn10": "1580931197",
@@ -2828,14 +2832,16 @@
 			"id": "14a55aa28d7181f4b8a5c333feffeb1a",
 			"slug": "condiment-adventures-in-food-and-form-questionable-taste",
 			"title": "Condiment: Adventures in Food and Form: Questionable Taste",
-			"format": "book",
+			"format": "journal",
 			"subtitle": null,
 			"authors": [],
 			"publishers": [
 				"Food and Form"
 			],
 			"tags": [
-				"Aesthetics"
+				"Aesthetics",
+				"Design Theory",
+				"Food"
 			],
 			"year": "2010",
 			"isbn10": null,
@@ -5955,7 +5961,9 @@
 			"publishers": [
 				"Princeton Architectural Press"
 			],
-			"tags": [],
+			"tags": [
+				"Algorithmic Design"
+			],
 			"year": "2010",
 			"isbn10": "1568989377",
 			"isbn13": "9781568989372",
@@ -8568,7 +8576,9 @@
 			],
 			"tags": [
 				"Sustainabilitist",
-				"Architecture"
+				"Architecture",
+				"Postmodernism",
+				"Design Theory"
 			],
 			"year": "1972",
 			"isbn10": "026272006X",
@@ -10815,7 +10825,11 @@
 			"publishers": [
 				"William Morrow & Company"
 			],
-			"tags": [],
+			"tags": [
+				"Semiotics",
+				"Comics",
+				"Publication Design"
+			],
 			"year": "2000",
 			"isbn10": "0060953500",
 			"isbn13": "9780060953508",
