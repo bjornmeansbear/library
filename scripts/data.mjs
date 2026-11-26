@@ -158,6 +158,7 @@ async function readNotion() {
 			bookshopIsbn: text(pr['Bookshop ISBN']),
 			// Yes / No once checked by hand (the 🛒 view); null until then.
 			onBookshop: pr['On Bookshop']?.select?.name ?? null,
+			copies: pr['Copies']?.number ?? null,
 			format: pr['Format']?.select?.name ?? '',
 			heightMm: pr['Height (mm)']?.number ?? null,
 			thicknessMm: pr['Thickness (mm)']?.number ?? null,
@@ -245,6 +246,8 @@ async function build(raw, cache) {
 			isbn13: isbn?.isbn13 ?? null,
 			bookshopIsbn: b.bookshopIsbn ? normalizeIsbn(b.bookshopIsbn)?.isbn13 ?? null : null,
 			onBookshop: b.onBookshop === 'Yes' ? true : b.onBookshop === 'No' ? false : null,
+			// One page per edition; a second copy of the same one is a number.
+			copies: b.copies > 1 ? b.copies : null,
 			where: b.where || null,
 			notes: b.notes || null,
 			pages: b.pages ?? ol?.pages ?? null,

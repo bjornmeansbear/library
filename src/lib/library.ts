@@ -16,6 +16,8 @@ export type Book = {
 	bookshopIsbn?: string | null;
 	/** Checked by hand: true sold, false not sold, null not checked yet. */
 	onBookshop?: boolean | null;
+	/** More than one copy of this edition; null means one. */
+	copies?: number | null;
 	where: string | null;
 	notes: string | null;
 	pages: number | null;

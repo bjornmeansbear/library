@@ -10,7 +10,7 @@
 	const isBook = $derived(book.format === 'book');
 	const FORMAT_NAMES = { book: 'Book', film: 'Film', music: 'Music', journal: 'Journal', zine: 'Zine' };
 	const hasDetails = $derived(
-		Boolean(!isBook || book.publishers.length || book.year || book.pages || isbn || book.tags.length)
+		Boolean(!isBook || book.copies || book.publishers.length || book.year || book.pages || isbn || book.tags.length)
 	);
 	// Each author, publisher, year and tag links back to the bookcase showing
 	// only the books that share it.
@@ -48,6 +48,10 @@
 		{#if book.pages}
 			<dt>Pages</dt>
 			<dd class="m-0">{book.pages}</dd>
+		{/if}
+		{#if book.copies}
+			<dt>Copies</dt>
+			<dd class="m-0">{book.copies}</dd>
 		{/if}
 		{#if isbn}
 			<dt>ISBN</dt>

@@ -84,6 +84,8 @@ catalogue knows the height of, A–Z like the shelves.
   Journal, Zine.
   Only books get Bookshop.org and Open Library links.
 - **Personal Notes** shows on the book's card.
+- **Copies**: more than one of the same edition (empty means one). One
+  page per edition; a different edition gets its own page.
 
 `node scripts/isbn-fixes.mjs` writes `ISBN-FIXES.md` (not in git): every
 book whose ISBN needs fixing, with Open Library's suggestion.
