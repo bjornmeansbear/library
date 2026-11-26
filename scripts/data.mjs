@@ -37,10 +37,9 @@ async function main() {
 		if (same(prev) === same(library)) library.generated = prev.generated;
 	}
 	fs.writeFileSync(out, JSON.stringify(library, null, '\t') + '\n');
-	const measured = library.books.filter((b) => b.measured).length;
 	console.log(
 		`${useSeed ? 'seed' : 'Notion'}: ${library.books.length} books, ` +
-			`${library.shelves.length} shelves, ${measured} spines at real size → ${path.relative(root, out)}`
+			`${library.shelves.length} shelves, sized: ${JSON.stringify(library.books.reduce((n, b) => ((n[b.sized] = (n[b.sized] ?? 0) + 1), n), {}))} → ${path.relative(root, out)}`
 	);
 }
 
@@ -155,9 +154,16 @@ async function readNotion() {
 			isbn: text(pr['ISBN-13']) || (pr['ISBN']?.number != null ? String(pr['ISBN'].number) : ''),
 			where: pr['Where']?.select?.name ?? '',
 			notes: text(pr['Personal Notes']),
+			// Only when Bookshop.org doesn't sell the edition you own.
+			bookshopIsbn: text(pr['Bookshop ISBN']),
 			format: pr['Format']?.select?.name ?? '',
 			heightMm: pr['Height (mm)']?.number ?? null,
-			thicknessMm: pr['Thickness (mm)']?.number ?? null
+			thicknessMm: pr['Thickness (mm)']?.number ?? null,
+			widthMm: pr['Width (mm)']?.number ?? null,
+			pages: pr['Pages']?.number ?? null,
+			// Where Height/Width/Thickness came from: Measured (calipers),
+			// Open Library or Library of Congress (npm run sizes). Blank = Measured.
+			sizeFrom: pr['Size from']?.select?.name ?? ''
 		});
 	}
 
@@ -235,9 +241,10 @@ async function build(raw, cache) {
 			year: /^\d{3,4}$/.test(b.year) && b.year !== '0' ? b.year : null,
 			isbn10: isbn?.isbn10 ?? null,
 			isbn13: isbn?.isbn13 ?? null,
+			bookshopIsbn: b.bookshopIsbn ? normalizeIsbn(b.bookshopIsbn)?.isbn13 ?? null : null,
 			where: b.where || null,
 			notes: b.notes || null,
-			pages: ol?.pages ?? null,
+			pages: b.pages ?? ol?.pages ?? null,
 			// Spine size in inches. Your caliper numbers in Notion win; then
 			// Open Library's; otherwise a steady made-up size per book, so the
 			// shelf is uneven the way a real one is.
@@ -248,10 +255,13 @@ async function build(raw, cache) {
 				b.thicknessMm
 					? b.thicknessMm / 25.4
 					: (dims?.[2] ??
-							(ol?.pages ? 0.15 + ol.pages * 0.0025 : 0.45 + ((h >> 8) % 70) / 100))
+							((b.pages ?? ol?.pages) ? 0.15 + (b.pages ?? ol.pages) * 0.0025 : 0.45 + ((h >> 8) % 70) / 100))
 			),
-			measured: Boolean(b.heightMm && b.thicknessMm),
-			sized: b.heightMm && b.thicknessMm ? 'measured' : dims ? 'open-library' : ol?.pages ? 'pages' : 'guessed',
+			measured: Boolean(b.heightMm && b.thicknessMm && (!b.sizeFrom || b.sizeFrom === 'Measured')),
+			sized: b.heightMm && (!b.sizeFrom || b.sizeFrom === 'Measured') && b.thicknessMm ? 'measured'
+				: b.sizeFrom === 'Library of Congress' || b.sizeFrom === 'Same as its series' ? 'library-of-congress'
+				: b.sizeFrom === 'Open Library' || dims ? 'open-library'
+				: (b.pages ?? ol?.pages) ? 'pages' : 'guessed',
 			tint: TINTS[h % TINTS.length],
 			shelf: null,
 			position: null

@@ -12,13 +12,15 @@ export type Book = {
 	year: string | null;
 	isbn10: string | null;
 	isbn13: string | null;
+	/** Another edition's ISBN for the Bookshop.org link, when yours isn't sold. */
+	bookshopIsbn?: string | null;
 	where: string | null;
 	notes: string | null;
 	pages: number | null;
 	height: number;
 	thickness: number;
 	measured: boolean;
-	sized: 'measured' | 'open-library' | 'pages' | 'guessed';
+	sized: 'measured' | 'open-library' | 'library-of-congress' | 'pages' | 'guessed';
 	tint: string;
 	face: string;
 	shelf: string | null;

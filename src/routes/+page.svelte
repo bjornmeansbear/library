@@ -149,6 +149,7 @@
 		Spines are drawn to scale:
 		{sized['measured'] ?? 0} measured by hand,
 		{sized['open-library'] ?? 0} from Open Library’s dimensions,
+		{sized['library-of-congress'] ?? 0} from Library of Congress heights,
 		{sized['pages'] ?? 0} estimated from the page count, and
 		{sized['guessed'] ?? 0} guessed. Updated {generated}.
 	</p>

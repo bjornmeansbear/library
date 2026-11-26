@@ -71,7 +71,7 @@
 	{:else if isbn}
 		<ul class="mt-6 mb-0 flex flex-wrap gap-x-6 p-0 text-sm">
 			{#if book.isbn13}
-				<li class="list-none"><a class="inline-block py-3" href={bookshopUrl(book.isbn13)}>Buy at Bookshop.org</a></li>
+				<li class="list-none"><a class="inline-block py-3" href={bookshopUrl(book.bookshopIsbn ?? book.isbn13)}>Buy at Bookshop.org</a></li>
 			{/if}
 			<li class="list-none"><a class="inline-block py-3" href="https://openlibrary.org/isbn/{isbn}">Open Library</a></li>
 			<li class="list-none"><a class="inline-block py-3" href="https://search.worldcat.org/isbn/{isbn}">Find it in a library</a></li>

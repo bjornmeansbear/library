@@ -69,6 +69,9 @@ book whose ISBN needs fixing, with Open Library's suggestion.
 Links use affiliate ID 129137 (`src/lib/library.ts`); the card shows a
 one-line disclosure.
 
+When Bookshop.org doesn't sell the edition you own, put a sold edition's
+ISBN in **Bookshop ISBN**; the link uses that, and ISBN-13 stays yours.
+
 ## Design notes
 
 Shelves, spines, tints and faces are in `src/routes/layout.css`, with the

@@ -4117,5 +4117,69 @@
 		"pages": 325,
 		"dimensions": null,
 		"lcc": "GF41 .B77 2009"
+	},
+	"9780993351129": null,
+	"9780993351136": null,
+	"9780615176772": {
+		"key": "/books/OL48012377M",
+		"title": "Sexy librarian",
+		"subtitle": null,
+		"authors": [
+			"Julia Weist"
+		],
+		"publishers": [
+			"Slush Editions"
+		],
+		"year": "2008",
+		"pages": 171,
+		"dimensions": null,
+		"lcc": null
+	},
+	"9780060976255": {
+		"key": "/books/OL9240710M",
+		"title": "Understanding Comics",
+		"subtitle": "The Invisible Art",
+		"authors": [
+			"Scott McCloud"
+		],
+		"publishers": [
+			"Harper Paperbacks"
+		],
+		"year": "1994",
+		"pages": 224,
+		"dimensions": "10 x 6.7 x 0.6 inches",
+		"lcc": null
+	},
+	"9772186094005": null,
+	"9780767903097": {
+		"key": "/books/OL8064253M",
+		"title": "Sin and Syntax",
+		"subtitle": "How to Craft Wickedly Effective Prose",
+		"authors": [
+			"Constance Hale"
+		],
+		"publishers": [
+			"Broadway"
+		],
+		"year": "2001",
+		"pages": 320,
+		"dimensions": "8 x 5.3 x 0.8 inches",
+		"lcc": "PE1408 .H299 1999"
+	},
+	"9780020557050": null,
+	"9781612197494": {
+		"key": "/books/OL27258148M",
+		"title": "How to Do Nothing: Resisting the Attention Economy",
+		"subtitle": null,
+		"authors": [
+			"Jenny Odell"
+		],
+		"publishers": [
+			"Melville House"
+		],
+		"year": "2019",
+		"pages": 256,
+		"dimensions": null,
+		"lcc": "HM851 .O374 2019"
 	}
 }
