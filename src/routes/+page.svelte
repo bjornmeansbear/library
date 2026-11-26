@@ -115,6 +115,7 @@
 	// Where else to find Kristian and Wjerk: the list on kristian.bjornard.com.
 	const elsewhere = [
 		['Contact', 'mailto:wjerkshop@pm.me', 'wjerkshop@pm.me', 'Studio work, talks, workshops.'],
+		['Phone', 'tel:+14439171420', '(443) 917-1420', ''],
 		['Studio', 'https://a.wjerk.shop/', 'a.wjerk.shop', 'Wjerk, a climate-design studio.'],
 		['Index', 'https://a.wjerk.shop/works', 'a.wjerk.shop/works', 'Every Wjerk project, in one list.'],
 		['About', 'https://kristian.bjornard.com/', 'kristian.bjornard.com', 'Kristian Bjørnard.'],
