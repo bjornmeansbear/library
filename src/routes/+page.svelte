@@ -272,7 +272,7 @@
 			</p>
 		</div>
 
-		<div class="min-[40rem]:col-span-2 min-[64rem]:col-span-1">
+		<div>
 			<h2 class="m-0 text-sm">Elsewhere</h2>
 			<div class="elsewhere">
 				{#each elsewhere as [group, links] (group)}
