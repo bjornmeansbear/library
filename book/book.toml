@@ -29,8 +29,7 @@ data   = "../src/lib/data/library.json"   # `npm run sync` refreshes it from Not
 date   = ""             # empty = the date of that sync
 mode   = "endless"      # one shelf through the whole book; "wall" = two shelves a spread
 scale  = 0              # 0 = by mode (0.4 endless, 0.25 wall)
-black_tags = ["Open Source", "The Commons", "A New Design Commons",
-              "Public Domain", "Copyright", "Intellectual Property"]
+black_tags = []      # books with these tags print as black spines; none for now
 back   = ["essay.md", "index", "colophon.md"]
 
 [cover]
