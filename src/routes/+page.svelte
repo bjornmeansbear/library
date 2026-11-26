@@ -259,6 +259,10 @@
 				{sized['pages'] ?? 0} are estimated from the page count, and
 				{sized['guessed'] ?? 0} are guessed. Updated <span class="whitespace-nowrap">{generated}</span>.
 			</p>
+			<p class="mt-4 mb-0">
+				The whole catalogue is open: <a href="/library.json">library.json</a> ({books.length} books,
+				plain JSON). Take it, sort it, make something with it.
+			</p>
 		</div>
 
 		<div class="max-w-[40rem]">

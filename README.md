@@ -119,6 +119,9 @@ reasoning in comments. Findings that matter beyond this site are in
 
 ## Licence
 
+The catalogue is open data: the site serves `src/lib/data/library.json` at
+`/library.json` (`src/routes/library.json/+server.ts`), linked from the footer.
+
 Code: Apache 2.0 (`LICENSE`). Text and design: CC BY-SA 4.0. The books
 themselves, their titles, cover details and everything else about them,
 belong to their authors and publishers.
