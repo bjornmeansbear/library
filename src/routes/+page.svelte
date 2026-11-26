@@ -114,20 +114,20 @@
 
 	// Where else to find Kristian and Wjerk: the list on kristian.bjornard.com.
 	const elsewhere = [
-		['Contact', 'mailto:wjerkshop@pm.me', 'wjerkshop@pm.me', 'Studio work, talks, workshops.'],
-		['Phone', 'tel:+14439171420', '(443) 917-1420', ''],
-		['Studio', 'https://a.wjerk.shop/', 'a.wjerk.shop', 'Wjerk, a climate-design studio.'],
-		['Index', 'https://a.wjerk.shop/works', 'a.wjerk.shop/works', 'Every Wjerk project, in one list.'],
-		['About', 'https://kristian.bjornard.com/', 'kristian.bjornard.com', 'Kristian Bjørnard.'],
-		['Teaching', 'https://teaching.kristianbjornard.com/', 'teaching.kristianbjornard.com', 'Courses, workshops, lectures and crits.'],
-		['Writing', 'https://bjornpaedia.wjerk.shop/', 'bjornpaedia.wjerk.shop', 'Essays and notes.'],
-		['Colour', 'https://wjavelength.wjerk.shop/', 'wjavelength.wjerk.shop', 'The Wjerk colour system, and a place to vote on it.'],
-		['Newsletter', 'https://buttondown.com/bjornmeansbear', 'buttondown.com/bjornmeansbear', ''],
-		['Materials', 'https://github.com/bjornmeansbear', 'github.com/bjornmeansbear', 'Free to take and change.'],
-		['Archive', 'https://archive.wjerk.shop/', 'archive.wjerk.shop', 'The old portfolio, 2003–2011.'],
-		['Archive', 'https://www.ookb.co/', 'ookb.co', 'The Office of Kristian Bjørnard.'],
-		['Elsewhere', 'https://www.instagram.com/bjornmeansbear', 'Instagram', ''],
-		['Elsewhere', 'https://www.linkedin.com/in/kristian-bjornard-367561259', 'LinkedIn', '']
+		['wjerkshop@pm.me', 'mailto:wjerkshop@pm.me'],
+		['(443) 917-1420', 'tel:+14439171420'],
+		['Wjerk, the studio', 'https://a.wjerk.shop/'],
+		['Every Wjerk project', 'https://a.wjerk.shop/works'],
+		['Kristian Bjørnard', 'https://kristian.bjornard.com/'],
+		['Teaching', 'https://teaching.kristianbjornard.com/'],
+		['Writing: Bjornpaedia', 'https://bjornpaedia.wjerk.shop/'],
+		['Wjavelength, the colour system', 'https://wjavelength.wjerk.shop/'],
+		['Newsletter', 'https://buttondown.com/bjornmeansbear'],
+		['GitHub', 'https://github.com/bjornmeansbear'],
+		['Archive, 2003–2011', 'https://archive.wjerk.shop/'],
+		['The Office of Kristian Bjørnard', 'https://www.ookb.co/'],
+		['Instagram', 'https://www.instagram.com/bjornmeansbear'],
+		['LinkedIn', 'https://www.linkedin.com/in/kristian-bjornard-367561259']
 	];
 
 	const sized = books.reduce(
@@ -233,7 +233,7 @@
      colophon, then everywhere else (the same list as kristian.bjornard.com),
      then the small print. -->
 <footer class="site-footer px-[clamp(1.5rem,6vw,6rem)] pt-8 pb-12 text-sm">
-	<div class="grid gap-x-[clamp(2rem,5vw,5rem)] gap-y-8 min-[55rem]:grid-cols-2">
+	<div class="grid gap-x-[clamp(2rem,4vw,4rem)] gap-y-8 min-[40rem]:grid-cols-2 min-[64rem]:grid-cols-[1fr_1fr_auto]">
 		<div class="max-w-[40rem]">
 			<h2 class="m-0 text-sm">About</h2>
 			<p class="mt-2 mb-0">
@@ -246,9 +246,13 @@
 				{#if sized['measured']}{sized['measured']} are measured by hand,{/if}
 				{(sized['open-library'] ?? 0) + (sized['library-of-congress'] ?? 0)} come from those catalogues,
 				{sized['pages'] ?? 0} are estimated from the page count, and
-				{sized['guessed'] ?? 0} are guessed. Updated {generated}.
+				{sized['guessed'] ?? 0} are guessed. Updated <span class="whitespace-nowrap">{generated}</span>.
 			</p>
-			<p class="mt-4 mb-0">
+		</div>
+
+		<div class="max-w-[40rem]">
+			<h2 class="m-0 text-sm">Colophon</h2>
+			<p class="mt-2 mb-0">
 				Spines are set in thirteen open-source typefaces, all under the SIL Open Font License. A
 				series shares a face, and so, mostly, does a publisher:
 				{#each faces as [cls, name, by], i (cls)}
@@ -260,11 +264,8 @@
 		<div>
 			<h2 class="m-0 text-sm">Elsewhere</h2>
 			<ul class="elsewhere">
-				{#each elsewhere as [what, href, label, note] (href)}
-					<li>
-						<span class="what">{what}</span>
-						<span><a {href}>{label}</a>{#if note}<span class="note">{note}</span>{/if}</span>
-					</li>
+				{#each elsewhere as [label, href] (href)}
+					<li><a {href}>{label}</a></li>
 				{/each}
 			</ul>
 		</div>

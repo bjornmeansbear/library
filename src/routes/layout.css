@@ -333,32 +333,9 @@ a:hover {
 	margin: 0.5rem 0 0;
 	padding: 0;
 }
-.elsewhere li {
-	padding: 0.25rem 0;
-}
-.elsewhere .what {
-	display: block;
-	color: var(--color-text-muted);
-}
 .elsewhere a {
-	font-weight: 700;
-}
-.elsewhere .note {
-	display: block;
-	color: var(--color-text-muted);
-}
-@media (min-width: 40rem) {
-	.elsewhere {
-		display: grid;
-		grid-template-columns: max-content minmax(0, 1fr);
-		column-gap: 1.5rem;
-	}
-	.elsewhere li {
-		display: grid;
-		grid-template-columns: subgrid;
-		grid-column: 1 / -1;
-		align-items: baseline;
-	}
+	display: inline-block;
+	padding: 0.1875rem 0; /* with the line height, a 24px target */
 }
 .small-print {
 	color: var(--color-text-muted);
