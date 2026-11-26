@@ -6,4 +6,4 @@ It is also a type specimen. Each spine is set in one of thirteen free/libre and 
 
 {faces}
 
-Drawn from library.wjerk.shop on {date}; the whole catalogue is open at library.wjerk.shop/library.json. Typeset with Bjook (HTML and CSS, printed by WeasyPrint), bjornmeansbook.com. Any new text by Kristian Bjørnard is CC BY-SA 4.0. The books themselves, their titles and everything else about them, belong to their authors and publishers. A Wjerk project.
+Drawn from library.wjerk.shop on {date}; the whole catalogue is open at library.wjerk.shop/library.json. The engraving of a book is in the public domain. Typeset with Bjook (HTML and CSS, printed by WeasyPrint), bjornmeansbook.com. Any new text by Kristian Bjørnard is CC BY-SA 4.0. The books themselves, their titles and everything else about them, belong to their authors and publishers. A Wjerk project.
