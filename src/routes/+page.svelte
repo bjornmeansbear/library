@@ -68,6 +68,21 @@
 	};
 	const shown = $derived(new Set(books.filter(matches).map((b) => b.slug)));
 
+	// The blurb under the title says what's on show, in a sentence: which
+	// shelf, author, search… and how many. It's also what screen readers hear
+	// when the shelf changes.
+	const FORMAT_PLURAL = { book: 'books', film: 'films', music: 'albums', journal: 'journals', zine: 'zines' } as Record<string, string>;
+	const scope = $derived.by(() => {
+		const parts: string[] = [];
+		if (facet?.kind === 'tag') parts.push(`the ${facet.value} shelf`);
+		else if (facet?.kind === 'author') parts.push(`the books by ${facet.value}`);
+		else if (facet?.kind === 'publisher') parts.push(`the books from ${facet.value}`);
+		else if (facet?.kind === 'year') parts.push(`the books published in ${facet.value}`);
+		else if (facet?.kind === 'format') parts.push(`the ${FORMAT_PLURAL[facet.value] ?? facet.value}`);
+		if (words.length) parts.push(`${parts.length ? 'matching' : 'everything matching'} “${query.trim()}”`);
+		return parts.join(', ');
+	});
+
 	// The shelf label: a card on the front of the first board, the way a
 	// library labels a shelf. It says what's on show and how many.
 	const firstShown = $derived(books.find((b) => shown.has(b.slug))?.slug ?? null);
@@ -114,9 +129,17 @@
 	<div class="grid gap-x-[clamp(2rem,5vw,5rem)] min-[55rem]:grid-cols-2 min-[55rem]:items-start">
 		<div>
 			<h1 class="m-0 text-[clamp(3rem,1rem+11vw,12rem)] min-[55rem]:text-[clamp(5rem,1rem+8vw,10rem)] leading-[0.95] tracking-[-0.02em]">Library</h1>
-			<p class="mt-4 mb-0 max-w-[36rem]">
-				<a href="https://kristian.bjornard.com/">Kristian Bjørnard’s</a> library: {books.length} books, filed by title the way they are on his office shelves! 
+			<p class="mt-4 mb-0 max-w-[36rem]" aria-live="polite">
+				<a href="https://kristian.bjornard.com/">Kristian Bjørnard’s</a> library{#if scope}, <strong>{scope}</strong>{/if}:
+				{#if !scope}
+					{books.length} books, filed by title the way they are on his office shelves!
+				{:else if shown.size}
+					<strong>{shown.size}</strong> of {books.length} books, filed by title the way they are on his office shelves.
+				{:else}
+					nothing here yet.
+				{/if}
 			</p>
+			{#if intro}<p class="mt-4 mb-0 max-w-[36rem] whitespace-pre-line">{intro}</p>{/if}
 		</div>
 		<div>
 			<form class="mt-8 min-[55rem]:mt-0 flex flex-wrap items-end gap-x-4 gap-y-2" role="search" onsubmit={(e) => e.preventDefault()}>
@@ -152,21 +175,8 @@
 					</label>
 				{/if}
 				<!-- The count shows on the shelf label; this says it to screen readers. -->
-				<p class="visually-hidden" aria-live="polite">
-					{#if words.length || facet}
-						{shown.size} of {books.length} {shown.size === 1 ? 'book' : 'books'}
-					{/if}
-				</p>
 			</form>
 
-			{#if facet}
-				<!-- On screen, the shelf label says this; here for screen readers. -->
-				<p class="visually-hidden">
-					{facet.kind === 'format' ? 'Format:' : facet.kind === 'year' ? 'Published in' : facet.kind === 'tag' ? 'Tagged' : facet.kind === 'author' ? 'By' : 'Published by'}
-					{facet.value}
-				</p>
-				{#if intro}<p class="mt-4 mb-0 max-w-[36rem] whitespace-pre-line">{intro}</p>{/if}
-			{/if}
 		</div>
 	</div>
 </header>
