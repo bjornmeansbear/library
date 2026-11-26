@@ -4181,5 +4181,466 @@
 		"pages": 256,
 		"dimensions": null,
 		"lcc": "HM851 .O374 2019"
+	},
+	"9780714864709": {
+		"key": "/books/OL25988249M",
+		"title": "Fviken",
+		"subtitle": null,
+		"authors": [
+			"Magnus Nilsson"
+		],
+		"publishers": [
+			"Phaidon Press"
+		],
+		"year": "2012",
+		"pages": 271,
+		"dimensions": null,
+		"lcc": "TX945.5.F38 N54 2012"
+	},
+	"9781619493919": {
+		"key": "/books/OL38218926M",
+		"title": "Walden",
+		"subtitle": null,
+		"authors": [
+			"Henry David Thoreau"
+		],
+		"publishers": [
+			"Empire Books"
+		],
+		"year": "2012",
+		"pages": 262,
+		"dimensions": null,
+		"lcc": null
+	},
+	"9780307279460": {
+		"key": "/books/OL9345866M",
+		"title": "A Walk in the Woods",
+		"subtitle": "Rediscovering America on the Appalachian Trail",
+		"authors": [
+			"Bill Bryson"
+		],
+		"publishers": [
+			"Anchor Books"
+		],
+		"year": "2007",
+		"pages": 416,
+		"dimensions": "6.8 x 4.1 x 1.3 inches",
+		"lcc": "F106 .B92 2007"
+	},
+	"9780143114963": {
+		"key": "/books/OL24225704M",
+		"title": "In Defense of Food",
+		"subtitle": null,
+		"authors": [
+			"Michael Pollan"
+		],
+		"publishers": [
+			"Penguin Books",
+			"Penguin Press"
+		],
+		"year": "2009",
+		"pages": 244,
+		"dimensions": null,
+		"lcc": "RA784.P643 2009"
+	},
+	"9780143038580": {
+		"key": "/books/OL7361725M",
+		"title": "The Omnivore's Dilemma",
+		"subtitle": "A Natural History of Four Meals",
+		"authors": [
+			"Michael Pollan"
+		],
+		"publishers": [
+			"Penguin Books"
+		],
+		"year": "2008",
+		"pages": 450,
+		"dimensions": null,
+		"lcc": "GT2850.P65 2006"
+	},
+	"9780812992946": {
+		"key": "/books/OL25879719M",
+		"title": "The future",
+		"subtitle": "six drivers of global change",
+		"authors": [
+			"Al Gore"
+		],
+		"publishers": [
+			"Random House"
+		],
+		"year": "2013",
+		"pages": 558,
+		"dimensions": null,
+		"lcc": "HM831 .G685 2013"
+	},
+	"9780060852566": {
+		"key": "/books/OL9950889M",
+		"title": "Animal, Vegetable, Miracle",
+		"subtitle": "A Year of Food Life (P.S.)",
+		"authors": [
+			"Barbara Kingsolver",
+			"Camille Kingsolver",
+			"Steven L. Hopp"
+		],
+		"publishers": [
+			"Harper Perennial"
+		],
+		"year": "2008",
+		"pages": 400,
+		"dimensions": "8 x 5.3 x 1 inches",
+		"lcc": null
+	},
+	"9781597261005": {
+		"key": "/books/OL8893183M",
+		"title": "The Designer's Atlas of Sustainability",
+		"subtitle": "Charting the Conceptual Landscape through Economy, Ecology, and Culture",
+		"authors": [
+			"Ann Thorpe"
+		],
+		"publishers": [
+			"Island Press"
+		],
+		"year": "2007",
+		"pages": 240,
+		"dimensions": "9.9 x 7.9 x 0.5 inches",
+		"lcc": null
+	},
+	"9780679740391": {
+		"key": "/books/OL1398731M",
+		"title": "The evolution of useful things",
+		"subtitle": null,
+		"authors": [
+			"Henry Petroski"
+		],
+		"publishers": [
+			"Vintage Books"
+		],
+		"year": "1994",
+		"pages": 288,
+		"dimensions": null,
+		"lcc": "T212 .P465 1994"
+	},
+	"9780679734161": {
+		"key": "/books/OL1566661M",
+		"title": "To engineer is human",
+		"subtitle": "the role of failure in successful design",
+		"authors": [
+			"Henry Petroski"
+		],
+		"publishers": [
+			"Vintage Books",
+			"Vintage"
+		],
+		"year": "1992",
+		"pages": 251,
+		"dimensions": null,
+		"lcc": "TA174 .P474 1992"
+	},
+	"9780465041664": {
+		"key": "/books/OL7593642M",
+		"title": "The Impossible Will Take a Little While",
+		"subtitle": "A Citizen's Guide to Hope in a Time of Fear",
+		"authors": [
+			"Paul Rogat Loeb"
+		],
+		"publishers": [
+			"Basic Books"
+		],
+		"year": "2004",
+		"pages": 422,
+		"dimensions": null,
+		"lcc": null
+	},
+	"9780394823379": {
+		"key": "/books/OL25191986M",
+		"title": "The Lorax",
+		"subtitle": null,
+		"authors": [
+			"Dr. Seuss"
+		],
+		"publishers": [
+			"Random House"
+		],
+		"year": "2012",
+		"pages": 70,
+		"dimensions": "29 x  x  centimeters",
+		"lcc": "PZ8.3.G276 Lo"
+	},
+	"9780061252792": {
+		"key": "/books/OL9244246M",
+		"title": "Ecology of Commerce, The",
+		"subtitle": "A Declaration of Sustainability (Collins Business Essentials)",
+		"authors": [
+			"Paul Hawken"
+		],
+		"publishers": [
+			"Collins"
+		],
+		"year": "2008",
+		"pages": 288,
+		"dimensions": "8 x 5.3 x 0.6 inches",
+		"lcc": null
+	},
+	"9783037781067": {
+		"key": "/books/OL9355185M",
+		"title": "Super Normal",
+		"subtitle": "Sensations of the Ordinary",
+		"authors": [
+			"Naoto Fukasawa",
+			"Jasper Morrison"
+		],
+		"publishers": [
+			"Lars Müller Publishers"
+		],
+		"year": "2007",
+		"pages": 112,
+		"dimensions": "7.9 x 5.8 x 0.6 inches",
+		"lcc": null
+	},
+	"9783764389345": {
+		"key": "/books/OL25534868M",
+		"title": "Limited language",
+		"subtitle": "rewriting design : responding to a feedback culture",
+		"authors": [
+			"Colin Davies"
+		],
+		"publishers": [
+			"Birkhäuser Verlag"
+		],
+		"year": "2010",
+		"pages": 288,
+		"dimensions": null,
+		"lcc": "NC997 .D37 2010"
+	},
+	"9781584799184": {
+		"key": "/books/OL26416918M",
+		"title": "The beekeeper's bible : bees, honey, recipes & other home uses",
+		"subtitle": null,
+		"authors": [
+			"Jones, Richard"
+		],
+		"publishers": [
+			"Stewart, Tabori & Chang"
+		],
+		"year": "2011",
+		"pages": null,
+		"dimensions": null,
+		"lcc": "SF523 .J736 2011"
+	},
+	"9783037784945": {
+		"key": "/books/OL28610621M",
+		"title": "Climates",
+		"subtitle": "Architecture and the Planetary Imaginary",
+		"authors": [
+			"James Graham",
+			"Caitlin Blanchfield",
+			"Alissa Anderson",
+			"Jordan Carver",
+			"Jacob Moore"
+		],
+		"publishers": [
+			"Lars Muller Publishers"
+		],
+		"year": "2016",
+		"pages": 384,
+		"dimensions": null,
+		"lcc": "NA2541.C544 2016"
+	},
+	"9780974903378": {
+		"key": "/books/OL11806113M",
+		"title": "Women in Green",
+		"subtitle": "Voices of Sustainable Design",
+		"authors": [
+			"Kira Gould and Lance Hosey"
+		],
+		"publishers": [
+			"Ecotone Publishing",
+			"Ecotone LLC"
+		],
+		"year": "2007",
+		"pages": 256,
+		"dimensions": "7.4 x 6 x 0.8 inches",
+		"lcc": "NA2542.36 .G68 2007"
+	},
+	"9789461400529": {
+		"key": "/books/OL44437102M",
+		"title": "A sustainist lexicon",
+		"subtitle": "seven entries to recast the future - rethinking design and heritage",
+		"authors": [
+			"Michiel Schwarz"
+		],
+		"publishers": [
+			"Architectura & Natura Press"
+		],
+		"year": "2016",
+		"pages": 156,
+		"dimensions": null,
+		"lcc": "NK1520 .S39 2016"
+	},
+	"9780807085110": {
+		"key": "/books/OL1867398M",
+		"title": "A land",
+		"subtitle": null,
+		"authors": [
+			"Jacquetta Hawkes"
+		],
+		"publishers": [
+			"Beacon Press"
+		],
+		"year": "1991",
+		"pages": 248,
+		"dimensions": null,
+		"lcc": "GF551 .H3 1991"
+	},
+	"9780714866918": {
+		"key": "/books/OL26824617M",
+		"title": "René Redzepi: A Work in Progress",
+		"subtitle": null,
+		"authors": [
+			"René Redzepi"
+		],
+		"publishers": [
+			"Phaidon Press"
+		],
+		"year": "2013",
+		"pages": 648,
+		"dimensions": null,
+		"lcc": "TX722.A1 R45 2013"
+	},
+	"9780714868721": {
+		"key": "/books/OL27193691M",
+		"title": "The Nordic cookbook",
+		"subtitle": null,
+		"authors": [
+			"Magnus Nilsson"
+		],
+		"publishers": [
+			"Phaidon"
+		],
+		"year": "2015",
+		"pages": 767,
+		"dimensions": null,
+		"lcc": "TX722.A1 N55 2015"
+	},
+	"9780442276164": {
+		"key": "/books/OL3501628M",
+		"title": "Design for human scale",
+		"subtitle": null,
+		"authors": [
+			"Victor J. Papanek"
+		],
+		"publishers": [
+			"Van Nostrand Reinhold Co."
+		],
+		"year": "1983",
+		"pages": 167,
+		"dimensions": null,
+		"lcc": "NK1510 .P27 1983"
+	},
+	"9788887942675": {
+		"key": "/books/OL59733279M",
+		"title": "Autoprogettazione?",
+		"subtitle": null,
+		"authors": [
+			"Enzo Mari"
+		],
+		"publishers": [
+			"Corriani"
+		],
+		"year": "2002",
+		"pages": 61,
+		"dimensions": null,
+		"lcc": "NK1535.M28 A4 2014"
+	},
+	"9780814764060": {
+		"key": "/books/OL25046753M",
+		"title": "The social media reader",
+		"subtitle": null,
+		"authors": [
+			"Michael Mandiberg"
+		],
+		"publishers": [
+			"New York University Press"
+		],
+		"year": "2012",
+		"pages": 289,
+		"dimensions": null,
+		"lcc": "HM742 .S6284 2012"
+	},
+	"9780981484655": {
+		"key": "/books/OL27181202M",
+		"title": "Wabi-sabi",
+		"subtitle": "further thoughts",
+		"authors": [
+			"Leonard Koren"
+		],
+		"publishers": [
+			"Imperfect Publishing"
+		],
+		"year": "2015",
+		"pages": 94,
+		"dimensions": null,
+		"lcc": "BH221.J3 K67 2015"
+	},
+	"9780745663890": {
+		"key": "/books/OL30393103M",
+		"title": "The philosophy of design",
+		"subtitle": null,
+		"authors": [
+			"Glenn Parsons"
+		],
+		"publishers": [
+			"Polity Press"
+		],
+		"year": "2015",
+		"pages": null,
+		"dimensions": null,
+		"lcc": "NK1505 .P37 2015"
+	},
+	"9780714843056": {
+		"key": "/books/OL3320820M",
+		"title": "Hella Jongerius",
+		"subtitle": null,
+		"authors": [
+			"Louise Schouwenberg"
+		],
+		"publishers": [
+			"Phaidon"
+		],
+		"year": "2003",
+		"pages": 148,
+		"dimensions": null,
+		"lcc": "NK1535.J65 A4 2003"
+	},
+	"9781981300358": {
+		"key": "/books/OL56352055M",
+		"title": "2047 Short Stories from Our Common Future",
+		"subtitle": null,
+		"authors": [
+			"Tanja Bisgaard"
+		],
+		"publishers": [
+			"CreateSpace Independent Publishing Platform"
+		],
+		"year": "2017",
+		"pages": 170,
+		"dimensions": null,
+		"lcc": null
+	},
+	"9780700618217": {
+		"key": "/books/OL26823079M",
+		"title": "Counterculture Green: The Whole Earth Catalog and American Environmentalism (Culture America)",
+		"subtitle": null,
+		"authors": [
+			"Andrew G. Kirk"
+		],
+		"publishers": [
+			"University Press of Kansas",
+			"Univ Pr of Kansas"
+		],
+		"year": "2007",
+		"pages": 320,
+		"dimensions": null,
+		"lcc": "GE197.K58 2007"
 	}
 }
