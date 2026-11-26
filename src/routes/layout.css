@@ -321,9 +321,9 @@ a:hover {
 }
 
 /* ---- Footer ----------------------------------------------------------------
-   A rule across the top, plain lists. The Elsewhere list is
-   kristian.bjornard.com's: what / link / note, stacked on a phone, and from
-   40rem each row on a subgrid so the columns line up down the list. The
+   A rule across the top, then plain lists with no rules between rows. The
+   Elsewhere list is kristian.bjornard.com's: what / link / note, stacked
+   on a phone, and from 40rem each row on a subgrid so the columns line up. The
    labels and notes are --color-text-muted: 7.34:1 light, 10.49:1 dark. */
 .site-footer {
 	border-top: 2px solid var(--color-text);
@@ -332,11 +332,9 @@ a:hover {
 	list-style: none;
 	margin: 0.5rem 0 0;
 	padding: 0;
-	border-top: 1px solid var(--color-text-muted);
 }
 .elsewhere li {
-	border-bottom: 1px solid var(--color-text-muted);
-	padding: 0.5rem 0;
+	padding: 0.25rem 0;
 }
 .elsewhere .what {
 	display: block;
