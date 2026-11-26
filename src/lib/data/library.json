@@ -124,7 +124,7 @@
 				"dialectic",
 				"dieter-rams-as-little-design-as-possible",
 				"digital-design-theory-readings-from-the-field",
-				"design-when-everybody-design",
+				"design-when-everybody-designs",
 				"the-design-of-everyday-things",
 				"the-design-of-the-unix-operating-system",
 				"the-design-encyclopedia",
@@ -221,7 +221,8 @@
 				"CreateSpace Independent Publishing Platform"
 			],
 			"tags": [
-				"Sustainabilitist"
+				"Sustainabilitist",
+				"Pragmatic Utopian"
 			],
 			"year": "2017",
 			"isbn10": "198130035X",
@@ -1201,7 +1202,9 @@
 			"publishers": [
 				"Lund Humphries"
 			],
-			"tags": [],
+			"tags": [
+				"Pragmatic Utopian"
+			],
 			"year": "2024",
 			"isbn10": "1848226519",
 			"isbn13": "9781848226517",
@@ -2964,7 +2967,8 @@
 				"University Press of Kansas"
 			],
 			"tags": [
-				"Sustainabilitist"
+				"Sustainabilitist",
+				"Pragmatic Utopian"
 			],
 			"year": "2007",
 			"isbn10": "070061821X",
@@ -3034,7 +3038,8 @@
 			"tags": [
 				"Sustainabilitist",
 				"Circular Economy",
-				"Product Design"
+				"Product Design",
+				"Pragmatic Utopian"
 			],
 			"year": "2002",
 			"isbn10": "0865475873",
@@ -3365,7 +3370,8 @@
 			],
 			"tags": [
 				"Sustainabilitist",
-				"Circular Economy"
+				"Circular Economy",
+				"Pragmatic Utopian"
 			],
 			"year": "2007",
 			"isbn10": "0805087222",
@@ -3626,7 +3632,8 @@
 				"Van Nostrand Reinhold Company"
 			],
 			"tags": [
-				"Sustainabilitist"
+				"Sustainabilitist",
+				"Pragmatic Utopian"
 			],
 			"year": "1983",
 			"isbn10": "0442276168",
@@ -3728,7 +3735,8 @@
 			],
 			"tags": [
 				"Sustainabilitist",
-				"Product Design"
+				"Product Design",
+				"Pragmatic Utopian"
 			],
 			"year": "1971",
 			"isbn10": "0394470362",
@@ -3762,7 +3770,8 @@
 			],
 			"tags": [
 				"Sustainabilitist",
-				"Architecture"
+				"Architecture",
+				"Pragmatic Utopian"
 			],
 			"year": "2009",
 			"isbn10": "184788217X",
@@ -3828,7 +3837,8 @@
 			"tags": [
 				"Sustainabilitist",
 				"Product Design",
-				"Architecture"
+				"Architecture",
+				"Pragmatic Utopian"
 			],
 			"year": "2009",
 			"isbn10": "1933820004",
@@ -4047,8 +4057,8 @@
 		},
 		{
 			"id": "15e55aa28d7180e589a9fca0dca119d0",
-			"slug": "design-when-everybody-design",
-			"title": "Design, When Everybody Design",
+			"slug": "design-when-everybody-designs",
+			"title": "Design, When Everybody Designs",
 			"format": "book",
 			"subtitle": "An Introduction to DEsign for Social Innovation",
 			"authors": [
@@ -4056,7 +4066,8 @@
 			],
 			"publishers": [],
 			"tags": [
-				"Sustainabilitist"
+				"Sustainabilitist",
+				"Pragmatic Utopian"
 			],
 			"year": null,
 			"isbn10": null,
@@ -6137,7 +6148,9 @@
 			"publishers": [
 				"The University of Chicago Press"
 			],
-			"tags": [],
+			"tags": [
+				"Pragmatic Utopian"
+			],
 			"year": "2006",
 			"isbn10": "0226817423",
 			"isbn13": "9780226817422",
@@ -6910,7 +6923,8 @@
 			"tags": [
 				"Sustainabilitist",
 				"Product Design",
-				"Architecture"
+				"Architecture",
+				"Pragmatic Utopian"
 			],
 			"year": "1995",
 			"isbn10": "0500278466",
@@ -7293,7 +7307,8 @@
 			],
 			"tags": [
 				"Sustainabilitist",
-				"Architecture"
+				"Architecture",
+				"Pragmatic Utopian"
 			],
 			"year": "1995",
 			"isbn10": "0140139966",
@@ -7608,7 +7623,9 @@
 			"publishers": [
 				"Thames & Hudson"
 			],
-			"tags": [],
+			"tags": [
+				"Pragmatic Utopian"
+			],
 			"year": "2015",
 			"isbn10": null,
 			"isbn13": null,
@@ -7898,7 +7915,8 @@
 			],
 			"tags": [
 				"Sustainabilitist",
-				"Product Design"
+				"Product Design",
+				"Pragmatic Utopian"
 			],
 			"year": "2005",
 			"isbn10": "0262201577",
@@ -8831,7 +8849,8 @@
 				"Sustainabilitist",
 				"Graphic Design",
 				"Product Design",
-				"Architecture"
+				"Architecture",
+				"Pragmatic Utopian"
 			],
 			"year": "2004",
 			"isbn10": "0714844012",
@@ -8960,7 +8979,9 @@
 			"publishers": [
 				"Harper Collins"
 			],
-			"tags": [],
+			"tags": [
+				"Pragmatic Utopian"
+			],
 			"year": "1994",
 			"isbn10": "0062510592",
 			"isbn13": "9780062510594",
@@ -9461,7 +9482,9 @@
 			"publishers": [
 				"Random House"
 			],
-			"tags": [],
+			"tags": [
+				"Pragmatic Utopian"
+			],
 			"year": "1980",
 			"isbn10": "0394739515",
 			"isbn13": "9780394739519",
@@ -10880,7 +10903,8 @@
 			],
 			"tags": [
 				"Sustainabilitist",
-				"Product Design"
+				"Product Design",
+				"Pragmatic Utopian"
 			],
 			"year": "2016",
 			"isbn10": "949209519X",
@@ -11234,7 +11258,8 @@
 			],
 			"tags": [
 				"Sustainabilitist",
-				"Product Design"
+				"Product Design",
+				"Pragmatic Utopian"
 			],
 			"year": "2005",
 			"isbn10": "0262693267",
@@ -11645,8 +11670,8 @@
 		},
 		{
 			"id": "14a55aa28d71810ca28cee7d713f8cf5",
-			"slug": "the-speculative-everything-design-function-and-social-dreami",
-			"title": "The Speculative Everything: Design, Function, and Social Dreaming",
+			"slug": "speculative-everything-design-function-and-social-dreaming",
+			"title": "Speculative Everything: Design, Function, and Social Dreaming",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -11656,7 +11681,9 @@
 			"publishers": [
 				"The MIT Press"
 			],
-			"tags": [],
+			"tags": [
+				"Pragmatic Utopian"
+			],
 			"year": "2013",
 			"isbn10": null,
 			"isbn13": null,
@@ -12259,7 +12286,8 @@
 				"Architectura & Natura Press"
 			],
 			"tags": [
-				"Sustainabilitist"
+				"Sustainabilitist",
+				"Pragmatic Utopian"
 			],
 			"year": "2016",
 			"isbn10": "9461400527",
@@ -12756,7 +12784,8 @@
 				"Random House"
 			],
 			"tags": [
-				"Sustainabilitist"
+				"Sustainabilitist",
+				"Pragmatic Utopian"
 			],
 			"year": "2002",
 			"isbn10": "0812969766",
@@ -13328,7 +13357,8 @@
 			],
 			"tags": [
 				"Sustainabilitist",
-				"Circular Economy"
+				"Circular Economy",
+				"Pragmatic Utopian"
 			],
 			"year": "2013",
 			"isbn10": "0865477485",
@@ -13944,7 +13974,8 @@
 			],
 			"tags": [
 				"Sustainabilitist",
-				"Climate Designer"
+				"Climate Designer",
+				"Pragmatic Utopian"
 			],
 			"year": "2009",
 			"isbn10": "0670021210",
@@ -14368,7 +14399,8 @@
 				"Abrams"
 			],
 			"tags": [
-				"Sustainabilitist"
+				"Sustainabilitist",
+				"Pragmatic Utopian"
 			],
 			"year": "2006",
 			"isbn10": "0810930951",
@@ -14401,7 +14433,8 @@
 				"Abrams"
 			],
 			"tags": [
-				"Sustainabilitist"
+				"Sustainabilitist",
+				"Pragmatic Utopian"
 			],
 			"year": "2011",
 			"isbn10": "0810997460",
