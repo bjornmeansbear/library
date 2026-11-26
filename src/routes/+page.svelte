@@ -203,19 +203,19 @@
 						</select>
 					</label>
 				{/if}
-				<!-- The count shows on the shelf label; this says it to screen readers. -->
 			</form>
+
+			<!-- The way out of a filter or search: a stamp, from wjavelength's
+			     yes/no votes, slapped on at a tilt beside the tools that set the
+			     filter. Goldenrod on Wjerk Black, the pairing the votes like best. -->
+			{#if facet || words.length}
+				<button type="button" class="stamp-all" onclick={() => ((query = ''), goto('/'))}>Show all the books</button>
+			{/if}
 
 		</div>
 	</div>
 </header>
 
-<!-- The way out of a filter or search: a stamp, from wjavelength's yes/no
-     votes, slapped on at a tilt over the top-left corner and staying put as
-     you scroll. Goldenrod on Wjerk Black, the pairing the votes like best. -->
-{#if facet || words.length}
-	<button type="button" class="stamp-all" onclick={() => ((query = ''), goto('/'))}>Show all the books</button>
-{/if}
 
 <!-- The shelves run nearly wall to wall; only the text above and below keeps the wide margins. -->
 <main class="bookcase px-[clamp(0.5rem,1.5vw,1rem)] pb-12">
@@ -243,7 +243,7 @@
 <!-- The footer, in a.wjerk.shop's order: what this is and how it works, the
      colophon, then everywhere else (the same list as kristian.bjornard.com),
      then the small print. -->
-<footer class="site-footer px-[clamp(1.5rem,6vw,6rem)] pt-8 pb-12 text-sm">
+<footer class="site-footer px-[clamp(1.5rem,6vw,6rem)] pb-12 text-sm">
 	<div class="grid gap-x-[clamp(2rem,4vw,4rem)] gap-y-8 min-[40rem]:grid-cols-2 min-[64rem]:grid-cols-3">
 		<div class="max-w-[40rem]">
 			<h2 class="m-0 text-sm">About</h2>

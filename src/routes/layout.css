@@ -186,39 +186,37 @@ a:hover {
 }
 
 /* ---- Show all the books: the stamp ---------------------------------------
-   From wjavelength's vote stamps: Basteleur, uppercase, a heavy rule in the
-   ink colour, tilted, landing with a quick scale-down. Fixed over the top
-   left, above the title, so the way back is always in reach while you
-   scroll a filtered shelf. Wjerk Goldenrod on Wjerk Black, 6.50:1 (AA):
-   the vote results' best-liked accent (94% yes) on their best-liked dark
-   ground. Paper and ink stay the same in dark mode, like the spines. Hover
-   and press invert it (goldenrod ground, black ink); the tilt never moves. Reduced motion: it simply appears. */
+   From wjavelength's vote stamps: Basteleur, uppercase, tilted -8deg,
+   landing with a quick scale-down; a 2px rule. It sits under the search and
+   shelf menu, the tools that set the filter. Cream (Wjerk White) on Wjerk
+   Navy, 9.55:1 (AAA): the one cool colour on a warm page, so it stands out
+   without shouting. Paper and ink stay the same in dark mode, like the
+   spines. Hover and press swap them (navy on cream); the tilt never moves.
+   Reduced motion: it simply appears. */
 .stamp-all {
-	position: fixed;
-	top: clamp(0.75rem, 2vw, 1.5rem);
-	left: clamp(0.75rem, 2vw, 1.5rem);
-	z-index: 10;
+	display: block;
+	margin-top: 1.25rem;
+	margin-left: 0.5rem; /* room for the tilt */
 	font-family: 'Basteleur', var(--font-sans);
 	font-weight: 700;
 	font-size: clamp(1rem, 0.75rem + 1vw, 1.5rem);
 	line-height: 1;
 	text-transform: uppercase;
 	padding: 0.35em 0.5em 0.25em;
-	border: 0.12em solid currentColor;
-	background: var(--wjerk-black);
-	color: var(--wjerk-goldenrod);
+	border: 2px solid var(--wjerk-navy);
+	background: var(--wjerk-navy);
+	color: var(--wjerk-white);
 	transform: rotate(-8deg);
 	cursor: pointer;
 	animation: stamp-in 150ms ease-out;
 }
 .stamp-all:hover,
 .stamp-all:active {
-	background: var(--wjerk-goldenrod);
-	color: var(--wjerk-black);
-	border-color: var(--wjerk-black);
+	background: var(--wjerk-white);
+	color: var(--wjerk-navy);
 }
 .stamp-all:focus-visible {
-	outline: 0.25rem solid var(--wjerk-goldenrod);
+	outline: 0.25rem solid var(--wjerk-navy);
 	outline-offset: 0.25rem;
 }
 @keyframes stamp-in {
@@ -321,13 +319,9 @@ a:hover {
 }
 
 /* ---- Footer ----------------------------------------------------------------
-   A rule across the top, then plain lists with no rules between rows. The
-   Elsewhere list is kristian.bjornard.com's: what / link / note, stacked
-   on a phone, and from 40rem each row on a subgrid so the columns line up. The
-   labels and notes are --color-text-muted: 7.34:1 light, 10.49:1 dark. */
-.site-footer {
-	border-top: 2px solid var(--color-text);
-}
+   No rule above it, no rules inside: three plain columns (About, Colophon,
+   Elsewhere), stacked on a phone. Elsewhere's group labels and the small
+   print are --color-text-muted: 7.34:1 light, 10.49:1 dark. */
 /* Elsewhere: a few small groups, each under a muted label, two groups
    across where the column has room. */
 .elsewhere {
