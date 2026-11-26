@@ -188,12 +188,15 @@
 			"publishers": [
 				"Contemporary Museum"
 			],
-			"tags": [],
+			"tags": [
+				"Conceptual Art",
+				"Art"
+			],
 			"year": "2011",
 			"isbn10": "0970098618",
 			"isbn13": "9780970098610",
 			"bookshopIsbn": null,
-			"onBookshop": null,
+			"onBookshop": false,
 			"where": "GD Office",
 			"notes": null,
 			"pages": null,
@@ -207,10 +210,42 @@
 			"face": "gentium"
 		},
 		{
+			"id": "42455aa28d7181a4b9c2f6738d24a248",
+			"slug": "2047-short-stories-from-our-common-future",
+			"title": "2047 Short Stories from Our Common Future",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Tanja Bisgaard"
+			],
+			"publishers": [
+				"CreateSpace Independent Publishing Platform"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2017",
+			"isbn10": "198130035X",
+			"isbn13": "9781981300358",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "N/A",
+			"notes": "I designed the cover.",
+			"pages": 170,
+			"height": 9.58,
+			"thickness": 0.57,
+			"measured": false,
+			"sized": "pages",
+			"tint": "yellow-1",
+			"shelf": null,
+			"position": null,
+			"face": "league-gothic"
+		},
+		{
 			"id": "14a55aa28d7181b79849c5118c91a235",
 			"slug": "2600-the-hacker-quarterly",
 			"title": "2600: The Hacker Quarterly",
-			"format": "book",
+			"format": "journal",
 			"subtitle": null,
 			"authors": [],
 			"publishers": [],
@@ -230,7 +265,7 @@
 			"tint": "brown-1",
 			"shelf": "GT1S1",
 			"position": 2,
-			"face": "league-gothic"
+			"face": "gentium"
 		},
 		{
 			"id": "14a55aa28d718188877bfef78257bc09",
@@ -247,7 +282,7 @@
 			"isbn10": "8477885354",
 			"isbn13": "9788477885351",
 			"bookshopIsbn": null,
-			"onBookshop": null,
+			"onBookshop": false,
 			"where": "GD Office",
 			"notes": null,
 			"pages": null,
@@ -270,7 +305,9 @@
 			"publishers": [
 				"AIGA"
 			],
-			"tags": [],
+			"tags": [
+				"Design"
+			],
 			"year": null,
 			"isbn10": null,
 			"isbn13": null,
@@ -308,7 +345,7 @@
 			"year": "1993",
 			"isbn10": "1878271423",
 			"isbn13": "9781878271426",
-			"bookshopIsbn": null,
+			"bookshopIsbn": "9781616897987",
 			"onBookshop": null,
 			"where": "GD Office",
 			"notes": null,
@@ -510,6 +547,36 @@
 			"face": "crimson-pro"
 		},
 		{
+			"id": "42455aa28d7181e18454f0b72ef8928f",
+			"slug": "ambient-1-music-for-airports",
+			"title": "Ambient 1/Music For Airports",
+			"format": "music",
+			"subtitle": null,
+			"authors": [
+				"Brian Eno"
+			],
+			"publishers": [],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": null,
+			"isbn10": null,
+			"isbn13": null,
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": null,
+			"height": 4.92,
+			"thickness": 0.41,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "red-1",
+			"shelf": null,
+			"position": null,
+			"face": "eb-garamond"
+		},
+		{
 			"id": "14a55aa28d7181a689e3d42b4ae486e9",
 			"slug": "america-the-book-a-citizens-guide-to-democracy-inaction",
 			"title": "America (The Book): A Citizens Guide to Democracy Inaction",
@@ -700,6 +767,40 @@
 			"shelf": null,
 			"position": null,
 			"face": "newsreader"
+		},
+		{
+			"id": "42455aa28d7181daaab8e127f8fb4e33",
+			"slug": "animal-vegetable-miracle",
+			"title": "Animal, Vegetable, Miracle",
+			"format": "book",
+			"subtitle": "A Year of Food Life",
+			"authors": [
+				"Barbara Kingsolver",
+				"Camille Kingsolver",
+				"Steven L. Hopp"
+			],
+			"publishers": [
+				"Harper Perennial"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2008",
+			"isbn10": "0060852569",
+			"isbn13": "9780060852566",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 400,
+			"height": 7.99,
+			"thickness": 0.98,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "orange-1",
+			"shelf": null,
+			"position": null,
+			"face": "eb-garamond"
 		},
 		{
 			"id": "14a55aa28d71816e9be4eae74ca30e84",
@@ -1425,6 +1526,38 @@
 			"face": "young-serif"
 		},
 		{
+			"id": "42455aa28d7181138aede2611eefd0de",
+			"slug": "autoprogettazione",
+			"title": "Autoprogettazione",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Enzo Mari"
+			],
+			"publishers": [
+				"Corriani"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2002",
+			"isbn10": "8887942676",
+			"isbn13": "9788887942675",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Not mine (recommended)",
+			"notes": null,
+			"pages": 61,
+			"height": 8.3,
+			"thickness": 0.3,
+			"measured": false,
+			"sized": "pages",
+			"tint": "goldenrod-3",
+			"shelf": null,
+			"position": null,
+			"face": "crimson-pro"
+		},
+		{
 			"id": "14a55aa28d7181168838ecf1e32d3d04",
 			"slug": "baltimore-open-city",
 			"title": "Baltimore: Open City",
@@ -1447,7 +1580,7 @@
 			"thickness": 0.79,
 			"measured": false,
 			"sized": "guessed",
-			"tint": "gray-2",
+			"tint": "cornflower-2",
 			"shelf": null,
 			"position": null,
 			"face": "fraunces"
@@ -1477,7 +1610,7 @@
 			"thickness": 0.39,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "cornflower-3",
+			"tint": "gray-3",
 			"shelf": "GT1S2",
 			"position": 1,
 			"face": "basteleur"
@@ -1602,6 +1735,38 @@
 			"shelf": "GT1S2",
 			"position": 4,
 			"face": "eb-garamond"
+		},
+		{
+			"id": "42455aa28d71813cbb0bf197dc27579b",
+			"slug": "the-beekeeper-s-bible",
+			"title": "The Beekeeper’s Bible",
+			"format": "book",
+			"subtitle": "Bees, Honey, Recipes & Other Home Uses",
+			"authors": [
+				"Richard Jones"
+			],
+			"publishers": [
+				"Stewart, Tabori & Chang"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2011",
+			"isbn10": "1584799188",
+			"isbn13": "9781584799184",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 413,
+			"height": 10.24,
+			"thickness": 1.18,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "purple-3",
+			"shelf": null,
+			"position": null,
+			"face": "space-mono"
 		},
 		{
 			"id": "14a55aa28d7181b58a2bdcf7a5bf4018",
@@ -2269,6 +2434,42 @@
 			"face": "libre-franklin"
 		},
 		{
+			"id": "42455aa28d7181538f6ff91d4161f959",
+			"slug": "climates",
+			"title": "Climates",
+			"format": "book",
+			"subtitle": "Architecture and the Planetary Imaginary",
+			"authors": [
+				"James Graham",
+				"Caitlin Blanchfield",
+				"Alissa Anderson",
+				"Jordan Carver",
+				"Jacob Moore"
+			],
+			"publishers": [
+				"Lars Müller Publishers"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2016",
+			"isbn10": "3037784946",
+			"isbn13": "9783037784945",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "MISSING!",
+			"notes": null,
+			"pages": 384,
+			"height": 9.45,
+			"thickness": 1.11,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "red-2",
+			"shelf": null,
+			"position": null,
+			"face": "crimson-pro"
+		},
+		{
 			"id": "14a55aa28d71815082ecdb4e386426bf",
 			"slug": "codex-the-journal-of-letterforms-fall-2012",
 			"title": "Codex: The Journal of Letterforms | Fall 2012",
@@ -2296,7 +2497,7 @@
 			"tint": "pink-1",
 			"shelf": "GT1S2",
 			"position": 16,
-			"face": "plex-mono"
+			"face": "libre-franklin"
 		},
 		{
 			"id": "14a55aa28d7181838218dd64f87c61dd",
@@ -2326,7 +2527,7 @@
 			"tint": "pink-1",
 			"shelf": "GT1S2",
 			"position": 17,
-			"face": "plex-mono"
+			"face": "libre-franklin"
 		},
 		{
 			"id": "14a55aa28d718199bff8f66121ede355",
@@ -2356,7 +2557,7 @@
 			"tint": "pink-1",
 			"shelf": "GT1S2",
 			"position": 18,
-			"face": "plex-mono"
+			"face": "libre-franklin"
 		},
 		{
 			"id": "18955aa28d71800cad52f3065e65d3b3",
@@ -2678,6 +2879,38 @@
 			"face": "basteleur"
 		},
 		{
+			"id": "42455aa28d7181518999dd79c3ccc223",
+			"slug": "counterculture-green",
+			"title": "Counterculture Green",
+			"format": "book",
+			"subtitle": "The Whole Earth Catalog and American Environmentalism",
+			"authors": [
+				"Andrew G. Kirk"
+			],
+			"publishers": [
+				"University Press of Kansas"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2007",
+			"isbn10": "070061821X",
+			"isbn13": "9780700618217",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "MICA Decker",
+			"notes": null,
+			"pages": 320,
+			"height": 9.81,
+			"thickness": 0.95,
+			"measured": false,
+			"sized": "pages",
+			"tint": "pink-3",
+			"shelf": null,
+			"position": null,
+			"face": "newsreader"
+		},
+		{
 			"id": "14a55aa28d7181d59d0fc3b4ae77e2fe",
 			"slug": "a-country-of-cities-a-manifesto-for-an-urban-america",
 			"title": "A Country of Cities: A Manifesto for an Urban America",
@@ -2694,7 +2927,7 @@
 			"isbn10": "1935202170",
 			"isbn13": "9781935202172",
 			"bookshopIsbn": null,
-			"onBookshop": null,
+			"onBookshop": true,
 			"where": "GD Office",
 			"notes": null,
 			"pages": 251,
@@ -3283,6 +3516,38 @@
 			"face": "crimson-pro"
 		},
 		{
+			"id": "42455aa28d71810592a4cb28924b23f9",
+			"slug": "design-for-human-scale",
+			"title": "Design for Human Scale",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Victor Papanek"
+			],
+			"publishers": [
+				"Van Nostrand Reinhold Company"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "1983",
+			"isbn10": "0442276168",
+			"isbn13": "9780442276164",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 167,
+			"height": 9.45,
+			"thickness": 0.57,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "green-3",
+			"shelf": null,
+			"position": null,
+			"face": "bricolage"
+		},
+		{
 			"id": "14a55aa28d7181cb80aacc264a1b0aee",
 			"slug": "design-for-society",
 			"title": "Design for Society",
@@ -3313,7 +3578,7 @@
 			"tint": "orange-3",
 			"shelf": "GT1S3",
 			"position": 10,
-			"face": "bricolage"
+			"face": "gentium"
 		},
 		{
 			"id": "14a55aa28d7181a8b4dae11845900544",
@@ -3729,6 +3994,38 @@
 			"face": "plex-mono"
 		},
 		{
+			"id": "42455aa28d71811fb501c61594d29169",
+			"slug": "the-designer-s-atlas-of-sustainability",
+			"title": "The Designer’s Atlas of Sustainability",
+			"format": "book",
+			"subtitle": "Charting the Conceptual Landscape through Economy, Ecology, and Culture",
+			"authors": [
+				"Ann Thorpe"
+			],
+			"publishers": [
+				"Island Press"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2007",
+			"isbn10": "1597261009",
+			"isbn13": "9781597261005",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 240,
+			"height": 9.88,
+			"thickness": 0.51,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "red-3",
+			"shelf": null,
+			"position": null,
+			"face": "crimson-pro"
+		},
+		{
 			"id": "14a55aa28d7181a79673dc53504442ba",
 			"slug": "designing-design",
 			"title": "Designing Design",
@@ -3756,10 +4053,10 @@
 			"thickness": 1.32,
 			"measured": false,
 			"sized": "pages",
-			"tint": "red-1",
+			"tint": "green-1",
 			"shelf": "GT1S3",
 			"position": 20,
-			"face": "crimson-pro"
+			"face": "space-mono"
 		},
 		{
 			"id": "14a55aa28d71811ea564cb934807e7ee",
@@ -4217,6 +4514,36 @@
 			"face": "work-sans"
 		},
 		{
+			"id": "42455aa28d7181f38071c91638555bca",
+			"slug": "discreet-music",
+			"title": "Discreet Music",
+			"format": "music",
+			"subtitle": null,
+			"authors": [
+				"Brian Eno"
+			],
+			"publishers": [],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": null,
+			"isbn10": null,
+			"isbn13": null,
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": null,
+			"height": 4.92,
+			"thickness": 0.41,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "orange-2",
+			"shelf": null,
+			"position": null,
+			"face": "plex-mono"
+		},
+		{
 			"id": "14a55aa28d71819eb412f94e779677b2",
 			"slug": "distinction-a-social-critique-of-the-judgement-of-taste",
 			"title": "Distinction: A Social Critique of the Judgement of Taste",
@@ -4495,6 +4822,38 @@
 			"face": "crimson-pro"
 		},
 		{
+			"id": "42455aa28d7181e09002cffb07a6422f",
+			"slug": "the-ecology-of-commerce",
+			"title": "The Ecology of Commerce",
+			"format": "book",
+			"subtitle": "A Declaration of Sustainability",
+			"authors": [
+				"Paul Hawken"
+			],
+			"publishers": [
+				"Collins"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2008",
+			"isbn10": "0061252794",
+			"isbn13": "9780061252792",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 288,
+			"height": 7.99,
+			"thickness": 0.59,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "orange-2",
+			"shelf": null,
+			"position": null,
+			"face": "young-serif"
+		},
+		{
 			"id": "14a55aa28d7181219f09c9db0dd5f4ca",
 			"slug": "the-ecology-of-design",
 			"title": "The Ecology of Design",
@@ -4524,7 +4883,7 @@
 			"tint": "goldenrod-1",
 			"shelf": null,
 			"position": null,
-			"face": "young-serif"
+			"face": "work-sans"
 		},
 		{
 			"id": "14a55aa28d71815195b0f1645d0bd88d",
@@ -5127,6 +5486,38 @@
 			"face": "libre-franklin"
 		},
 		{
+			"id": "42455aa28d7181caba14f47ce26f5f08",
+			"slug": "the-evolution-of-useful-things",
+			"title": "The Evolution of Useful Things",
+			"format": "book",
+			"subtitle": "How Everyday Artifacts-From Forks and Pins to Paper Clips and Zippers-Came to be as They are",
+			"authors": [
+				"Henry Petroski"
+			],
+			"publishers": [
+				"Vintage Books"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "1994",
+			"isbn10": "0679740392",
+			"isbn13": "9780679740391",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 288,
+			"height": 8.27,
+			"thickness": 0.87,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "yellow-2",
+			"shelf": null,
+			"position": null,
+			"face": "space-mono"
+		},
+		{
 			"id": "14a55aa28d71819bb2ece560e7831c0d",
 			"slug": "the-experimenters-chance-and-design-at-black-mountain-colleg",
 			"title": "The Experimenters: Chance and Design at Black Mountain College",
@@ -5156,7 +5547,39 @@
 			"tint": "gray-2",
 			"shelf": null,
 			"position": null,
-			"face": "plex-mono"
+			"face": "libre-franklin"
+		},
+		{
+			"id": "42455aa28d7181f2b7acede1c5f6d23c",
+			"slug": "faviken",
+			"title": "Fäviken",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Magnus Nilsson"
+			],
+			"publishers": [
+				"Phaidon"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2012",
+			"isbn10": "0714864706",
+			"isbn13": "9780714864709",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 271,
+			"height": 11.81,
+			"thickness": 0.83,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "purple-2",
+			"shelf": null,
+			"position": null,
+			"face": "fraunces"
 		},
 		{
 			"id": "14a55aa28d71812fa8b6fae98b09eabb",
@@ -5205,7 +5628,7 @@
 			"isbn10": "0970098626",
 			"isbn13": "9780970098627",
 			"bookshopIsbn": null,
-			"onBookshop": null,
+			"onBookshop": false,
 			"where": "GD Office",
 			"notes": null,
 			"pages": 68,
@@ -5235,7 +5658,7 @@
 			"isbn10": "0970098626",
 			"isbn13": "9780970098627",
 			"bookshopIsbn": null,
-			"onBookshop": null,
+			"onBookshop": false,
 			"where": "GD Office",
 			"notes": null,
 			"pages": 68,
@@ -5599,6 +6022,38 @@
 			"shelf": null,
 			"position": null,
 			"face": "libre-franklin"
+		},
+		{
+			"id": "42455aa28d7181539709e4a1c9adab90",
+			"slug": "the-future",
+			"title": "The Future",
+			"format": "book",
+			"subtitle": "Six Drivers of Global Change",
+			"authors": [
+				"Al Gore"
+			],
+			"publishers": [
+				"Random House"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2013",
+			"isbn10": "0812992946",
+			"isbn13": "9780812992946",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Not mine (recommended)",
+			"notes": null,
+			"pages": 558,
+			"height": 9.84,
+			"thickness": 1.55,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "blue-1",
+			"shelf": null,
+			"position": null,
+			"face": "crimson-pro"
 		},
 		{
 			"id": "1b255aa28d7180dd9c72f3143d4e9b81",
@@ -6442,6 +6897,38 @@
 			"face": "gentium"
 		},
 		{
+			"id": "42455aa28d7181abb83fe4b8303a92a6",
+			"slug": "hella-jongerius",
+			"title": "Hella Jongerius",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Louise Schouwenberg"
+			],
+			"publishers": [
+				"Phaidon"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2003",
+			"isbn10": "0714843059",
+			"isbn13": "9780714843056",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "MICA Decker",
+			"notes": null,
+			"pages": 148,
+			"height": 9.84,
+			"thickness": 0.52,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "purple-3",
+			"shelf": null,
+			"position": null,
+			"face": "fraunces"
+		},
+		{
 			"id": "14a55aa28d7181b38a9be8f01833dc79",
 			"slug": "helvetica",
 			"title": "Helvetica",
@@ -6579,7 +7066,7 @@
 			"year": "1989",
 			"isbn10": "0471291986",
 			"isbn13": "9780471291985",
-			"bookshopIsbn": null,
+			"bookshopIsbn": "9781119743293",
 			"onBookshop": null,
 			"where": "GD Office",
 			"notes": null,
@@ -7176,6 +7663,70 @@
 			"face": "work-sans"
 		},
 		{
+			"id": "42455aa28d7181eab890ecb26588530d",
+			"slug": "the-impossible-will-take-a-little-while",
+			"title": "The Impossible Will Take a Little While",
+			"format": "book",
+			"subtitle": "A Citizen’s Guide to Hope in a Time of Fear",
+			"authors": [
+				"Paul Rogat Loeb"
+			],
+			"publishers": [
+				"Basic Book"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2004",
+			"isbn10": "0465041663",
+			"isbn13": "9780465041664",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 422,
+			"height": 8.27,
+			"thickness": 1.2,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "orange-3",
+			"shelf": null,
+			"position": null,
+			"face": "basteleur"
+		},
+		{
+			"id": "42455aa28d7181d2bb06f2786f4c15a5",
+			"slug": "in-defense-of-food",
+			"title": "In Defense of Food",
+			"format": "book",
+			"subtitle": "An Eater’s Manifesto",
+			"authors": [
+				"Michael Pollan"
+			],
+			"publishers": [
+				"Penguin Books"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2009",
+			"isbn10": "0143114964",
+			"isbn13": "9780143114963",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 244,
+			"height": 9.72,
+			"thickness": 0.76,
+			"measured": false,
+			"sized": "pages",
+			"tint": "goldenrod-1",
+			"shelf": null,
+			"position": null,
+			"face": "space-mono"
+		},
+		{
 			"id": "14a55aa28d7181e4924af3b60f944123",
 			"slug": "in-the-bubble-designing-in-a-complex-world",
 			"title": "In the Bubble: Designing in a Complex World",
@@ -7619,6 +8170,38 @@
 			"face": "plex-mono"
 		},
 		{
+			"id": "42455aa28d7181dbb3a5e50ee9562f0a",
+			"slug": "a-land",
+			"title": "A Land",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Jacquetta Hawkes"
+			],
+			"publishers": [
+				"Beacon Press Books"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "1991",
+			"isbn10": "0807085111",
+			"isbn13": "9780807085110",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "MICA Decker",
+			"notes": null,
+			"pages": 248,
+			"height": 8.27,
+			"thickness": 0.77,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "orange-2",
+			"shelf": null,
+			"position": null,
+			"face": "fraunces"
+		},
+		{
 			"id": "14a55aa28d718155ad27d9f42e462bb4",
 			"slug": "las-vegas-studio-images-from-the-archive-of-robert-venturi-a",
 			"title": "Las Vegas Studio: Images from the Archive of Robert Venturi and Denise Scott Brown",
@@ -7646,10 +8229,10 @@
 			"thickness": 0.63,
 			"measured": false,
 			"sized": "pages",
-			"tint": "orange-3",
+			"tint": "blue-3",
 			"shelf": null,
 			"position": null,
-			"face": "fraunces"
+			"face": "eb-garamond"
 		},
 		{
 			"id": "14a55aa28d718101abb2d68f6dc1d0f9",
@@ -7879,6 +8462,38 @@
 			"face": "libre-franklin"
 		},
 		{
+			"id": "42455aa28d71816892dde822d8ff2afe",
+			"slug": "limited-language",
+			"title": "Limited Language",
+			"format": "book",
+			"subtitle": "Rewriting Design: Responding to a Feedback Culture",
+			"authors": [
+				"Colin Davies"
+			],
+			"publishers": [
+				"Birkhäuser Verlag"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2010",
+			"isbn10": "3764389346",
+			"isbn13": "9783764389345",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Not mine (recommended)",
+			"notes": null,
+			"pages": 288,
+			"height": 8.38,
+			"thickness": 0.87,
+			"measured": false,
+			"sized": "pages",
+			"tint": "brown-1",
+			"shelf": null,
+			"position": null,
+			"face": "basteleur"
+		},
+		{
 			"id": "14a55aa28d7181bcbaebcceeb532f28e",
 			"slug": "looking-closer-critical-writings-on-graphic-design",
 			"title": "Looking Closer: Critical Writings on Graphic Design",
@@ -7908,10 +8523,42 @@
 			"thickness": 0.71,
 			"measured": false,
 			"sized": "open-library",
-			"tint": "brown-1",
+			"tint": "yellow-1",
 			"shelf": null,
 			"position": null,
 			"face": "young-serif"
+		},
+		{
+			"id": "42455aa28d7181a5b866ff02e644cf99",
+			"slug": "the-lorax",
+			"title": "The Lorax",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Dr. Seuss"
+			],
+			"publishers": [
+				"Random House"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2012",
+			"isbn10": "0394823370",
+			"isbn13": "9780394823379",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 70,
+			"height": 11.42,
+			"thickness": 0.33,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "blue-1",
+			"shelf": null,
+			"position": null,
+			"face": "crimson-pro"
 		},
 		{
 			"id": "14a55aa28d7181f5aafad24703423088",
@@ -8678,6 +9325,38 @@
 			"face": "fraunces"
 		},
 		{
+			"id": "42455aa28d7181afb317f008c5f292c7",
+			"slug": "the-nordic-cookbook",
+			"title": "The Nordic Cookbook",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Magnus Nilsson"
+			],
+			"publishers": [
+				"Phaidon"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2015",
+			"isbn10": "0714868728",
+			"isbn13": "9780714868721",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 767,
+			"height": 11.02,
+			"thickness": 2.07,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "purple-3",
+			"shelf": null,
+			"position": null,
+			"face": "eb-garamond"
+		},
+		{
 			"id": "14a55aa28d7181e7b995cfe3cc747aed",
 			"slug": "notes-on-the-synthesis-of-form",
 			"title": "Notes on the Synthesis of Form",
@@ -8704,10 +9383,42 @@
 			"thickness": 0.69,
 			"measured": false,
 			"sized": "pages",
-			"tint": "gray-1",
+			"tint": "cornflower-1",
 			"shelf": null,
 			"position": null,
 			"face": "newsreader"
+		},
+		{
+			"id": "42455aa28d7181fa9a82c7c75bd4d7fc",
+			"slug": "the-omnivore-s-dilemma",
+			"title": "The Omnivore’s Dilemma",
+			"format": "book",
+			"subtitle": "A Natural History of Four Meals",
+			"authors": [
+				"Michael Pollan"
+			],
+			"publishers": [
+				"Penguin Books"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2008",
+			"isbn10": "0143038583",
+			"isbn13": "9780143038580",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 450,
+			"height": 7.52,
+			"thickness": 1.27,
+			"measured": false,
+			"sized": "pages",
+			"tint": "goldenrod-3",
+			"shelf": null,
+			"position": null,
+			"face": "space-mono"
 		},
 		{
 			"id": "18b55aa28d7180069370c3279e3f3d56",
@@ -9283,6 +9994,38 @@
 			"face": "league-gothic"
 		},
 		{
+			"id": "42455aa28d7181b89724f766d2d18627",
+			"slug": "the-philosophy-of-design",
+			"title": "The Philosophy of Design",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Glenn Parsons"
+			],
+			"publishers": [
+				"Polity Press"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2015",
+			"isbn10": "0745663893",
+			"isbn13": "9780745663890",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "MICA Decker",
+			"notes": null,
+			"pages": 192,
+			"height": 9.06,
+			"thickness": 0.63,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "orange-3",
+			"shelf": null,
+			"position": null,
+			"face": "plex-mono"
+		},
+		{
 			"id": "14a55aa28d7181528d7dc2678ee53caa",
 			"slug": "philosophy-of-physics-space-and-time",
 			"title": "Philosophy of Physics: Space and Time",
@@ -9307,10 +10050,10 @@
 			"thickness": 0.61,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "orange-3",
+			"tint": "pink-3",
 			"shelf": null,
 			"position": null,
-			"face": "basteleur"
+			"face": "league-gothic"
 		},
 		{
 			"id": "14a55aa28d71810a8b0ad8807a11963e",
@@ -9536,13 +10279,15 @@
 			"publishers": [
 				"Earthscan Publications"
 			],
-			"tags": [],
+			"tags": [
+				"Sustainabilitist"
+			],
 			"year": "2002",
 			"isbn10": "185383842X",
 			"isbn13": "9781853838422",
 			"bookshopIsbn": null,
 			"onBookshop": null,
-			"where": null,
+			"where": "Personal Library (KB office)",
 			"notes": null,
 			"pages": 224,
 			"height": 9.09,
@@ -9774,6 +10519,38 @@
 			"face": "plex-mono"
 		},
 		{
+			"id": "42455aa28d71815297dee7156aa187ac",
+			"slug": "rene-redzepi",
+			"title": "René Redzepi",
+			"format": "book",
+			"subtitle": "A Work in Progress",
+			"authors": [
+				"René Redzepi"
+			],
+			"publishers": [
+				"Phaidon"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2013",
+			"isbn10": "0714866911",
+			"isbn13": "9780714866918",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 648,
+			"height": 11.02,
+			"thickness": 1.77,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "red-3",
+			"shelf": null,
+			"position": null,
+			"face": "fraunces"
+		},
+		{
 			"id": "14a55aa28d7181a68662f8a94f31c16c",
 			"slug": "research-for-designers-a-guide-to-methods-and-practice",
 			"title": "Research for Designers: A Guide to Methods and Practice",
@@ -9800,7 +10577,7 @@
 			"thickness": 0.85,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "red-1",
+			"tint": "purple-1",
 			"shelf": null,
 			"position": null,
 			"face": "libre-franklin"
@@ -10534,6 +11311,38 @@
 			"face": "space-mono"
 		},
 		{
+			"id": "42455aa28d71810ea71bd70300caacf6",
+			"slug": "the-social-media-reader",
+			"title": "The Social Media Reader",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Michael Mandiberg"
+			],
+			"publishers": [
+				"New York University Press"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2012",
+			"isbn10": "0814764061",
+			"isbn13": "9780814764060",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "MICA Decker",
+			"notes": null,
+			"pages": 289,
+			"height": 9.45,
+			"thickness": 0.87,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "pink-1",
+			"shelf": null,
+			"position": null,
+			"face": "basteleur"
+		},
+		{
 			"id": "14a55aa28d71810ca28cee7d713f8cf5",
 			"slug": "the-speculative-everything-design-function-and-social-dreami",
 			"title": "The Speculative Everything: Design, Function, and Social Dreaming",
@@ -10811,6 +11620,39 @@
 			"face": "newsreader"
 		},
 		{
+			"id": "42455aa28d718177a6e2f76d77b91f30",
+			"slug": "super-normal",
+			"title": "Super Normal",
+			"format": "book",
+			"subtitle": "Sensations of the Ordinary",
+			"authors": [
+				"Naoto Fukasawa",
+				"Jasper Morrison"
+			],
+			"publishers": [
+				"Lars Müller Publishers"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2007",
+			"isbn10": "3037781068",
+			"isbn13": "9783037781067",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "MICA Decker",
+			"notes": null,
+			"pages": 112,
+			"height": 7.91,
+			"thickness": 0.59,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "red-3",
+			"shelf": null,
+			"position": null,
+			"face": "crimson-pro"
+		},
+		{
 			"id": "14a55aa28d718124ae63cd7bd7f0b511",
 			"slug": "sustainability-principles-and-practice",
 			"title": "Sustainability Principles And Practice",
@@ -11070,6 +11912,38 @@
 			"face": "plex-mono"
 		},
 		{
+			"id": "42455aa28d7181c6b8efc61e4187c5b1",
+			"slug": "a-sustainist-lexicon",
+			"title": "A Sustainist Lexicon",
+			"format": "book",
+			"subtitle": "Seven Entries to Recast the Future - Rethinking Design and Heritage",
+			"authors": [
+				"Michiel Schwarz"
+			],
+			"publishers": [
+				"Architectura & Natura Press"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2016",
+			"isbn10": "9461400527",
+			"isbn13": "9789461400529",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "MICA Decker",
+			"notes": null,
+			"pages": 156,
+			"height": 7.09,
+			"thickness": 0.54,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "green-2",
+			"shelf": null,
+			"position": null,
+			"face": "work-sans"
+		},
+		{
 			"id": "14a55aa28d7181bc8e9eea01265732f4",
 			"slug": "symbols-a-handbook-for-seeing",
 			"title": "Symbols: A Handbook for Seeing",
@@ -11097,10 +11971,10 @@
 			"thickness": 0.79,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "cornflower-3",
+			"tint": "yellow-3",
 			"shelf": null,
 			"position": null,
-			"face": "work-sans"
+			"face": "newsreader"
 		},
 		{
 			"id": "14a55aa28d71812ab39cc069fb92f163",
@@ -11200,6 +12074,36 @@
 			"face": "gentium"
 		},
 		{
+			"id": "42455aa28d7181909ff4d2431069210a",
+			"slug": "thank-you-for-smoking",
+			"title": "Thank You for Smoking",
+			"format": "film",
+			"subtitle": null,
+			"authors": [
+				"Jason Reitman"
+			],
+			"publishers": [],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": null,
+			"isbn10": null,
+			"isbn13": null,
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Not mine (recommended)",
+			"notes": null,
+			"pages": null,
+			"height": 7.5,
+			"thickness": 0.55,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "goldenrod-3",
+			"shelf": null,
+			"position": null,
+			"face": "eb-garamond"
+		},
+		{
 			"id": "14a55aa28d71815089dcda30643526b6",
 			"slug": "there-s-nothing-funny-about-design",
 			"title": "There's Nothing Funny About Design",
@@ -11226,7 +12130,7 @@
 			"thickness": 0.79,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "orange-2",
+			"tint": "pink-2",
 			"shelf": null,
 			"position": null,
 			"face": "league-gothic"
@@ -11422,6 +12326,38 @@
 			"shelf": null,
 			"position": null,
 			"face": "plex-mono"
+		},
+		{
+			"id": "42455aa28d71814d9e88d18abb7eb9c6",
+			"slug": "to-engineer-is-human",
+			"title": "To Engineer Is Human",
+			"format": "book",
+			"subtitle": "The Role of Failure in Successful Design",
+			"authors": [
+				"Henry Petroski"
+			],
+			"publishers": [
+				"Vintage Books"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "1992",
+			"isbn10": "0679734163",
+			"isbn13": "9780679734161",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "MICA Decker",
+			"notes": null,
+			"pages": 251,
+			"height": 8.27,
+			"thickness": 0.78,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "yellow-2",
+			"shelf": null,
+			"position": null,
+			"face": "space-mono"
 		},
 		{
 			"id": "14a55aa28d7181ec8d75c60d8111f94d",
@@ -12269,6 +13205,70 @@
 			"face": "bricolage"
 		},
 		{
+			"id": "42455aa28d7181958d30c6761cd97d8a",
+			"slug": "wabi-sabi",
+			"title": "Wabi-Sabi",
+			"format": "book",
+			"subtitle": "Further Thoughts",
+			"authors": [
+				"Leonard Koren"
+			],
+			"publishers": [
+				"Imperfect Publishing"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2015",
+			"isbn10": "0981484654",
+			"isbn13": "9780981484655",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 94,
+			"height": 7.54,
+			"thickness": 0.39,
+			"measured": false,
+			"sized": "pages",
+			"tint": "gray-2",
+			"shelf": null,
+			"position": null,
+			"face": "gentium"
+		},
+		{
+			"id": "42455aa28d7181619fbfd9999f20f780",
+			"slug": "walden",
+			"title": "Walden",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Henry David Thoreau"
+			],
+			"publishers": [
+				"Empire Books"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2012",
+			"isbn10": "1619493918",
+			"isbn13": "9781619493919",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 262,
+			"height": 8.33,
+			"thickness": 0.81,
+			"measured": false,
+			"sized": "pages",
+			"tint": "orange-3",
+			"shelf": null,
+			"position": null,
+			"face": "crimson-pro"
+		},
+		{
 			"id": "14a55aa28d7181c5a19af5fe95f838a9",
 			"slug": "walden-and-other-writings",
 			"title": "Walden and Other Writings",
@@ -12296,7 +13296,39 @@
 			"tint": "blue-3",
 			"shelf": null,
 			"position": null,
-			"face": "crimson-pro"
+			"face": "space-mono"
+		},
+		{
+			"id": "42455aa28d71817dbb04c3d2b80a10d1",
+			"slug": "a-walk-in-the-woods",
+			"title": "A Walk in the Woods",
+			"format": "book",
+			"subtitle": "Rediscovering America on the Appalachian Trail",
+			"authors": [
+				"Bill Bryson"
+			],
+			"publishers": [
+				"Anchor Books"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2007",
+			"isbn10": "0307279464",
+			"isbn13": "9780307279460",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": 416,
+			"height": 6.81,
+			"thickness": 1.3,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "cornflower-1",
+			"shelf": null,
+			"position": null,
+			"face": "gentium"
 		},
 		{
 			"id": "14a55aa28d7181d4a2e0f28d29aa46dd",
@@ -12598,6 +13630,39 @@
 			"shelf": null,
 			"position": null,
 			"face": "bricolage"
+		},
+		{
+			"id": "42455aa28d71817a8612d2b479d6c34e",
+			"slug": "women-in-green",
+			"title": "Women in Green",
+			"format": "book",
+			"subtitle": "Voices of Sustainable Design",
+			"authors": [
+				"Kira Gould",
+				"Lance Hosey"
+			],
+			"publishers": [
+				"Ecotone Publishing"
+			],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": "2007",
+			"isbn10": "097490337X",
+			"isbn13": "9780974903378",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "MICA Decker",
+			"notes": null,
+			"pages": 256,
+			"height": 7.4,
+			"thickness": 0.79,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "brown-2",
+			"shelf": null,
+			"position": null,
+			"face": "fraunces"
 		},
 		{
 			"id": "14a55aa28d71818196cee4117a0cadaa",
@@ -12938,6 +14003,36 @@
 			"shelf": null,
 			"position": null,
 			"face": "libre-franklin"
+		},
+		{
+			"id": "42455aa28d718114b0d1e3f246c1dbef",
+			"slug": "worldchanging",
+			"title": "Worldchanging",
+			"format": "book",
+			"subtitle": "A User’s Guide for the 21st Century",
+			"authors": [
+				"Alex Steffen"
+			],
+			"publishers": [],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": null,
+			"isbn10": null,
+			"isbn13": null,
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"where": "Personal Library (KB office)",
+			"notes": null,
+			"pages": null,
+			"height": 7.89,
+			"thickness": 1.09,
+			"measured": false,
+			"sized": "guessed",
+			"tint": "orange-2",
+			"shelf": null,
+			"position": null,
+			"face": "space-mono"
 		},
 		{
 			"id": "14a55aa28d7181b7b71fd65e498e97d4",

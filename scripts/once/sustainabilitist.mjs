@@ -186,6 +186,7 @@ async function applyPlan() {
 		if (r.subtitle) props.Subtitle = rich(r.subtitle);
 		if (r.year) props.Year = rich(r.year);
 		if (r.lcc) props['LOC Call Number'] = rich(r.lcc);
+		if (r.personalNotes) props['Personal Notes'] = rich(r.personalNotes);
 		await api('POST', 'pages', { parent: { type: 'data_source_id', data_source_id: DS.books }, properties: props });
 		titles.add(key(r.title));
 		n++;
