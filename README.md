@@ -93,8 +93,10 @@ book whose ISBN needs fixing, with Open Library's suggestion.
 Links use affiliate ID 129137 (`src/lib/library.ts`); the card shows a
 one-line disclosure.
 
-When Bookshop.org doesn't sell the edition you own, put a sold edition's
-ISBN in **Bookshop ISBN**; the link uses that, and ISBN-13 stays yours.
+Links are a Bookshop.org search for the title and author (with the
+affiliate ID), because a direct ISBN link 404s whenever Bookshop doesn't
+stock that exact edition. To link straight to an edition you know Bookshop
+sells, put its ISBN in **Bookshop ISBN**; ISBN-13 stays the copy you own.
 
 ## Design notes
 
