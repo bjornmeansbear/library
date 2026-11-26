@@ -541,7 +541,7 @@
 			"slug": "american-environmentalism-the-u-s-environmental-movement-197",
 			"title": "American Environmentalism: The U.S. Environmental Movement, 1970–1990",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "The U.S. Environmental Movement, 1970-1990",
 			"authors": [
 				"Riley E. Dunlap",
 				"Angele G. Mertig"
@@ -598,7 +598,7 @@
 			"slug": "american-signs-form-and-meaning-on-route-66",
 			"title": "American Signs: Form and Meaning on Route 66",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Form and Meaning on Rte. 66",
 			"authors": [
 				"Lisa Mahar"
 			],
@@ -869,7 +869,7 @@
 			"slug": "aristotle-for-everybody",
 			"title": "Aristotle for Everybody",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Difficult Thought Made Easy",
 			"authors": [
 				"Mortimer J. Adler"
 			],
@@ -1089,7 +1089,7 @@
 			"slug": "the-art-of-construction",
 			"title": "The Art of Construction",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Projects and Principles for Beginning Engineers and Architects",
 			"authors": [
 				"Mario Salvadori"
 			],
@@ -1173,7 +1173,7 @@
 			"slug": "art-on-the-edge-and-over",
 			"title": "Art on the Edge and Over",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Searching for Art's Meaning in Contemporary Society, 1970s-1990s",
 			"authors": [
 				"Linda Weintraub"
 			],
@@ -1233,7 +1233,9 @@
 			"authors": [
 				"Antolin Palomino Olalla"
 			],
-			"publishers": [],
+			"publishers": [
+				"Ayuntamiento de Madrid"
+			],
 			"tags": [],
 			"year": "1986",
 			"isbn10": "8450550874",
@@ -1248,7 +1250,7 @@
 			"tint": "green-3",
 			"shelf": "GT1S4",
 			"position": 3,
-			"face": "plex-mono"
+			"face": "young-serif"
 		},
 		{
 			"id": "14a55aa28d7181aca7afc15114d7c56a",
@@ -1277,7 +1279,7 @@
 			"tint": "yellow-3",
 			"shelf": null,
 			"position": null,
-			"face": "young-serif"
+			"face": "work-sans"
 		},
 		{
 			"id": "14a55aa28d718116859fc841f9bcf6ea",
@@ -1305,7 +1307,7 @@
 			"tint": "cornflower-3",
 			"shelf": "GT1S1",
 			"position": 37,
-			"face": "work-sans"
+			"face": "young-serif"
 		},
 		{
 			"id": "14a55aa28d7181168838ecf1e32d3d04",
@@ -1563,7 +1565,9 @@
 			"title": "BIG: Bjarke Ingels Group",
 			"format": "book",
 			"subtitle": null,
-			"authors": [],
+			"authors": [
+				"CLOG"
+			],
 			"publishers": [
 				"CLOG"
 			],
@@ -1667,7 +1671,9 @@
 			"title": "Blue Guide: Venice",
 			"format": "book",
 			"subtitle": null,
-			"authors": [],
+			"authors": [
+				"Alta Macadam"
+			],
 			"publishers": [
 				"Somerset Norton"
 			],
@@ -1994,7 +2000,7 @@
 			"slug": "the-cathedral-and-the-bazaar",
 			"title": "The Cathedral & The Bazaar",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Musings on Linux and Open Source by an Accidental Revolutionary",
 			"authors": [
 				"Eric S. Raymond"
 			],
@@ -2022,7 +2028,7 @@
 			"slug": "change-by-design",
 			"title": "Change by Design",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "How Design Thinking Can Transform Organizations and Inspire Innovation",
 			"authors": [
 				"Tim Brown",
 				"Barry Katz"
@@ -2190,9 +2196,11 @@
 			"authors": [
 				"Emily Noyes Vanderpoel"
 			],
-			"publishers": [],
+			"publishers": [
+				"Sacred Bones Books"
+			],
 			"tags": [],
-			"year": null,
+			"year": "2018",
 			"isbn10": "0999609939",
 			"isbn13": "9780999609934",
 			"where": "MICA Decker",
@@ -2202,10 +2210,10 @@
 			"thickness": 1.14,
 			"measured": false,
 			"sized": "pages",
-			"tint": "blue-3",
+			"tint": "gray-3",
 			"shelf": null,
 			"position": null,
-			"face": "libre-franklin"
+			"face": "work-sans"
 		},
 		{
 			"id": "14a55aa28d71812f901ac19a832e5d81",
@@ -2351,7 +2359,11 @@
 			"title": "Conditional Design Workbook",
 			"format": "book",
 			"subtitle": null,
-			"authors": [],
+			"authors": [
+				"Andrew Blauvelt",
+				"Koert Van Mensvoort",
+				"Conditional Design Team"
+			],
 			"publishers": [
 				"Valiz"
 			],
@@ -2742,7 +2754,7 @@
 			"slug": "deep-economy-the-wealth-of-communities-and-the-durable-furtu",
 			"title": "Deep Economy: The Wealth of Communities and the Durable Furture",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "The Wealth of Communities and the Durable Future",
 			"authors": [
 				"Bill McKibben"
 			],
@@ -3022,7 +3034,7 @@
 			"slug": "design-for-the-real-world",
 			"title": "Design for the Real World",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Human Ecology and Social Change",
 			"authors": [
 				"Victor Papanek"
 			],
@@ -3050,7 +3062,7 @@
 			"slug": "design-futuring-sustainablity-ethics-and-new-practice",
 			"title": "Design Futuring: Sustainablity, Ethics, and New Practice",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Sustainability, Ethics, and New Practice",
 			"authors": [
 				"Tony Fry"
 			],
@@ -3134,7 +3146,7 @@
 			"slug": "design-like-you-give-a-damn",
 			"title": "Design Like You Give a Damn",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Architectural Responses to Humanitarian Crises",
 			"authors": [
 				"Architecture for Humanity"
 			],
@@ -3383,7 +3395,7 @@
 			"slug": "designing-for-social-change",
 			"title": "Designing for Social Change",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Strategies for Community-Based Graphic Design",
 			"authors": [
 				"Andrew Shea",
 				"William Drenttel",
@@ -3801,7 +3813,7 @@
 				"Harvard University Press"
 			],
 			"tags": [],
-			"year": null,
+			"year": "2000",
 			"isbn10": "0674212770",
 			"isbn13": "9780674212770",
 			"where": "GD Office",
@@ -4133,7 +4145,7 @@
 			"slug": "the-electric-information-age-book",
 			"title": "The Electric Information Age Book",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "McLuhan/Agel/Fiore and the experimental paperback",
 			"authors": [
 				"Jeffrey T. Schnapp",
 				"Adam Michaels"
@@ -4277,7 +4289,7 @@
 			"slug": "the-end-of-education-redefining-the-value-of-school",
 			"title": "The End of Education: Redefining the Value of School",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "L'arte di uscire fuori dal corpo",
 			"authors": [
 				"Neil Postman"
 			],
@@ -4362,7 +4374,7 @@
 			"slug": "the-environmental-ethics-and-policy-book",
 			"title": "The Environmental Ethics & Policy Book",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Philosophy, Ecology, Economics",
 			"authors": [
 				"Donald VanDeVeer",
 				"Christine Pierce"
@@ -4475,7 +4487,7 @@
 			"slug": "the-eternal-letter-two-millenia-of-the-classical-roman-capit",
 			"title": "The Eternal Letter: Two Millenia of the Classical Roman Capital",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Two Millennia of the Classical Roman Capital",
 			"authors": [
 				"Paul Shaw"
 			],
@@ -4613,7 +4625,7 @@
 			"slug": "the-experimenters-change-and-design-at-black-mountain-colleg",
 			"title": "The Experimenters: Change and Design at Black Mountain College",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Chance and Design at Black Mountain College",
 			"authors": [
 				"Eva Díaz"
 			],
@@ -4669,7 +4681,7 @@
 			"slug": "a-field-guide-to-patricia-johanson-s-works",
 			"title": "A Field Guide to Patricia Johanson's Works",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Built, Proposed, Collected & Published",
 			"authors": [
 				"Sue Spaid"
 			],
@@ -4697,7 +4709,7 @@
 			"slug": "a-field-guide-to-patricia-johanson-s-works-2",
 			"title": "A Field Guide to Patricia Johanson's Works",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Built, Proposed, Collected & Published",
 			"authors": [
 				"Sue Spaid"
 			],
@@ -4866,7 +4878,7 @@
 			"slug": "form-follows-fiasco-why-modern-architecture-hasnt-worked",
 			"title": "Form Follows Fiasco: Why Modern Architecture Hasnt Worked",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Why Modern Architecture Hasn't Worked",
 			"authors": [
 				"Peter Blake"
 			],
@@ -4931,7 +4943,7 @@
 				"Wadsworth"
 			],
 			"tags": [],
-			"year": null,
+			"year": "2007",
 			"isbn10": "0534613381",
 			"isbn13": "9780534613389",
 			"where": "MICA Decker",
@@ -4955,9 +4967,11 @@
 			"authors": [
 				"Jeff Davis"
 			],
-			"publishers": [],
+			"publishers": [
+				"Tempe Digital"
+			],
 			"tags": [],
-			"year": null,
+			"year": "2015",
 			"isbn10": "0986163708",
 			"isbn13": "9780986163708",
 			"where": "MICA Decker",
@@ -4967,10 +4981,10 @@
 			"thickness": 0.4,
 			"measured": false,
 			"sized": "pages",
-			"tint": "goldenrod-1",
+			"tint": "red-1",
 			"shelf": null,
 			"position": null,
-			"face": "league-gothic"
+			"face": "young-serif"
 		},
 		{
 			"id": "14a55aa28d7181f0a823e2739771e4df",
@@ -5005,7 +5019,7 @@
 			"slug": "from-counterculture-to-cyberculture",
 			"title": "From Counterculture to Cyberculture",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Stewart Brand, the Whole Earth Network, and the Rise of Digital Utopianism",
 			"authors": [
 				"Fred Turner"
 			],
@@ -5041,7 +5055,7 @@
 				"Vintage Books"
 			],
 			"tags": [],
-			"year": null,
+			"year": "2002",
 			"isbn10": "0375726446",
 			"isbn13": "9780375726446",
 			"where": "MICA Decker",
@@ -5117,7 +5131,7 @@
 			"slug": "geometry-of-design",
 			"title": "Geometry of Design",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Studies in Proportion and Composition",
 			"authors": [
 				"Kimberly Elam"
 			],
@@ -5145,7 +5159,7 @@
 			"slug": "a-golden-thread-2500-years-of-solar-architecture-and-tecnolo",
 			"title": "A Golden Thread: 2500 Years of Solar Architecture and Tecnology",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "2500 years of solar architecture and technology",
 			"authors": [
 				"Ken Butti",
 				"John Perlin"
@@ -5175,7 +5189,9 @@
 			"title": "Graphic Artists Guild Handbook: Pricing and Ethical Guidelines",
 			"format": "book",
 			"subtitle": null,
-			"authors": [],
+			"authors": [
+				"Graphic Artists Guild (U.S.)"
+			],
 			"publishers": [
 				"Graphic Arts Guild"
 			],
@@ -5457,7 +5473,7 @@
 			"slug": "graphic-design-thinking-beyond-brainstroming",
 			"title": "Graphic Design Thinking: Beyond Brainstroming",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Beyond Brainstorming",
 			"authors": [
 				"Ellen Lupton"
 			],
@@ -5485,7 +5501,7 @@
 			"slug": "graphic-design-a-concise-history",
 			"title": "Graphic Design: A Concise History",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "A Concise History, Second Edition",
 			"authors": [
 				"Richard Hollis"
 			],
@@ -5653,7 +5669,7 @@
 			"slug": "the-green-imperative",
 			"title": "The Green Imperative",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Natural Design for the Real World",
 			"authors": [
 				"Victor Papanek"
 			],
@@ -5681,7 +5697,7 @@
 			"slug": "grid-systems-in-graphic-design-a-visual-communication-manual",
 			"title": "Grid Systems in Graphic Design: A Visual Communication Manual for Graphic Designers, Typographers, and Three Dimensional Designers",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "A Visual Communication Manual for Graphic Designers, Typographers and Three Dimensional Designers = Raster Systeme Für Die Visuelle Gestaltung : Ein Handbuch Für Grafiker, Typografen Und Ausstellungsgestalter",
 			"authors": [
 				"Josef Müller-Brockman"
 			],
@@ -5819,7 +5835,7 @@
 			"slug": "the-hidden-life-of-art-secrets-and-symbols-in-great-masterpi",
 			"title": "The Hidden Life of Art: Secrets and Symbols in Great Masterpieces",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "A Key to Figures, Symbols, and Messages",
 			"authors": [
 				"Clare Gibson"
 			],
@@ -5985,7 +6001,7 @@
 			"slug": "how-buildings-work",
 			"title": "How Buildings Work",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "The Natural Order of Architecture",
 			"authors": [
 				"Edward Allen"
 			],
@@ -6428,7 +6444,7 @@
 			"slug": "in-the-bubble-designing-a-complex-world",
 			"title": "In the Bubble: Designing a Complex World",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Designing in a Complex World",
 			"authors": [
 				"John Thackara"
 			],
@@ -6485,7 +6501,7 @@
 			"slug": "an-inconvenient-truth",
 			"title": "An Inconvenient Truth",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "The Planetary Emergency of Global Warming and What We Can Do About It",
 			"authors": [
 				"Al Gore"
 			],
@@ -6513,7 +6529,7 @@
 			"slug": "indie-publishing-how-to-design-and-produce-your-own-books",
 			"title": "Indie Publishing: How to Design and Produce Your Own Books",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "How to Design & Publish Your Own Book",
 			"authors": [
 				"Ellen Lupton"
 			],
@@ -6545,9 +6561,11 @@
 			"authors": [
 				"Nir Eyal"
 			],
-			"publishers": [],
+			"publishers": [
+				"Benbella Books"
+			],
 			"tags": [],
-			"year": null,
+			"year": "2019",
 			"isbn10": "194883653X",
 			"isbn13": "9781948836531",
 			"where": null,
@@ -6557,17 +6575,17 @@
 			"thickness": 0.83,
 			"measured": false,
 			"sized": "pages",
-			"tint": "green-1",
+			"tint": "brown-1",
 			"shelf": null,
 			"position": null,
-			"face": "basteleur"
+			"face": "crimson-pro"
 		},
 		{
 			"id": "14a55aa28d7181fd90d5d1a6d20dc078",
 			"slug": "information-doesn-t-want-to-be-free",
 			"title": "Information Doesn't Want to Be Free",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Laws for the Internet Age",
 			"authors": [
 				"Cory Doctorow"
 			],
@@ -6651,7 +6669,7 @@
 			"slug": "interdiciplinary-interaction-design-a-visual-guide-to-basic",
 			"title": "Interdiciplinary Interaction Design: A Visual Guide to Basic Theories, Models and Ideas for Thinking and Designing for Interactive Web Design and Digital Device Experiencees",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "A Visual Guide to Basic Theories, Models and Ideas for Thinking and Designing for Interactive Web Design and Digital Device Experiences",
 			"authors": [
 				"James Pannafino"
 			],
@@ -6937,7 +6955,7 @@
 			"slug": "learning-from-las-vegas",
 			"title": "Learning from Las Vegas",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "The Forgotten Symbolism of Architectural Form",
 			"authors": [
 				"Robert Venturi",
 				"Denise Scott Brown",
@@ -7084,7 +7102,7 @@
 			"slug": "making-comics-storytelling-sectrets-of-comics-manga-and-grap",
 			"title": "Making Comics: Storytelling Sectrets of COmics, Manga, and Graphic Novels",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Storytelling Secrets of Comics, Manga and Graphic Novels",
 			"authors": [
 				"Scott McCloud"
 			],
@@ -7112,7 +7130,7 @@
 			"slug": "manager-mechanics-people-skills-for-the-first-time-manager",
 			"title": "Manager Mechanics: People Skills for the First-Time Manager",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "People Skills for First-Time Managers",
 			"authors": [
 				"Eric P. Bloom"
 			],
@@ -7250,7 +7268,7 @@
 			"slug": "the-millenium-whole-earth-catalog",
 			"title": "The Millenium Whole Earth Catalog",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Access to Tools and Ideas for the Twenty-First Century.",
 			"authors": [
 				"Howard Rheingold"
 			],
@@ -7336,7 +7354,9 @@
 			"title": "MLA Handbook for Writers of Research Papers",
 			"format": "book",
 			"subtitle": null,
-			"authors": [],
+			"authors": [
+				"Joseph Gibaldi"
+			],
 			"publishers": [
 				"The Modern Language Association of America"
 			],
@@ -7361,7 +7381,7 @@
 			"slug": "more-alive-with-color-personal-colors",
 			"title": "More Alive with Color: Personal Colors",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Personal Colors, Personal Style",
 			"authors": [
 				"Leatrice Eisman"
 			],
@@ -7548,7 +7568,10 @@
 			"title": "Never Sleep: Graduating to Graphic Design",
 			"format": "book",
 			"subtitle": null,
-			"authors": [],
+			"authors": [
+				"Andre Andreev",
+				"Dan Covert"
+			],
 			"publishers": [
 				"de.MO"
 			],
@@ -7685,7 +7708,7 @@
 			"slug": "the-next-whole-earth-catalogue",
 			"title": "The Next Whole Earth Catalogue",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Access to Tools",
 			"authors": [
 				"Steward Brand"
 			],
@@ -7713,7 +7736,7 @@
 			"slug": "no-logo",
 			"title": "No Logo",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "No Space, No Choice, No Jobs",
 			"authors": [
 				"Naomi Klein"
 			],
@@ -7854,7 +7877,10 @@
 			"title": "The Open Book Project",
 			"format": "book",
 			"subtitle": null,
-			"authors": [],
+			"authors": [
+				"Leslie Atzmon",
+				"Ryan Molloy"
+			],
 			"publishers": [
 				"Eastern Michigan University Galleries"
 			],
@@ -7992,7 +8018,7 @@
 			"slug": "packaging-sustainability",
 			"title": "Packaging Sustainability",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Tools, Systems and Strategies for Innovative Package Design",
 			"authors": [
 				"Wendy Jedlička"
 			],
@@ -8076,7 +8102,7 @@
 			"slug": "a-pattern-language",
 			"title": "A Pattern Language",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Towns, Buildings, Construction",
 			"authors": [
 				"Christopher Alexander",
 				"Sara Ishikawa",
@@ -8222,7 +8248,9 @@
 			"title": "Peter Seitz: Designing a Life",
 			"format": "book",
 			"subtitle": null,
-			"authors": [],
+			"authors": [
+				"Andrew Blauvelt"
+			],
 			"publishers": [
 				"The Minneapolis College of Art and Design"
 			],
@@ -8367,7 +8395,7 @@
 				"Rockport Publishers"
 			],
 			"tags": [],
-			"year": null,
+			"year": "2013",
 			"isbn10": "1592538088",
 			"isbn13": "9781592538089",
 			"where": "MICA Decker",
@@ -8696,7 +8724,7 @@
 			"slug": "rebel-code",
 			"title": "Rebel Code",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Linux and the Open Source Revolution",
 			"authors": [
 				"Glyn Moody"
 			],
@@ -8724,7 +8752,7 @@
 			"slug": "reinventing-comics-the-evolution-of-an-artform",
 			"title": "Reinventing Comics: The Evolution of an Artform",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "How Imagination and Technology Are Revolutionizing an Art Form",
 			"authors": [
 				"Scott McCloud"
 			],
@@ -8752,7 +8780,7 @@
 			"slug": "research-for-designers-a-guide-to-method-and-practice",
 			"title": "Research for Designers: A Guide to Method and Practice",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "A Guide to Methods and Practice",
 			"authors": [
 				"Gjoko Muratovski"
 			],
@@ -9129,7 +9157,7 @@
 			"slug": "the-shingle-style-and-the-stick-style-architectural-theory-a",
 			"title": "The Shingle Style and The Stick Style: Architectural Theory and Design from Downing to the Origins of Wright",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Architectural Theory and Design from Richardson to the Origins of Wright",
 			"authors": [
 				"Vincent J. Scully, Jr."
 			],
@@ -9325,7 +9353,7 @@
 			"slug": "skin-surface-substance-design",
 			"title": "Skin: Surface Substance + Design",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Surface, Substance, and Design",
 			"authors": [
 				"Ellen Lupton"
 			],
@@ -9382,7 +9410,7 @@
 			"slug": "small-is-beautiful",
 			"title": "Small is Beautiful",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Economics as If People Mattered",
 			"authors": [
 				"E.F. Shumacher"
 			],
@@ -9467,7 +9495,7 @@
 			"slug": "the-spell-of-the-sensuous",
 			"title": "The Spell of the Sensuous",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Perception and Language in a More-Than-Human World",
 			"authors": [
 				"David Abram"
 			],
@@ -9524,7 +9552,7 @@
 			"slug": "spiritually-dysfunctional",
 			"title": "Spiritually Dysfunctional",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Being the True and Amazing Story of How a Confirmed Jewish Atheist and His Seriously Catholic Wife Explore the Meaning of Life, ... Ideas)",
 			"authors": [
 				"Fred SInger"
 			],
@@ -9552,7 +9580,7 @@
 			"slug": "st-mary-s-hall-coventry-a-guide-to-the-building-its-histroy",
 			"title": "St Mary's Hall, Coventry: A Guide to the Building its Histroy and Contents",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "A Guide to the Building, Its History and Contents",
 			"authors": [
 				"Joan C Lancaster"
 			],
@@ -9637,7 +9665,7 @@
 			"slug": "strategy-for-sustainablity",
 			"title": "Strategy for Sustainablity",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "A Business Manifesto",
 			"authors": [
 				"Adam Webach"
 			],
@@ -9749,7 +9777,7 @@
 			"slug": "sustainable-cuisine",
 			"title": "Sustainable Cuisine",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "White Papers",
 			"authors": [
 				"Earth Pledge"
 			],
@@ -9777,7 +9805,7 @@
 			"slug": "sustainable-graphic-design",
 			"title": "Sustainable Graphic Design",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Tools, Systems and Strategies for Innovative Print Design",
 			"authors": [
 				"Wendy Jedlička"
 			],
@@ -9949,7 +9977,7 @@
 			"slug": "teaching-motion-design-course-offerings-and-class-projects-f",
 			"title": "Teaching Motion Design: Course Offerings and Class Projects from LEading Undergraduate and Graduate Programs",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Course Offerings and Class Projects from the Leading Undergraduate and Graduate Programs",
 			"authors": [
 				"Steven Heller",
 				"Michael Dooley"
@@ -9978,7 +10006,7 @@
 			"slug": "the-texbook",
 			"title": "The TeXbook",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "L'arte di uscire fuori dal corpo",
 			"authors": [
 				"Donald E. Knuth"
 			],
@@ -10148,7 +10176,7 @@
 			"slug": "this-means-this-this-means-that-a-users-guide-to-semiotics",
 			"title": "This Means This, This Means That: A Users Guide to Semiotics",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "A User's Guide to Semiotics",
 			"authors": [
 				"Sean Hall"
 			],
@@ -10204,7 +10232,7 @@
 			"slug": "the-toaster-project-or-a-heroic-attempt-to-build-simple-elec",
 			"title": "The Toaster Project: Or a Heroic Attempt to Build Simple Electric Appliance from Scratch",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Or A Heroic Attempt to Build a Simple Electric Appliance from Scratch",
 			"authors": [
 				"Thomas Thwaites"
 			],
@@ -10455,7 +10483,7 @@
 			"slug": "type-on-screen-a-critical-guide-for-designers-writers-develo",
 			"title": "Type on Screen: A Critical Guide for Designers, Writers, Developers, and Students",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "A Guide for Designers, Developers, Writers, and Students",
 			"authors": [
 				"Ellen Lupton"
 			],
@@ -10547,7 +10575,7 @@
 				"Wiley"
 			],
 			"tags": [],
-			"year": null,
+			"year": "2011",
 			"isbn10": "0470381353",
 			"isbn13": "9780470381359",
 			"where": "MICA Decker",
@@ -10712,7 +10740,7 @@
 			"slug": "the-upcycle",
 			"title": "The Upcycle",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Beyond Sustainability, Designing for Abundance",
 			"authors": [
 				"William McDonough",
 				"Michael Braungart"
@@ -10770,7 +10798,7 @@
 			"slug": "vernacular-architecture-of-the-lake-counties",
 			"title": "Vernacular Architecture of the Lake Counties",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "A Field Handbook",
 			"authors": [
 				"R.W. Brunskill"
 			],
@@ -10798,7 +10826,7 @@
 			"slug": "visual-communication-and-the-graphic-arts",
 			"title": "Visual Communication and the Graphic Arts",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Photographic Technologies in the Nineteenth Century.",
 			"authors": [
 				"Estelle Jussim"
 			],
@@ -10992,7 +11020,7 @@
 			"slug": "the-way-the-world-works",
 			"title": "The Way the World Works",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Essays",
 			"authors": [
 				"Nicholson Baker"
 			],
@@ -11048,7 +11076,7 @@
 			"slug": "ways-of-seeing",
 			"title": "Ways of Seeing",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "Based on the BBC Television Series",
 			"authors": [
 				"John Berger"
 			],
@@ -11076,7 +11104,7 @@
 			"slug": "what-we-see-when-we-read",
 			"title": "What We See When We Read",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "A Phenomenology: With Illustrations",
 			"authors": [
 				"Peter Mendelsund"
 			],
