@@ -8,7 +8,8 @@
 //
 // Signals: the Library of Congress call number (Z250 → Typography, NA →
 // Architecture), Open Library's subject headings, words in the title and
-// subtitle, a few authors, and the old Sustainabilitist list. A tag is
+// subtitle, and a few authors. (Everything from the old Sustainabilitist
+// list is already tagged in Notion.) A tag is
 // SURE when a signal names the subject outright, MAYBE when it only hints.
 // Tags that carry your own argument (Pragmatic Utopian, Climate Designer)
 // are only ever maybes. Only adds; never removes a tag.
@@ -21,7 +22,6 @@ const root = path.resolve(import.meta.dirname, '..');
 const planJson = path.join(root, 'data/tag-plan.json');
 const planMd = path.join(root, 'TAG-PLAN.md');
 const cachePath = path.join(root, 'data/openlibrary-subjects.json');
-const sustJson = path.join(root, 'data/sustainabilitist-matched.json');
 
 // The shelves, in the order the plan lists them. `create` ones don't exist
 // yet and are made on --apply only if a book gets them.
@@ -43,7 +43,6 @@ const UTOPIANS = /stewart brand|buckminster fuller|bruce mau|alex steffen|papane
 // b.s = subject headings joined, b.lcc, b.authors.
 const RULES = {
 	Sustainabilitist: [
-		['sure', 'on the old Sustainabilitist list', (b) => b.sust],
 		['maybe', 'subjects: sustainability / environment', (b) => /sustainab|environmental (protection|policy|ethics|economics)|environmentalism|ecolog|green (design|products|marketing)/.test(b.s)],
 		['maybe', 'call number GE / HC79.E5 (environment)', (b) => lccIn(b.lcc, 'GE') || /^HC79\.?\s*E5/.test(b.lcc)],
 		['maybe', 'title: sustainab / ecolog / environment', (b) => /sustainab|ecolog|environment/.test(b.t)]
@@ -141,7 +140,6 @@ async function tagIndex(books) {
 
 async function makePlan() {
 	const cache = fs.existsSync(cachePath) ? JSON.parse(fs.readFileSync(cachePath, 'utf8')) : {};
-	const sust = new Set(fs.existsSync(sustJson) ? JSON.parse(fs.readFileSync(sustJson, 'utf8')).map((m) => m.id) : []);
 	const books = await queryAll(DS.books);
 	const tags = await tagIndex(books);
 	const people = new Map((await queryAll(DS.people)).map((p) => [p.id, titleOf(p)]));
@@ -159,8 +157,7 @@ async function makePlan() {
 			t: `${titleOf(p)} ${text(pr['Subtitle'])}`.toLowerCase(),
 			s: (isbn ? cache[isbn] : []).join('; ').toLowerCase(),
 			lcc: text(pr['LOC Call Number']).toUpperCase(),
-			authors: (pr['Author']?.relation ?? []).map((r) => people.get(r.id) ?? '').join(', '),
-			sust: sust.has(p.id.replaceAll('-', ''))
+			authors: (pr['Author']?.relation ?? []).map((r) => people.get(r.id) ?? '').join(', ')
 		};
 		for (const shelf of SHELVES) {
 			if (has.has(nameKey(shelf))) continue;
@@ -196,8 +193,6 @@ Sure: a call number or subject heading names the subject, or the title says it o
 - "apply the sure tags"
 - "apply the sure tags and maybes m3, m7, m12" (or "and all the Typography maybes")
 - or name sure ones to leave out first
-
-The 35 new Sustainabilitist books aren't in Notion yet; they get their Sustainabilitist tag on import, and the rest on a rerun after.
 
 ${shelves.map(section).join('\n')}`);
 	console.log(`${sureCount} sure, ${maybeCount} maybe → TAG-PLAN.md`);
