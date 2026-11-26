@@ -5,7 +5,8 @@ as a spine on one A–Z bookcase, drawn to scale, in kit tints and thirteen
 open-source typefaces. Click a spine for its card.
 
 SvelteKit + Tailwind + Wjerk `kit.css`, every page prerendered, served from a
-Cloudflare Worker.
+Cloudflare Worker. New here, or back after a while? Start with
+[HOW-IT-WORKS.md](HOW-IT-WORKS.md): the six steps from Notion to the live site.
 
 ## Update the books
 
