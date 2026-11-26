@@ -11401,7 +11401,7 @@
 			"face": "basteleur"
 		},
 		{
-			"id": "14a55aa28d718141905fca3e4e3bc31a",
+			"id": "14a55aa28d7181c5ba37cee19d2ec778",
 			"slug": "sexy-librarian-a-novel-critical-edition",
 			"title": "Sexy Librarian: A Novel, Critical Edition",
 			"format": "book",
@@ -11418,71 +11418,9 @@
 			"isbn13": "9780615176772",
 			"bookshopIsbn": null,
 			"onBookshop": null,
-			"copies": null,
+			"copies": 3,
 			"where": null,
-			"notes": null,
-			"pages": 171,
-			"height": 9.99,
-			"thickness": 0.58,
-			"measured": false,
-			"sized": "pages",
-			"tint": "gray-2",
-			"shelf": null,
-			"position": null,
-			"face": "crimson-pro"
-		},
-		{
-			"id": "14a55aa28d7181819739dd8e82d63ed2",
-			"slug": "sexy-librarian-a-novel-critical-edition-2",
-			"title": "Sexy Librarian: A Novel, Critical Edition",
-			"format": "book",
-			"subtitle": null,
-			"authors": [
-				"Julia Weist"
-			],
-			"publishers": [
-				"Ellen Lupton"
-			],
-			"tags": [],
-			"year": "2008",
-			"isbn10": "0615176771",
-			"isbn13": "9780615176772",
-			"bookshopIsbn": null,
-			"onBookshop": null,
-			"copies": null,
-			"where": null,
-			"notes": null,
-			"pages": 171,
-			"height": 9.72,
-			"thickness": 0.58,
-			"measured": false,
-			"sized": "pages",
-			"tint": "gray-2",
-			"shelf": null,
-			"position": null,
-			"face": "crimson-pro"
-		},
-		{
-			"id": "14a55aa28d7181c5ba37cee19d2ec778",
-			"slug": "sexy-librarian-a-novel-critical-edition-3",
-			"title": "Sexy Librarian: A Novel, Critical Edition",
-			"format": "book",
-			"subtitle": null,
-			"authors": [
-				"Julia Weist"
-			],
-			"publishers": [
-				"Ellen Lupton"
-			],
-			"tags": [],
-			"year": "2008",
-			"isbn10": "0615176771",
-			"isbn13": "9780615176772",
-			"bookshopIsbn": null,
-			"onBookshop": null,
-			"copies": null,
-			"where": null,
-			"notes": null,
+			"notes": "I designed this.",
 			"pages": 171,
 			"height": 8.62,
 			"thickness": 0.58,
