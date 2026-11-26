@@ -160,19 +160,6 @@ a:hover {
 	flex: 1 0 1.5rem;
 }
 
-/* ---- Outlines ----------------------------------------------------------------
-   While a filter is on, the books it leaves out stay on the shelf as faint
-   outlines behind the ones pulled forward: the empty space is the count.
-   Decoration only (the shelf label carries the number in text), so the
-   rule can be faint; it follows --color-text so it works in dark mode. */
-.board > li.ghost .spine {
-	background: transparent;
-	color: transparent;
-	border-width: 1px;
-	border-color: color-mix(in oklab, var(--color-text) 22%, transparent);
-	margin-right: -1px;
-}
-
 /* ---- The shelf label -------------------------------------------------------
    A library labels its shelves with a small card in a holder on the board's
    front edge. Ours hangs on the first board: what's on show and how many

@@ -5,8 +5,6 @@
 	import { goto, pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
 	import { browser } from '$app/env';
-	import { flip } from 'svelte/animate';
-	import { prefersReducedMotion } from 'svelte/motion';
 
 	let query = $state('');
 
@@ -69,22 +67,6 @@
 		return words.every((w) => hay.includes(w));
 	};
 	const shown = $derived(new Set(books.filter(matches).map((b) => b.slug)));
-
-	// Filtering pulls the matching books to the front of the shelf, still A to
-	// Z, and leaves every other book behind them as an empty outline: the
-	// shelf shows how much you've pulled out, not just a number. The books
-	// slide into place (instantly with reduced motion).
-	const filtering = $derived(Boolean(facet || words.length));
-	// Two ways to show a filter, to compare: 'front' pulls the matches to
-	// the front of the shelf; 'in-place' leaves every book where it stands,
-	// so you see where in A to Z the matches fall. ?shelf=in-place to try.
-	const arrangement = $derived(browser && page.url.searchParams.get('shelf') === 'in-place' ? 'in-place' : 'front');
-	const ordered = $derived(
-		filtering && arrangement === 'front'
-			? [...books.filter((b) => shown.has(b.slug)), ...books.filter((b) => !shown.has(b.slug))]
-			: books
-	);
-	const slide = $derived({ duration: prefersReducedMotion.current ? 0 : 450 });
 
 	// The shelf label: a card on the front of the first board, the way a
 	// library labels a shelf. It says what's on show and how many.
@@ -198,9 +180,8 @@
 	     keyboard users get the same thing with Enter. -->
 	<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -->
 	<ul class="board mt-4" onclick={pick}>
-		{#each ordered as book (book.slug)}
-			<!-- An outline is inert: not a link, not a tab stop, not read out. -->
-			<li class:ghost={filtering && !shown.has(book.slug)} inert={filtering && !shown.has(book.slug)} animate:flip={slide}>
+		{#each books as book (book.slug)}
+			<li hidden={!shown.has(book.slug)}>
 				<Spine {book} />
 				{#if book.slug === firstShown}<span class="shelf-label" aria-hidden="true">{shelfLabel}</span>{/if}
 			</li>
