@@ -160,6 +160,44 @@ a:hover {
 	flex: 1 0 1.5rem;
 }
 
+/* ---- Outlines ----------------------------------------------------------------
+   While a filter is on, the books it leaves out stay on the shelf as faint
+   outlines behind the ones pulled forward: the empty space is the count.
+   Decoration only (the shelf label carries the number in text), so the
+   rule can be faint; it follows --color-text so it works in dark mode. */
+.board > li.ghost .spine {
+	background: transparent;
+	color: transparent;
+	border-width: 1px;
+	border-color: color-mix(in oklab, var(--color-text) 22%, transparent);
+	margin-right: -1px;
+}
+
+/* ---- The shelf label -------------------------------------------------------
+   A library labels its shelves with a small card in a holder on the board's
+   front edge. Ours hangs on the first board: what's on show and how many
+   ("Typography · 34 of 441"). Paper and ink like the spines, so it reads
+   the same in dark mode; the holder's rim is the board's lighter top. It's
+   centred on the plank, so on a phone's thinner board it overlaps it evenly. */
+.shelf-label {
+	position: absolute;
+	left: 0.25rem;
+	top: calc(100% - var(--board) / 2);
+	transform: translateY(-50%);
+	z-index: 1;
+	max-width: calc(100vw - 2rem);
+	padding: 0.125rem 0.5rem;
+	border: 2px solid var(--board-top);
+	background: var(--wjerk-white);
+	color: var(--wjerk-black);
+	font-size: var(--text-xs);
+	line-height: var(--leading-xs);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	pointer-events: none;
+}
+
 /* ---- Show all the books ---------------------------------------------------
    The way back from a filter, drawn as the house button (onething's .btn):
    a 2px ink rule, room inside, and it inverts when pressed. No radius,
