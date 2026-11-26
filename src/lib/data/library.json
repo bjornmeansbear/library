@@ -905,7 +905,9 @@
 			"publishers": [
 				"The MIT Press"
 			],
-			"tags": [],
+			"tags": [
+				"Conceptual Art"
+			],
 			"year": "2006",
 			"isbn10": "0262511959",
 			"isbn13": "9780262511957",
@@ -1040,7 +1042,10 @@
 			"publishers": [
 				"Van Nostrand Reinhold Company"
 			],
-			"tags": [],
+			"tags": [
+				"Color Design",
+				"Bauhaus"
+			],
 			"year": null,
 			"isbn10": "0442240376",
 			"isbn13": "9780442240370",
@@ -1126,7 +1131,10 @@
 				"Pearson",
 				"Laurence King Publishing"
 			],
-			"tags": [],
+			"tags": [
+				"Color Design",
+				"Visual Fundamentals"
+			],
 			"year": "2011",
 			"isbn10": "0205748341",
 			"isbn13": "9780205748341",
@@ -2171,7 +2179,10 @@
 			"publishers": [
 				"University of California Press"
 			],
-			"tags": [],
+			"tags": [
+				"Color Design",
+				"Semiotics"
+			],
 			"year": null,
 			"isbn10": "0520220390",
 			"isbn13": "9780520220393",
@@ -2199,7 +2210,9 @@
 			"publishers": [
 				"Sacred Bones Books"
 			],
-			"tags": [],
+			"tags": [
+				"Color Design"
+			],
 			"year": "2018",
 			"isbn10": "0999609939",
 			"isbn13": "9780999609934",
@@ -2422,7 +2435,12 @@
 			"publishers": [
 				"Onomatopee"
 			],
-			"tags": [],
+			"tags": [
+				"Copyright",
+				"Open Studies",
+				"Public Domain",
+				"Lecture"
+			],
 			"year": "2019",
 			"isbn10": "9491677934",
 			"isbn13": "9789491677939",
@@ -2845,7 +2863,10 @@
 			"publishers": [
 				"Harcourt Brace Jovanovich"
 			],
-			"tags": [],
+			"tags": [
+				"Color Design",
+				"Visual Fundamentals"
+			],
 			"year": "1990",
 			"isbn10": "0030304229",
 			"isbn13": "9780030304224",
@@ -3572,7 +3593,11 @@
 				"Riverhead Books",
 				"Penguin Books"
 			],
-			"tags": [],
+			"tags": [
+				"Music",
+				"Literature",
+				"Biography"
+			],
 			"year": "2022",
 			"isbn10": "0593541820",
 			"isbn13": "9780593541821",
@@ -4604,7 +4629,9 @@
 				"Deborah Kay Fitzgerald"
 			],
 			"publishers": [],
-			"tags": [],
+			"tags": [
+				"Want to read"
+			],
 			"year": "2003",
 			"isbn10": null,
 			"isbn13": null,
@@ -4913,7 +4940,11 @@
 			"publishers": [
 				"The MIT Press"
 			],
-			"tags": [],
+			"tags": [
+				"Color Design",
+				"Form",
+				"Modernist"
+			],
 			"year": "1986",
 			"isbn10": null,
 			"isbn13": null,
@@ -4942,7 +4973,10 @@
 				"Thomson Wadsworth",
 				"Wadsworth"
 			],
-			"tags": [],
+			"tags": [
+				"Color Design",
+				"Visual Fundamentals"
+			],
 			"year": "2007",
 			"isbn10": "0534613381",
 			"isbn13": "9780534613389",
@@ -4970,7 +5004,9 @@
 			"publishers": [
 				"Tempe Digital"
 			],
-			"tags": [],
+			"tags": [
+				"Color Design"
+			],
 			"year": "2015",
 			"isbn10": "0986163708",
 			"isbn13": "9780986163708",
@@ -5054,7 +5090,17 @@
 			"publishers": [
 				"Vintage Books"
 			],
-			"tags": [],
+			"tags": [
+				"A New Design Commons",
+				"Open Source",
+				"The Commons",
+				"Public Domain",
+				"Copyright",
+				"Intellectual Property",
+				"Law School",
+				"Law",
+				"Technology"
+			],
 			"year": "2002",
 			"isbn10": "0375726446",
 			"isbn13": "9780375726446",
@@ -6648,7 +6694,10 @@
 			"publishers": [
 				"Yale University Press"
 			],
-			"tags": [],
+			"tags": [
+				"Color Design",
+				"Modernist"
+			],
 			"year": "1963",
 			"isbn10": "0300179359",
 			"isbn13": "9780300179354",
@@ -6817,7 +6866,11 @@
 			"publishers": [
 				"Rizzoli"
 			],
-			"tags": [],
+			"tags": [
+				"Color Design",
+				"Visual Fundamentals",
+				"Bauhaus"
+			],
 			"year": null,
 			"isbn10": "0847807800",
 			"isbn13": "9780847807802",
@@ -8394,7 +8447,9 @@
 			"publishers": [
 				"Rockport Publishers"
 			],
-			"tags": [],
+			"tags": [
+				"Color Design"
+			],
 			"year": "2013",
 			"isbn10": "1592538088",
 			"isbn13": "9781592538089",
@@ -8558,7 +8613,10 @@
 				"Wucius Wong"
 			],
 			"publishers": [],
-			"tags": [],
+			"tags": [
+				"Color Design",
+				"Visual Fundamentals"
+			],
 			"year": null,
 			"isbn10": "0442292848",
 			"isbn13": "9780442292843",
@@ -8584,7 +8642,9 @@
 				"Wucius Wong"
 			],
 			"publishers": [],
-			"tags": [],
+			"tags": [
+				"Visual Fundamentals"
+			],
 			"year": null,
 			"isbn10": "0442295650",
 			"isbn13": "9780442295653",
@@ -9332,7 +9392,9 @@
 			"publishers": [
 				"University of California Press"
 			],
-			"tags": [],
+			"tags": [
+				"Conceptual Art"
+			],
 			"year": null,
 			"isbn10": "0520210131",
 			"isbn13": "9780520210134",
@@ -10461,7 +10523,14 @@
 			"publishers": [
 				"Wiley"
 			],
-			"tags": [],
+			"tags": [
+				"Generally Fine Design",
+				"Graphic Design",
+				"Form Content Context",
+				"Semiotics",
+				"Visual Fundamentals",
+				"Visual Literacy"
+			],
 			"year": "1992",
 			"isbn10": "0471284920",
 			"isbn13": "9780471284925",
@@ -10602,7 +10671,9 @@
 			"publishers": [
 				"Wiley"
 			],
-			"tags": [],
+			"tags": [
+				"Color Design"
+			],
 			"year": "2011",
 			"isbn10": "0470381353",
 			"isbn13": "9780470381359",
