@@ -120,22 +120,22 @@
 		</div>
 		<div>
 			<form class="mt-8 min-[55rem]:mt-0 flex flex-wrap items-end gap-x-4 gap-y-2" role="search" onsubmit={(e) => e.preventDefault()}>
-				<label class="flex flex-col gap-1 text-sm">
+				<label class="flex flex-[1_1_14rem] flex-col gap-1 text-sm">
 					Find a book
 					<input
 						type="search"
 						bind:value={query}
 						placeholder="Title, author, publisher, year, tag"
-						class="w-[min(24rem,80vw)] border-2 border-text bg-bg px-2 py-1 text-base placeholder:text-text-muted"
+						class="w-full border-2 border-text bg-bg px-2 py-1 text-base placeholder:text-text-muted"
 					/>
 				</label>
 				{#if tags.length}
-					<label class="flex flex-col gap-1 text-sm">
+					<label class="flex flex-[0_1_14rem] flex-col gap-1 text-sm">
 						Browse a shelf
 						<select
 							value={currentTag ?? ''}
 							onchange={(e) => goto(e.currentTarget.value ? shelfHref(e.currentTarget.value) : '/')}
-							class="w-[min(16rem,80vw)] border-2 border-text bg-bg px-2 py-1 text-base"
+							class="w-full border-2 border-text bg-bg px-2 py-1 text-base"
 						>
 							<option value="">All {books.length} books</option>
 							<optgroup label="Shelves">
@@ -160,18 +160,23 @@
 			</form>
 
 			{#if facet}
-				<p class="mt-4 mb-0 flex flex-wrap items-baseline gap-x-4 gap-y-1">
-					<span>
-						{facet.kind === 'format' ? 'Format:' : facet.kind === 'year' ? 'Published in' : facet.kind === 'tag' ? 'Tagged' : facet.kind === 'author' ? 'By' : 'Published by'}
-						<strong>{facet.value}</strong>
-					</span>
-					<a href="/" class="show-all">Show all the books</a>
+				<!-- On screen, the shelf label says this; here for screen readers. -->
+				<p class="visually-hidden">
+					{facet.kind === 'format' ? 'Format:' : facet.kind === 'year' ? 'Published in' : facet.kind === 'tag' ? 'Tagged' : facet.kind === 'author' ? 'By' : 'Published by'}
+					{facet.value}
 				</p>
-				{#if intro}<p class="mt-0 mb-0 max-w-[36rem] whitespace-pre-line">{intro}</p>{/if}
+				{#if intro}<p class="mt-4 mb-0 max-w-[36rem] whitespace-pre-line">{intro}</p>{/if}
 			{/if}
 		</div>
 	</div>
 </header>
+
+<!-- The way out of a filter or search: a stamp, from wjavelength's yes/no
+     votes, slapped on at a tilt over the top-left corner and staying put as
+     you scroll. Goldenrod on Wjerk Black, the pairing the votes like best. -->
+{#if facet || words.length}
+	<button type="button" class="stamp-all" onclick={() => ((query = ''), goto('/'))}>Show all the books</button>
+{/if}
 
 <!-- The shelves run nearly wall to wall; only the text above and below keeps the wide margins. -->
 <main class="bookcase px-[clamp(0.5rem,1.5vw,1rem)] pb-12">

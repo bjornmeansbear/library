@@ -185,25 +185,57 @@ a:hover {
 	pointer-events: none;
 }
 
-/* ---- Show all the books ---------------------------------------------------
-   The way back from a filter, drawn as the house button (onething's .btn):
-   a 2px ink rule, room inside, and it inverts when pressed. No radius,
-   no shadow. */
-.show-all {
-	display: inline-block;
-	padding: 0.5rem 1rem;
-	border: 2px solid var(--color-text);
-	background: var(--color-bg);
-	color: var(--color-text);
-	font-size: var(--text-sm);
-	text-decoration: none;
+/* ---- Show all the books: the stamp ---------------------------------------
+   From wjavelength's vote stamps: Basteleur, uppercase, a heavy rule in the
+   ink colour, tilted, landing with a quick scale-down. Fixed over the top
+   left, above the title, so the way back is always in reach while you
+   scroll a filtered shelf. Wjerk Goldenrod on Wjerk Black, 6.50:1 (AA):
+   the vote results' best-liked accent (94% yes) on their best-liked dark
+   ground. Paper and ink stay the same in dark mode, like the spines. Press
+   inverts. Reduced motion: it simply appears. */
+.stamp-all {
+	position: fixed;
+	top: clamp(0.75rem, 2vw, 1.5rem);
+	left: clamp(0.75rem, 2vw, 1.5rem);
+	z-index: 10;
+	font-family: 'Basteleur', var(--font-sans);
+	font-weight: 700;
+	font-size: clamp(1rem, 0.75rem + 1vw, 1.5rem);
+	line-height: 1;
+	text-transform: uppercase;
+	padding: 0.35em 0.5em 0.25em;
+	border: 0.12em solid currentColor;
+	background: var(--wjerk-black);
+	color: var(--wjerk-goldenrod);
+	transform: rotate(-8deg);
+	cursor: pointer;
+	animation: stamp-in 150ms ease-out;
 }
-.show-all:hover {
-	color: var(--color-accent-hover);
+.stamp-all:hover {
+	transform: rotate(-6deg) scale(1.03);
 }
-.show-all:active {
-	background: var(--color-text);
-	color: var(--color-bg);
+.stamp-all:active {
+	background: var(--wjerk-goldenrod);
+	color: var(--wjerk-black);
+	border-color: var(--wjerk-black);
+}
+.stamp-all:focus-visible {
+	outline: 0.25rem solid var(--wjerk-goldenrod);
+	outline-offset: 0.25rem;
+}
+@keyframes stamp-in {
+	from {
+		opacity: 0;
+		scale: 1.6;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	.stamp-all {
+		animation: none;
+	}
+	.stamp-all:hover {
+		transform: rotate(-8deg);
+	}
 }
 
 /* ---- A spine -------------------------------------------------------------
