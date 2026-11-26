@@ -113,21 +113,32 @@
 	];
 
 	// Where else to find Kristian and Wjerk: the list on kristian.bjornard.com.
-	const elsewhere = [
-		['wjerkshop@pm.me', 'mailto:wjerkshop@pm.me'],
-		['(443) 917-1420', 'tel:+14439171420'],
-		['Wjerk, the studio', 'https://a.wjerk.shop/'],
-		['Every Wjerk project', 'https://a.wjerk.shop/works'],
-		['Kristian Bjørnard', 'https://kristian.bjornard.com/'],
-		['Teaching', 'https://teaching.kristianbjornard.com/'],
-		['Writing: Bjornpaedia', 'https://bjornpaedia.wjerk.shop/'],
-		['Wjavelength, the colour system', 'https://wjavelength.wjerk.shop/'],
-		['Newsletter', 'https://buttondown.com/bjornmeansbear'],
-		['GitHub', 'https://github.com/bjornmeansbear'],
-		['Archive, 2003–2011', 'https://archive.wjerk.shop/'],
-		['The Office of Kristian Bjørnard', 'https://www.ookb.co/'],
-		['Instagram', 'https://www.instagram.com/bjornmeansbear'],
-		['LinkedIn', 'https://www.linkedin.com/in/kristian-bjornard-367561259']
+	// Grouped, so the column reads as a few kinds of place, not one long list.
+	const elsewhere: [string, [string, string][]][] = [
+		['Get in touch', [
+			['wjerkshop@pm.me', 'mailto:wjerkshop@pm.me'],
+			['(443) 917-1420', 'tel:+14439171420']
+		]],
+		['Wjerk', [
+			['The studio', 'https://a.wjerk.shop/'],
+			['Every project', 'https://a.wjerk.shop/works'],
+			['Wjavelength, the colour system', 'https://wjavelength.wjerk.shop/'],
+			['Bjornpaedia, the writing', 'https://bjornpaedia.wjerk.shop/']
+		]],
+		['Kristian Bjørnard', [
+			['kristian.bjornard.com', 'https://kristian.bjornard.com/'],
+			['Teaching', 'https://teaching.kristianbjornard.com/'],
+			['Newsletter', 'https://buttondown.com/bjornmeansbear'],
+			['GitHub', 'https://github.com/bjornmeansbear']
+		]],
+		['Archives', [
+			['2003–2011', 'https://archive.wjerk.shop/'],
+			['The Office of Kristian Bjørnard', 'https://www.ookb.co/']
+		]],
+		['Social', [
+			['Instagram', 'https://www.instagram.com/bjornmeansbear'],
+			['LinkedIn', 'https://www.linkedin.com/in/kristian-bjornard-367561259']
+		]]
 	];
 
 	const sized = books.reduce(
@@ -233,7 +244,7 @@
      colophon, then everywhere else (the same list as kristian.bjornard.com),
      then the small print. -->
 <footer class="site-footer px-[clamp(1.5rem,6vw,6rem)] pt-8 pb-12 text-sm">
-	<div class="grid gap-x-[clamp(2rem,4vw,4rem)] gap-y-8 min-[40rem]:grid-cols-2 min-[64rem]:grid-cols-[1fr_1fr_auto]">
+	<div class="grid gap-x-[clamp(2rem,4vw,4rem)] gap-y-8 min-[40rem]:grid-cols-2 min-[64rem]:grid-cols-3">
 		<div class="max-w-[40rem]">
 			<h2 class="m-0 text-sm">About</h2>
 			<p class="mt-2 mb-0">
@@ -261,13 +272,20 @@
 			</p>
 		</div>
 
-		<div>
+		<div class="min-[40rem]:col-span-2 min-[64rem]:col-span-1">
 			<h2 class="m-0 text-sm">Elsewhere</h2>
-			<ul class="elsewhere">
-				{#each elsewhere as [label, href] (href)}
-					<li><a {href}>{label}</a></li>
+			<div class="elsewhere">
+				{#each elsewhere as [group, links] (group)}
+					<section>
+						<h3>{group}</h3>
+						<ul>
+							{#each links as [label, href] (href)}
+								<li><a {href}>{label}</a></li>
+							{/each}
+						</ul>
+					</section>
 				{/each}
-			</ul>
+			</div>
 		</div>
 	</div>
 

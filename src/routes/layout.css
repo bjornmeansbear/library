@@ -328,9 +328,23 @@ a:hover {
 .site-footer {
 	border-top: 2px solid var(--color-text);
 }
+/* Elsewhere: a few small groups, each under a muted label, two groups
+   across where the column has room. */
 .elsewhere {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+	gap: 1rem 2rem;
+	margin-top: 0.5rem;
+}
+.elsewhere h3 {
+	margin: 0;
+	font-size: inherit;
+	font-weight: 400;
+	color: var(--color-text-muted);
+}
+.elsewhere ul {
 	list-style: none;
-	margin: 0.5rem 0 0;
+	margin: 0;
 	padding: 0;
 }
 .elsewhere a {
