@@ -23,7 +23,7 @@
 				"an-essay-on-typography",
 				"a-new-program-for-graphic-design",
 				"365-aiga-annual-design-competitions-365-aiga-year-in-design",
-				"a-golden-thread-2500-years-of-solar-architecture-and-tecnolo",
+				"a-golden-thread-2500-years-of-solar-architecture-and-technol",
 				"a-guide-to-teaching-art-at-the-college-level",
 				"30-joyas-bibliograficas-en-la-coleccion-borbon-lorenzana",
 				"aquinas",
@@ -101,16 +101,16 @@
 				"d-i-y-design-it-yourself",
 				"de-bono-s-thinking-course",
 				"the-death-and-life-of-great-american-cities",
-				"deep-economy-the-wealth-of-communities-and-the-durable-furtu",
+				"deep-economy-the-wealth-of-communities-and-the-durable-futur",
 				"design-anarchy",
 				"design-as-art",
 				"design-by-numbers",
 				"design-elements-a-graphic-style-manual-understanding-the-rul",
 				"design-for-an-empathetic-world",
 				"design-for-society",
-				"design-for-the-enviornment",
+				"design-for-the-environment",
 				"design-for-the-real-world",
-				"design-futuring-sustainablity-ethics-and-new-practice",
+				"design-futuring-sustainability-ethics-and-new-practice",
 				"design-is-a-job",
 				"design-is-the-problem-the-future-of-design-must-be-sustainab",
 				"design-like-you-give-a-damn",
@@ -139,7 +139,7 @@
 			"books": [
 				"cancer-edipemiology-in-older-adolecents-and-young-adults-15",
 				"cancer-edipemiology-in-older-adolecents-and-young-adults-15-2",
-				"autobiografia-conocimentos-y-recuerdos-sobre-el-arte-de-la-e"
+				"autobiografia-conocimientos-y-recuerdos-sobre-el-arte-de-la"
 			]
 		},
 		{
@@ -1295,8 +1295,8 @@
 		},
 		{
 			"id": "14a55aa28d71810fb37afd75d9fb0fcc",
-			"slug": "autobiografia-conocimentos-y-recuerdos-sobre-el-arte-de-la-e",
-			"title": "Autobiografia Conocimentos Y Recuerdos Sobre El Arte De La Encuadernacion",
+			"slug": "autobiografia-conocimientos-y-recuerdos-sobre-el-arte-de-la",
+			"title": "Autobiografia Conocimientos Y Recuerdos Sobre El Arte De La Encuadernacion",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -1317,7 +1317,7 @@
 			"thickness": 0.32,
 			"measured": false,
 			"sized": "pages",
-			"tint": "green-3",
+			"tint": "green-2",
 			"shelf": "GT1S4",
 			"position": 3,
 			"face": "young-serif"
@@ -2938,8 +2938,8 @@
 		},
 		{
 			"id": "14a55aa28d7181a59204caeeafe044a0",
-			"slug": "deep-economy-the-wealth-of-communities-and-the-durable-furtu",
-			"title": "Deep Economy: The Wealth of Communities and the Durable Furture",
+			"slug": "deep-economy-the-wealth-of-communities-and-the-durable-futur",
+			"title": "Deep Economy: The Wealth of Communities and the Durable Future",
 			"format": "book",
 			"subtitle": "The Wealth of Communities and the Durable Future",
 			"authors": [
@@ -3215,8 +3215,8 @@
 		},
 		{
 			"id": "14a55aa28d7181a8b4dae11845900544",
-			"slug": "design-for-the-enviornment",
-			"title": "Design for the Enviornment",
+			"slug": "design-for-the-environment",
+			"title": "Design for the Environment",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -3278,8 +3278,8 @@
 		},
 		{
 			"id": "14a55aa28d7181e5a647f80953fe3cd6",
-			"slug": "design-futuring-sustainablity-ethics-and-new-practice",
-			"title": "Design Futuring: Sustainablity, Ethics, and New Practice",
+			"slug": "design-futuring-sustainability-ethics-and-new-practice",
+			"title": "Design Futuring: Sustainability, Ethics, and New Practice",
 			"format": "book",
 			"subtitle": "Sustainability, Ethics, and New Practice",
 			"authors": [
@@ -4819,8 +4819,8 @@
 		},
 		{
 			"id": "14a55aa28d7181eb83c8fd377f85b6d5",
-			"slug": "the-eternal-letter-two-millenia-of-the-classical-roman-capit",
-			"title": "The Eternal Letter: Two Millenia of the Classical Roman Capital",
+			"slug": "the-eternal-letter-two-millennia-of-the-classical-roman-capi",
+			"title": "The Eternal Letter: Two Millennia of the Classical Roman Capital",
 			"format": "book",
 			"subtitle": "Two Millennia of the Classical Roman Capital",
 			"authors": [
@@ -4968,8 +4968,8 @@
 		},
 		{
 			"id": "14a55aa28d71819bb2ece560e7831c0d",
-			"slug": "the-experimenters-change-and-design-at-black-mountain-colleg",
-			"title": "The Experimenters: Change and Design at Black Mountain College",
+			"slug": "the-experimenters-chance-and-design-at-black-mountain-colleg",
+			"title": "The Experimenters: Chance and Design at Black Mountain College",
 			"format": "book",
 			"subtitle": "Chance and Design at Black Mountain College",
 			"authors": [
@@ -5236,8 +5236,8 @@
 		},
 		{
 			"id": "14a55aa28d71811db504e0d88efba4a4",
-			"slug": "form-follows-fiasco-why-modern-architecture-hasnt-worked",
-			"title": "Form Follows Fiasco: Why Modern Architecture Hasnt Worked",
+			"slug": "form-follows-fiasco-why-modern-architecture-hasn-t-worked",
+			"title": "Form Follows Fiasco: Why Modern Architecture Hasn't Worked",
 			"format": "book",
 			"subtitle": "Why Modern Architecture Hasn't Worked",
 			"authors": [
@@ -5301,8 +5301,8 @@
 		},
 		{
 			"id": "19d55aa28d71803e8f59f012a928234e",
-			"slug": "foundation-of-art-and-design",
-			"title": "Foundation of Art and Design",
+			"slug": "foundations-of-art-and-design",
+			"title": "Foundations of Art and Design",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -5556,8 +5556,8 @@
 		},
 		{
 			"id": "14a55aa28d7181dc85e6d486af2110cf",
-			"slug": "a-golden-thread-2500-years-of-solar-architecture-and-tecnolo",
-			"title": "A Golden Thread: 2500 Years of Solar Architecture and Tecnology",
+			"slug": "a-golden-thread-2500-years-of-solar-architecture-and-technol",
+			"title": "A Golden Thread: 2500 Years of Solar Architecture and Technology",
 			"format": "book",
 			"subtitle": "2500 years of solar architecture and technology",
 			"authors": [
@@ -5906,8 +5906,8 @@
 		},
 		{
 			"id": "14a55aa28d718173ae34cc07914d9828",
-			"slug": "graphic-design-thinking-beyond-brainstroming",
-			"title": "Graphic Design Thinking: Beyond Brainstroming",
+			"slug": "graphic-design-thinking-beyond-brainstorming",
+			"title": "Graphic Design Thinking: Beyond Brainstorming",
 			"format": "book",
 			"subtitle": "Beyond Brainstorming",
 			"authors": [
@@ -6568,8 +6568,8 @@
 		},
 		{
 			"id": "14a55aa28d718125acf5d92a1b687708",
-			"slug": "how-to-be-a-graphic-designer-without-loosing-your-soul",
-			"title": "How to be a Graphic Designer Without Loosing Your Soul",
+			"slug": "how-to-be-a-graphic-designer-without-losing-your-soul",
+			"title": "How to be a Graphic Designer Without Losing Your Soul",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -6592,7 +6592,7 @@
 			"thickness": 0.59,
 			"measured": false,
 			"sized": "open-library",
-			"tint": "orange-2",
+			"tint": "orange-1",
 			"shelf": null,
 			"position": null,
 			"face": "league-gothic"
@@ -7045,8 +7045,8 @@
 		},
 		{
 			"id": "14a55aa28d71815ab307ed3471b2fc99",
-			"slug": "indie-publishing-how-to-design-and-produce-your-own-books",
-			"title": "Indie Publishing: How to Design and Produce Your Own Books",
+			"slug": "indie-publishing-how-to-design-and-produce-your-own-book",
+			"title": "Indie Publishing: How to Design and Produce Your Own Book",
 			"format": "book",
 			"subtitle": "How to Design & Publish Your Own Book",
 			"authors": [
@@ -7200,8 +7200,8 @@
 		},
 		{
 			"id": "14a55aa28d718141a679c4b10a3ac800",
-			"slug": "interdiciplinary-interaction-design-a-visual-guide-to-basic",
-			"title": "Interdiciplinary Interaction Design: A Visual Guide to Basic Theories, Models and Ideas for Thinking and Designing for Interactive Web Design and Digital Device Experiencees",
+			"slug": "interdisciplinary-interaction-design-a-visual-guide-to-basic",
+			"title": "Interdisciplinary Interaction Design: A Visual Guide to Basic Theories, Models and Ideas for Thinking and Designing for Interactive Web Design and Digital Device Experiences",
 			"format": "book",
 			"subtitle": "A Visual Guide to Basic Theories, Models and Ideas for Thinking and Designing for Interactive Web Design and Digital Device Experiences",
 			"authors": [
@@ -7222,7 +7222,7 @@
 			"thickness": 0.42,
 			"measured": false,
 			"sized": "pages",
-			"tint": "blue-3",
+			"tint": "blue-1",
 			"shelf": null,
 			"position": null,
 			"face": "gentium"
@@ -7381,8 +7381,8 @@
 		},
 		{
 			"id": "14a55aa28d718155ad27d9f42e462bb4",
-			"slug": "las-vegas-studio-images-from-the-archives-of-robert-venturi",
-			"title": "Las Vegas Studio: Images from the Archives of Robert Venturi and Denise Scott Brown",
+			"slug": "las-vegas-studio-images-from-the-archive-of-robert-venturi-a",
+			"title": "Las Vegas Studio: Images from the Archive of Robert Venturi and Denise Scott Brown",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -7667,8 +7667,8 @@
 		},
 		{
 			"id": "14a55aa28d7181f5aafad24703423088",
-			"slug": "making-comics-storytelling-sectrets-of-comics-manga-and-grap",
-			"title": "Making Comics: Storytelling Sectrets of COmics, Manga, and Graphic Novels",
+			"slug": "making-comics-storytelling-secrets-of-comics-manga-and-graph",
+			"title": "Making Comics: Storytelling Secrets of Comics, Manga, and Graphic Novels",
 			"format": "book",
 			"subtitle": "Storytelling Secrets of Comics, Manga and Graphic Novels",
 			"authors": [
@@ -7850,8 +7850,8 @@
 		},
 		{
 			"id": "14a55aa28d7181ce9787e49b71c52a48",
-			"slug": "the-millenium-whole-earth-catalog",
-			"title": "The Millenium Whole Earth Catalog",
+			"slug": "the-millennium-whole-earth-catalog",
+			"title": "The Millennium Whole Earth Catalog",
 			"format": "book",
 			"subtitle": "Access to Tools and Ideas for the Twenty-First Century.",
 			"authors": [
@@ -8319,8 +8319,8 @@
 		},
 		{
 			"id": "14a55aa28d71817e8af6df8c810f0a36",
-			"slug": "the-next-whole-earth-catalogue",
-			"title": "The Next Whole Earth Catalogue",
+			"slug": "the-next-whole-earth-catalog",
+			"title": "The Next Whole Earth Catalog",
 			"format": "book",
 			"subtitle": "Access to Tools",
 			"authors": [
@@ -8807,8 +8807,8 @@
 		},
 		{
 			"id": "14a55aa28d71819f86c8cab09550a873",
-			"slug": "people-penguin-and-plastic-trees-basic-issues-in-environment",
-			"title": "People, Penguin, And Plastic Trees: Basic issues in Environmental Ethics",
+			"slug": "people-penguins-and-plastic-trees-basic-issues-in-environmen",
+			"title": "People, Penguins, And Plastic Trees: Basic issues in Environmental Ethics",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -9195,35 +9195,6 @@
 			"face": "bricolage"
 		},
 		{
-			"id": "14a55aa28d7181f5ada5c60b95f5a576",
-			"slug": "the-principals-of-sustainability",
-			"title": "The Principals of Sustainability",
-			"format": "book",
-			"subtitle": null,
-			"authors": [
-				"Simon Dresner"
-			],
-			"publishers": [
-				"Earthscan Publications"
-			],
-			"tags": [],
-			"year": "2002",
-			"isbn10": "185383842X",
-			"isbn13": "9781853838422",
-			"bookshopIsbn": null,
-			"where": null,
-			"notes": null,
-			"pages": 224,
-			"height": 9.09,
-			"thickness": 0.71,
-			"measured": false,
-			"sized": "open-library",
-			"tint": "blue-1",
-			"shelf": null,
-			"position": null,
-			"face": "work-sans"
-		},
-		{
 			"id": "18955aa28d718015baa8d8b15874b43b",
 			"slug": "principles-of-color-design",
 			"title": "Principles of Color Design",
@@ -9248,10 +9219,39 @@
 			"thickness": 0.4,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "brown-3",
+			"tint": "blue-3",
 			"shelf": null,
 			"position": null,
 			"face": "gentium"
+		},
+		{
+			"id": "14a55aa28d7181f5ada5c60b95f5a576",
+			"slug": "the-principles-of-sustainability",
+			"title": "The Principles of Sustainability",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Simon Dresner"
+			],
+			"publishers": [
+				"Earthscan Publications"
+			],
+			"tags": [],
+			"year": "2002",
+			"isbn10": "185383842X",
+			"isbn13": "9781853838422",
+			"bookshopIsbn": null,
+			"where": null,
+			"notes": null,
+			"pages": 224,
+			"height": 9.09,
+			"thickness": 0.71,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "brown-3",
+			"shelf": null,
+			"position": null,
+			"face": "work-sans"
 		},
 		{
 			"id": "18955aa28d7180e987c8f1c780385ae8",
@@ -9467,8 +9467,8 @@
 		},
 		{
 			"id": "14a55aa28d7181a68662f8a94f31c16c",
-			"slug": "research-for-designers-a-guide-to-method-and-practice",
-			"title": "Research for Designers: A Guide to Method and Practice",
+			"slug": "research-for-designers-a-guide-to-methods-and-practice",
+			"title": "Research for Designers: A Guide to Methods and Practice",
 			"format": "book",
 			"subtitle": "A Guide to Methods and Practice",
 			"authors": [
@@ -9989,8 +9989,8 @@
 		},
 		{
 			"id": "14a55aa28d71814ba60ced762e612a71",
-			"slug": "six-memos-for-the-next-millenium",
-			"title": "Six Memos for the Next Millenium",
+			"slug": "six-memos-for-the-next-millennium",
+			"title": "Six Memos for the Next Millennium",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -10013,7 +10013,7 @@
 			"thickness": 0.46,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "yellow-3",
+			"tint": "yellow-1",
 			"shelf": null,
 			"position": null,
 			"face": "space-mono"
@@ -10350,8 +10350,8 @@
 		},
 		{
 			"id": "14a55aa28d71815388a8fdbf5b9a8ae7",
-			"slug": "st-mary-s-hall-coventry-a-guide-to-the-building-its-histroy",
-			"title": "St Mary's Hall, Coventry: A Guide to the Building its Histroy and Contents",
+			"slug": "st-mary-s-hall-coventry-a-guide-to-the-building-its-history",
+			"title": "St Mary's Hall, Coventry: A Guide to the Building its History and Contents",
 			"format": "book",
 			"subtitle": "A Guide to the Building, Its History and Contents",
 			"authors": [
@@ -10440,8 +10440,8 @@
 		},
 		{
 			"id": "14a55aa28d71810baa03c92482b14a16",
-			"slug": "strategy-for-sustainablity",
-			"title": "Strategy for Sustainablity",
+			"slug": "strategy-for-sustainability",
+			"title": "Strategy for Sustainability",
 			"format": "book",
 			"subtitle": "A Business Manifesto",
 			"authors": [
@@ -10464,7 +10464,7 @@
 			"thickness": 0.75,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "cornflower-1",
+			"tint": "cornflower-2",
 			"shelf": null,
 			"position": null,
 			"face": "newsreader"
@@ -11002,8 +11002,8 @@
 		},
 		{
 			"id": "14a55aa28d718182ada1cdade6dd5ca5",
-			"slug": "this-means-this-this-means-that-a-users-guide-to-semiotics",
-			"title": "This Means This, This Means That: A Users Guide to Semiotics",
+			"slug": "this-means-this-this-means-that-a-user-s-guide-to-semiotics",
+			"title": "This Means This, This Means That: A User's Guide to Semiotics",
 			"format": "book",
 			"subtitle": "A User's Guide to Semiotics",
 			"authors": [
@@ -11533,8 +11533,8 @@
 		},
 		{
 			"id": "14a55aa28d7181fe9902fc541bba05a8",
-			"slug": "universal-principals-of-design",
-			"title": "Universal Principals of Design",
+			"slug": "universal-principles-of-design",
+			"title": "Universal Principles of Design",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -11559,7 +11559,7 @@
 			"thickness": 0.83,
 			"measured": false,
 			"sized": "pages",
-			"tint": "orange-1",
+			"tint": "orange-3",
 			"shelf": null,
 			"position": null,
 			"face": "eb-garamond"
@@ -11852,8 +11852,8 @@
 		},
 		{
 			"id": "14a55aa28d718165ac60f63c8c20f12e",
-			"slug": "wabi-sabi-for-artists-deisgners-poets-and-philosophers",
-			"title": "Wabi Sabi: For artists, deisgners, poets, & philosophers",
+			"slug": "wabi-sabi-for-artists-designers-poets-and-philosophers",
+			"title": "Wabi Sabi: For artists, designers, poets, & philosophers",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -12085,8 +12085,8 @@
 		},
 		{
 			"id": "14a55aa28d7181ff9571e582b453089b",
-			"slug": "who-killed-virginia-wolf",
-			"title": "Who Killed Virginia Wolf",
+			"slug": "who-killed-virginia-woolf",
+			"title": "Who Killed Virginia Woolf",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -12107,7 +12107,7 @@
 			"thickness": 0.65,
 			"measured": false,
 			"sized": "pages",
-			"tint": "pink-1",
+			"tint": "pink-2",
 			"shelf": null,
 			"position": null,
 			"face": "crimson-pro"
