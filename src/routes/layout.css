@@ -160,73 +160,25 @@ a:hover {
 	flex: 1 0 1.5rem;
 }
 
-/* ---- The tag shelf -------------------------------------------------------
-   The tags as their own small shelf beside the search: outlined spines on
-   the same board as the bookcase, wider for bigger tags (--w). Name runs
-   down the spine, count at the foot. The tag on show is inverted, like a
-   pressed button. Boards run the width of the shelf and are clipped there. */
-.tag-shelf {
-	--board: 0.625rem;
-	overflow-x: clip;
-}
-.tag-shelf > ul {
-	list-style: none;
-	margin: 0.5rem 0 0;
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
-	align-items: flex-end;
-	isolation: isolate;
-}
-.tag-shelf > ul > li {
-	position: relative;
-	padding: 0.75rem 0 var(--board);
-}
-.tag-shelf > ul > li::after {
-	content: '';
-	position: absolute;
-	left: -100vw;
-	right: -100vw;
-	bottom: 0;
-	height: var(--board);
-	box-sizing: border-box;
-	background: light-dark(var(--wjerk-brown), var(--brown-5));
-	border-top: calc(var(--board) * 0.3) solid light-dark(var(--brown-5), var(--brown-3));
-	z-index: -1;
-}
-.tag-spine {
-	writing-mode: vertical-rl;
-	display: flex;
-	justify-content: space-between;
-	gap: 0.75rem;
-	box-sizing: border-box;
-	width: var(--w);
-	min-height: 7.5rem;
-	padding: 0.5rem 0;
-	align-items: center;
+/* ---- Show all the books ---------------------------------------------------
+   The way back from a filter, drawn as the house button (onething's .btn):
+   a 2px ink rule, room inside, and it inverts when pressed. No radius,
+   no shadow. */
+.show-all {
+	display: inline-block;
+	padding: 0.5rem 1rem;
 	border: 2px solid var(--color-text);
-	border-bottom: 0;
-	margin-left: -2px; /* neighbours share one rule */
 	background: var(--color-bg);
 	color: var(--color-text);
 	font-size: var(--text-sm);
-	line-height: 1;
 	text-decoration: none;
-	white-space: nowrap;
 }
-.tag-shelf > ul > li:first-child .tag-spine {
-	margin-left: 0;
-}
-.tag-spine:hover {
+.show-all:hover {
 	color: var(--color-accent-hover);
 }
-.tag-spine[aria-current='page'] {
+.show-all:active {
 	background: var(--color-text);
 	color: var(--color-bg);
-}
-.tag-spine:focus-visible {
-	position: relative;
-	z-index: 1;
 }
 
 /* ---- A spine -------------------------------------------------------------

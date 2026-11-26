@@ -2,7 +2,7 @@
 	import Spine from '#lib/Spine.svelte';
 	import BookDialog from '#lib/BookDialog.svelte';
 	import { books, bySlug, generated, tags, type Book } from '#lib/library.ts';
-	import { pushState, replaceState } from '$app/navigation';
+	import { goto, pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
 	import { browser } from '$app/env';
 
@@ -49,10 +49,9 @@
 		return Array.isArray(field) ? field.includes(facet.value) : field === facet.value;
 	};
 
-	// Tags as shelves to browse: the ones with a few books up front, the
-	// one-offs folded away. A shelf's intro (from Notion) shows when it's open.
-	const mainShelves = tags.filter((t) => t.count > 1);
-	const moreShelves = tags.filter((t) => t.count === 1);
+	// Tags as shelves to browse, from a menu beside the search. Picking one
+	// goes to /?tag=…, the same address a tag link on a book card uses. A
+	// shelf's intro (from Notion) shows when it's open.
 	const shelfHref = (name: string) => `/?tag=${encodeURIComponent(name)}`;
 	const currentTag = $derived(facet?.kind === 'tag' ? facet.value : null);
 	const intro = $derived(currentTag ? (tags.find((t) => t.name === currentTag)?.intro ?? null) : null);
@@ -118,6 +117,28 @@
 						class="w-[min(24rem,80vw)] border-2 border-text bg-bg px-2 py-1 text-base placeholder:text-text-muted"
 					/>
 				</label>
+				{#if tags.length}
+					<label class="flex flex-col gap-1 text-sm">
+						Browse a shelf
+						<select
+							value={currentTag ?? ''}
+							onchange={(e) => goto(e.currentTarget.value ? shelfHref(e.currentTarget.value) : '/')}
+							class="w-[min(16rem,80vw)] border-2 border-text bg-bg px-2 py-1 text-base"
+						>
+							<option value="">All {books.length} books</option>
+							<optgroup label="Shelves">
+								{#each tags.filter((t) => t.count > 1) as t (t.name)}
+									<option value={t.name}>{t.name} ({t.count})</option>
+								{/each}
+							</optgroup>
+							<optgroup label="One book each">
+								{#each tags.filter((t) => t.count === 1) as t (t.name)}
+									<option value={t.name}>{t.name}</option>
+								{/each}
+							</optgroup>
+						</select>
+					</label>
+				{/if}
 				<p class="m-0 text-sm" aria-live="polite">
 					{#if words.length || facet}
 						{shown.size} of {books.length} {shown.size === 1 ? 'book' : 'books'}
@@ -125,48 +146,13 @@
 				</p>
 			</form>
 
-			{#if tags.length}
-				<!-- The tags as a little shelf of their own: outlined spines, thicker
-				     the more books they hold. The one-book tags fold away below. -->
-				<nav aria-labelledby="shelves-heading" class="tag-shelf mt-6">
-					<h2 id="shelves-heading" class="m-0 text-sm">Shelves</h2>
-					<ul>
-						{#each mainShelves as t (t.name)}
-							<li>
-								<a
-									class="tag-spine"
-									style="--w: {(1.5 + Math.log2(t.count) * 0.22).toFixed(2)}rem"
-									href={shelfHref(t.name)}
-									aria-current={currentTag === t.name ? 'page' : undefined}
-								>
-									<span>{t.name}</span>
-									<span class="tabular-nums">{t.count}</span>
-								</a>
-							</li>
-						{/each}
-					</ul>
-					{#if moreShelves.length}
-						<details class="text-sm" open={moreShelves.some((t) => t.name === currentTag)}>
-							<summary class="inline-block cursor-pointer py-1.5">{moreShelves.length} more, one book each</summary>
-							<ul class="m-0 flex flex-wrap gap-x-5 p-0">
-								{#each moreShelves as t (t.name)}
-									<li class="list-none">
-										<a class="inline-block py-1.5 aria-[current=page]:font-bold" href={shelfHref(t.name)} aria-current={currentTag === t.name ? 'page' : undefined}>{t.name}</a>
-									</li>
-								{/each}
-							</ul>
-						</details>
-					{/if}
-				</nav>
-			{/if}
-
 			{#if facet}
 				<p class="mt-4 mb-0 flex flex-wrap items-baseline gap-x-4 gap-y-1">
 					<span>
 						{facet.kind === 'format' ? 'Format:' : facet.kind === 'year' ? 'Published in' : facet.kind === 'tag' ? 'Tagged' : facet.kind === 'author' ? 'By' : 'Published by'}
 						<strong>{facet.value}</strong>
 					</span>
-					<a href="/" class="inline-block py-3 text-sm">Show all the books</a>
+					<a href="/" class="show-all">Show all the books</a>
 				</p>
 				{#if intro}<p class="mt-0 mb-0 max-w-[36rem] whitespace-pre-line">{intro}</p>{/if}
 			{/if}
