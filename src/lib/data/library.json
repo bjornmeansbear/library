@@ -175,12 +175,12 @@
 	"tags": [
 		{
 			"name": "Sustainabilitist",
-			"count": 108,
+			"count": 109,
 			"intro": null
 		},
 		{
 			"name": "Graphic Design",
-			"count": 74,
+			"count": 75,
 			"intro": null
 		},
 		{
@@ -190,7 +190,7 @@
 		},
 		{
 			"name": "Typography",
-			"count": 34,
+			"count": 35,
 			"intro": null
 		},
 		{
@@ -234,12 +234,27 @@
 			"intro": null
 		},
 		{
+			"name": "A New Design Commons",
+			"count": 9,
+			"intro": null
+		},
+		{
+			"name": "Open Source",
+			"count": 7,
+			"intro": null
+		},
+		{
 			"name": "Circular Economy",
 			"count": 6,
 			"intro": null
 		},
 		{
 			"name": "Modernist",
+			"count": 6,
+			"intro": null
+		},
+		{
+			"name": "The Commons",
 			"count": 6,
 			"intro": null
 		},
@@ -259,11 +274,6 @@
 			"intro": null
 		},
 		{
-			"name": "Open Source",
-			"count": 4,
-			"intro": null
-		},
-		{
 			"name": "Conceptual Art",
 			"count": 3,
 			"intro": null
@@ -271,6 +281,11 @@
 		{
 			"name": "Semiotics",
 			"count": 3,
+			"intro": null
+		},
+		{
+			"name": "Art",
+			"count": 2,
 			"intro": null
 		},
 		{
@@ -289,22 +304,7 @@
 			"intro": null
 		},
 		{
-			"name": "The Commons",
-			"count": 2,
-			"intro": null
-		},
-		{
-			"name": "A New Design Commons",
-			"count": 1,
-			"intro": null
-		},
-		{
 			"name": "Algorithmic Design",
-			"count": 1,
-			"intro": null
-		},
-		{
-			"name": "Art",
 			"count": 1,
 			"intro": null
 		},
@@ -325,6 +325,11 @@
 		},
 		{
 			"name": "Design",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Ecovention",
 			"count": 1,
 			"intro": null
 		},
@@ -487,7 +492,9 @@
 			"subtitle": null,
 			"authors": [],
 			"publishers": [],
-			"tags": [],
+			"tags": [
+				"Open Source"
+			],
 			"year": null,
 			"isbn10": null,
 			"isbn13": null,
@@ -1833,7 +1840,9 @@
 			"tags": [
 				"Sustainabilitist",
 				"Product Design",
-				"Design Theory"
+				"Design Theory",
+				"A New Design Commons",
+				"Open Source"
 			],
 			"year": "2002",
 			"isbn10": "8887942676",
@@ -3214,7 +3223,8 @@
 			],
 			"tags": [
 				"Sustainabilitist",
-				"Pragmatic Utopian"
+				"Pragmatic Utopian",
+				"The Commons"
 			],
 			"year": "2007",
 			"isbn10": "070061821X",
@@ -3445,7 +3455,8 @@
 			],
 			"tags": [
 				"Graphic Design",
-				"Architecture"
+				"Architecture",
+				"A New Design Commons"
 			],
 			"year": "2006",
 			"isbn10": "1568985525",
@@ -3985,7 +3996,8 @@
 			"tags": [
 				"Sustainabilitist",
 				"Product Design",
-				"Pragmatic Utopian"
+				"Pragmatic Utopian",
+				"A New Design Commons"
 			],
 			"year": "1971",
 			"isbn10": "0394470362",
@@ -6038,7 +6050,11 @@
 			"publishers": [
 				"Contemporary Museum"
 			],
-			"tags": [],
+			"tags": [
+				"Art",
+				"Ecovention",
+				"Sustainabilitist"
+			],
 			"year": "2012",
 			"isbn10": "0970098626",
 			"isbn13": "9780970098627",
@@ -6406,7 +6422,9 @@
 				"The University of Chicago Press"
 			],
 			"tags": [
-				"Pragmatic Utopian"
+				"Pragmatic Utopian",
+				"The Commons",
+				"Open Source"
 			],
 			"year": "2006",
 			"isbn10": "0226817423",
@@ -7503,7 +7521,10 @@
 			"publishers": [
 				"Hastings House"
 			],
-			"tags": [],
+			"tags": [
+				"Graphic Design",
+				"Typography"
+			],
 			"year": "1971",
 			"isbn10": null,
 			"isbn13": null,
@@ -9244,7 +9265,8 @@
 				"Harper Collins"
 			],
 			"tags": [
-				"Pragmatic Utopian"
+				"Pragmatic Utopian",
+				"A New Design Commons"
 			],
 			"year": "1994",
 			"isbn10": "0062510592",
@@ -9749,7 +9771,8 @@
 				"Random House"
 			],
 			"tags": [
-				"Pragmatic Utopian"
+				"Pragmatic Utopian",
+				"A New Design Commons"
 			],
 			"year": "1980",
 			"isbn10": "0394739515",
@@ -10011,7 +10034,8 @@
 				"Eastern Michigan University Galleries"
 			],
 			"tags": [
-				"Visual Fundamentals"
+				"Visual Fundamentals",
+				"A New Design Commons"
 			],
 			"year": "2014",
 			"isbn10": "0912042133",
@@ -10279,7 +10303,8 @@
 				"Sustainabilitist",
 				"Architecture",
 				"Aesthetics",
-				"Pedagogy"
+				"Pedagogy",
+				"A New Design Commons"
 			],
 			"year": "1977",
 			"isbn10": "0195019199",
@@ -12910,7 +12935,8 @@
 			],
 			"tags": [
 				"Sustainabilitist",
-				"Architecture"
+				"Architecture",
+				"A New Design Commons"
 			],
 			"year": "1979",
 			"isbn10": "0195024028",
@@ -13038,7 +13064,9 @@
 				"Ivan Illich"
 			],
 			"publishers": [],
-			"tags": [],
+			"tags": [
+				"The Commons"
+			],
 			"year": "1973",
 			"isbn10": null,
 			"isbn13": null,
@@ -13346,7 +13374,9 @@
 			"publishers": [
 				"Maryland Institute of Art"
 			],
-			"tags": [],
+			"tags": [
+				"The Commons"
+			],
 			"year": "2010",
 			"isbn10": null,
 			"isbn13": "5800036816522",
