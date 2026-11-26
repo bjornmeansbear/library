@@ -35,9 +35,12 @@ one file. Run it by hand with `npm run sync`.
 `package.json`, each standing for a longer command.
 
 Its helpers sit next to it: `scripts/lib/notion.mjs` (talking to Notion),
-`scripts/lib/openlibrary.mjs` (talking to Open Library). The other scripts,
-`add`, `fill` and `isbn-fixes`, use the same helpers but write *into* Notion
-instead of reading out of it.
+`scripts/lib/openlibrary.mjs` (talking to Open Library),
+`scripts/lib/sizes.mjs` (the Library of Congress catalogue, for heights and
+page counts). The other scripts, `add`, `fill`, `sizes`, `tags` and
+`isbn-fixes`, use the same helpers but write *into* Notion instead of
+reading out of it. The careful ones (`fill`, `tags`) write a plan file
+first and only change Notion when run with `--apply`.
 
 **Looks broken when:** `npm run sync` prints an error in red. Read the last
 line; it usually names the field or book it choked on.

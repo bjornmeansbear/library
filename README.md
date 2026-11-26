@@ -46,16 +46,40 @@ Fills only empty Subtitle, Year, Author, Publisher and LOC Call Number
 fields from Open Library, by ISBN-13; never changes what you typed. To leave
 a change out, delete it from `data/fill-plan.json` before applying.
 
+## Sizes and page counts
+
+    npm run sizes                # show what it would fill
+    npm run sizes -- --apply     # fill it
+
+Fills empty Pages, Height, Width and Thickness from Open Library and the
+Library of Congress catalogue (heights in whole cm, rounded up), and says
+where each height came from in **Size from**. `npm run add` does the same
+for a new book. Calipers beat any catalogue: type over the number and set
+Size from to Measured. Thickness left empty is estimated from Pages.
+
+## Shelf tags
+
+    npm run tags                 # writes TAG-PLAN.md: suggested tags
+    npm run tags -- --apply [--maybe m3,m7 | --maybe all]
+
+Suggests your existing shelf tags (Sustainabilitist, Typography, …) from
+call numbers, Open Library subjects and titles. Sure ones and maybes are
+listed separately; nothing is written until you apply. Any tag on a book is
+public: the Tags database is shared with the rest of your Notion, so keep
+private tags off books. A tag's **Shelf intro** field is for a curated
+shelf's introduction (not shown on the site yet); the tag page's own text is
+never read.
+
 In Notion, the **🔎 Needs info** view lists books missing an ISBN-13,
-author, publisher or year; **📏 To measure** lists books without caliper
-measurements, A–Z like the shelves.
+author, publisher or year; **📏 To measure** lists books you own that no
+catalogue knows the height of, A–Z like the shelves.
 
 ## In Notion
 
 - **ISBN-13** (text) is the ISBN the site uses. The old number **ISBN**
   column is only a fallback.
-- **Height (mm)** and **Thickness (mm)**: caliper measurements. A measured
-  book is drawn at its real size.
+- **Height / Width / Thickness (mm)** and **Pages**: from a catalogue or
+  your calipers; **Size from** says which. The spine is drawn at this size.
 - **Format**: blank or Book, Film (drawn as a DVD case), Music (a CD case),
   Journal, Zine.
   Only books get Bookshop.org and Open Library links.
