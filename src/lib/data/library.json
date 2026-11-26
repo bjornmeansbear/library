@@ -632,7 +632,9 @@
 			"publishers": [
 				"The MIT Press"
 			],
-			"tags": [],
+			"tags": [
+				"Architecture"
+			],
 			"year": "1969",
 			"isbn10": null,
 			"isbn13": null,
@@ -893,7 +895,9 @@
 			"publishers": [
 				"McGraw Hill"
 			],
-			"tags": [],
+			"tags": [
+				"Architecture"
+			],
 			"year": null,
 			"isbn10": null,
 			"isbn13": null,
@@ -1326,7 +1330,9 @@
 			"publishers": [
 				"Chicago Review Press"
 			],
-			"tags": [],
+			"tags": [
+				"Architecture"
+			],
 			"year": "1990",
 			"isbn10": "1556520808",
 			"isbn13": "9781556520808",
@@ -2077,7 +2083,9 @@
 			"subtitle": null,
 			"authors": [],
 			"publishers": [],
-			"tags": [],
+			"tags": [
+				"Pedagogy"
+			],
 			"year": null,
 			"isbn10": null,
 			"isbn13": null,
@@ -2989,7 +2997,8 @@
 				"Metropolis Books"
 			],
 			"tags": [
-				"Sustainabilitist"
+				"Sustainabilitist",
+				"Architecture"
 			],
 			"year": "2013",
 			"isbn10": "1935202170",
@@ -3252,7 +3261,8 @@
 				"Facts on File"
 			],
 			"tags": [
-				"Sustainabilitist"
+				"Sustainabilitist",
+				"Pedagogy"
 			],
 			"year": "1982",
 			"isbn10": "0816013802",
@@ -5239,7 +5249,9 @@
 				"Vintage Books",
 				"Random House"
 			],
-			"tags": [],
+			"tags": [
+				"Pedagogy"
+			],
 			"year": "1996",
 			"isbn10": "0679750312",
 			"isbn13": "9780679750314",
@@ -6963,7 +6975,9 @@
 				"Stacy Salazar"
 			],
 			"publishers": [],
-			"tags": [],
+			"tags": [
+				"Pedagogy"
+			],
 			"year": null,
 			"isbn10": null,
 			"isbn13": null,
@@ -8178,7 +8192,9 @@
 			"publishers": [
 				"Harvest Book"
 			],
-			"tags": [],
+			"tags": [
+				"Architecture"
+			],
 			"year": "1972",
 			"isbn10": null,
 			"isbn13": null,
@@ -8274,7 +8290,9 @@
 			"publishers": [
 				"Stampato"
 			],
-			"tags": [],
+			"tags": [
+				"Architecture"
+			],
 			"year": "1972",
 			"isbn10": null,
 			"isbn13": null,
@@ -8308,7 +8326,8 @@
 			"tags": [
 				"Color Design",
 				"Visual Fundamentals",
-				"Bauhaus"
+				"Bauhaus",
+				"Pedagogy"
 			],
 			"year": null,
 			"isbn10": "0847807800",
@@ -8579,7 +8598,9 @@
 			"publishers": [
 				"Stylus Publishing"
 			],
-			"tags": [],
+			"tags": [
+				"Pedagogy"
+			],
 			"year": "2007",
 			"isbn10": null,
 			"isbn13": null,
@@ -9831,7 +9852,9 @@
 			"publishers": [
 				"Penguin Books"
 			],
-			"tags": [],
+			"tags": [
+				"Architecture"
+			],
 			"year": "1943",
 			"isbn10": null,
 			"isbn13": null,
@@ -10444,8 +10467,8 @@
 		},
 		{
 			"id": "14a55aa28d718111bab9f925d9a5fc3d",
-			"slug": "principals-of-architectural-history-the-four-phases-of-archi",
-			"title": "Principals of Architectural History: The Four Phases of Architectural Style, 1420-1900",
+			"slug": "principles-of-architectural-history-the-four-phases-of-archi",
+			"title": "Principles of Architectural History: The Four Phases of Architectural Style, 1420-1900",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -10454,7 +10477,9 @@
 			"publishers": [
 				"The MIT Press"
 			],
-			"tags": [],
+			"tags": [
+				"Architecture"
+			],
 			"year": null,
 			"isbn10": null,
 			"isbn13": null,
@@ -10641,7 +10666,9 @@
 			"publishers": [
 				"Melbourne University Press"
 			],
-			"tags": [],
+			"tags": [
+				"Architecture"
+			],
 			"year": "1965",
 			"isbn10": null,
 			"isbn13": null,
@@ -11789,7 +11816,9 @@
 			"publishers": [
 				"City of Coventry"
 			],
-			"tags": [],
+			"tags": [
+				"Architecture"
+			],
 			"year": "1981",
 			"isbn10": "0901606650",
 			"isbn13": "9780901606655",
@@ -12298,7 +12327,9 @@
 				"Dell Publishing Company",
 				"Delta"
 			],
-			"tags": [],
+			"tags": [
+				"Pedagogy"
+			],
 			"year": "1969",
 			"isbn10": "0385290098",
 			"isbn13": "9780385290098",
@@ -12560,7 +12591,9 @@
 			"publishers": [
 				"Praeger Publishers"
 			],
-			"tags": [],
+			"tags": [
+				"Architecture"
+			],
 			"year": "1972",
 			"isbn10": null,
 			"isbn13": null,
