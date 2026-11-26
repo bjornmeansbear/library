@@ -14,6 +14,8 @@ export type Book = {
 	isbn13: string | null;
 	/** Another edition's ISBN for the Bookshop.org link, when yours isn't sold. */
 	bookshopIsbn?: string | null;
+	/** Checked by hand: true sold, false not sold, null not checked yet. */
+	onBookshop?: boolean | null;
 	where: string | null;
 	notes: string | null;
 	pages: number | null;
@@ -43,16 +45,23 @@ export const BOOKSHOP_AFFILIATE_ID = '129137';
 
 // A direct ISBN link 404s whenever Bookshop.org doesn't stock that exact
 // edition (out of print, museum catalogues, foreign editions: much of this
-// library), and a title search buries the book among look-alikes. So by
-// default it searches for the ISBN: the result is that edition or nothing.
-// A "Bookshop ISBN" set in Notion means that edition is known to be sold:
-// link straight to it. Bookshop.org has no public API to check stock.
-export function bookshopUrl(book: Pick<Book, 'isbn13' | 'bookshopIsbn'>) {
+// library), and Bookshop.org has no public API to check. So stock is checked
+// by hand in Notion ("On Bookshop", the 🛒 view):
+//   Bookshop ISBN set   → straight to that edition
+//   On Bookshop = Yes   → straight to the ISBN-13
+//   On Bookshop = No    → no link
+//   not checked yet     → a search for the ISBN-13: that edition or nothing
+// Returns null when there's no link to show.
+export function bookshopLink(
+	book: Pick<Book, 'isbn13' | 'bookshopIsbn' | 'onBookshop'>
+): { url: string; sure: boolean } | null {
 	const aff = BOOKSHOP_AFFILIATE_ID;
-	if (book.bookshopIsbn) {
-		return aff ? `https://bookshop.org/a/${aff}/${book.bookshopIsbn}` : `https://bookshop.org/book/${book.bookshopIsbn}`;
-	}
-	return `https://bookshop.org/search?keywords=${book.isbn13}${aff ? `&affiliate=${aff}` : ''}`;
+	const direct = (isbn: string) =>
+		aff ? `https://bookshop.org/a/${aff}/${isbn}` : `https://bookshop.org/book/${isbn}`;
+	if (book.bookshopIsbn) return { url: direct(book.bookshopIsbn), sure: true };
+	if (!book.isbn13 || book.onBookshop === false) return null;
+	if (book.onBookshop) return { url: direct(book.isbn13), sure: true };
+	return { url: `https://bookshop.org/search?keywords=${book.isbn13}${aff ? `&affiliate=${aff}` : ''}`, sure: false };
 }
 
 export function ordinal(n: number) {

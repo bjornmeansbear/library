@@ -1,9 +1,10 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import { bookshopUrl, BOOKSHOP_AFFILIATE_ID, type Book } from './library.ts';
+	import { bookshopLink, BOOKSHOP_AFFILIATE_ID, type Book } from './library.ts';
 
 	let { book, top, bottom }: { book: Book; top?: Snippet; bottom?: Snippet } = $props();
 	const isbn = $derived(book.isbn13 ?? book.isbn10);
+	const bookshop = $derived(bookshopLink(book));
 	// Shops and Open Library only know books; a film or journal gets a
 	// library search by title instead.
 	const isBook = $derived(book.format === 'book');
@@ -70,13 +71,13 @@
 		</ul>
 	{:else if isbn}
 		<ul class="mt-6 mb-0 flex flex-wrap gap-x-6 p-0 text-sm">
-			{#if book.isbn13}
-				<li class="list-none"><a class="inline-block py-3" href={bookshopUrl(book)}>{book.bookshopIsbn ? 'Buy at Bookshop.org' : 'Find it at Bookshop.org'}</a></li>
+			{#if bookshop}
+				<li class="list-none"><a class="inline-block py-3" href={bookshop.url}>{bookshop.sure ? 'Buy at Bookshop.org' : 'Find it at Bookshop.org'}</a></li>
 			{/if}
 			<li class="list-none"><a class="inline-block py-3" href="https://openlibrary.org/isbn/{isbn}">Open Library</a></li>
 			<li class="list-none"><a class="inline-block py-3" href="https://search.worldcat.org/isbn/{isbn}">Find it in a library</a></li>
 		</ul>
-		{#if BOOKSHOP_AFFILIATE_ID && book.isbn13}
+		{#if BOOKSHOP_AFFILIATE_ID && bookshop}
 			<p class="m-0 text-xs">Bookshop.org links are affiliate links: a small share of a sale goes to me and to independent bookstores.</p>
 		{/if}
 	{/if}

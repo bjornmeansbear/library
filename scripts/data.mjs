@@ -156,6 +156,8 @@ async function readNotion() {
 			notes: text(pr['Personal Notes']),
 			// Only when Bookshop.org doesn't sell the edition you own.
 			bookshopIsbn: text(pr['Bookshop ISBN']),
+			// Yes / No once checked by hand (the 🛒 view); null until then.
+			onBookshop: pr['On Bookshop']?.select?.name ?? null,
 			format: pr['Format']?.select?.name ?? '',
 			heightMm: pr['Height (mm)']?.number ?? null,
 			thicknessMm: pr['Thickness (mm)']?.number ?? null,
@@ -242,6 +244,7 @@ async function build(raw, cache) {
 			isbn10: isbn?.isbn10 ?? null,
 			isbn13: isbn?.isbn13 ?? null,
 			bookshopIsbn: b.bookshopIsbn ? normalizeIsbn(b.bookshopIsbn)?.isbn13 ?? null : null,
+			onBookshop: b.onBookshop === 'Yes' ? true : b.onBookshop === 'No' ? false : null,
 			where: b.where || null,
 			notes: b.notes || null,
 			pages: b.pages ?? ol?.pages ?? null,

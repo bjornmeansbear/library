@@ -93,11 +93,21 @@ book whose ISBN needs fixing, with Open Library's suggestion.
 Links use affiliate ID 129137 (`src/lib/library.ts`); the card shows a
 one-line disclosure.
 
-Links are a Bookshop.org search for the book's ISBN-13 (with the
-affiliate ID): it finds that edition or nothing. A direct ISBN link 404s
-whenever Bookshop doesn't stock that exact edition, and Bookshop has no
-public API to check which ones it does. To link straight to an edition you know Bookshop
-sells, put its ISBN in **Bookshop ISBN**; ISBN-13 stays the copy you own.
+Bookshop has no public API, and a direct ISBN link 404s whenever it doesn't
+stock that exact edition, so stock is checked by hand. In Notion, the
+🛒 **Check on Bookshop** view lists the books not checked yet. Click
+**Check** (a Bookshop search for the ISBN-13: the book or no results), then
+set **On Bookshop**:
+
+| In Notion | The card shows |
+|---|---|
+| **Bookshop ISBN** filled in | "Buy at Bookshop.org", straight to that edition |
+| On Bookshop = Yes | "Buy at Bookshop.org", straight to the ISBN-13 |
+| On Bookshop = No | no Bookshop link |
+| not checked yet | "Find it at Bookshop.org", the ISBN search |
+
+When Bookshop doesn't sell your edition but sells another, put that
+edition's ISBN in **Bookshop ISBN**; ISBN-13 stays the copy you own.
 
 ## Design notes
 
