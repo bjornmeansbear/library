@@ -271,8 +271,9 @@
 	</div>
 
 	<p class="small-print mt-8 mb-0">
-		Wjerk. 2026. Text CC BY-SA 4.0. Served from Cloudflare; the site’s code is at
+		Wjerk. 2026. Text and design CC BY-SA 4.0; code Apache 2.0, at
 		<a href="https://github.com/bjornmeansbear/library">github.com/bjornmeansbear/library</a>.
-		Bookshop.org links are affiliate links.
+		The books themselves, their titles and everything else about them, belong to their authors
+		and publishers. Served from Cloudflare. Bookshop.org links are affiliate links.
 	</p>
 </footer>

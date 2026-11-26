@@ -116,3 +116,9 @@ edition's ISBN in **Bookshop ISBN**; ISBN-13 stays the copy you own.
 Shelves, spines, tints and faces are in `src/routes/layout.css`, with the
 reasoning in comments. Findings that matter beyond this site are in
 `~/Code/color-system-and-guidelines/NOTES.md` (2026-11-26).
+
+## Licence
+
+Code: Apache 2.0 (`LICENSE`). Text and design: CC BY-SA 4.0. The books
+themselves, their titles, cover details and everything else about them,
+belong to their authors and publishers.
