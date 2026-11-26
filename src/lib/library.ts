@@ -32,6 +32,7 @@ export type Book = {
 };
 
 export type Shelf = { id: string; name: string; room: string | null; books: string[] };
+export type Tag = { name: string; count: number; intro: string | null };
 
 export const books = data.books as Book[];
 export const bySlug = new Map(books.map((b) => [b.slug, b]));
@@ -40,6 +41,7 @@ export const shelves = (data.shelves as Shelf[]).map((s) => ({
 	books: s.books.map((slug) => bySlug.get(slug)!)
 }));
 export const generated = data.generated;
+export const tags = (data.tags ?? []) as Tag[];
 
 // Set this to your Bookshop.org affiliate ID to earn on links; empty means
 // plain links and no affiliate disclosure.

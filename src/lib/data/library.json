@@ -172,6 +172,243 @@
 			]
 		}
 	],
+	"tags": [
+		{
+			"name": "Sustainabilitist",
+			"count": 108,
+			"intro": null
+		},
+		{
+			"name": "Graphic Design",
+			"count": 74,
+			"intro": null
+		},
+		{
+			"name": "Architecture",
+			"count": 51,
+			"intro": null
+		},
+		{
+			"name": "Typography",
+			"count": 34,
+			"intro": null
+		},
+		{
+			"name": "Pragmatic Utopian",
+			"count": 27,
+			"intro": null
+		},
+		{
+			"name": "Product Design",
+			"count": 27,
+			"intro": null
+		},
+		{
+			"name": "Design Theory",
+			"count": 20,
+			"intro": null
+		},
+		{
+			"name": "Aesthetics",
+			"count": 17,
+			"intro": null
+		},
+		{
+			"name": "Pedagogy",
+			"count": 17,
+			"intro": null
+		},
+		{
+			"name": "Publication Design",
+			"count": 17,
+			"intro": null
+		},
+		{
+			"name": "Color Design",
+			"count": 15,
+			"intro": null
+		},
+		{
+			"name": "Visual Fundamentals",
+			"count": 15,
+			"intro": null
+		},
+		{
+			"name": "Circular Economy",
+			"count": 6,
+			"intro": null
+		},
+		{
+			"name": "Modernist",
+			"count": 6,
+			"intro": null
+		},
+		{
+			"name": "Bauhaus",
+			"count": 5,
+			"intro": null
+		},
+		{
+			"name": "Climate Designer",
+			"count": 4,
+			"intro": null
+		},
+		{
+			"name": "Intellectual Property",
+			"count": 4,
+			"intro": null
+		},
+		{
+			"name": "Open Source",
+			"count": 4,
+			"intro": null
+		},
+		{
+			"name": "Conceptual Art",
+			"count": 3,
+			"intro": null
+		},
+		{
+			"name": "Semiotics",
+			"count": 3,
+			"intro": null
+		},
+		{
+			"name": "Black Mountain",
+			"count": 2,
+			"intro": null
+		},
+		{
+			"name": "Copyright",
+			"count": 2,
+			"intro": null
+		},
+		{
+			"name": "Public Domain",
+			"count": 2,
+			"intro": null
+		},
+		{
+			"name": "The Commons",
+			"count": 2,
+			"intro": null
+		},
+		{
+			"name": "A New Design Commons",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Algorithmic Design",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Art",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Biography",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Branding",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Comics",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Design",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Food",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Form",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Form Content Context",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Generally Fine Design",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "History",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Law",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Law School",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Lecture",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Literature",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Music",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Open Studies",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Postmodernism",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Signs Signaling",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Technology",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Visual Literacy",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Want to read",
+			"count": 1,
+			"intro": null
+		}
+	],
 	"books": [
 		{
 			"id": "14a55aa28d7181d0be0dd0cb9b4ee377",
@@ -813,7 +1050,7 @@
 			"year": "2008",
 			"isbn10": "0060852569",
 			"isbn13": "9780060852566",
-			"bookshopIsbn": null,
+			"bookshopIsbn": "9780062653055",
 			"onBookshop": null,
 			"copies": null,
 			"where": "Personal Library (KB office)",
@@ -1274,7 +1511,7 @@
 				"Bauhaus",
 				"Aesthetics"
 			],
-			"year": null,
+			"year": "1993",
 			"isbn10": "0442240376",
 			"isbn13": "9780442240370",
 			"bookshopIsbn": null,
@@ -2645,7 +2882,7 @@
 				"Semiotics",
 				"Aesthetics"
 			],
-			"year": null,
+			"year": "1999",
 			"isbn10": "0520220390",
 			"isbn13": "9780520220393",
 			"bookshopIsbn": null,
@@ -8372,7 +8609,7 @@
 				"Bauhaus",
 				"Pedagogy"
 			],
-			"year": null,
+			"year": "1986",
 			"isbn10": "0847807800",
 			"isbn13": "9780847807802",
 			"bookshopIsbn": null,
@@ -10560,12 +10797,14 @@
 			"authors": [
 				"Wucius Wong"
 			],
-			"publishers": [],
+			"publishers": [
+				"Van Nostrand Reinhold Company"
+			],
 			"tags": [
 				"Color Design",
 				"Visual Fundamentals"
 			],
-			"year": null,
+			"year": "1986",
 			"isbn10": "0442292848",
 			"isbn13": "9780442292843",
 			"bookshopIsbn": null,
@@ -10578,7 +10817,7 @@
 			"thickness": 0.4,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "blue-3",
+			"tint": "red-3",
 			"shelf": null,
 			"position": null,
 			"face": "gentium"
@@ -10611,7 +10850,7 @@
 			"thickness": 0.71,
 			"measured": false,
 			"sized": "open-library",
-			"tint": "brown-3",
+			"tint": "blue-3",
 			"shelf": null,
 			"position": null,
 			"face": "work-sans"
@@ -10625,11 +10864,13 @@
 			"authors": [
 				"Wucius Wong"
 			],
-			"publishers": [],
+			"publishers": [
+				"Van Nostrand Reinhold Company"
+			],
 			"tags": [
 				"Visual Fundamentals"
 			],
-			"year": null,
+			"year": "1972",
 			"isbn10": "0442295650",
 			"isbn13": "9780442295653",
 			"bookshopIsbn": null,
@@ -10642,10 +10883,10 @@
 			"thickness": 0.38,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "gray-3",
+			"tint": "red-3",
 			"shelf": null,
 			"position": null,
-			"face": "basteleur"
+			"face": "bricolage"
 		},
 		{
 			"id": "14a55aa28d718177b2ecff55dea98edb",
@@ -14010,7 +14251,7 @@
 			"slug": "whole-earth-discipline",
 			"title": "Whole Earth Discipline",
 			"format": "book",
-			"subtitle": null,
+			"subtitle": "an ecopragmatist manifesto",
 			"authors": [
 				"Stewart Brand"
 			],

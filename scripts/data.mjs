@@ -133,10 +133,16 @@ async function readNotion() {
 	const publishers = await nameMap(DS.publishers);
 	// Tags is a workspace-wide database outside the Library page; the site
 	// works without it.
-	const tags = await nameMap(DS.tags).catch(() => {
+	// Only each tag's name and its "Shelf intro" are read: tag pages hold
+	// other notes (and the email database uses the same tags) that stay private.
+	const tagPages = await queryAll(DS.tags).catch(() => {
 		console.warn('Tags database not shared with the integration; building without tags.');
-		return {};
+		return [];
 	});
+	const tags = Object.fromEntries(tagPages.map((p) => [bare(p.id), titleOf(p)]));
+	const tagIntros = Object.fromEntries(
+		tagPages.map((p) => [titleOf(p), text(p.properties['Shelf intro'])]).filter(([, intro]) => intro)
+	);
 
 	const books = [];
 	for (const p of await queryAll(DS.books)) {
@@ -177,7 +183,7 @@ async function readNotion() {
 			shelves.push({ id: bare(p.id), name: titleOf(p), room: p.properties['Room']?.select?.name ?? '', books: ids });
 		}
 	}
-	return { people, publishers, tags, books, shelves };
+	return { people, publishers, tags, tagIntros, books, shelves };
 }
 
 // ------------------------------------------------------- 2. Open Library
@@ -291,7 +297,14 @@ async function build(raw, cache) {
 	// One bookcase, every book in title order (the office shelves are filed
 	// the same way), so colours are worked out along that single run.
 	colour([books]);
-	return { generated: new Date().toISOString().slice(0, 10), shelves, books };
+
+	// The tags as browsable shelves, biggest first, with your Shelf intro.
+	const counts = {};
+	for (const b of books) for (const t of b.tags) counts[t] = (counts[t] ?? 0) + 1;
+	const tags = Object.entries(counts)
+		.map(([name, count]) => ({ name, count, intro: raw.tagIntros?.[name] || null }))
+		.sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+	return { generated: new Date().toISOString().slice(0, 10), shelves, tags, books };
 }
 
 // Every pale kit tint that keeps Wjerk Black text at AAA (7.15:1 and up),

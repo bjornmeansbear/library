@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Spine from '#lib/Spine.svelte';
 	import BookDialog from '#lib/BookDialog.svelte';
-	import { books, bySlug, generated, type Book } from '#lib/library.ts';
+	import { books, bySlug, generated, tags, type Book } from '#lib/library.ts';
 	import { pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
 	import { browser } from '$app/env';
@@ -49,6 +49,14 @@
 		return Array.isArray(field) ? field.includes(facet.value) : field === facet.value;
 	};
 
+	// Tags as shelves to browse: the ones with a few books up front, the
+	// one-offs folded away. A shelf's intro (from Notion) shows when it's open.
+	const mainShelves = tags.filter((t) => t.count > 1);
+	const moreShelves = tags.filter((t) => t.count === 1);
+	const shelfHref = (name: string) => `/?tag=${encodeURIComponent(name)}`;
+	const currentTag = $derived(facet?.kind === 'tag' ? facet.value : null);
+	const intro = $derived(currentTag ? (tags.find((t) => t.name === currentTag)?.intro ?? null) : null);
+
 	const words = $derived(query.toLowerCase().split(/\s+/).filter(Boolean));
 	const matches = (b: Book) => {
 		if (!inFacet(b)) return false;
@@ -89,39 +97,70 @@
 	<meta name="description" content="The design books on Kristian Bjørnard’s office shelves, in the order they stand." />
 </svelte:head>
 
-<header class="px-[clamp(1.5rem,6vw,6rem)] pt-[clamp(1.5rem,6vw,6rem)]">
-	<h1 class="m-0 text-[clamp(3rem,1rem+11vw,12rem)] leading-[0.95] tracking-[-0.02em]">Library</h1>
-	<p class="mt-4 mb-0 max-w-[36rem]">
-		Kristian Bjørnard’s design library: {books.length} books, filed by title the way they are on
-		his office shelves.
-	</p>
+<header class="px-[clamp(1.5rem,6vw,6rem)] pt-[clamp(1.5rem,5vw,4rem)]">
+	<!-- Phone: one column. From 55rem: title and blurb on the left, finding
+	     things (search, shelves) on the right. -->
+	<div class="grid gap-x-[clamp(2rem,5vw,5rem)] min-[55rem]:grid-cols-2 min-[55rem]:items-start">
+		<div>
+			<h1 class="m-0 text-[clamp(3rem,1rem+11vw,12rem)] min-[55rem]:text-[clamp(5rem,1rem+8vw,10rem)] leading-[0.95] tracking-[-0.02em]">Library</h1>
+			<p class="mt-4 mb-0 max-w-[36rem]">
+				<a href="https://kristian.bjornard.com/">Kristian Bjørnard’s</a> library: {books.length} books, filed by title the way they are on his office shelves! 
+			</p>
+		</div>
+		<div>
+			<form class="mt-8 min-[55rem]:mt-0 flex flex-wrap items-end gap-x-4 gap-y-2" role="search" onsubmit={(e) => e.preventDefault()}>
+				<label class="flex flex-col gap-1 text-sm">
+					Find a book
+					<input
+						type="search"
+						bind:value={query}
+						placeholder="Title, author, publisher, year, tag"
+						class="w-[min(24rem,80vw)] border-2 border-text bg-bg px-2 py-1 text-base placeholder:text-text-muted"
+					/>
+				</label>
+				<p class="m-0 text-sm" aria-live="polite">
+					{#if words.length || facet}
+						{shown.size} of {books.length} {shown.size === 1 ? 'book' : 'books'}
+					{/if}
+				</p>
+			</form>
 
-	<form class="mt-8 flex flex-wrap items-end gap-x-4 gap-y-2" role="search" onsubmit={(e) => e.preventDefault()}>
-		<label class="flex flex-col gap-1 text-sm">
-			Find a book
-			<input
-				type="search"
-				bind:value={query}
-				placeholder="Title, author, publisher, year"
-				class="w-[min(24rem,80vw)] border-2 border-text bg-bg px-2 py-1 text-base placeholder:text-text-muted"
-			/>
-		</label>
-		<p class="m-0 text-sm" aria-live="polite">
-			{#if words.length || facet}
-				{shown.size} of {books.length} {shown.size === 1 ? 'book' : 'books'}
+			{#snippet shelfLinks(list: typeof tags)}
+				<ul class="m-0 flex flex-wrap gap-x-5 p-0">
+					{#each list as t (t.name)}
+						<li class="list-none">
+							<a class="inline-block py-1.5 aria-[current=page]:font-bold" href={shelfHref(t.name)} aria-current={currentTag === t.name ? 'page' : undefined}>{t.name}</a>
+							<span class="tabular-nums text-text-muted">{t.count}</span>
+						</li>
+					{/each}
+				</ul>
+			{/snippet}
+
+			{#if tags.length}
+				<nav aria-labelledby="shelves-heading" class="mt-6 max-w-[64rem] text-sm">
+					<h2 id="shelves-heading" class="m-0 text-sm">Shelves</h2>
+					{@render shelfLinks(mainShelves)}
+					{#if moreShelves.length}
+						<details open={moreShelves.some((t) => t.name === currentTag)}>
+							<summary class="inline-block cursor-pointer py-1.5">{moreShelves.length} more, one book each</summary>
+							{@render shelfLinks(moreShelves)}
+						</details>
+					{/if}
+				</nav>
 			{/if}
-		</p>
-	</form>
 
-	{#if facet}
-		<p class="mt-4 mb-0 flex flex-wrap items-baseline gap-x-4 gap-y-1">
-			<span>
-				{facet.kind === 'format' ? 'Format:' : facet.kind === 'year' ? 'Published in' : facet.kind === 'tag' ? 'Tagged' : facet.kind === 'author' ? 'By' : 'Published by'}
-				<strong>{facet.value}</strong>
-			</span>
-			<a href="/" class="inline-block py-3 text-sm">Show all the books</a>
-		</p>
-	{/if}
+			{#if facet}
+				<p class="mt-4 mb-0 flex flex-wrap items-baseline gap-x-4 gap-y-1">
+					<span>
+						{facet.kind === 'format' ? 'Format:' : facet.kind === 'year' ? 'Published in' : facet.kind === 'tag' ? 'Tagged' : facet.kind === 'author' ? 'By' : 'Published by'}
+						<strong>{facet.value}</strong>
+					</span>
+					<a href="/" class="inline-block py-3 text-sm">Show all the books</a>
+				</p>
+				{#if intro}<p class="mt-0 mb-0 max-w-[36rem] whitespace-pre-line">{intro}</p>{/if}
+			{/if}
+		</div>
+	</div>
 </header>
 
 <!-- The shelves run nearly wall to wall; only the text above and below keeps the wide margins. -->
@@ -130,7 +169,7 @@
 	<!-- One listener for every spine; the spines themselves are links, so
 	     keyboard users get the same thing with Enter. -->
 	<!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_noninteractive_element_interactions -->
-	<ul class="board mt-6" onclick={pick}>
+	<ul class="board mt-4" onclick={pick}>
 		{#each books as book (book.slug)}
 			<li hidden={!shown.has(book.slug)}><Spine {book} /></li>
 		{/each}

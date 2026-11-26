@@ -113,10 +113,15 @@ a:hover {
 	--board: clamp(0.875rem, 0.5rem + 1.2vw, 1.5rem);
 	--board-face: light-dark(var(--wjerk-brown), var(--brown-5));
 	--board-top: light-dark(var(--brown-5), var(--brown-3));
+	/* The boards run past the books to both edges of the window; this clips
+	   them there. On the bookcase, not the list, because the list sits inside
+	   the bookcase's side padding, which is what keeps the books off the edge. */
+	overflow-x: clip;
 }
-/* Every book lays its own board, running far off to the right; the next
-   book's board covers it, so the last book in a row carries the board to
-   the wall. The list clips the overrun sideways only. It has to be
+/* Every book lays its own board, running far off to both sides; they all
+   overlap, the same colour, so each row reads as one plank from wall to
+   wall: past the first book to the left edge, past the last to the right.
+   The bookcase clips the overrun sideways only. It has to be
    `overflow-x: clip`, not clip-path: clip-path hides the overrun but the
    page still counts it as width, and scrolls sideways. A focused spine
    inverts as well as showing the ring, so an edge spine stays obvious. */
@@ -127,7 +132,6 @@ a:hover {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: flex-end;
-	overflow-x: clip;
 	/* The boards sit at z-index -1, behind the books. Without a stacking
 	   context of their own they'd drop behind the page's ground and vanish. */
 	isolation: isolate;
@@ -143,9 +147,9 @@ a:hover {
 .board > li::after {
 	content: '';
 	position: absolute;
-	left: 0;
+	left: -100vw;
+	right: -100vw;
 	bottom: 0;
-	width: 100vw;
 	height: var(--board);
 	box-sizing: border-box;
 	background: var(--board-face);
