@@ -125,25 +125,36 @@
 				</p>
 			</form>
 
-			{#snippet shelfLinks(list: typeof tags)}
-				<ul class="m-0 flex flex-wrap gap-x-5 p-0">
-					{#each list as t (t.name)}
-						<li class="list-none">
-							<a class="inline-block py-1.5 aria-[current=page]:font-bold" href={shelfHref(t.name)} aria-current={currentTag === t.name ? 'page' : undefined}>{t.name}</a>
-							<span class="tabular-nums text-text-muted">{t.count}</span>
-						</li>
-					{/each}
-				</ul>
-			{/snippet}
-
 			{#if tags.length}
-				<nav aria-labelledby="shelves-heading" class="mt-6 max-w-[64rem] text-sm">
+				<!-- The tags as a little shelf of their own: outlined spines, thicker
+				     the more books they hold. The one-book tags fold away below. -->
+				<nav aria-labelledby="shelves-heading" class="tag-shelf mt-6">
 					<h2 id="shelves-heading" class="m-0 text-sm">Shelves</h2>
-					{@render shelfLinks(mainShelves)}
+					<ul>
+						{#each mainShelves as t (t.name)}
+							<li>
+								<a
+									class="tag-spine"
+									style="--w: {(1.5 + Math.log2(t.count) * 0.22).toFixed(2)}rem"
+									href={shelfHref(t.name)}
+									aria-current={currentTag === t.name ? 'page' : undefined}
+								>
+									<span>{t.name}</span>
+									<span class="tabular-nums">{t.count}</span>
+								</a>
+							</li>
+						{/each}
+					</ul>
 					{#if moreShelves.length}
-						<details open={moreShelves.some((t) => t.name === currentTag)}>
+						<details class="text-sm" open={moreShelves.some((t) => t.name === currentTag)}>
 							<summary class="inline-block cursor-pointer py-1.5">{moreShelves.length} more, one book each</summary>
-							{@render shelfLinks(moreShelves)}
+							<ul class="m-0 flex flex-wrap gap-x-5 p-0">
+								{#each moreShelves as t (t.name)}
+									<li class="list-none">
+										<a class="inline-block py-1.5 aria-[current=page]:font-bold" href={shelfHref(t.name)} aria-current={currentTag === t.name ? 'page' : undefined}>{t.name}</a>
+									</li>
+								{/each}
+							</ul>
 						</details>
 					{/if}
 				</nav>
