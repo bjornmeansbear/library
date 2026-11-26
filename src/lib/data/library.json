@@ -13956,13 +13956,15 @@
 			"publishers": [
 				"Abrams"
 			],
-			"tags": [],
+			"tags": [
+				"Sustainabilitist"
+			],
 			"year": "2006",
 			"isbn10": "0810930951",
 			"isbn13": "9780810930957",
 			"bookshopIsbn": null,
 			"onBookshop": null,
-			"where": null,
+			"where": "Personal Library (KB office)",
 			"notes": null,
 			"pages": 608,
 			"height": 9.88,
@@ -13986,13 +13988,15 @@
 			"publishers": [
 				"Abrams"
 			],
-			"tags": [],
+			"tags": [
+				"Sustainabilitist"
+			],
 			"year": "2011",
 			"isbn10": "0810997460",
 			"isbn13": "9780810997462",
 			"bookshopIsbn": null,
 			"onBookshop": null,
-			"where": null,
+			"where": "Personal Library (KB office)",
 			"notes": null,
 			"pages": 598,
 			"height": 9.45,
@@ -14003,36 +14007,6 @@
 			"shelf": null,
 			"position": null,
 			"face": "libre-franklin"
-		},
-		{
-			"id": "42455aa28d718114b0d1e3f246c1dbef",
-			"slug": "worldchanging",
-			"title": "Worldchanging",
-			"format": "book",
-			"subtitle": "A User’s Guide for the 21st Century",
-			"authors": [
-				"Alex Steffen"
-			],
-			"publishers": [],
-			"tags": [
-				"Sustainabilitist"
-			],
-			"year": null,
-			"isbn10": null,
-			"isbn13": null,
-			"bookshopIsbn": null,
-			"onBookshop": null,
-			"where": "Personal Library (KB office)",
-			"notes": null,
-			"pages": null,
-			"height": 7.89,
-			"thickness": 1.09,
-			"measured": false,
-			"sized": "guessed",
-			"tint": "orange-2",
-			"shelf": null,
-			"position": null,
-			"face": "space-mono"
 		},
 		{
 			"id": "14a55aa28d7181b7b71fd65e498e97d4",
