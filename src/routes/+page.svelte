@@ -112,6 +112,23 @@
 		['basteleur', 'Basteleur', 'Keussel, Velvetyne']
 	];
 
+	// Where else to find Kristian and Wjerk: the list on kristian.bjornard.com.
+	const elsewhere = [
+		['Contact', 'mailto:wjerkshop@pm.me', 'wjerkshop@pm.me', 'Studio work, talks, workshops.'],
+		['Studio', 'https://a.wjerk.shop/', 'a.wjerk.shop', 'Wjerk, a climate-design studio.'],
+		['Index', 'https://a.wjerk.shop/works', 'a.wjerk.shop/works', 'Every Wjerk project, in one list.'],
+		['About', 'https://kristian.bjornard.com/', 'kristian.bjornard.com', 'Kristian Bjørnard.'],
+		['Teaching', 'https://teaching.kristianbjornard.com/', 'teaching.kristianbjornard.com', 'Courses, workshops, lectures and crits.'],
+		['Writing', 'https://bjornpaedia.wjerk.shop/', 'bjornpaedia.wjerk.shop', 'Essays and notes.'],
+		['Colour', 'https://wjavelength.wjerk.shop/', 'wjavelength.wjerk.shop', 'The Wjerk colour system, and a place to vote on it.'],
+		['Newsletter', 'https://buttondown.com/bjornmeansbear', 'buttondown.com/bjornmeansbear', ''],
+		['Materials', 'https://github.com/bjornmeansbear', 'github.com/bjornmeansbear', 'Free to take and change.'],
+		['Archive', 'https://archive.wjerk.shop/', 'archive.wjerk.shop', 'The old portfolio, 2003–2011.'],
+		['Archive', 'https://www.ookb.co/', 'ookb.co', 'The Office of Kristian Bjørnard.'],
+		['Elsewhere', 'https://www.instagram.com/bjornmeansbear', 'Instagram', ''],
+		['Elsewhere', 'https://www.linkedin.com/in/kristian-bjornard-367561259', 'LinkedIn', '']
+	];
+
 	const sized = books.reduce(
 		(n, b) => ((n[b.sized] = (n[b.sized] ?? 0) + 1), n),
 		{} as Record<string, number>
@@ -211,20 +228,50 @@
 
 <BookDialog book={open} onclose={() => history.back()} onstep={step} />
 
-<footer class="px-[clamp(1.5rem,6vw,6rem)] pb-12 text-sm">
-	<p class="m-0 max-w-[40rem]">
-		Spines are drawn to scale:
-		{sized['measured'] ?? 0} measured by hand,
-		{sized['open-library'] ?? 0} from Open Library’s dimensions,
-		{sized['library-of-congress'] ?? 0} from Library of Congress heights,
-		{sized['pages'] ?? 0} estimated from the page count, and
-		{sized['guessed'] ?? 0} guessed. Updated {generated}.
-	</p>
-	<p class="mt-4 mb-0 max-w-[40rem]">
-		Spines are set in thirteen open-source typefaces, all under the SIL Open Font License. A
-		series shares a face, and so, mostly, does a publisher:
-		{#each faces as [cls, name, by], i (cls)}
-			<span class="face-{cls} spine-credit">{name}</span> ({by}){i < faces.length - 1 ? ', ' : '.'}
-		{/each}
+<!-- The footer, in a.wjerk.shop's order: what this is and how it works, the
+     colophon, then everywhere else (the same list as kristian.bjornard.com),
+     then the small print. -->
+<footer class="site-footer px-[clamp(1.5rem,6vw,6rem)] pt-8 pb-12 text-sm">
+	<div class="grid gap-x-[clamp(2rem,5vw,5rem)] gap-y-8 min-[55rem]:grid-cols-2">
+		<div class="max-w-[40rem]">
+			<h2 class="m-0 text-sm">About</h2>
+			<p class="mt-2 mb-0">
+				Library is <a href="https://kristian.bjornard.com/">Kristian Bjørnard’s</a> design library: every book on his office shelves, drawn as a
+				spine to scale and filed A to Z. A <a href="https://a.wjerk.shop/">Wjerk</a> project.
+			</p>
+			<p class="mt-4 mb-0">
+				The catalogue lives in Notion. Each night a script reads it, looks up page counts and sizes
+				in Open Library and the Library of Congress, and rebuilds this page. Of the spines,
+				{#if sized['measured']}{sized['measured']} are measured by hand,{/if}
+				{(sized['open-library'] ?? 0) + (sized['library-of-congress'] ?? 0)} come from those catalogues,
+				{sized['pages'] ?? 0} are estimated from the page count, and
+				{sized['guessed'] ?? 0} are guessed. Updated {generated}.
+			</p>
+			<p class="mt-4 mb-0">
+				Spines are set in thirteen open-source typefaces, all under the SIL Open Font License. A
+				series shares a face, and so, mostly, does a publisher:
+				{#each faces as [cls, name, by], i (cls)}
+					<span class="face-{cls} spine-credit">{name}</span> ({by}){i < faces.length - 1 ? ', ' : '.'}
+				{/each}
+			</p>
+		</div>
+
+		<div>
+			<h2 class="m-0 text-sm">Elsewhere</h2>
+			<ul class="elsewhere">
+				{#each elsewhere as [what, href, label, note] (href)}
+					<li>
+						<span class="what">{what}</span>
+						<span><a {href}>{label}</a>{#if note}<span class="note">{note}</span>{/if}</span>
+					</li>
+				{/each}
+			</ul>
+		</div>
+	</div>
+
+	<p class="small-print mt-8 mb-0">
+		Wjerk. 2026. Text CC BY-SA 4.0. Served from Cloudflare; the site’s code is at
+		<a href="https://github.com/bjornmeansbear/library">github.com/bjornmeansbear/library</a>.
+		Bookshop.org links are affiliate links.
 	</p>
 </footer>
