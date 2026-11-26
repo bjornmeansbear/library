@@ -38,3 +38,5 @@ data/isbn-fixes.json
 # The fill plan (rebuilt by npm run fill)
 FILL-PLAN.md
 data/fill-plan.json
+SUSTAINABILITIST-PLAN.md
+data/sustainabilitist-plan.json

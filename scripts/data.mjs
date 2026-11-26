@@ -213,12 +213,14 @@ async function build(raw, cache) {
 	for (const b of raw.books) {
 		const title = cleanTitle(b.title);
 		if (!title) continue;
-		// Blank counts as Book. A film's number is a barcode, not an ISBN.
+		// Blank counts as Book. A film's or album's number is a barcode, not an ISBN.
 		const format = (b.format || 'Book').toLowerCase();
-		const isbn = format === 'film' ? null : normalizeIsbn(b.isbn);
+		const isbn = format === 'film' || format === 'music' ? null : normalizeIsbn(b.isbn);
 		const ol = isbn ? await lookUp(isbn.isbn13) : null;
-		// A DVD case is a fixed object: 7.5 × 5.3 × 0.55 inches.
-		const dims = format === 'film' ? [7.5, 5.3, 0.55] : inches(ol?.dimensions);
+		// Cases are fixed objects. DVD: 7.5 × 5.3 × 0.55 inches. CD jewel
+		// case: 125 × 142 × 10.4 mm, standing on its 125 mm side.
+		const CASES = { film: [7.5, 5.3, 0.55], music: [4.92, 5.59, 0.41] };
+		const dims = CASES[format] ?? inches(ol?.dimensions);
 		const h = hash(b.id);
 
 		const book = {

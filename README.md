@@ -56,7 +56,8 @@ measurements, A–Z like the shelves.
   column is only a fallback.
 - **Height (mm)** and **Thickness (mm)**: caliper measurements. A measured
   book is drawn at its real size.
-- **Format**: blank or Book, Film (drawn as a DVD case), Journal, Zine.
+- **Format**: blank or Book, Film (drawn as a DVD case), Music (a CD case),
+  Journal, Zine.
   Only books get Bookshop.org and Open Library links.
 - **Personal Notes** shows on the book's card.
 

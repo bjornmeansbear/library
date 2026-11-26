@@ -4,7 +4,7 @@ export type Book = {
 	id: string;
 	slug: string;
 	title: string;
-	format: 'book' | 'film' | 'journal' | 'zine';
+	format: 'book' | 'film' | 'music' | 'journal' | 'zine';
 	subtitle: string | null;
 	authors: string[];
 	publishers: string[];

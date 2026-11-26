@@ -7,7 +7,7 @@
 	// Shops and Open Library only know books; a film or journal gets a
 	// library search by title instead.
 	const isBook = $derived(book.format === 'book');
-	const FORMAT_NAMES = { book: 'Book', film: 'Film', journal: 'Journal', zine: 'Zine' };
+	const FORMAT_NAMES = { book: 'Book', film: 'Film', music: 'Music', journal: 'Journal', zine: 'Zine' };
 	const hasDetails = $derived(
 		Boolean(!isBook || book.publishers.length || book.year || book.pages || isbn || book.tags.length)
 	);
