@@ -10,7 +10,6 @@
 				"2600-the-hacker-quarterly",
 				"a-country-of-cities-a-manifesto-for-an-urban-america",
 				"a-field-guide-to-patricia-johanson-s-works",
-				"a-field-guide-to-patricia-johanson-s-works-2",
 				"a-history-of-graphic-design",
 				"a-pattern-language",
 				"a-sand-county-almanac",
@@ -296,7 +295,7 @@
 			"sized": "guessed",
 			"tint": "goldenrod-1",
 			"shelf": "GT1S1",
-			"position": 20,
+			"position": 19,
 			"face": "young-serif"
 		},
 		{
@@ -327,7 +326,7 @@
 			"sized": "guessed",
 			"tint": "purple-3",
 			"shelf": "GT1S1",
-			"position": 17,
+			"position": 16,
 			"face": "work-sans"
 		},
 		{
@@ -362,7 +361,7 @@
 			"sized": "open-library",
 			"tint": "pink-1",
 			"shelf": "GT1S1",
-			"position": 31,
+			"position": 30,
 			"face": "league-gothic"
 		},
 		{
@@ -425,7 +424,7 @@
 			"sized": "guessed",
 			"tint": "goldenrod-1",
 			"shelf": "GT1S1",
-			"position": 43,
+			"position": 42,
 			"face": "fraunces"
 		},
 		{
@@ -456,7 +455,7 @@
 			"sized": "library-of-congress",
 			"tint": "purple-1",
 			"shelf": "GT1S1",
-			"position": 9,
+			"position": 8,
 			"face": "libre-franklin"
 		},
 		{
@@ -491,7 +490,7 @@
 			"sized": "library-of-congress",
 			"tint": "goldenrod-2",
 			"shelf": "GT1S1",
-			"position": 10,
+			"position": 9,
 			"face": "eb-garamond"
 		},
 		{
@@ -522,7 +521,7 @@
 			"sized": "guessed",
 			"tint": "purple-1",
 			"shelf": "GT1S1",
-			"position": 30,
+			"position": 29,
 			"face": "space-mono"
 		},
 		{
@@ -555,7 +554,7 @@
 			"sized": "library-of-congress",
 			"tint": "orange-3",
 			"shelf": "GT1S1",
-			"position": 11,
+			"position": 10,
 			"face": "crimson-pro"
 		},
 		{
@@ -619,7 +618,7 @@
 			"sized": "library-of-congress",
 			"tint": "purple-3",
 			"shelf": "GT1S1",
-			"position": 12,
+			"position": 11,
 			"face": "libre-franklin"
 		},
 		{
@@ -650,7 +649,7 @@
 			"sized": "guessed",
 			"tint": "cornflower-2",
 			"shelf": "GT1S1",
-			"position": 34,
+			"position": 33,
 			"face": "bricolage"
 		},
 		{
@@ -684,7 +683,7 @@
 			"sized": "library-of-congress",
 			"tint": "gray-3",
 			"shelf": "GT1S1",
-			"position": 13,
+			"position": 12,
 			"face": "libre-franklin"
 		},
 		{
@@ -717,7 +716,7 @@
 			"sized": "guessed",
 			"tint": "brown-1",
 			"shelf": "GT1S1",
-			"position": 35,
+			"position": 34,
 			"face": "crimson-pro"
 		},
 		{
@@ -752,7 +751,7 @@
 			"sized": "open-library",
 			"tint": "yellow-3",
 			"shelf": "GT1S1",
-			"position": 14,
+			"position": 13,
 			"face": "work-sans"
 		},
 		{
@@ -881,7 +880,7 @@
 			"sized": "library-of-congress",
 			"tint": "green-2",
 			"shelf": "GT1S1",
-			"position": 21,
+			"position": 20,
 			"face": "plex-mono"
 		},
 		{
@@ -910,7 +909,7 @@
 			"sized": "guessed",
 			"tint": "brown-1",
 			"shelf": "GT1S1",
-			"position": 44,
+			"position": 43,
 			"face": "bricolage"
 		},
 		{
@@ -944,7 +943,7 @@
 			"sized": "pages",
 			"tint": "yellow-3",
 			"shelf": "GT1S1",
-			"position": 26,
+			"position": 25,
 			"face": "space-mono"
 		},
 		{
@@ -973,7 +972,7 @@
 			"sized": "library-of-congress",
 			"tint": "cornflower-3",
 			"shelf": "GT1S1",
-			"position": 39,
+			"position": 38,
 			"face": "plex-mono"
 		},
 		{
@@ -1002,7 +1001,7 @@
 			"sized": "library-of-congress",
 			"tint": "cornflower-3",
 			"shelf": "GT1S1",
-			"position": 40,
+			"position": 39,
 			"face": "plex-mono"
 		},
 		{
@@ -1031,7 +1030,7 @@
 			"sized": "library-of-congress",
 			"tint": "cornflower-3",
 			"shelf": "GT1S1",
-			"position": 41,
+			"position": 40,
 			"face": "plex-mono"
 		},
 		{
@@ -1060,7 +1059,7 @@
 			"sized": "library-of-congress",
 			"tint": "cornflower-3",
 			"shelf": "GT1S1",
-			"position": 42,
+			"position": 41,
 			"face": "plex-mono"
 		},
 		{
@@ -1091,7 +1090,7 @@
 			"sized": "library-of-congress",
 			"tint": "brown-2",
 			"shelf": "GT1S1",
-			"position": 22,
+			"position": 21,
 			"face": "crimson-pro"
 		},
 		{
@@ -1183,7 +1182,7 @@
 			"sized": "library-of-congress",
 			"tint": "gray-3",
 			"shelf": "GT1S1",
-			"position": 25,
+			"position": 24,
 			"face": "league-gothic"
 		},
 		{
@@ -1244,7 +1243,7 @@
 			"sized": "guessed",
 			"tint": "pink-3",
 			"shelf": "GT1S1",
-			"position": 38,
+			"position": 37,
 			"face": "basteleur"
 		},
 		{
@@ -1312,7 +1311,7 @@
 			"sized": "library-of-congress",
 			"tint": "pink-2",
 			"shelf": "GT1S1",
-			"position": 27,
+			"position": 26,
 			"face": "plex-mono"
 		},
 		{
@@ -1343,7 +1342,7 @@
 			"sized": "open-library",
 			"tint": "blue-2",
 			"shelf": "GT1S1",
-			"position": 28,
+			"position": 27,
 			"face": "league-gothic"
 		},
 		{
@@ -1408,7 +1407,7 @@
 			"sized": "guessed",
 			"tint": "goldenrod-3",
 			"shelf": "GT1S1",
-			"position": 24,
+			"position": 23,
 			"face": "bricolage"
 		},
 		{
@@ -1439,7 +1438,7 @@
 			"sized": "open-library",
 			"tint": "red-1",
 			"shelf": "GT1S1",
-			"position": 23,
+			"position": 22,
 			"face": "libre-franklin"
 		},
 		{
@@ -1470,7 +1469,7 @@
 			"sized": "open-library",
 			"tint": "goldenrod-1",
 			"shelf": "GT1S1",
-			"position": 29,
+			"position": 28,
 			"face": "space-mono"
 		},
 		{
@@ -1566,7 +1565,7 @@
 			"sized": "library-of-congress",
 			"tint": "cornflower-3",
 			"shelf": "GT1S1",
-			"position": 37,
+			"position": 36,
 			"face": "young-serif"
 		},
 		{
@@ -5467,7 +5466,7 @@
 			"sized": "open-library",
 			"tint": "green-3",
 			"shelf": "GT1S1",
-			"position": 15,
+			"position": 14,
 			"face": "fraunces"
 		},
 		{
@@ -5810,7 +5809,7 @@
 			"isbn13": "9780970098627",
 			"bookshopIsbn": null,
 			"onBookshop": false,
-			"copies": null,
+			"copies": 2,
 			"where": "GD Office",
 			"notes": null,
 			"pages": 68,
@@ -5821,37 +5820,6 @@
 			"tint": "blue-3",
 			"shelf": "GT1S1",
 			"position": 4,
-			"face": "gentium"
-		},
-		{
-			"id": "14a55aa28d7181aaaf81f15143e24357",
-			"slug": "a-field-guide-to-patricia-johanson-s-works-2",
-			"title": "A Field Guide to Patricia Johanson's Works",
-			"format": "book",
-			"subtitle": "Built, Proposed, Collected & Published",
-			"authors": [
-				"Sue Spaid"
-			],
-			"publishers": [
-				"Contemporary Museum"
-			],
-			"tags": [],
-			"year": "2012",
-			"isbn10": "0970098626",
-			"isbn13": "9780970098627",
-			"bookshopIsbn": null,
-			"onBookshop": false,
-			"copies": null,
-			"where": "GD Office",
-			"notes": null,
-			"pages": 68,
-			"height": 8.27,
-			"thickness": 0.32,
-			"measured": false,
-			"sized": "library-of-congress",
-			"tint": "blue-3",
-			"shelf": "GT1S1",
-			"position": 5,
 			"face": "gentium"
 		},
 		{
@@ -6418,7 +6386,7 @@
 			"sized": "library-of-congress",
 			"tint": "purple-2",
 			"shelf": "GT1S1",
-			"position": 18,
+			"position": 17,
 			"face": "basteleur"
 		},
 		{
@@ -7052,7 +7020,7 @@
 			"sized": "guessed",
 			"tint": "blue-1",
 			"shelf": "GT1S1",
-			"position": 19,
+			"position": 18,
 			"face": "eb-garamond"
 		},
 		{
@@ -7273,7 +7241,7 @@
 			"sized": "library-of-congress",
 			"tint": "orange-3",
 			"shelf": "GT1S1",
-			"position": 6,
+			"position": 5,
 			"face": "crimson-pro"
 		},
 		{
@@ -7304,7 +7272,7 @@
 			"sized": "guessed",
 			"tint": "brown-2",
 			"shelf": "GT1S1",
-			"position": 32,
+			"position": 31,
 			"face": "plex-mono"
 		},
 		{
@@ -8039,7 +8007,7 @@
 			"sized": "open-library",
 			"tint": "red-3",
 			"shelf": "GT1S1",
-			"position": 36,
+			"position": 35,
 			"face": "crimson-pro"
 		},
 		{
@@ -9497,7 +9465,7 @@
 			"sized": "guessed",
 			"tint": "cornflower-3",
 			"shelf": "GT1S1",
-			"position": 16,
+			"position": 15,
 			"face": "fraunces"
 		},
 		{
@@ -9914,7 +9882,7 @@
 			"sized": "guessed",
 			"tint": "goldenrod-2",
 			"shelf": "GT1S1",
-			"position": 33,
+			"position": 32,
 			"face": "space-mono"
 		},
 		{
@@ -10049,7 +10017,7 @@
 			"sized": "library-of-congress",
 			"tint": "pink-1",
 			"shelf": "GT1S1",
-			"position": 7,
+			"position": 6,
 			"face": "plex-mono"
 		},
 		{
@@ -10997,7 +10965,7 @@
 			"sized": "guessed",
 			"tint": "green-1",
 			"shelf": "GT1S1",
-			"position": 8,
+			"position": 7,
 			"face": "plex-mono"
 		},
 		{
