@@ -258,7 +258,7 @@ async function build(raw, cache) {
 				b.thicknessMm
 					? b.thicknessMm / 25.4
 					: (dims?.[2] ??
-							((b.pages ?? ol?.pages) ? 0.15 + (b.pages ?? ol.pages) * 0.0025 : 0.45 + ((h >> 8) % 70) / 100))
+							((b.pages ?? ol?.pages) ? 0.15 + (b.pages ?? ol.pages) * 0.0025 : 0.45 + ((h >>> 8) % 70) / 100))
 			),
 			measured: Boolean(b.heightMm && b.thicknessMm && (!b.sizeFrom || b.sizeFrom === 'Measured')),
 			sized: b.heightMm && (!b.sizeFrom || b.sizeFrom === 'Measured') && b.thicknessMm ? 'measured'
