@@ -14,7 +14,8 @@ if (!process.env.NOTION_TOKEN && fs.existsSync(envFile)) {
 export const DS = {
 	books: 'f4d45ea0-fcaf-44cb-a488-5a3e6ba3537f',
 	people: 'dcabd07d-b2e1-4af3-a0cc-51ed47cc1678',
-	publishers: '9027a079-5e5d-44c5-a5aa-a5b3abfd441a'
+	publishers: '9027a079-5e5d-44c5-a5aa-a5b3abfd441a',
+	tags: 'e6a290b7-0f2d-4245-b942-d6425c840f73'
 };
 
 export const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

@@ -18,7 +18,9 @@
 		"sync": "node scripts/data.mjs",
 		"fill": "node scripts/fill.mjs",
 		"add": "node scripts/add.mjs",
-		"isbn-fixes": "node scripts/isbn-fixes.mjs"
+		"isbn-fixes": "node scripts/isbn-fixes.mjs",
+		"tags": "node scripts/tag-plan.mjs",
+		"sizes": "node scripts/sizes.mjs"
 	},
 	"devDependencies": {
 		"@fontsource/bricolage-grotesque": "^5.3.0",

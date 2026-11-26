@@ -3951,5 +3951,171 @@
 		"pages": 272,
 		"dimensions": null,
 		"lcc": "N6494.C63 L56 1997"
+	},
+	"9780241537770": {
+		"key": "/books/OL33905016M",
+		"title": "Speed and Scale",
+		"subtitle": null,
+		"authors": [
+			"John Doerr"
+		],
+		"publishers": [
+			"Penguin Books, Limited"
+		],
+		"year": "2021",
+		"pages": 176,
+		"dimensions": null,
+		"lcc": "TD171.75"
+	},
+	"9780471284925": {
+		"key": "/books/OL7614571M",
+		"title": "Type and Image",
+		"subtitle": "The Language of Graphic Design",
+		"authors": [
+			"Philip B. Meggs"
+		],
+		"publishers": [
+			"Wiley"
+		],
+		"year": "1992",
+		"pages": 208,
+		"dimensions": null,
+		"lcc": "Z246 .M44 1989"
+	},
+	"9780593541821": {
+		"key": "/books/OL37927493M",
+		"title": "Dickens and Prince",
+		"subtitle": "A Particular Kind of Genius",
+		"authors": [
+			"Nick Hornby"
+		],
+		"publishers": [
+			"Riverhead Books"
+		],
+		"year": "2022",
+		"pages": 208,
+		"dimensions": null,
+		"lcc": null
+	},
+	"9780030304224": {
+		"key": "/books/OL2204785M",
+		"title": "Design basics",
+		"subtitle": null,
+		"authors": [
+			"David A. Lauer"
+		],
+		"publishers": [
+			"Holt, Rinehart, and Winston"
+		],
+		"year": "1990",
+		"pages": 274,
+		"dimensions": null,
+		"lcc": "NK1510 .L38 1990"
+	},
+	"9781848226517": {
+		"key": "/books/OL50656890M",
+		"title": "Art Institution of Tomorrow",
+		"subtitle": "Reinventing the Model",
+		"authors": [
+			"Fatos Üstek"
+		],
+		"publishers": [
+			"Lund Humphries Publishers, Limited"
+		],
+		"year": "2024",
+		"pages": null,
+		"dimensions": null,
+		"lcc": null
+	},
+	"9780442240370": {
+		"key": "/books/OL1483289M",
+		"title": "The art of color",
+		"subtitle": "the subjective experience and objective rationale of color",
+		"authors": [
+			"Johannes Itten"
+		],
+		"publishers": [
+			"Van Nostrand Reinhold"
+		],
+		"year": "1993",
+		"pages": 155,
+		"dimensions": null,
+		"lcc": "ND1493.I8 I813 1993"
+	},
+	"9780847807802": {
+		"key": "/books/OL2721935M",
+		"title": "Kandinsky's teaching at the Bauhaus",
+		"subtitle": "color theory and analytical drawing",
+		"authors": [
+			"Clark V. Poling"
+		],
+		"publishers": [
+			"Rizzoli",
+			"Rizzoli International Publications, Incorporated"
+		],
+		"year": "1986",
+		"pages": 160,
+		"dimensions": null,
+		"lcc": "ND1489 .P6313 1986"
+	},
+	"9780520220393": {
+		"key": "/books/OL98327M",
+		"title": "Color and meaning",
+		"subtitle": "art, science, and symbolism",
+		"authors": [
+			"Gage, John."
+		],
+		"publishers": [
+			"University of California Press"
+		],
+		"year": "1999",
+		"pages": 320,
+		"dimensions": null,
+		"lcc": "ND1488 .G344 1999"
+	},
+	"9780442295653": {
+		"key": "/books/OL5283389M",
+		"title": "Principles of two-dimensional design.",
+		"subtitle": null,
+		"authors": [
+			"Wucius Wong"
+		],
+		"publishers": [
+			"Van Nostrand Reinhold Co."
+		],
+		"year": "1972",
+		"pages": 93,
+		"dimensions": null,
+		"lcc": "NK1510 .W6 1972"
+	},
+	"9780442292843": {
+		"key": "/books/OL2712744M",
+		"title": "Principles of color design",
+		"subtitle": null,
+		"authors": [
+			"Wucius Wong"
+		],
+		"publishers": [
+			"Van Nostrand Reinhold Co."
+		],
+		"year": "1986",
+		"pages": 101,
+		"dimensions": null,
+		"lcc": "NK1548 .W66 1987"
+	},
+	"9780670021215": {
+		"key": "/books/OL23197874M",
+		"title": "Whole earth discipline",
+		"subtitle": "an ecopragmatist manifesto",
+		"authors": [
+			"Stewart Brand"
+		],
+		"publishers": [
+			"Viking"
+		],
+		"year": "2009",
+		"pages": 325,
+		"dimensions": null,
+		"lcc": "GF41 .B77 2009"
 	}
 }

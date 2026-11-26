@@ -79,3 +79,12 @@ export function isbn13(input) {
 	if (valid10(s)) return to13(s);
 	return null;
 }
+
+// Open Library's subject headings for an ISBN: the edition's and its work's,
+// which is where most of them live. [] when it doesn't know the book.
+export async function subjects(isbn) {
+	const e = await get(`/isbn/${isbn}.json`);
+	if (!e) return [];
+	const w = e.works?.[0]?.key ? await get(`${e.works[0].key}.json`) : null;
+	return [...new Set([...(e.subjects ?? []), ...(w?.subjects ?? [])].map((s) => (typeof s === 'string' ? s : s?.name ?? '')).filter(Boolean))];
+}

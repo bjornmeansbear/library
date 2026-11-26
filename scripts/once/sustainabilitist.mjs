@@ -17,6 +17,7 @@ import { edition, isbn13 } from '../lib/openlibrary.mjs';
 const root = path.resolve(import.meta.dirname, '../..');
 const planJson = path.join(root, 'data/sustainabilitist-plan.json');
 const planMd = path.join(root, 'SUSTAINABILITIST-PLAN.md');
+const matchedJson = path.join(root, 'data/sustainabilitist-matched.json');
 const TUMBLR = 'https://api.tumblr.com/v2/blog/sustainabilitist.tumblr.com/posts?api_key=OmMwFOoJB741CZxXe57kU8moYu0iMzKMtlDKZdE3djCKqJVWgY';
 
 const decode = (s) => s
@@ -124,6 +125,8 @@ async function makePlan() {
 	}
 
 	fs.writeFileSync(planJson, JSON.stringify(add, null, '\t') + '\n');
+	// The books already in Notion, for tagging them Sustainabilitist.
+	fs.writeFileSync(matchedJson, JSON.stringify(have.map((h) => ({ id: h.url.slice(-32), title: h.notion })), null, '\t') + '\n');
 	const line = (r) => `| ${r.n} | ${r.where === 'skip' ? '~~' : ''}**${r.title}**${r.where === 'skip' ? '~~' : ''}${r.subtitle ? `: ${r.subtitle}` : ''}<br>${r.authors.map((a) => a.name + (a.new ? ' (new)' : '')).join(', ') || '—'} · ${r.publisher ? r.publisher.name + (r.publisher.new ? ' (new)' : '') : '**no publisher**'}${r.year ? ` · ${r.year}` : ''}${r.note ? `<br>*${r.note}*` : ''} | ${r.openLibrary ? `[OL](${r.openLibrary})` : 'not on OL'} |`;
 	fs.writeFileSync(planMd, `# Sustainabilitist books: import plan
 
@@ -162,6 +165,8 @@ async function applyPlan() {
 	const titles = new Set(books.map((p) => key(titleOf(p))));
 	const people = await nameIndex('people');
 	const publishers = await nameIndex('publishers');
+	// Every book from the old library gets your existing Sustainabilitist tag.
+	const tag = (await queryAll(DS.tags)).find((p) => titleOf(p) === 'Sustainabilitist');
 	let n = 0;
 	for (const r of plan) {
 		if (r.where === 'skip') continue;
@@ -175,6 +180,7 @@ async function applyPlan() {
 			Where: { select: { name: r.where } },
 			'Date Added': { date: { start: new Date().toISOString().slice(0, 10) } }
 		};
+		if (tag) props['🏷️ Tags'] = { relation: [{ id: tag.id }] };
 		if (r.publisher) props.Publisher = { relation: [{ id: (await findOrCreate('publishers', r.publisher.name, publishers, { create: true })).id }] };
 		if (r.isbn && r.format === 'Book') props['ISBN-13'] = rich(r.isbn);
 		if (r.subtitle) props.Subtitle = rich(r.subtitle);
