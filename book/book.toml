@@ -1,0 +1,139 @@
+# A Library: the books on my office shelves at MICA, drawn as spines.
+# `bjook build` here (or `bjook watch` for a live preview of the spreads).
+# The text is in essay.md, colophon.md and cover.md.
+
+kind   = "shelf"
+title  = "A Library"
+author = "Kristian Bjørnard"
+
+[page]                  # half letter; margins are for the essay, index and colophon
+width   = "5.5in"
+height  = "8.5in"
+top     = "0.5in"
+bottom  = "0.55in"
+inside  = "0.45in"
+outside = "0.45in"
+
+[type]
+text    = "Work Sans"
+size    = "10pt"        # the essay
+leading = "14pt"
+
+[folio]
+size      = "7pt"
+position  = "bottom-center"
+from_edge = "0.3in"
+
+[shelf]
+data   = "../src/lib/data/library.json"   # `npm run sync` refreshes it from Notion
+date   = ""             # empty = the date of that sync
+mode   = "endless"      # one shelf through the whole book; "wall" = two shelves a spread
+scale  = 0              # 0 = by mode (0.4 endless, 0.25 wall)
+black_tags = ["Open Source", "The Commons", "A New Design Commons",
+              "Public Domain", "Copyright", "Intellectual Property"]
+back   = ["essay.md", "index", "colophon.md"]
+
+[cover]
+text   = "cover.md"     # the card on the back cover
+bleed  = "0.125in"
+
+# The thirteen spine faces, as the website sets them (src/routes/layout.css).
+# Each is self-hosted from the site's own font files.
+[faces.work-sans]
+family = "Work Sans"
+weight = 600
+css = "../node_modules/@fontsource/work-sans/600.css"
+designer = "Wei Huang"
+url = "fonts.google.com/specimen/Work+Sans"
+
+[faces.libre-franklin]
+family = "Libre Franklin"
+weight = 600
+css = "../node_modules/@fontsource/libre-franklin/600.css"
+designer = "Impallari Type"
+url = "fonts.google.com/specimen/Libre+Franklin"
+
+[faces.gentium]
+family = "Gentium Book Plus"
+weight = 700
+css = "../node_modules/@fontsource/gentium-book-plus/700.css"
+designer = "SIL International"
+url = "software.sil.org/gentium"
+
+[faces.eb-garamond]
+family = "EB Garamond"
+weight = 600
+scale = 1.1
+css = "../node_modules/@fontsource/eb-garamond/600.css"
+designer = "Georg Duffner and Octavio Pardo"
+url = "fonts.google.com/specimen/EB+Garamond"
+
+[faces.crimson-pro]
+family = "Crimson Pro"
+weight = 600
+scale = 1.1
+css = "../node_modules/@fontsource/crimson-pro/600.css"
+designer = "Jacques Le Bailly"
+url = "fonts.google.com/specimen/Crimson+Pro"
+
+[faces.newsreader]
+family = "Newsreader"
+weight = 600
+scale = 1.05
+css = "../node_modules/@fontsource/newsreader/600.css"
+designer = "Production Type"
+url = "fonts.google.com/specimen/Newsreader"
+
+[faces.plex-mono]
+family = "IBM Plex Mono"
+weight = 500
+scale = 0.95
+css = "../node_modules/@fontsource/ibm-plex-mono/500.css"
+designer = "Mike Abbink and Bold Monday, for IBM"
+url = "github.com/IBM/plex"
+
+[faces.league-gothic]
+family = "League Gothic"
+weight = 400
+scale = 1.35
+css = "../node_modules/@fontsource/league-gothic/400.css"
+designer = "The League of Moveable Type"
+url = "theleagueofmoveabletype.com/league-gothic"
+
+[faces.young-serif]
+family = "Young Serif"
+weight = 400
+scale = 0.95
+css = "../node_modules/@fontsource/young-serif/400.css"
+designer = "Bastien Sozeau"
+url = "fonts.google.com/specimen/Young+Serif"
+
+[faces.space-mono]
+family = "Space Mono"
+weight = 700
+scale = 0.9
+css = "../node_modules/@fontsource/space-mono/700.css"
+designer = "Colophon Foundry"
+url = "fonts.google.com/specimen/Space+Mono"
+
+[faces.bricolage]
+family = "Bricolage Grotesque"
+weight = 600
+css = "../node_modules/@fontsource/bricolage-grotesque/600.css"
+designer = "Mathieu Triay"
+url = "fonts.google.com/specimen/Bricolage+Grotesque"
+
+[faces.fraunces]
+family = "Fraunces"
+weight = 600
+css = "../node_modules/@fontsource/fraunces/600.css"
+designer = "Undercase Type"
+url = "fonts.google.com/specimen/Fraunces"
+
+[faces.basteleur]
+family = "Basteleur"
+weight = 700
+scale = 0.9
+file = "../static/fonts/Basteleur-Bold.woff2"
+designer = "Keussel, published by Velvetyne"
+url = "velvetyne.fr/fonts/basteleur"
