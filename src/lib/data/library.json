@@ -6609,75 +6609,6 @@
 			"face": "crimson-pro"
 		},
 		{
-			"id": "14a55aa28d718132a89cc70dc2e8c32b",
-			"slug": "graphic-design-the-new-basics",
-			"title": "Graphic Design The New Basics",
-			"format": "book",
-			"subtitle": null,
-			"authors": [
-				"Ellen Lupton",
-				"Jennifer Cole Phillips"
-			],
-			"publishers": [
-				"Princeton Architectural Press"
-			],
-			"tags": [
-				"Graphic Design"
-			],
-			"year": "2008",
-			"isbn10": "161689332X",
-			"isbn13": "9781616893323",
-			"bookshopIsbn": null,
-			"onBookshop": null,
-			"copies": null,
-			"where": null,
-			"notes": null,
-			"pages": 264,
-			"height": 9.06,
-			"thickness": 0.81,
-			"measured": false,
-			"sized": "library-of-congress",
-			"tint": "pink-3",
-			"shelf": null,
-			"position": null,
-			"face": "league-gothic"
-		},
-		{
-			"id": "14a55aa28d71812a90d9cb70d55ed881",
-			"slug": "graphic-design-the-new-basics-2",
-			"title": "Graphic Design The New Basics",
-			"format": "book",
-			"subtitle": null,
-			"authors": [
-				"Ellen Lupton",
-				"Jennifer Cole Phillips"
-			],
-			"publishers": [
-				"Princeton Architectural Press"
-			],
-			"tags": [
-				"Typography",
-				"Graphic Design"
-			],
-			"year": "2008",
-			"isbn10": "1568987021",
-			"isbn13": "9781568987026",
-			"bookshopIsbn": null,
-			"onBookshop": null,
-			"copies": null,
-			"where": null,
-			"notes": null,
-			"pages": 240,
-			"height": 9.06,
-			"thickness": 0.75,
-			"measured": false,
-			"sized": "library-of-congress",
-			"tint": "pink-3",
-			"shelf": null,
-			"position": null,
-			"face": "league-gothic"
-		},
-		{
 			"id": "14a55aa28d7181ddabcdcab5f9744f6f",
 			"slug": "graphic-design-theory",
 			"title": "Graphic Design Theory",
@@ -6706,10 +6637,10 @@
 			"thickness": 0.53,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "orange-1",
+			"tint": "pink-1",
 			"shelf": null,
 			"position": null,
-			"face": "basteleur"
+			"face": "league-gothic"
 		},
 		{
 			"id": "14a55aa28d718173ae34cc07914d9828",
@@ -6739,10 +6670,10 @@
 			"thickness": 0.61,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "pink-2",
+			"tint": "orange-2",
 			"shelf": null,
 			"position": null,
-			"face": "league-gothic"
+			"face": "basteleur"
 		},
 		{
 			"id": "14a55aa28d7181bba2d4fc6acd4a099f",
@@ -6772,7 +6703,7 @@
 			"thickness": 0.71,
 			"measured": false,
 			"sized": "open-library",
-			"tint": "orange-1",
+			"tint": "pink-1",
 			"shelf": null,
 			"position": null,
 			"face": "gentium"
@@ -6806,7 +6737,76 @@
 			"thickness": 0.75,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "orange-1",
+			"tint": "pink-1",
+			"shelf": null,
+			"position": null,
+			"face": "gentium"
+		},
+		{
+			"id": "14a55aa28d718132a89cc70dc2e8c32b",
+			"slug": "graphic-design-the-new-basics",
+			"title": "Graphic Design: The New Basics",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Ellen Lupton",
+				"Jennifer Cole Phillips"
+			],
+			"publishers": [
+				"Princeton Architectural Press"
+			],
+			"tags": [
+				"Graphic Design"
+			],
+			"year": "2015",
+			"isbn10": "161689332X",
+			"isbn13": "9781616893323",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": null,
+			"notes": null,
+			"pages": 264,
+			"height": 9.06,
+			"thickness": 0.81,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "pink-1",
+			"shelf": null,
+			"position": null,
+			"face": "gentium"
+		},
+		{
+			"id": "14a55aa28d71812a90d9cb70d55ed881",
+			"slug": "graphic-design-the-new-basics-2",
+			"title": "Graphic Design: The New Basics",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Ellen Lupton",
+				"Jennifer Cole Phillips"
+			],
+			"publishers": [
+				"Princeton Architectural Press"
+			],
+			"tags": [
+				"Typography",
+				"Graphic Design"
+			],
+			"year": "2008",
+			"isbn10": "1568987021",
+			"isbn13": "9781568987026",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": null,
+			"notes": null,
+			"pages": 240,
+			"height": 9.06,
+			"thickness": 0.75,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "pink-1",
 			"shelf": null,
 			"position": null,
 			"face": "gentium"
