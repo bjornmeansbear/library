@@ -136,8 +136,7 @@
 			"name": "GT1S4",
 			"room": null,
 			"books": [
-				"cancer-edipemiology-in-older-adolecents-and-young-adults-15",
-				"cancer-edipemiology-in-older-adolecents-and-young-adults-15-2",
+				"cancer-epidemiology-in-older-adolescents-and-young-adults-15",
 				"autobiografia-conocimientos-y-recuerdos-sobre-el-arte-de-la"
 			]
 		},
@@ -1500,7 +1499,7 @@
 			"sized": "pages",
 			"tint": "green-2",
 			"shelf": "GT1S4",
-			"position": 3,
+			"position": 2,
 			"face": "young-serif"
 		},
 		{
@@ -2220,8 +2219,8 @@
 		},
 		{
 			"id": "14a55aa28d718149a41ce7d0ccec270c",
-			"slug": "cancer-edipemiology-in-older-adolecents-and-young-adults-15",
-			"title": "Cancer Edipemiology in Older Adolecents and Young Adults 15 to 29 Years of Age",
+			"slug": "cancer-epidemiology-in-older-adolescents-and-young-adults-15",
+			"title": "Cancer Epidemiology in Older Adolescents and Young Adults 15 to 29 Years of Age",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -2236,9 +2235,9 @@
 			"isbn13": null,
 			"bookshopIsbn": null,
 			"onBookshop": null,
-			"copies": null,
+			"copies": 2,
 			"where": "GD Office",
-			"notes": null,
+			"notes": "I designed this.",
 			"pages": null,
 			"height": 9.88,
 			"thickness": 0.83,
@@ -2247,37 +2246,6 @@
 			"tint": "goldenrod-1",
 			"shelf": "GT1S4",
 			"position": 1,
-			"face": "work-sans"
-		},
-		{
-			"id": "14a55aa28d7181e3aef6e313d8bb6817",
-			"slug": "cancer-edipemiology-in-older-adolecents-and-young-adults-15-2",
-			"title": "Cancer Edipemiology in Older Adolecents and Young Adults 15 to 29 Years of Age",
-			"format": "book",
-			"subtitle": null,
-			"authors": [
-				"National Cancer Institute"
-			],
-			"publishers": [
-				"NIH Publishers"
-			],
-			"tags": [],
-			"year": "2006",
-			"isbn10": null,
-			"isbn13": null,
-			"bookshopIsbn": null,
-			"onBookshop": null,
-			"copies": null,
-			"where": "GD Office",
-			"notes": null,
-			"pages": null,
-			"height": 9.36,
-			"thickness": 0.83,
-			"measured": false,
-			"sized": "guessed",
-			"tint": "goldenrod-1",
-			"shelf": "GT1S4",
-			"position": 2,
 			"face": "work-sans"
 		},
 		{
@@ -5243,9 +5211,9 @@
 			"face": "eb-garamond"
 		},
 		{
-			"id": "40e9616896a44f80a936f3684853e182",
-			"slug": "the-end-of-education",
-			"title": "The End of Education",
+			"id": "14a55aa28d718196b92bd06f83029b0f",
+			"slug": "the-end-of-education-redefining-the-value-of-school",
+			"title": "The End of Education: Redefining the Value of School",
 			"format": "book",
 			"subtitle": "Redefining the Value of School",
 			"authors": [
@@ -5256,49 +5224,17 @@
 				"Random House"
 			],
 			"tags": [],
-			"year": null,
-			"isbn10": null,
-			"isbn13": null,
-			"bookshopIsbn": null,
-			"onBookshop": null,
-			"copies": null,
-			"where": null,
-			"notes": null,
-			"pages": null,
-			"height": 7.9,
-			"thickness": 1.05,
-			"measured": false,
-			"sized": "guessed",
-			"tint": "yellow-2",
-			"shelf": null,
-			"position": null,
-			"face": "space-mono"
-		},
-		{
-			"id": "14a55aa28d718196b92bd06f83029b0f",
-			"slug": "the-end-of-education-redefining-the-value-of-school",
-			"title": "The End of Education: Redefining the Value of School",
-			"format": "book",
-			"subtitle": "L'arte di uscire fuori dal corpo",
-			"authors": [
-				"Neil Postman"
-			],
-			"publishers": [
-				"Vintage Books",
-				"Random House"
-			],
-			"tags": [],
 			"year": "1996",
-			"isbn10": "0000000000",
-			"isbn13": "9780000000002",
+			"isbn10": "0679750312",
+			"isbn13": "9780679750314",
 			"bookshopIsbn": null,
 			"onBookshop": null,
 			"copies": null,
 			"where": null,
 			"notes": null,
-			"pages": 289,
-			"height": 9.02,
-			"thickness": 0.71,
+			"pages": 209,
+			"height": 7.8,
+			"thickness": 0.59,
 			"measured": false,
 			"sized": "open-library",
 			"tint": "yellow-2",
@@ -12374,7 +12310,7 @@
 			"slug": "the-texbook",
 			"title": "The TeXbook",
 			"format": "book",
-			"subtitle": "L'arte di uscire fuori dal corpo",
+			"subtitle": null,
 			"authors": [
 				"Donald E. Knuth"
 			],
@@ -12384,18 +12320,18 @@
 			],
 			"tags": [],
 			"year": "1989",
-			"isbn10": "0000000000",
-			"isbn13": "9780000000002",
+			"isbn10": "0201134470",
+			"isbn13": "9780201134476",
 			"bookshopIsbn": null,
 			"onBookshop": null,
 			"copies": null,
 			"where": null,
 			"notes": null,
-			"pages": 289,
-			"height": 9.02,
-			"thickness": 0.71,
+			"pages": 483,
+			"height": 9.45,
+			"thickness": 1.36,
 			"measured": false,
-			"sized": "open-library",
+			"sized": "library-of-congress",
 			"tint": "pink-1",
 			"shelf": null,
 			"position": null,
