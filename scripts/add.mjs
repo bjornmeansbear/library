@@ -9,7 +9,8 @@
 // keyboard, so a scanning session is one long command). For each one it
 // checks the book isn't already there, looks it up on Open Library, and
 // creates the page: title, subtitle, author, publisher, year, ISBN-13, LOC
-// call number, Format, Date Added. Existing author and publisher pages are
+// call number, Format, Date Added, and pages and size from Open Library or
+// the Library of Congress when they know them. Existing author and publisher pages are
 // reused when the names match; new ones are made otherwise.
 //
 // A book has to have a publisher (from Open Library or --publisher), so the
@@ -24,6 +25,7 @@
 //   --dry-run                change nothing
 import { DS, api, queryAll, text, titleOf, rich, nameIndex, findOrCreate, nameKey } from './lib/notion.mjs';
 import { edition, isbn13 } from './lib/openlibrary.mjs';
+import { locRecord, sizeProps } from './lib/sizes.mjs';
 
 const args = process.argv.slice(2);
 const opt = (name) => {
@@ -104,9 +106,14 @@ for (const input of inputs) {
 	if (ol?.year) props['Year'] = rich(ol.year);
 	if (ol?.lcc) props['LOC Call Number'] = rich(ol.lcc);
 	if (opt('where')) props['Where'] = { select: { name: opt('where') } };
+	const format = opt('format') ?? 'Book';
+	if (format !== 'Film' && format !== 'Music') {
+		Object.assign(props, sizeProps({ ol, loc: await locRecord(isbn), empty: { height: true, width: true, thickness: true, pages: true } }));
+	}
 
 	const who = authors.map((a) => a.name + (a.created ? ' (new)' : '')).join(', ') || 'no author listed';
-	const line = `“${title}”${ol?.subtitle ? `: ${ol.subtitle}` : ''} · ${who} · ${publisher.name}${publisher.created ? ' (new)' : ''}${ol?.year ? ` · ${ol.year}` : ''}`;
+	const size = props['Height (mm)'] ? ` · ${props['Height (mm)'].number} mm tall (${props['Size from'].select.name})` : '';
+	const line = `“${title}”${ol?.subtitle ? `: ${ol.subtitle}` : ''} · ${who} · ${publisher.name}${publisher.created ? ' (new)' : ''}${ol?.year ? ` · ${ol.year}` : ''}${size}`;
 	if (dryRun) {
 		console.log(`○ ${isbn} would add ${line}`);
 		continue;

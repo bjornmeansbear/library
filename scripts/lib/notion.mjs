@@ -68,7 +68,9 @@ export function nameKey(s, publisher = false) {
 // "Phaidon Press Limited" → "Phaidon Press"; legal suffixes only.
 export function shortPublisher(s) {
 	let t = s.replace(/\s+/g, ' ').trim();
-	const LEGAL = /,?\s*\b(inc|ltd|llc|limited)\b\.?$/i;
+	// Library catalogues invert some names: "Norton & Company, W. W." → "W. W. Norton & Company".
+	t = t.replace(/^(.+?),\s*((?:[A-Z]\.\s*)+)$/, (_, rest, initials) => `${initials.trim()} ${rest}`);
+	const LEGAL = /,?\s*\b(inc|ltd|llc|limited)\b\.?(?=$|,)/i;
 	while (LEGAL.test(t)) t = t.replace(LEGAL, '').trim();
 	return t.replace(/,$/, '');
 }
