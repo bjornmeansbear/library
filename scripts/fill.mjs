@@ -51,8 +51,11 @@ async function makePlan() {
 
 		const title = titleOf(p);
 		const changes = {};
-		// A subtitle only when the Notion title doesn't already include it.
-		if (missing.subtitle && ol.subtitle && !nameKey(title).includes(nameKey(ol.subtitle))) changes.subtitle = ol.subtitle;
+		// A subtitle only when the Notion title doesn't already include it
+		// ("&" vs "and" and bracketed notes don't count as different).
+		const bare = (s) => nameKey(s.replace(/\s*[([].*?[)\]]/g, '')).replace(/\band\b/g, ' ').replace(/\s+/g, ' ').trim();
+		const sub = ol.subtitle?.replace(/\s*[([].*?[)\]]\s*$/, '').trim();
+		if (missing.subtitle && sub && !bare(title).includes(bare(sub))) changes.subtitle = sub;
 		if (missing.year && ol.year) changes.year = ol.year;
 		if (missing.lcc && ol.lcc) changes.lcc = ol.lcc;
 		if (missing.authors && ol.authors.length) {
