@@ -1058,5 +1058,45 @@
 	"9781416572473": {
 		"pages": null,
 		"dimensions": null
+	},
+	"9780030304224": {
+		"pages": 274,
+		"dimensions": null
+	},
+	"9780442240370": {
+		"pages": 155,
+		"dimensions": null
+	},
+	"9780847807802": {
+		"pages": 160,
+		"dimensions": null
+	},
+	"9780520220393": {
+		"pages": 320,
+		"dimensions": null
+	},
+	"9780442295653": {
+		"pages": 93,
+		"dimensions": null
+	},
+	"9780442292843": {
+		"pages": 101,
+		"dimensions": null
+	},
+	"9780670021215": {
+		"pages": 325,
+		"dimensions": null
+	},
+	"9780615176772": {
+		"pages": 171,
+		"dimensions": null
+	},
+	"9780060976255": {
+		"pages": 224,
+		"dimensions": "10 x 6.7 x 0.6 inches"
+	},
+	"9780767903097": {
+		"pages": 320,
+		"dimensions": "8 x 5.3 x 0.8 inches"
 	}
 }
