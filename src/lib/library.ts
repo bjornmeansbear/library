@@ -43,17 +43,16 @@ export const BOOKSHOP_AFFILIATE_ID = '129137';
 
 // A direct ISBN link 404s whenever Bookshop.org doesn't stock that exact
 // edition (out of print, museum catalogues, foreign editions: much of this
-// library). So by default it's a search for the title and author, which
-// finds whatever edition is in print. A "Bookshop ISBN" set in Notion means
-// that edition is known to be sold: link straight to it.
-export function bookshopUrl(book: Pick<Book, 'title' | 'authors' | 'bookshopIsbn'>) {
+// library), and a title search buries the book among look-alikes. So by
+// default it searches for the ISBN: the result is that edition or nothing.
+// A "Bookshop ISBN" set in Notion means that edition is known to be sold:
+// link straight to it. Bookshop.org has no public API to check stock.
+export function bookshopUrl(book: Pick<Book, 'isbn13' | 'bookshopIsbn'>) {
 	const aff = BOOKSHOP_AFFILIATE_ID;
 	if (book.bookshopIsbn) {
 		return aff ? `https://bookshop.org/a/${aff}/${book.bookshopIsbn}` : `https://bookshop.org/book/${book.bookshopIsbn}`;
 	}
-	const surname = book.authors[0]?.split(/\s+/).at(-1) ?? '';
-	const keywords = `${book.title.split(/[:(]/)[0].trim()} ${surname}`.trim();
-	return `https://bookshop.org/search?keywords=${encodeURIComponent(keywords)}${aff ? `&affiliate=${aff}` : ''}`;
+	return `https://bookshop.org/search?keywords=${book.isbn13}${aff ? `&affiliate=${aff}` : ''}`;
 }
 
 export function ordinal(n: number) {
