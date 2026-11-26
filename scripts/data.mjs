@@ -29,6 +29,13 @@ async function main() {
 	const library = await build(raw, cache);
 	fs.writeFileSync(cachePath, JSON.stringify(cache, null, '\t') + '\n');
 	fs.mkdirSync(path.dirname(out), { recursive: true });
+	// Keep the old date when nothing else changed, so the nightly sync
+	// doesn't commit (and redeploy) just because a day went by.
+	if (fs.existsSync(out)) {
+		const prev = JSON.parse(fs.readFileSync(out, 'utf8'));
+		const same = (o) => JSON.stringify({ ...o, generated: null });
+		if (same(prev) === same(library)) library.generated = prev.generated;
+	}
 	fs.writeFileSync(out, JSON.stringify(library, null, '\t') + '\n');
 	const measured = library.books.filter((b) => b.measured).length;
 	console.log(

@@ -1,0 +1,52 @@
+# Every night, pull the books from Notion and commit the snapshot if anything
+# changed. The push is what publishes: Cloudflare (Workers Builds, connected
+# to this repo) rebuilds and deploys on every push to main.
+#
+# Run it by hand any time: GitHub → Actions → "Sync books from Notion" →
+# "Run workflow".
+#
+# Needs one repository secret: NOTION_TOKEN.
+name: Sync books from Notion
+
+on:
+  schedule:
+    - cron: '0 8 * * *' # 08:00 UTC, about 3–4 a.m. in Baltimore
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: notion-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      # data.mjs uses only Node's own modules and fetch: no npm install.
+      - name: Pull from Notion and Open Library
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: |
+          test -n "$NOTION_TOKEN" || { echo "NOTION_TOKEN secret is missing"; exit 1; }
+          node scripts/data.mjs
+
+      - name: Commit if anything changed
+        run: |
+          git add src/lib/data/library.json data/openlibrary.json
+          if git diff --cached --quiet; then
+            echo "No changes in Notion."
+            exit 0
+          fi
+          git config user.name "library-sync"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync books from Notion"
+          git push
