@@ -5055,7 +5055,7 @@
 			"slug": "design-when-everybody-designs",
 			"title": "Design, When Everybody Designs",
 			"format": "book",
-			"subtitle": "An Introduction to DEsign for Social Innovation",
+			"subtitle": "An Introduction to Design for Social Innovation",
 			"authors": [
 				"Ezio Manzini"
 			],
@@ -5074,12 +5074,12 @@
 			"notes": null,
 			"bjornpaedia": "https://bjornpaedia.wjerk.shop/static/Design%252C%2520When%2520Everybody%2520Designs.html",
 			"pages": 241,
-			"height": 7.98,
+			"height": 9.45,
 			"thickness": 0.75,
 			"measured": false,
-			"tall": "guessed",
+			"tall": "recorded",
 			"thick": "pages",
-			"sized": "pages",
+			"sized": "library-of-congress",
 			"tint": "gray-3",
 			"shelf": "GT1S3",
 			"position": 28,
@@ -7265,12 +7265,12 @@
 			"notes": null,
 			"bjornpaedia": "https://bjornpaedia.wjerk.shop/static/Flourishing.html",
 			"pages": 151,
-			"height": 9.21,
+			"height": 9.06,
 			"thickness": 0.53,
 			"measured": false,
-			"tall": "guessed",
+			"tall": "recorded",
 			"thick": "pages",
-			"sized": "pages",
+			"sized": "library-of-congress",
 			"tint": "red-3",
 			"shelf": null,
 			"position": null,
@@ -7347,7 +7347,7 @@
 		{
 			"id": "14a55aa28d7181108612ea2c6836b31f",
 			"slug": "form-code-in-design-art-and-architecture",
-			"title": "Form + Code : In Design, Art, and Architecture",
+			"title": "Form + Code: In Design, Art, and Architecture",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -7573,8 +7573,7 @@
 			"format": "book",
 			"subtitle": "The Story of a Garden in the South of France",
 			"authors": [
-				"Richard Goodman",
-				"Goodman, Richard"
+				"Richard Goodman"
 			],
 			"publishers": [
 				"Algonquin Books"
@@ -11362,7 +11361,7 @@
 		{
 			"id": "14a55aa28d71811c8a6cfbea52428758",
 			"slug": "mica-grad-show-2014",
-			"title": "MICA Grad Show : 2014",
+			"title": "MICA Grad Show: 2014",
 			"format": "book",
 			"subtitle": null,
 			"authors": [],
@@ -11743,8 +11742,8 @@
 		},
 		{
 			"id": "14a55aa28d718184b007c9cd019a7cb6",
-			"slug": "national-geographic-whats-a-genius",
-			"title": "National Geographic: Whats A Genius?",
+			"slug": "national-geographic-what-s-a-genius",
+			"title": "National Geographic: What’s A Genius?",
 			"format": "book",
 			"subtitle": null,
 			"authors": [],
@@ -11840,8 +11839,8 @@
 		},
 		{
 			"id": "14a55aa28d7181e1bf4ac4e20326368c",
-			"slug": "neue-staatsgalerie-stuggart",
-			"title": "Neue Staatsgalerie Stuggart",
+			"slug": "neue-staatsgalerie-stuttgart",
+			"title": "Neue Staatsgalerie Stuttgart",
 			"format": "book",
 			"subtitle": null,
 			"authors": [],
@@ -11865,7 +11864,7 @@
 			"tall": "guessed",
 			"thick": "guessed",
 			"sized": "guessed",
-			"tint": "orange-2",
+			"tint": "orange-3",
 			"shelf": null,
 			"position": null,
 			"face": "plex-mono"
@@ -12037,12 +12036,12 @@
 			"notes": null,
 			"bjornpaedia": "https://bjornpaedia.wjerk.shop/static/A%2520%252ANew%252A%2520Program%2520for%2520Graphic%2520Design.html",
 			"pages": 255,
-			"height": 8.62,
+			"height": 9.06,
 			"thickness": 0.79,
 			"measured": false,
-			"tall": "guessed",
+			"tall": "recorded",
 			"thick": "pages",
-			"sized": "pages",
+			"sized": "library-of-congress",
 			"tint": "cornflower-3",
 			"shelf": "GT1S1",
 			"position": 15,
@@ -14836,12 +14835,12 @@
 			"notes": null,
 			"bjornpaedia": "https://bjornpaedia.wjerk.shop/static/Speculative%2520Everything.html",
 			"pages": 224,
-			"height": 9.39,
+			"height": 9.45,
 			"thickness": 0.71,
 			"measured": false,
-			"tall": "guessed",
+			"tall": "recorded",
 			"thick": "pages",
-			"sized": "pages",
+			"sized": "library-of-congress",
 			"tint": "cornflower-1",
 			"shelf": null,
 			"position": null,
@@ -17745,7 +17744,7 @@
 			"format": "book",
 			"subtitle": "the sacred traditions of Christmas",
 			"authors": [
-				"Matthews, John"
+				"John Matthews"
 			],
 			"publishers": [
 				"Quest Books"
