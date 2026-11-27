@@ -1,3 +1,4 @@
+// @ts-nocheck: a Node script, shared with the /scan Worker; not type-checked
 // Open Library lookups by ISBN: the edition (title, subtitle, publisher,
 // year, pages, size, Library of Congress call number) and its authors.
 // Free, no key; we identify ourselves and keep to about 3 requests a second.

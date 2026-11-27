@@ -125,3 +125,21 @@ The catalogue is open data: the site serves `src/lib/data/library.json` at
 Code: Apache 2.0 (`LICENSE`). Text and design: CC BY-SA 4.0. The books
 themselves, their titles, cover details and everything else about them,
 belong to their authors and publishers.
+
+## Adding books from a phone: /scan
+
+`library.wjerk.shop/scan` is a private page for adding a book from the
+shelf: scan the barcode with the phone's camera (or type the ISBN), check
+the book it found, pick Where (and Format), and press the stamp. It does
+what `npm run add` does, from the Worker (`src/lib/server/scan.ts`, using
+the same Open Library, Library of Congress and name-matching code in
+`scripts/lib/`). New books show on the site after the next sync.
+
+It needs two Worker secrets, set once (each command asks for the value):
+
+    npx wrangler secret put NOTION_TOKEN   # the same token as in .env
+    npx wrangler secret put SCAN_KEY       # a passphrase for the page
+
+The phone remembers the passphrase after the first time. The barcode reader
+(zxing-wasm, for iPhone Safari, which can't read barcodes by itself) is
+served from this site, not a CDN.

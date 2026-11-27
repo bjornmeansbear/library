@@ -1,3 +1,4 @@
+// @ts-nocheck: a Node script, shared with the /scan Worker; not type-checked
 // Book sizes and page counts from free catalogues, as Notion fields.
 //
 // Open Library sometimes records all three dimensions ("8.5 x 5.5 x 0.54
