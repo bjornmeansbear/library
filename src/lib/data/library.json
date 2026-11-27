@@ -1,5 +1,5 @@
 {
-	"generated": "2026-11-26",
+	"generated": "2026-11-27",
 	"shelves": [
 		{
 			"id": "14a55aa28d718078974adc87fb068e0c",
@@ -185,7 +185,7 @@
 		},
 		{
 			"name": "Architecture",
-			"count": 51,
+			"count": 52,
 			"intro": null
 		},
 		{
@@ -395,6 +395,11 @@
 		},
 		{
 			"name": "Signs Signaling",
+			"count": 1,
+			"intro": null
+		},
+		{
+			"name": "Social",
 			"count": 1,
 			"intro": null
 		},
@@ -1872,7 +1877,10 @@
 			"publishers": [
 				"Maryland Institute of Art"
 			],
-			"tags": [],
+			"tags": [
+				"Architecture",
+				"Social"
+			],
 			"year": null,
 			"isbn10": null,
 			"isbn13": null,
@@ -2741,6 +2749,37 @@
 			"shelf": null,
 			"position": null,
 			"face": "libre-franklin"
+		},
+		{
+			"id": "42555aa28d71812eb385f76abab5eacd",
+			"slug": "chuck-klosterman-iv",
+			"title": "Chuck Klosterman IV",
+			"format": "book",
+			"subtitle": "A Decade of Curious People and Dangerous Ideas",
+			"authors": [
+				"Chuck Klosterman"
+			],
+			"publishers": [
+				"Scribner"
+			],
+			"tags": [],
+			"year": "2006",
+			"isbn10": "0743284887",
+			"isbn13": "9780743284882",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 384,
+			"height": 8.5,
+			"thickness": 1.18,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "goldenrod-2",
+			"shelf": null,
+			"position": null,
+			"face": "eb-garamond"
 		},
 		{
 			"id": "42455aa28d7181538f6ff91d4161f959",
@@ -6374,6 +6413,37 @@
 			"face": "young-serif"
 		},
 		{
+			"id": "42555aa28d7181ffb0f1c74293e49997",
+			"slug": "four-thousand-weeks",
+			"title": "Four Thousand Weeks",
+			"format": "book",
+			"subtitle": "Time Management for Mortals",
+			"authors": [
+				"Oliver Burkeman"
+			],
+			"publishers": [
+				"Farrar, Straus and Giroux"
+			],
+			"tags": [],
+			"year": "2021",
+			"isbn10": "0374159122",
+			"isbn13": "9780374159122",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 224,
+			"height": 8.66,
+			"thickness": 0.71,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "cornflower-1",
+			"shelf": null,
+			"position": null,
+			"face": "libre-franklin"
+		},
+		{
 			"id": "14a55aa28d7181f0a823e2739771e4df",
 			"slug": "from-bauhaus-to-our-house",
 			"title": "From Bauhaus to Our House",
@@ -8347,6 +8417,37 @@
 			"shelf": null,
 			"position": null,
 			"face": "crimson-pro"
+		},
+		{
+			"id": "42555aa28d71817896abda73411121fb",
+			"slug": "an-infinity-of-nations",
+			"title": "An Infinity of Nations",
+			"format": "book",
+			"subtitle": "How the Native New World Shaped Early North America",
+			"authors": [
+				"Michael Witgen"
+			],
+			"publishers": [
+				"University of Pennsylvania Press"
+			],
+			"tags": [],
+			"year": "2013",
+			"isbn10": "0812222865",
+			"isbn13": "9780812222869",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 456,
+			"height": 7.81,
+			"thickness": 1.29,
+			"measured": false,
+			"sized": "pages",
+			"tint": "red-1",
+			"shelf": null,
+			"position": null,
+			"face": "space-mono"
 		},
 		{
 			"id": "14a55aa28d7181fd90d5d1a6d20dc078",
@@ -11324,6 +11425,37 @@
 			"face": "work-sans"
 		},
 		{
+			"id": "42555aa28d71812e94d8c732e6f9baa7",
+			"slug": "secret-lives-of-great-artists",
+			"title": "Secret Lives of Great Artists",
+			"format": "book",
+			"subtitle": "What Your Teachers Never Told You About Master Painters and Sculptors",
+			"authors": [
+				"Elizabeth Lunday"
+			],
+			"publishers": [
+				"Quirk Books"
+			],
+			"tags": [],
+			"year": "2008",
+			"isbn10": "159474257X",
+			"isbn13": "9781594742576",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 287,
+			"height": 8.27,
+			"thickness": 0.87,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "gray-3",
+			"shelf": null,
+			"position": null,
+			"face": "young-serif"
+		},
+		{
 			"id": "14a55aa28d718167bd75cd62283b75ea",
 			"slug": "the-senior-library-2004-advertising-graphic-design-3d-design",
 			"title": "The Senior Library 2004: Advertising, Graphic Design, 3D Design & Motion Graphics from the School of Visual Arts, New York City",
@@ -11356,7 +11488,7 @@
 			"tint": "goldenrod-3",
 			"shelf": null,
 			"position": null,
-			"face": "young-serif"
+			"face": "work-sans"
 		},
 		{
 			"id": "14a55aa28d7181e18ca1c283eb2ce6a0",
