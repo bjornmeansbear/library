@@ -60,9 +60,10 @@ edition is just the date of the last sync.
 On the shelf: Design Writing Research (Lupton & Miller, 1999); What We See
 When We Read (Mendelsund, 2014); Climates (Graham et al., 2016); Eternally
 Yours (van Hinte, 2004); The Electric Information Age Book (Schnapp &
-Michaels, 2012, about Agel's paperbacks). NOT in the catalogue: The Medium
-Is the Massage (McLuhan, Fiore, Agel, 1967), I Seem to Be a Verb (Fuller,
-Agel, Fiore, 1970). Climates' thickening paper: from memory of the object,
+Michaels, 2012, about Agel's paperbacks). Not in the catalogue yet: The Medium
+Is the Massage (McLuhan, Fiore, Agel, 1967): he owns it, to scan in. I Seem
+to Be a Verb (Fuller, Agel, Fiore, 1970): MICA's Decker Library copy, not
+his. Climates' thickening paper: from memory of the object,
 not checked here.
 
 ## Reading
