@@ -54,6 +54,11 @@ links = [["library.wjerk.shop: the live catalogue", "https://library.wjerk.shop/
 [cover]
 text   = "cover.md"     # the card on the back cover
 bleed  = "0.125in"
+caliper = 0.004         # old copier paper, French fold: each page is a whole sheet thick
+hairline = "0.6pt"      # a touch heavier: thin gold on black paper prints faint
+riso   = true           # gold ink on black paper; the master is black on white
+ink    = "#C2A14D"      # riso gold, as near as a screen gets
+paper  = "#161412"      # black paper
 
 # The thirteen spine faces, as the website sets them (src/routes/layout.css).
 # Each is self-hosted from the site's own font files.
