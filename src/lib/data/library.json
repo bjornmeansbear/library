@@ -530,11 +530,6 @@
 			"name": "Visual Literacy",
 			"count": 1,
 			"intro": null
-		},
-		{
-			"name": "Want to read",
-			"count": 1,
-			"intro": null
 		}
 	],
 	"books": [
@@ -6829,9 +6824,7 @@
 				"Deborah Kay Fitzgerald"
 			],
 			"publishers": [],
-			"tags": [
-				"Want to read"
-			],
+			"tags": [],
 			"year": "2003",
 			"isbn10": null,
 			"isbn13": null,
