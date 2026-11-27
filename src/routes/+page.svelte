@@ -231,12 +231,14 @@
 				{#if book.slug === firstShown}<span class="shelf-label" aria-hidden="true">{shelfLabel}</span>{/if}
 			</li>
 		{/each}
-		<li class="rest" role="presentation"></li>
+		<!-- The rest of the plank. When nothing matches, the words stand on it,
+		     where the books would be. -->
+		{#if words.length && shown.size === 0}
+			<li class="rest empty">Nothing here matches “{query}”</li>
+		{:else}
+			<li class="rest" role="presentation"></li>
+		{/if}
 	</ul>
-
-	{#if words.length && shown.size === 0}
-		<p class="mt-12">Nothing here matches “{query}”.</p>
-	{/if}
 </main>
 
 <BookDialog book={open} onclose={() => history.back()} onstep={step} />

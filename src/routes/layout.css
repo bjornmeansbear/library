@@ -163,6 +163,21 @@ a:hover {
 .board > .rest {
 	flex: 1 0 1.5rem;
 }
+/* The empty shelf: when nothing matches, the message stands on the bare
+   plank, big, in Basteleur, so the emptiness is obvious. */
+.board > .empty {
+	min-height: 12rem;
+	justify-content: flex-end;
+	padding-top: calc(var(--board) + 2em);
+	padding-bottom: calc(var(--board) + 1em);
+	/* lines up with the page title: the header's inset less the bookcase's */
+	padding-inline: calc(clamp(1.5rem, 6vw, 6rem) - clamp(0.5rem, 1.5vw, 1rem));
+	font-family: 'Basteleur', var(--font-sans);
+	font-weight: 700;
+	font-size: clamp(2.25rem, 1rem + 6vw, 5.5rem);
+	line-height: 1.168;
+	overflow-wrap: anywhere;
+}
 
 /* ---- The shelf label -------------------------------------------------------
    A library labels its shelves with a small card in a holder on the board's
