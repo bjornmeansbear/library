@@ -20,7 +20,9 @@
 		"add": "node scripts/add.mjs",
 		"isbn-fixes": "node scripts/isbn-fixes.mjs",
 		"tags": "node scripts/tag-plan.mjs",
-		"sizes": "node scripts/sizes.mjs"
+		"sizes": "node scripts/sizes.mjs",
+		"fix": "node scripts/fix.mjs",
+		"typos": "node scripts/typos.mjs"
 	},
 	"devDependencies": {
 		"@fontsource/bricolage-grotesque": "^5.3.0",

@@ -1,0 +1,53 @@
+# Fixes for the catalog in Notion, one to a line. `npm run fix` shows what
+# would change; `npm run fix -- --apply` changes it. Then `npm run sync`.
+#
+#   person: Steward Brand → Stewart Brand        renames the author page, so
+#                                                every book by them is fixed;
+#                                                if "Stewart Brand" already has
+#                                                a page, the books move to it
+#                                                and the misspelled page goes
+#                                                to Notion's trash
+#   publisher: HarperPerennial → Harper Perennial   the same, for publishers
+#   title: Enviornment → Environment             replaces those words in every
+#                                                title and subtitle that has them
+#   isbn: Flourishing → 9780804784146            sets the ISBN-13 of the book
+#                                                whose title starts that way
+#
+# -> works as well as →. Lines starting with # are notes. A fix that's already
+# done says so and changes nothing, so lines can stay here as a record.
+# `npm run typos` lists likely typos to check and copy in here.
+
+# 2026-11-27
+person: Alvia Toffler → Alvin Toffler
+person: Steve King → Steve Krug
+person: Gary Huswit → Gary Hustwit
+person: Christoph Nieman → Christoph Niemann
+person: Josef Müller-Brockman → Josef Müller-Brockmann
+person: E.F. Shumacher → E.F. Schumacher
+person: Adam Webach → Adam Werbach
+person: John Stewart → Jon Stewart
+person: Leatrice Eisman → Leatrice Eiseman
+person: Usamu Sato → Osamu Sato
+person: Patricia T. O' Connor → Patricia T. O'Conner
+person: Marylin Stokstad → Marilyn Stokstad
+person: Brando Mitrovic → Branko Mitrović
+person: Fred SInger → Fred Singer
+publisher: Stanford Buisnes Books → Stanford Business Books
+publisher: HarperPerennial → Harper Perennial
+title: Enviornment → Environment
+title: Sytems → Systems
+title: Mondernism → Modernism
+title: Attachements → Attachments
+title: Design fo Social Inovation → Design for Social Innovation
+title: LEading → Leading
+title: LIfe → Life
+title: Selections fro, → Selections from
+title: A Citizens Guide → A Citizen's Guide
+title: Horrible;s → Horrible's
+isbn: Design, When Everybody Designs → 9780262028608
+isbn: Flourishing → 9780804784146
+isbn: A New Program for Graphic Design → 9781941753217
+isbn: Speculative Everything → 9780262019842
+
+# found by npm run typos, 2026-11-27
+title: DEsign → Design
