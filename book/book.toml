@@ -30,10 +30,8 @@ date   = ""             # empty = the date of that sync
 mode   = "endless"      # one shelf through the whole book; "wall" = two shelves a spread
 scale  = 0              # 0 = by mode (0.4 endless, 0.25 wall)
 black_tags = []      # books with these tags print as black spines; none for now
-second_spines = [     # the books the essay talks about: a green block under the black spine
-  "do-it-scenarios-of-the-revolution",                          # the Jerome Agel books
-  "herman-kahnsciousness-the-megaton-ideas-of-the-one-man-think",
-  "it-s-about-time-and-it-s-about-time",
+second_spines = [     # the books the essay names by title: a green block under the black spine (the
+                      # Agel books it names as a group stay plain)
   "climates",
   "eternally-yours-time-in-design",
   "how-buildings-learn-what-happens-after-they-re-built",
