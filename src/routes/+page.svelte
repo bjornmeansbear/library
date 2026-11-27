@@ -149,7 +149,7 @@
 
 <svelte:head>
 	<title>Library</title>
-	<meta name="description" content="The design books on Kristian Bjørnard’s office shelves, in the order they stand." />
+	<meta name="description" content="The books in Kristian Bjørnard’s library, in alphabetical order." />
 </svelte:head>
 
 <header class="px-[clamp(1.5rem,6vw,6rem)] pt-[clamp(1.5rem,5vw,4rem)]">
@@ -161,9 +161,9 @@
 			<p class="mt-4 mb-0 max-w-[36rem]" aria-live="polite">
 				<a href="https://kristian.bjornard.com/">Kristian Bjørnard’s</a> library{#if scope}, <strong>{scope}</strong>{/if}:
 				{#if !scope}
-					{books.length} books, filed by title the way they are on his office shelves!
+					{books.length} books in alphabetical order.
 				{:else if shown.size}
-					<strong>{shown.size}</strong> of {books.length} books, filed by title the way they are on his office shelves.
+					<strong>{shown.size}</strong> of {books.length} books in alphabetical order.
 				{:else}
 					nothing here yet.
 				{/if}
@@ -248,8 +248,8 @@
 		<div class="max-w-[40rem]">
 			<h2 class="m-0 text-sm">About</h2>
 			<p class="mt-2 mb-0">
-				Library is <a href="https://kristian.bjornard.com/">Kristian Bjørnard’s</a> design library: every book on his office shelves, drawn as a
-				spine to scale and filed A to Z. A <a href="https://a.wjerk.shop/">Wjerk</a> project.
+				Library is <a href="https://kristian.bjornard.com/">Kristian Bjørnard’s</a> design library: every book in his catalogue, drawn as a
+				spine to scale, in alphabetical order. A <a href="https://a.wjerk.shop/">Wjerk</a> project.
 			</p>
 			<p class="mt-4 mb-0">
 				The catalogue lives in Notion. Each night a script reads it, looks up page counts and sizes
