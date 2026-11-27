@@ -265,6 +265,15 @@ async function build(raw, cache) {
 							((b.pages ?? ol?.pages) ? 0.15 + (b.pages ?? ol.pages) * 0.0025 : 0.45 + ((h >>> 8) % 70) / 100))
 			),
 			measured: Boolean(b.heightMm && b.thicknessMm && (!b.sizeFrom || b.sizeFrom === 'Measured')),
+			// Where each of the spine's two numbers came from, separately: the
+			// height, and the thickness (the spine's width on the page).
+			// measured (calipers), recorded (a catalogue or the series), pages
+			// (thickness only: worked out from the page count), or guessed.
+			tall: b.heightMm ? (!b.sizeFrom || b.sizeFrom === 'Measured' ? 'measured' : 'recorded')
+				: dims?.[0] ? 'recorded' : 'guessed',
+			thick: b.thicknessMm ? (!b.sizeFrom || b.sizeFrom === 'Measured' ? 'measured' : 'recorded')
+				: dims?.[2] ? 'recorded'
+				: (b.pages ?? ol?.pages) ? 'pages' : 'guessed',
 			sized: b.heightMm && (!b.sizeFrom || b.sizeFrom === 'Measured') && b.thicknessMm ? 'measured'
 				: b.sizeFrom === 'Library of Congress' || b.sizeFrom === 'Same as its series' ? 'library-of-congress'
 				: b.sizeFrom === 'Open Library' || dims ? 'open-library'
