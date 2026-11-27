@@ -51,7 +51,11 @@ second_spines = [     # the books the essay talks about: a green block under the
   "karl-gerstner",                      # Designing Programmes (Notion title: "Karl Gerstner")
   "the-texbook",
   "faviken",
+  "the-medium-is-the-massage",
 ]
+index_mark = "spine"   # in the index, a small green spine beside each of those books
+                       # (disc, ring, star, underline: tried 2026-11-27; spine is simple,
+                       # noticeable, not intrusive)
 title_image = "images/bjornmeansbook.svg"   # the Bjorn Means Book mark on the title page
 running = "running.txt"  # one line of type across the top of every spread
 running_caps = false
@@ -68,7 +72,7 @@ per_sheet = 1                # one leaf a sheet, centered: room for the riso's e
 marks  = true
 
 [site]                  # `bjook site --out ~/Code/bjornmeansbook`
-text  = ["cover.md"]    # add "essay.md" here once it's ready
+text  = ["cover.md", "essay.md"]
 links = [["library.wjerk.shop: the live catalog", "https://library.wjerk.shop/"],
          ["library.json: the whole catalog as open data", "https://library.wjerk.shop/library.json"],
          ["Bjook, the tool that typeset it", "../bjook.html"]]

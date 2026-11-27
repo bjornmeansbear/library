@@ -79,3 +79,7 @@ ok: Garde in Merz to Emigre and Beyond
 ok: Natur in Natur und Bauen
 ok: Futura in Never Use Futura
 ok: Norge in Norway
+
+# The Medium Is the Massage came in lowercase from Open Library
+title: The medium is the massage → The Medium Is the Massage
+title: an inventory of effects → An Inventory of Effects
