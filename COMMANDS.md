@@ -126,6 +126,10 @@ one finds likely typos, the other fixes them from a list.
      `title: Enviornment → Environment   # maybe; in How to See…`
    - Lines marked "maybe" are guesses: names and foreign words ("Natur",
      "Futura") show up too. Keep only the real typos.
+   - **A word that's right where it is**: add `ok: Natur in Natur und Bauen`
+     to `fixes.txt` (the word, then the start of that book's title). It stops
+     being listed in that book only; anywhere else it's still checked.
+   - **`Nothing looks wrong.`** means you're done.
    - **It can't see** a misspelled name on someone's only book ("Alvia
      Toffler"): nothing to compare it against. Catch those by reading.
 2. Copy the real ones into `fixes.txt` (the notes at its top explain the four

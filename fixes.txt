@@ -16,6 +16,10 @@
 # -> works as well as →. Lines starting with # are notes. A fix that's already
 # done says so and changes nothing, so lines can stay here as a record.
 # `npm run typos` lists likely typos to check and copy in here.
+#
+#   ok: Natur in Natur und Bauen                 not a typo: npm run typos stops
+#                                                listing that word in the book whose
+#                                                title starts that way (only there)
 
 # 2026-11-27
 person: Alvia Toffler → Alvin Toffler
@@ -68,3 +72,10 @@ person: Goodman, Richard → Richard Goodman
 #   "Carrere Areleston": split it by hand in Notion (two author pages).
 # Pentagram's author is "The Monacelli Press", which is its publisher: in Notion,
 #   move it to Publisher and leave Author empty (or Pentagram).
+
+# right where they are: npm run typos won't list these words in these books
+ok: Systeme in Grid Systems in Graphic Design
+ok: Garde in Merz to Emigre and Beyond
+ok: Natur in Natur und Bauen
+ok: Futura in Never Use Futura
+ok: Norge in Norway

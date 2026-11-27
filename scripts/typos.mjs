@@ -15,6 +15,10 @@
 //     words already in the catalog; that keeps the list short.
 // It can't catch a name spelled wrong on its only book ("Alvia Toffler"):
 // that takes someone who knows the name.
+//
+// A word that's right where it is (a foreign word, a name) goes in fixes.txt
+// as `ok: Natur in Natur und Bauen`: that word, in the book whose title
+// starts that way, isn't listed again. The same word in any other title is.
 import fs from 'node:fs';
 
 const books = JSON.parse(fs.readFileSync('src/lib/data/library.json', 'utf8')).books;
@@ -22,6 +26,13 @@ const DICT = '/usr/share/dict/words';
 const dict = fs.existsSync(DICT) ? new Set(fs.readFileSync(DICT, 'utf8').toLowerCase().split('\n')) : null;
 const plain = (s) => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[‘’]/g, "'");
 const out = [];
+
+// Words checked and found right, each in one book: `ok: Natur in Natur und Bauen`.
+const fold = (s) => plain(s ?? '').replace(/[“”]/g, '"').toLowerCase().trim();
+const oks = fs.existsSync('fixes.txt')
+	? fs.readFileSync('fixes.txt', 'utf8').split('\n').map((l) => l.trim().match(/^ok:\s*(.+?)\s+in\s+(.+)$/)).filter(Boolean).map((m) => [fold(m[1]), fold(m[2])])
+	: [];
+const okay = (word, title) => oks.some(([w, t]) => w === fold(word) && fold(title).startsWith(t));
 
 // Is it a word, allowing for endings the word list leaves out?
 const STEMS = [[/ies$/, 'y'], [/ied$/, 'y'], [/es$/, ''], [/s$/, ''], [/ed$/, ''], [/ed$/, 'e'], [/d$/, ''], [/ing$/, ''], [/ing$/, 'e'], [/men$/, 'man'], [/ly$/, ''], [/er$/, ''], [/ers$/, '']];
@@ -72,18 +83,20 @@ for (const b of books) {
 		if (!value) continue;
 		// A capital too many
 		for (const w of value.match(/\b[A-Z]{2}[a-z]+\b/g) ?? []) {
+			if (okay(w, b.title)) continue;
 			const fixed = w[0] + w.slice(1).toLowerCase();
 			out.push([field === 'person' ? `person: ${value} → ${value.replace(w, fixed)}` : `title: ${w} → ${fixed}`, `in ${field === 'person' ? `an author of ${where}` : where}`]);
 		}
 		// Stray punctuation
 		for (const m of value.match(/\w;\w|\w ,|\s{2,}|\( | \)/g) ?? []) {
+			if (okay(m.trim(), b.title)) continue;
 			out.push([`title: ${m.trim()} → ?`, `odd punctuation "${m}" in ${where}`]);
 		}
 		// One slip from a dictionary word
 		if (dict && field !== 'person') {
 			for (const w of plain(value).match(WORD) ?? []) {
 				const lw = w.toLowerCase();
-				if (isWord(lw) || nameWords.has(lw)) continue;
+				if (isWord(lw) || nameWords.has(lw) || okay(w, b.title)) continue;
 				const near = [...vocab].find((d) => d[0] === lw[0] && oneSlip(lw, d));
 				if (near) out.push([`title: ${w} → ${w[0] === w[0].toUpperCase() ? near[0].toUpperCase() + near.slice(1) : near}`, `maybe; in ${where}`]);
 			}
@@ -92,8 +105,9 @@ for (const b of books) {
 }
 
 const unique = [...new Map(out.map(([fix, why]) => [fix, why])).entries()];
-if (!unique.length) console.log('Nothing looks wrong.');
+if (!unique.length) console.log(`Nothing looks wrong.${oks.length ? ` (${oks.length} words marked ok in fixes.txt.)` : ''}`);
 else {
-	console.log(`${unique.length} to check. Copy the right ones into fixes.txt, then \`npm run fix\`.\n`);
+	console.log(`${unique.length} to check. Copy the right ones into fixes.txt, then \`npm run fix\`;`);
+	console.log(`for a word that's right where it is, add \`ok: Word in Title\` to fixes.txt.\n`);
 	for (const [fix, why] of unique) console.log(`${fix.padEnd(52)}  # ${why}`);
 }

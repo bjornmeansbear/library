@@ -22,7 +22,7 @@ const FIELD = { people: 'Author', publishers: 'Publisher' };
 const fixes = [];
 for (const [n, raw] of fs.readFileSync(file, 'utf8').split('\n').entries()) {
 	const line = raw.trim();
-	if (!line || line.startsWith('#')) continue;
+	if (!line || line.startsWith('#') || line.startsWith('ok:')) continue; // ok: lines are for npm run typos
 	const m = line.match(/^(person|publisher|title|isbn):\s*(.+?)\s*(?:→|->)\s*(.+)$/);
 	if (!m) {
 		console.log(`  ? line ${n + 1} isn't a fix: "${line}"`);
