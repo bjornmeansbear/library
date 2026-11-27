@@ -73,14 +73,14 @@ export function to13(s10) {
 	for (let i = 0; i < 12; i++) t += Number(c[i]) * (i % 2 ? 3 : 1);
 	return c + ((10 - (t % 10)) % 10);
 }
-// Whatever was typed or scanned → a checked ISBN-13, or null. Nine digits
-// are an old ISBN-10 without its last character, which is only a check digit
-// (and sometimes an X, which a phone's number pad can't type).
+// Whatever was typed or scanned → a checked ISBN-13, or null. Nine
+// characters are an SBN, the Standard Book Number on books from before
+// about 1974: the same as the ISBN-10 without its leading 0.
 export function isbn13(input) {
 	const s = String(input).toUpperCase().replace(/[^\dX]/g, '');
 	if (valid13(s)) return s;
 	if (valid10(s)) return to13(s);
-	if (/^\d{9}$/.test(s)) return to13(s);
+	if (s.length === 9 && valid10('0' + s)) return to13('0' + s);
 	return null;
 }
 

@@ -210,10 +210,10 @@
 		<form class="flex flex-col gap-3" onsubmit={(e) => (e.preventDefault(), lookup())}>
 			<label class="flex flex-col gap-1 text-sm">
 				ISBN
-				<input bind:value={isbn} inputmode="numeric" autocomplete="off" placeholder="978…"
+				<input bind:value={isbn} autocomplete="off" autocapitalize="characters" autocorrect="off" spellcheck="false" placeholder="978…"
 					class="w-full border-2 border-text bg-bg px-2 py-2 text-base tabular-nums" />
 			</label>
-			<p class="m-0 text-sm">An old ISBN ending in X: type just the first 9 digits.</p>
+			<p class="m-0 text-sm">Type it as printed. Books from before about 1974 have a 9-character SBN instead (like 460 01336 X): that works too.</p>
 			<div class="grid grid-cols-2 gap-3">
 				<button class="w-full border-2 border-text bg-bg px-2 py-2 text-base font-semibold hover:bg-text hover:text-bg" disabled={busy}>Look it up</button>
 				{#if scanning}
