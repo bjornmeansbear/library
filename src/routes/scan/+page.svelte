@@ -158,7 +158,7 @@
 	<meta name="robots" content="noindex" />
 </svelte:head>
 
-<main class="mx-auto max-w-[40rem] px-6 pt-[clamp(1.5rem,5vw,4rem)] pb-24">
+<main class="mx-auto max-w-tablet px-6 pt-[clamp(1.5rem,5vw,4rem)] pb-24">
 	<p class="m-0 text-sm"><a href="/">Library</a></p>
 	<h1 class="mt-2 mb-6 text-[clamp(2.5rem,1rem+8vw,5rem)] leading-[0.95] tracking-[-0.02em]">Add a book</h1>
 

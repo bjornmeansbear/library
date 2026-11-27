@@ -155,9 +155,9 @@
 <header class="px-[clamp(1.5rem,6vw,6rem)] pt-[clamp(1.5rem,5vw,4rem)]">
 	<!-- Phone: one column. From 55rem: title and blurb on the left, finding
 	     things (search, shelves) on the right. -->
-	<div class="grid gap-x-[clamp(2rem,5vw,5rem)] min-[55rem]:grid-cols-2 min-[55rem]:items-start">
+	<div class="grid gap-x-[clamp(2rem,5vw,5rem)] desktop:grid-cols-2 desktop:items-start">
 		<div>
-			<h1 class="m-0 text-[clamp(3rem,1rem+11vw,12rem)] min-[55rem]:text-[clamp(5rem,1rem+8vw,10rem)] leading-[0.95] tracking-[-0.02em]">Library</h1>
+			<h1 class="m-0 text-[clamp(3rem,1rem+11vw,12rem)] desktop:text-[clamp(5rem,1rem+8vw,10rem)] leading-[0.95] tracking-[-0.02em]">Library</h1>
 			<p class="mt-4 mb-0 max-w-[36rem]" aria-live="polite">
 				<a href="https://kristian.bjornard.com/">Kristian Bjørnard’s</a> library{#if scope}, <strong>{scope}</strong>{/if}:
 				{#if !scope}
@@ -171,7 +171,7 @@
 			{#if intro}<p class="mt-4 mb-0 max-w-[36rem] whitespace-pre-line">{intro}</p>{/if}
 		</div>
 		<div>
-			<form class="mt-8 min-[55rem]:mt-0 flex flex-wrap items-end gap-x-4 gap-y-2" role="search" onsubmit={(e) => e.preventDefault()}>
+			<form class="mt-8 desktop:mt-0 flex flex-wrap items-end gap-x-4 gap-y-2" role="search" onsubmit={(e) => e.preventDefault()}>
 				<label class="flex flex-[1_1_14rem] flex-col gap-1 text-sm">
 					Find a book
 					<input
@@ -244,8 +244,8 @@
      colophon, then everywhere else (the same list as kristian.bjornard.com),
      then the small print. -->
 <footer class="site-footer px-[clamp(1.5rem,6vw,6rem)] pb-12 text-sm">
-	<div class="grid gap-x-[clamp(2rem,4vw,4rem)] gap-y-8 min-[40rem]:grid-cols-2 min-[64rem]:grid-cols-3">
-		<div class="max-w-[40rem]">
+	<div class="grid gap-x-[clamp(2rem,4vw,4rem)] gap-y-8 tablet:grid-cols-2 min-[64rem]:grid-cols-3">
+		<div class="max-w-tablet">
 			<h2 class="m-0 text-sm">About</h2>
 			<p class="mt-2 mb-0">
 				Library is <a href="https://kristian.bjornard.com/">Kristian Bjørnard’s</a> design library: every book in his catalogue, drawn as a
@@ -265,7 +265,7 @@
 			</p>
 		</div>
 
-		<div class="max-w-[40rem]">
+		<div class="max-w-tablet">
 			<h2 class="m-0 text-sm">Colophon</h2>
 			<p class="mt-2 mb-0">
 				Spines are set in thirteen open-source typefaces, all under the SIL Open Font License. A
