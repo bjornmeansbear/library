@@ -25,6 +25,7 @@
 	let isbn = $state('');
 	let status = $state('');
 	let busy = $state(false);
+	let adding = $state(false);
 	let found = $state<Found | null>(null);
 	let added = $state<{ title: string; url: string; authors: string[]; publisher: string } | null>(null);
 	let where = $state(typeof localStorage === 'undefined' ? '' : (localStorage.getItem(WHERE) ?? ''));
@@ -118,8 +119,8 @@
 
 	async function addIt() {
 		if (!found?.isbn) return;
-		busy = true;
-		status = 'Adding it…';
+		busy = adding = true;
+		status = '';
 		try {
 			const r = (await call('POST', { isbn: found.isbn, where, format, title, publisher, force })) as { error?: string; added: { title: string; url: string; authors: string[]; publisher: string } };
 			if (r.error) status = r.error;
@@ -133,7 +134,7 @@
 		} catch (e) {
 			status = (e as Error).message;
 		}
-		busy = false;
+		busy = adding = false;
 	}
 
 	function saveKey(e: SubmitEvent) {
@@ -254,8 +255,22 @@
 				</select>
 			</label>
 		</div>
-		<button type="button" class="stamp-all self-start" onclick={addIt} disabled={busy || (found?.unknown && (!title || !publisher))}>
-			Add it to the library
+		<button type="button" class="stamp-all self-start" onclick={addIt} aria-busy={adding}
+			disabled={busy || (found?.unknown && (!title || !publisher))}>
+			{adding ? 'Adding it…' : 'Add it to the library'}
 		</button>
+		<p class="m-0 text-sm" role="status">
+			{#if adding}Finding its size and putting it in Notion. This takes a few seconds.{:else if status && found}{status}{/if}
+		</p>
 	</div>
 {/snippet}
+
+<style>
+	/* While it's being added the stamp stays pressed: the colours swap, the
+	   way every Wjerk control shows it's been pressed. */
+	:global(.stamp-all[aria-busy='true']) {
+		background: var(--wjerk-white);
+		color: var(--wjerk-navy);
+		cursor: progress;
+	}
+</style>
