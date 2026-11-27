@@ -66,7 +66,7 @@ function readSeed() {
 	};
 }
 
-import { DS } from './lib/ids.mjs';
+import { DS, roomOf } from './lib/ids.mjs';
 
 async function notion(method, url, body) {
 	for (let attempt = 0; ; attempt++) {
@@ -170,11 +170,12 @@ async function readNotion() {
 		});
 	}
 
+	const roomNames = new Map((await queryAll(DS.rooms)).map((p) => [p.id, titleOf(p)]));
 	const shelves = [];
 	for (const p of await queryAll(DS.shelves)) {
 		const ids = await relation(p, '📚 The Library of KB');
 		if (ids.length) {
-			shelves.push({ id: bare(p.id), name: titleOf(p), room: p.properties['Room']?.select?.name ?? '', books: ids });
+			shelves.push({ id: bare(p.id), name: titleOf(p), room: roomOf(p, roomNames), books: ids });
 		}
 	}
 	return { people, publishers, tags, tagIntros, books, shelves };

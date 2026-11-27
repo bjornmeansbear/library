@@ -5,7 +5,7 @@
 import { edition, isbn13, olSearch } from '../../../scripts/lib/openlibrary.mjs';
 import { locRecord, locSearch, sizeProps } from '../../../scripts/lib/sizes.mjs';
 import { nameKey, shortPublisher } from '../../../scripts/lib/names.mjs';
-import { DS } from '../../../scripts/lib/ids.mjs';
+import { DS, roomOf } from '../../../scripts/lib/ids.mjs';
 
 type Page = { id: string; url: string; properties: Record<string, any> };
 
@@ -105,14 +105,16 @@ export type Known = {
 // The library's Where and Format options, its shelves (each with its room),
 // and the titles already in it.
 async function context(n: ReturnType<typeof notion>) {
-	const [books, schema, shelfPages] = await Promise.all([
+	const [books, schema, shelfPages, roomPages] = await Promise.all([
 		n.queryAll(DS.books),
 		n.api('GET', `data_sources/${DS.books}`),
-		n.queryAll(DS.shelves)
+		n.queryAll(DS.shelves),
+		n.queryAll(DS.rooms)
 	]);
+	const roomNames = new Map(roomPages.map((p) => [p.id, titleOf(p)]));
 	const options = (name: string): string[] => schema.properties?.[name]?.select?.options?.map((o: any) => o.name) ?? [];
 	const shelves = shelfPages
-		.map((p) => ({ id: p.id, name: titleOf(p), room: p.properties['Room']?.select?.name ?? '' }))
+		.map((p) => ({ id: p.id, name: titleOf(p), room: roomOf(p, roomNames) as string }))
 		.filter((s) => s.name)
 		.sort((a, b) => a.room.localeCompare(b.room) || a.name.localeCompare(b.name, 'en', { numeric: true }));
 	return { books, where: options('Where'), formats: options('Format'), shelves };
