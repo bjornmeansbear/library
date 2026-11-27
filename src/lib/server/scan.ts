@@ -85,10 +85,10 @@ export async function lookup(token: string, input: string) {
 	const isbn = isbn13(input);
 	if (!isbn) return { error: 'That isn’t a valid ISBN: the check digit doesn’t work out. Check the number.' };
 	const [ctx, known] = await Promise.all([context(notion(token)), whatIsKnown(isbn)]);
-	const { where, formats } = ctx;
+	const { where, formats, shelves } = ctx;
 	const same = withIsbn(ctx.books, isbn);
-	if (same) return { isbn, where, formats, have: { title: titleOf(same), url: same.url } };
-	return { isbn, where, formats, book: known.book, twin: twinOf(ctx.books, known.book.title) };
+	if (same) return { isbn, where, formats, shelves, have: { title: titleOf(same), url: same.url } };
+	return { isbn, where, formats, shelves, book: known.book, twin: twinOf(ctx.books, known.book.title) };
 }
 
 export type Known = {
@@ -102,11 +102,20 @@ export type Known = {
 	widthCm?: number | null;
 };
 
-// The library's Where and Format options, and the titles already in it.
+// The library's Where and Format options, its shelves (each with its room),
+// and the titles already in it.
 async function context(n: ReturnType<typeof notion>) {
-	const [books, schema] = await Promise.all([n.queryAll(DS.books), n.api('GET', `data_sources/${DS.books}`)]);
+	const [books, schema, shelfPages] = await Promise.all([
+		n.queryAll(DS.books),
+		n.api('GET', `data_sources/${DS.books}`),
+		n.queryAll(DS.shelves)
+	]);
 	const options = (name: string): string[] => schema.properties?.[name]?.select?.options?.map((o: any) => o.name) ?? [];
-	return { books, where: options('Where'), formats: options('Format') };
+	const shelves = shelfPages
+		.map((p) => ({ id: p.id, name: titleOf(p), room: p.properties['Room']?.select?.name ?? '' }))
+		.filter((s) => s.name)
+		.sort((a, b) => a.room.localeCompare(b.room) || a.name.localeCompare(b.name, 'en', { numeric: true }));
+	return { books, where: options('Where'), formats: options('Format'), shelves };
 }
 
 // The page already here under a title that looks like the same book.
@@ -139,6 +148,7 @@ export async function search(token: string, words: string) {
 	return {
 		where: ctx.where,
 		formats: ctx.formats,
+		shelves: ctx.shelves,
 		results: results.map((b) => ({ ...b, twin: twinOf(ctx.books, b.title) }))
 	};
 }
@@ -149,7 +159,7 @@ export async function search(token: string, words: string) {
 async function createBook(
 	n: ReturnType<typeof notion>,
 	b: Known,
-	o: { isbn?: string; where?: string; format?: string; lcc?: string | null; sizes?: Record<string, any> }
+	o: { isbn?: string; where?: string; shelf?: string; format?: string; lcc?: string | null; sizes?: Record<string, any> }
 ) {
 	const [people, publishers] = await Promise.all([n.queryAll(DS.people), n.queryAll(DS.publishers)]);
 	async function findOrCreate(kind: 'people' | 'publishers', name: string, pages: Page[]) {
@@ -181,6 +191,7 @@ async function createBook(
 	if (b.year) props['Year'] = rich(b.year);
 	if (o.lcc) props['LOC Call Number'] = rich(o.lcc);
 	if (o.where) props['Where'] = { select: { name: o.where } };
+	if (o.shelf) props['🗄️ Shelf'] = { relation: [{ id: o.shelf }] };
 	const page = await n.api('POST', 'pages', {
 		parent: { type: 'data_source_id', data_source_id: DS.books },
 		properties: props
@@ -196,7 +207,7 @@ async function createBook(
 }
 
 // Add by ISBN, whatever is or isn't known about it.
-export async function add(token: string, o: { isbn: string; where?: string; format?: string }) {
+export async function add(token: string, o: { isbn: string; where?: string; shelf?: string; format?: string }) {
 	const isbn = isbn13(o.isbn);
 	if (!isbn) return { error: 'Not a valid ISBN.' };
 	const n = notion(token);
@@ -211,7 +222,7 @@ export async function add(token: string, o: { isbn: string; where?: string; form
 }
 
 // Add an edition picked from a title search (no ISBN).
-export async function addFound(token: string, o: { book: Known; where?: string; format?: string }) {
+export async function addFound(token: string, o: { book: Known; where?: string; shelf?: string; format?: string }) {
 	const b = o.book;
 	if (!b?.title) return { error: 'Pick a book from the search first.' };
 	const sizes: Record<string, any> = {};
@@ -221,5 +232,5 @@ export async function addFound(token: string, o: { book: Known; where?: string; 
 		sizes['Size from'] = { select: { name: 'Library of Congress' } };
 	}
 	if (b.pages && b.pages < 5000) sizes['Pages'] = { number: b.pages };
-	return createBook(notion(token), b, { where: o.where, format: o.format, sizes });
+	return createBook(notion(token), b, { where: o.where, shelf: o.shelf, format: o.format, sizes });
 }

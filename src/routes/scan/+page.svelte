@@ -10,6 +10,7 @@
 
 	type Book_ = { title: string | null; subtitle: string | null; authors: string[]; publisher: string | null; year: string | null; pages: number | null; heightCm?: number | null; widthCm?: number | null };
 	type Result = Book_ & { source: string; twin: { title: string; url: string } | null };
+	type ShelfOption = { id: string; name: string; room: string };
 	type Found = {
 		isbn?: string;
 		/** picked from a title search: no ISBN */
@@ -17,12 +18,13 @@
 		error?: string;
 		where?: string[];
 		formats?: string[];
+		shelves?: ShelfOption[];
 		have?: { title: string; url: string };
 		book?: Book_;
 		twin?: { title: string; url: string } | null;
 	};
 
-	const KEY = 'library-scan-key', WHERE = 'library-scan-where';
+	const KEY = 'library-scan-key', WHERE = 'library-scan-where', SHELF = 'library-scan-shelf';
 	let key = $state(typeof localStorage === 'undefined' ? '' : (localStorage.getItem(KEY) ?? ''));
 	let keyInput = $state('');
 	let isbn = $state('');
@@ -33,9 +35,10 @@
 	let added = $state<{ title: string; url: string; authors: string[]; publisher: string | null } | null>(null);
 	let where = $state(typeof localStorage === 'undefined' ? '' : (localStorage.getItem(WHERE) ?? ''));
 	let format = $state('Book');
+	let shelf = $state(typeof localStorage === 'undefined' ? '' : (localStorage.getItem(SHELF) ?? ''));
 	// No ISBN: a title search, and the editions it found.
 	let words = $state('');
-	type Results = { where: string[]; formats: string[]; results: Result[] };
+	type Results = { where: string[]; formats: string[]; shelves: ShelfOption[]; results: Result[] };
 	let results = $state<Results | null>(null);
 
 	// ---- the camera ----
@@ -113,11 +116,18 @@
 		try {
 			found = (await call('GET')) as Found;
 			status = found?.error ?? '';
-			if (found?.where?.length && !found.where.includes(where)) where = '';
+			keepChoices();
 		} catch (e) {
 			status = (e as Error).message;
 		}
 		busy = false;
+	}
+
+	// The last Where and Shelf carry over from book to book, as long as
+	// they're still options in Notion.
+	function keepChoices() {
+		if (found?.where?.length && !found.where.includes(where)) where = '';
+		if (found?.shelves && !found.shelves.some((s) => s.id === shelf)) shelf = '';
 	}
 
 	async function searchTitles() {
@@ -136,8 +146,8 @@
 	}
 
 	function pick(r: Result) {
-		found = { picked: true, where: results?.where, formats: results?.formats, book: r, twin: r.twin };
-		if (found.where?.length && !found.where.includes(where)) where = '';
+		found = { picked: true, where: results?.where, formats: results?.formats, shelves: results?.shelves, book: r, twin: r.twin };
+		keepChoices();
 		results = null;
 	}
 
@@ -146,12 +156,13 @@
 		busy = adding = true;
 		status = '';
 		try {
-			const body = found.picked ? { book: found.book, where, format } : { isbn: found.isbn, where, format };
+			const body = found.picked ? { book: found.book, where, shelf, format } : { isbn: found.isbn, where, shelf, format };
 			const r = (await call('POST', body)) as { error?: string; added: { title: string; url: string; authors: string[]; publisher: string | null } };
 			if (r.error) status = r.error;
 			else {
 				added = r.added;
 				localStorage.setItem(WHERE, where);
+				localStorage.setItem(SHELF, shelf);
 				found = null;
 				status = `Added “${r.added.title}”.`;
 				isbn = words = '';
@@ -168,6 +179,13 @@
 		localStorage.setItem(KEY, key);
 		keyInput = '';
 	}
+
+	// Shelves grouped by the room they're in, for the picker.
+	const rooms = (list: ShelfOption[]) => {
+		const by = new Map<string, ShelfOption[]>();
+		for (const s of list) by.set(s.room, [...(by.get(s.room) ?? []), s]);
+		return [...by];
+	};
 
 	// The found book as the library's card, in a pale tint picked from its
 	// ISBN or title. A book nobody's catalogue knows goes in as "ISBN …".
@@ -301,6 +319,17 @@
 				<select bind:value={where} class="w-full border-2 border-[var(--wjerk-black)] bg-[var(--wjerk-white)] px-2 py-2 text-base text-[var(--wjerk-black)]">
 					<option value="">Not set</option>
 					{#each found?.where ?? [] as w (w)}<option value={w}>{w}</option>{/each}
+				</select>
+			</label>
+			<label class="flex flex-[1_1_9rem] flex-col gap-1 text-sm">
+				Shelf
+				<select bind:value={shelf} class="w-full border-2 border-[var(--wjerk-black)] bg-[var(--wjerk-white)] px-2 py-2 text-base text-[var(--wjerk-black)]">
+					<option value="">Not set</option>
+					{#each rooms(found?.shelves ?? []) as [room, list] (room)}
+						<optgroup label={room || 'No room set'}>
+							{#each list as s (s.id)}<option value={s.id}>{s.name}</option>{/each}
+						</optgroup>
+					{/each}
 				</select>
 			</label>
 			<label class="flex flex-[0_1_9rem] flex-col gap-1 text-sm">
