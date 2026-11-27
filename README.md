@@ -1,5 +1,7 @@
 # Library
 
+Every "just run it" command is in [COMMANDS.md](COMMANDS.md).
+
 Kristian Bjørnard's design library at https://library.wjerk.shop: every book
 as a spine on one A–Z bookcase, drawn to scale, in kit tints and thirteen
 open-source typefaces. Click a spine for its card.
