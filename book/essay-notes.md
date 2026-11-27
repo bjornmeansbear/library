@@ -40,7 +40,7 @@ by measuring the type so it spans the shelf exactly; each spine's face comes
 from a rule (a series shares a face, mostly a publisher too); the riso copies
 are printed on the backs of old one-sided office paper, the old printing
 folded inside each leaf, so every copy hides something different; guessed
-heights are steady from build to build (a calculation on the title); the
+sizes are steady from build to build (a calculation on the book's Notion ID, so renaming a book doesn't change it); the
 edition is just the date of the last sync.
 
 ## Questions still open
