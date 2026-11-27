@@ -4,7 +4,7 @@
 		{
 			"id": "14a55aa28d718078974adc87fb068e0c",
 			"name": "GT1S1",
-			"room": null,
+			"room": "Office (BR319)",
 			"books": [
 				"20-years-contemporary-museum",
 				"2600-the-hacker-quarterly",
@@ -54,7 +54,7 @@
 		{
 			"id": "14a55aa28d7180fa9a72dd16a3d3b32f",
 			"name": "GT1S2",
-			"room": null,
+			"room": "Office (BR319)",
 			"books": [
 				"basic-design-the-dynamics-of-visual-form",
 				"bauhaus",
@@ -95,7 +95,7 @@
 		{
 			"id": "14a55aa28d7180899b80e22392bd19fb",
 			"name": "GT1S3",
-			"room": null,
+			"room": "Office (BR319)",
 			"books": [
 				"d-i-y-design-it-yourself",
 				"de-bono-s-thinking-course",
@@ -134,7 +134,7 @@
 		{
 			"id": "14a55aa28d718053aa80fac1ec1e1ab3",
 			"name": "GT1S4",
-			"room": null,
+			"room": "Office (BR319)",
 			"books": [
 				"cancer-epidemiology-in-older-adolescents-and-young-adults-15",
 				"autobiografia-conocimientos-y-recuerdos-sobre-el-arte-de-la"
@@ -143,7 +143,7 @@
 		{
 			"id": "14a55aa28d7180abbe06dd24ff5cbfe6",
 			"name": "GT2S1",
-			"room": null,
+			"room": "Office (BR319)",
 			"books": [
 				"eats-shoots-and-leaves-the-zero-tolerance-approach-to-punctu",
 				"eco-economy",
@@ -164,9 +164,90 @@
 			]
 		},
 		{
+			"id": "14a55aa28d71813e8ca4e5bad0a8048b",
+			"name": "KS01",
+			"room": "Kitchen",
+			"books": [
+				"faviken"
+			]
+		},
+		{
+			"id": "42555aa28d718007abd8c71bf76f60cb",
+			"name": "LR001",
+			"room": "Living Room",
+			"books": [
+				"tomorrow-and-tomorrow-and-tomorrow",
+				"a-long-way-down",
+				"about-a-boy",
+				"killing-yourself-to-live",
+				"shakespeare-wrote-for-money",
+				"solutions-and-other-problems",
+				"songbook",
+				"the-immortal-life-of-henrietta-lacks",
+				"how-to-be-good",
+				"high-fidelity",
+				"fever-pitch",
+				"fargo-rock-city",
+				"chuck-klosterman-iv"
+			]
+		},
+		{
+			"id": "42555aa28d7180478f46f40d65539412",
+			"name": "LR002",
+			"room": "Living Room",
+			"books": [
+				"an-infinity-of-nations",
+				"becoming-wise",
+				"existence-and-being",
+				"four-thousand-weeks",
+				"french-dirt",
+				"livre-de-la-jungle-the-jungle-book",
+				"myths-of-the-norsemen",
+				"narrative-of-the-life-of-frederick-douglass-an-american-slav",
+				"norse-stories",
+				"peterson-first-guide-to-butterflies-and-moths",
+				"peterson-first-guide-to-insects-of-north-america",
+				"reinventing-you",
+				"stand-out-of-our-light",
+				"tales-of-mystery-and-imagination",
+				"the-viking-gods-viking-series-literary-pearls-from-the-vikin",
+				"the-discomfort-zone",
+				"secret-lives-of-great-artists",
+				"speed-and-scale"
+			]
+		},
+		{
+			"id": "42555aa28d7180d98759d88549761cd5",
+			"name": "LR003",
+			"room": "Living Room",
+			"books": [
+				"thomas-dambo-trash-trolls-and-treasure-hunts",
+				"the-winter-solstice",
+				"a-forest-tree-house",
+				"a-journey-to-the-far-canine-range-and-the-unexplored-territo",
+				"martha-s-flowers",
+				"norway-norge-norwegen-noruega",
+				"leave-only-footprints",
+				"how-to-trick-rope",
+				"pocket-architecture-minneapolis",
+				"the-wet-collection",
+				"the-roald-dahl-treasury",
+				"the-national-parks",
+				"the-drunken-botanist",
+				"taylor-s-pocket-guide-to-ground-covers-for-sun",
+				"robert-frank",
+				"how-to-hygge",
+				"hollywood-life",
+				"height-of-fashion",
+				"floret-farm-s-cut-flower-garden",
+				"chesapeake-bay",
+				"black-panthers"
+			]
+		},
+		{
 			"id": "15055aa28d718007a20fd4d6ee73e2ce",
 			"name": "Tsundoku",
-			"room": null,
+			"room": "Bedroom / Office (BR319)",
 			"books": [
 				"every-farm-a-factory"
 			]
@@ -175,7 +256,7 @@
 	"tags": [
 		{
 			"name": "Sustainabilitist",
-			"count": 109,
+			"count": 110,
 			"intro": null
 		},
 		{
@@ -190,7 +271,7 @@
 		},
 		{
 			"name": "Typography",
-			"count": 35,
+			"count": 36,
 			"intro": null
 		},
 		{
@@ -240,7 +321,7 @@
 		},
 		{
 			"name": "Open Source",
-			"count": 7,
+			"count": 9,
 			"intro": null
 		},
 		{
@@ -614,8 +695,39 @@
 			"face": "league-gothic"
 		},
 		{
-			"id": "14a55aa28d718124af8ff27d89a98342",
+			"id": "42555aa28d7181059ed6dffdeaf48622",
 			"slug": "about-a-boy",
+			"title": "About a boy",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Nick Hornby"
+			],
+			"publishers": [
+				"Riverhead Books"
+			],
+			"tags": [],
+			"year": "1999",
+			"isbn10": "1573227331",
+			"isbn13": "9781573227339",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 307,
+			"height": 8.48,
+			"thickness": 0.92,
+			"measured": false,
+			"sized": "pages",
+			"tint": "orange-1",
+			"shelf": "LR001",
+			"position": 3,
+			"face": "work-sans"
+		},
+		{
+			"id": "14a55aa28d718124af8ff27d89a98342",
+			"slug": "about-a-boy-2",
 			"title": "About a Boy",
 			"format": "book",
 			"subtitle": null,
@@ -637,10 +749,10 @@
 			"thickness": 0.63,
 			"measured": false,
 			"sized": "guessed",
-			"tint": "blue-1",
+			"tint": "orange-1",
 			"shelf": null,
 			"position": null,
-			"face": "newsreader"
+			"face": "work-sans"
 		},
 		{
 			"id": "15e55aa28d71808aacd7d69854f5944f",
@@ -2058,6 +2170,37 @@
 			"face": "eb-garamond"
 		},
 		{
+			"id": "42555aa28d718112b583cd1f05613bb0",
+			"slug": "becoming-wise",
+			"title": "Becoming Wise",
+			"format": "book",
+			"subtitle": "An Inquiry into the Mystery and Art of Living",
+			"authors": [
+				"Krista Tippett"
+			],
+			"publishers": [
+				"Penguin Books"
+			],
+			"tags": [],
+			"year": "2017",
+			"isbn10": "1101980311",
+			"isbn13": "9781101980316",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 304,
+			"height": 7.75,
+			"thickness": 0.91,
+			"measured": false,
+			"sized": "pages",
+			"tint": "purple-3",
+			"shelf": "LR002",
+			"position": 2,
+			"face": "space-mono"
+		},
+		{
 			"id": "42455aa28d71813cbb0bf197dc27579b",
 			"slug": "the-beekeeper-s-bible",
 			"title": "The Beekeeper’s Bible",
@@ -2085,15 +2228,15 @@
 			"thickness": 1.18,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "purple-3",
+			"tint": "goldenrod-3",
 			"shelf": null,
 			"position": null,
-			"face": "space-mono"
+			"face": "libre-franklin"
 		},
 		{
 			"id": "14a55aa28d7181b58a2bdcf7a5bf4018",
 			"slug": "best-face-forward-why-companies-must-improve-their-service-i",
-			"title": "Best Face Forward: WHy Companies Must Improve Their Service Interfaces with Customers",
+			"title": "Best Face Forward: Why Companies Must Improve Their Service Interfaces with Customers",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -2280,6 +2423,37 @@
 			"face": "gentium"
 		},
 		{
+			"id": "42555aa28d7181f4a7a9ee0bbac13681",
+			"slug": "black-panthers",
+			"title": "Black Panthers",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Ruth-Marion Baruch"
+			],
+			"publishers": [
+				"Greybull Press"
+			],
+			"tags": [],
+			"year": "2002",
+			"isbn10": "096723669X",
+			"isbn13": "9780967236698",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 152,
+			"height": 12.52,
+			"thickness": 0.91,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "blue-2",
+			"shelf": "LR003",
+			"position": 21,
+			"face": "league-gothic"
+		},
+		{
 			"id": "15e55aa28d7180b39e4cf3ccd0a16e58",
 			"slug": "the-blank-canvas",
 			"title": "The Blank Canvas",
@@ -2303,7 +2477,7 @@
 			"thickness": 0.72,
 			"measured": false,
 			"sized": "guessed",
-			"tint": "pink-1",
+			"tint": "green-1",
 			"shelf": "GT1S2",
 			"position": 15,
 			"face": "basteleur"
@@ -2719,6 +2893,37 @@
 			"face": "gentium"
 		},
 		{
+			"id": "42555aa28d71816ab9e4e06b8cd6305a",
+			"slug": "chesapeake-bay",
+			"title": "Chesapeake Bay",
+			"format": "book",
+			"subtitle": "nature of the estuary : a field guide",
+			"authors": [
+				"Christopher P. White"
+			],
+			"publishers": [
+				"Tidewater Publishers"
+			],
+			"tags": [],
+			"year": "1989",
+			"isbn10": "0870333518",
+			"isbn13": "9780870333514",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 212,
+			"height": 9.06,
+			"thickness": 0.68,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "brown-2",
+			"shelf": "LR003",
+			"position": 20,
+			"face": "bricolage"
+		},
+		{
 			"id": "14a55aa28d71814d98e8c0472588c1f4",
 			"slug": "the-chicago-manual-of-style-the-essential-guide-for-writers",
 			"title": "The Chicago Manual of Style: The Essential Guide for Writers, Editors, and Publishers",
@@ -2777,8 +2982,8 @@
 			"measured": false,
 			"sized": "open-library",
 			"tint": "goldenrod-2",
-			"shelf": null,
-			"position": null,
+			"shelf": "LR001",
+			"position": 13,
 			"face": "eb-garamond"
 		},
 		{
@@ -4962,6 +5167,37 @@
 			"face": "work-sans"
 		},
 		{
+			"id": "42555aa28d71818fbb44c221cfded606",
+			"slug": "the-discomfort-zone",
+			"title": "The discomfort zone",
+			"format": "book",
+			"subtitle": "how leaders turn difficult conversations into breakthroughs",
+			"authors": [
+				"Marcia Reynolds"
+			],
+			"publishers": [
+				"Berrett-Koehler Publishers"
+			],
+			"tags": [],
+			"year": "2014",
+			"isbn10": "162656065X",
+			"isbn13": "9781626560659",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 164,
+			"height": 8.66,
+			"thickness": 0.56,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "pink-3",
+			"shelf": "LR002",
+			"position": 16,
+			"face": "young-serif"
+		},
+		{
 			"id": "42455aa28d7181f38071c91638555bca",
 			"slug": "discreet-music",
 			"title": "Discreet Music",
@@ -5153,6 +5389,37 @@
 			"shelf": "GT2S1",
 			"position": 6,
 			"face": "bricolage"
+		},
+		{
+			"id": "42555aa28d7181a5bbb0da8f4dd3b120",
+			"slug": "the-drunken-botanist",
+			"title": "The Drunken Botanist",
+			"format": "book",
+			"subtitle": "The Plants that Create the World's Great Drinks",
+			"authors": [
+				"Amy Stewart"
+			],
+			"publishers": [
+				"Algonquin Books"
+			],
+			"tags": [],
+			"year": "2013",
+			"isbn10": "1616200464",
+			"isbn13": "9781616200466",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 400,
+			"height": 8.27,
+			"thickness": 1.15,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "green-1",
+			"shelf": "LR003",
+			"position": 13,
+			"face": "league-gothic"
 		},
 		{
 			"id": "14a55aa28d718106bc88c1985bf5de22",
@@ -5981,6 +6248,37 @@
 			"face": "space-mono"
 		},
 		{
+			"id": "42555aa28d7181208a98c181fc3894e4",
+			"slug": "existence-and-being",
+			"title": "Existence and Being",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Martin Heidegger"
+			],
+			"publishers": [
+				"Henry Regnery Company"
+			],
+			"tags": [],
+			"year": "1949",
+			"isbn10": null,
+			"isbn13": null,
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 399,
+			"height": 7.48,
+			"thickness": 1.15,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "goldenrod-2",
+			"shelf": "LR002",
+			"position": 3,
+			"face": "libre-franklin"
+		},
+		{
 			"id": "14a55aa28d71819bb2ece560e7831c0d",
 			"slug": "the-experimenters-chance-and-design-at-black-mountain-colleg",
 			"title": "The Experimenters: Chance and Design at Black Mountain College",
@@ -6011,7 +6309,38 @@
 			"tint": "gray-2",
 			"shelf": null,
 			"position": null,
-			"face": "libre-franklin"
+			"face": "plex-mono"
+		},
+		{
+			"id": "42555aa28d718164abc9de1cef5eeb45",
+			"slug": "fargo-rock-city",
+			"title": "Fargo Rock City",
+			"format": "book",
+			"subtitle": "A Heavy Metal Odyssey in Rural North Dakota",
+			"authors": [
+				"Chuck Klosterman"
+			],
+			"publishers": [
+				"Scribner"
+			],
+			"tags": [],
+			"year": "2003",
+			"isbn10": "0743406567",
+			"isbn13": "9780743406567",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 288,
+			"height": 8.19,
+			"thickness": 0.79,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "goldenrod-2",
+			"shelf": "LR001",
+			"position": 12,
+			"face": "eb-garamond"
 		},
 		{
 			"id": "42455aa28d7181f2b7acede1c5f6d23c",
@@ -6042,8 +6371,8 @@
 			"measured": false,
 			"sized": "library-of-congress",
 			"tint": "purple-2",
-			"shelf": null,
-			"position": null,
+			"shelf": "KS01",
+			"position": 1,
 			"face": "fraunces"
 		},
 		{
@@ -6076,6 +6405,37 @@
 			"shelf": null,
 			"position": null,
 			"face": "newsreader"
+		},
+		{
+			"id": "42555aa28d71818792f0fbf8359f7732",
+			"slug": "fever-pitch",
+			"title": "Fever pitch",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Nick Hornby"
+			],
+			"publishers": [
+				"Riverhead Books"
+			],
+			"tags": [],
+			"year": "1998",
+			"isbn10": "1573226882",
+			"isbn13": "9781573226882",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 247,
+			"height": 8.27,
+			"thickness": 0.77,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "orange-3",
+			"shelf": "LR001",
+			"position": 11,
+			"face": "work-sans"
 		},
 		{
 			"id": "14a55aa28d718154a9b7ccfb58c81970",
@@ -6175,6 +6535,37 @@
 			"face": "young-serif"
 		},
 		{
+			"id": "42555aa28d71819180e9c09ed18f85f8",
+			"slug": "floret-farm-s-cut-flower-garden",
+			"title": "Floret Farm's cut flower garden",
+			"format": "book",
+			"subtitle": "grow, harvest & arrange stunning seasonal blooms",
+			"authors": [
+				"Erin Benzakein"
+			],
+			"publishers": [
+				"Chronicle Books"
+			],
+			"tags": [],
+			"year": "2017",
+			"isbn10": "1452145768",
+			"isbn13": "9781452145761",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 308,
+			"height": 10.63,
+			"thickness": 0.92,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "pink-1",
+			"shelf": "LR003",
+			"position": 19,
+			"face": "eb-garamond"
+		},
+		{
 			"id": "14a55aa28d7181bba916ee2162bbc888",
 			"slug": "flourishing-a-frank-conversation-about-sustainability",
 			"title": "Flourishing: A Frank Conversation About Sustainability",
@@ -6203,7 +6594,7 @@
 			"thickness": 0.9,
 			"measured": false,
 			"sized": "guessed",
-			"tint": "pink-3",
+			"tint": "green-3",
 			"shelf": null,
 			"position": null,
 			"face": "space-mono"
@@ -6238,6 +6629,37 @@
 			"shelf": null,
 			"position": null,
 			"face": "libre-franklin"
+		},
+		{
+			"id": "42555aa28d718129bcfcfe5866f96034",
+			"slug": "a-forest-tree-house",
+			"title": "A Forest Tree House",
+			"format": "book",
+			"subtitle": "written by Sheryl A. Reda ; illustrated by Peter Barrett.",
+			"authors": [
+				"Sheryl A. Reda"
+			],
+			"publishers": [
+				"World Book"
+			],
+			"tags": [],
+			"year": "1992",
+			"isbn10": "071661619X",
+			"isbn13": "9780716616191",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": null,
+			"height": 10.24,
+			"thickness": 1.08,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "cornflower-3",
+			"shelf": "LR003",
+			"position": 3,
+			"face": "work-sans"
 		},
 		{
 			"id": "14a55aa28d7181108612ea2c6836b31f",
@@ -6439,9 +6861,41 @@
 			"measured": false,
 			"sized": "library-of-congress",
 			"tint": "cornflower-1",
-			"shelf": null,
-			"position": null,
+			"shelf": "LR002",
+			"position": 4,
 			"face": "libre-franklin"
+		},
+		{
+			"id": "42555aa28d7181539e9df1cd9a95f8ac",
+			"slug": "french-dirt",
+			"title": "French Dirt",
+			"format": "book",
+			"subtitle": "The Story of a Garden in the South of France",
+			"authors": [
+				"Richard Goodman",
+				"Goodman, Richard"
+			],
+			"publishers": [
+				"Algonquin Books"
+			],
+			"tags": [],
+			"year": "2002",
+			"isbn10": "1565123522",
+			"isbn13": "9781565123526",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 203,
+			"height": 8.31,
+			"thickness": 0.39,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "red-2",
+			"shelf": "LR002",
+			"position": 5,
+			"face": "league-gothic"
 		},
 		{
 			"id": "14a55aa28d7181f0a823e2739771e4df",
@@ -7389,6 +7843,37 @@
 			"face": "gentium"
 		},
 		{
+			"id": "42555aa28d7181bda23dd017551d4e1d",
+			"slug": "height-of-fashion",
+			"title": "Height of fashion",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Lisa Eisner"
+			],
+			"publishers": [
+				"Greybull Press"
+			],
+			"tags": [],
+			"year": "2000",
+			"isbn10": "0967236614",
+			"isbn13": "9780967236612",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": null,
+			"height": 11.02,
+			"thickness": 1.09,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "blue-3",
+			"shelf": "LR003",
+			"position": 18,
+			"face": "league-gothic"
+		},
+		{
 			"id": "42455aa28d7181abb83fe4b8303a92a6",
 			"slug": "hella-jongerius",
 			"title": "Hella Jongerius",
@@ -7516,8 +8001,39 @@
 			"face": "plex-mono"
 		},
 		{
-			"id": "14a55aa28d7181da939dd2c414380d71",
+			"id": "42555aa28d7181e9b491e3e5e3905654",
 			"slug": "high-fidelity",
+			"title": "High fidelity",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Nick Hornby"
+			],
+			"publishers": [
+				"Riverhead Books"
+			],
+			"tags": [],
+			"year": "1996",
+			"isbn10": "1573225517",
+			"isbn13": "9781573225519",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 323,
+			"height": 8.32,
+			"thickness": 0.96,
+			"measured": false,
+			"sized": "pages",
+			"tint": "orange-2",
+			"shelf": "LR001",
+			"position": 10,
+			"face": "work-sans"
+		},
+		{
+			"id": "14a55aa28d7181da939dd2c414380d71",
+			"slug": "high-fidelity-2",
 			"title": "High Fidelity",
 			"format": "book",
 			"subtitle": null,
@@ -7539,10 +8055,10 @@
 			"thickness": 0.71,
 			"measured": false,
 			"sized": "guessed",
-			"tint": "yellow-2",
+			"tint": "orange-2",
 			"shelf": null,
 			"position": null,
-			"face": "bricolage"
+			"face": "work-sans"
 		},
 		{
 			"id": "14a55aa28d7181f3a34ac6df758b6087",
@@ -7574,7 +8090,7 @@
 			"thickness": 1.43,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "orange-3",
+			"tint": "blue-3",
 			"shelf": "GT1S1",
 			"position": 5,
 			"face": "crimson-pro"
@@ -7643,6 +8159,37 @@
 			"shelf": null,
 			"position": null,
 			"face": "newsreader"
+		},
+		{
+			"id": "42555aa28d7181eda65bcc413d320a73",
+			"slug": "hollywood-life",
+			"title": "Hollywood life",
+			"format": "book",
+			"subtitle": "the glamorous homes of vintage Hollywood",
+			"authors": [
+				"Eliot Elisofon"
+			],
+			"publishers": [
+				"Greybull Press"
+			],
+			"tags": [],
+			"year": "2004",
+			"isbn10": "0972778829",
+			"isbn13": "9780972778824",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 191,
+			"height": 12.6,
+			"thickness": 0.63,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "blue-2",
+			"shelf": "LR003",
+			"position": 17,
+			"face": "league-gothic"
 		},
 		{
 			"id": "14a55aa28d71819fa4f2c2a47b98a5d9",
@@ -7808,8 +8355,39 @@
 			"face": "league-gothic"
 		},
 		{
-			"id": "14a55aa28d71812eb521f38ca03b6332",
+			"id": "42555aa28d7181debe6af3fbe473ddb9",
 			"slug": "how-to-be-good",
+			"title": "How to Be Good",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Nick Hornby"
+			],
+			"publishers": [
+				"Riverhead Books"
+			],
+			"tags": [],
+			"year": "2002",
+			"isbn10": "1573229326",
+			"isbn13": "9781573229326",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 305,
+			"height": 8.39,
+			"thickness": 0.91,
+			"measured": false,
+			"sized": "pages",
+			"tint": "blue-2",
+			"shelf": "LR001",
+			"position": 9,
+			"face": "work-sans"
+		},
+		{
+			"id": "14a55aa28d71812eb521f38ca03b6332",
+			"slug": "how-to-be-good-2",
 			"title": "How to be Good",
 			"format": "book",
 			"subtitle": null,
@@ -7834,7 +8412,7 @@
 			"tint": "blue-2",
 			"shelf": null,
 			"position": null,
-			"face": "basteleur"
+			"face": "work-sans"
 		},
 		{
 			"id": "14a55aa28d718156bbb6da44f10c582e",
@@ -7866,6 +8444,37 @@
 			"shelf": null,
 			"position": null,
 			"face": "young-serif"
+		},
+		{
+			"id": "42555aa28d7181de9813e7cfe4072eb9",
+			"slug": "how-to-hygge",
+			"title": "How to hygge",
+			"format": "book",
+			"subtitle": "the Nordic secrets to a happy life",
+			"authors": [
+				"Signe Johansen"
+			],
+			"publishers": [
+				"St. Martin's Griffin"
+			],
+			"tags": [],
+			"year": "2017",
+			"isbn10": "1250122031",
+			"isbn13": "9781250122032",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 206,
+			"height": 9.06,
+			"thickness": 0.67,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "purple-2",
+			"shelf": "LR003",
+			"position": 16,
+			"face": "work-sans"
 		},
 		{
 			"id": "14a55aa28d7181d389a4f6eb46cad365",
@@ -7994,6 +8603,37 @@
 			"shelf": null,
 			"position": null,
 			"face": "gentium"
+		},
+		{
+			"id": "42555aa28d7181dd95fae9e34017add0",
+			"slug": "how-to-trick-rope",
+			"title": "How to trick rope",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Clare Johnson"
+			],
+			"publishers": [
+				"Wild West Arts Club"
+			],
+			"tags": [],
+			"year": "1994",
+			"isbn10": "0964074621",
+			"isbn13": "9780964074620",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 320,
+			"height": 9.06,
+			"thickness": 0.95,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "blue-2",
+			"shelf": "LR003",
+			"position": 8,
+			"face": "basteleur"
 		},
 		{
 			"id": "14a55aa28d7181d9b123d86fd0464a32",
@@ -8188,6 +8828,37 @@
 			"face": "work-sans"
 		},
 		{
+			"id": "42555aa28d718153b858e1b73acb9212",
+			"slug": "the-immortal-life-of-henrietta-lacks",
+			"title": "The Immortal Life of Henrietta Lacks",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Rebecca Skloot"
+			],
+			"publishers": [
+				"Broadway Paperbacks"
+			],
+			"tags": [],
+			"year": "2011",
+			"isbn10": "1400052181",
+			"isbn13": "9781400052189",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 381,
+			"height": 9.84,
+			"thickness": 1.1,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "yellow-2",
+			"shelf": "LR001",
+			"position": 8,
+			"face": "gentium"
+		},
+		{
 			"id": "42455aa28d7181eab890ecb26588530d",
 			"slug": "the-impossible-will-take-a-little-while",
 			"title": "The Impossible Will Take a Little While",
@@ -8215,7 +8886,7 @@
 			"thickness": 1.2,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "orange-3",
+			"tint": "pink-3",
 			"shelf": null,
 			"position": null,
 			"face": "basteleur"
@@ -8445,8 +9116,8 @@
 			"measured": false,
 			"sized": "pages",
 			"tint": "red-1",
-			"shelf": null,
-			"position": null,
+			"shelf": "LR002",
+			"position": 1,
 			"face": "space-mono"
 		},
 		{
@@ -8714,6 +9385,37 @@
 			"face": "crimson-pro"
 		},
 		{
+			"id": "42555aa28d718126b095ca55804a70ef",
+			"slug": "a-journey-to-the-far-canine-range-and-the-unexplored-territo",
+			"title": "A journey to the Far Canine Range and the unexplored territory beyond Terrier Pass",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Roy De Forest"
+			],
+			"publishers": [
+				"Bedford Arts"
+			],
+			"tags": [],
+			"year": "1988",
+			"isbn10": "0938491091",
+			"isbn13": "9780938491095",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": null,
+			"height": 12.6,
+			"thickness": 0.84,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "green-2",
+			"shelf": "LR003",
+			"position": 4,
+			"face": "basteleur"
+		},
+		{
 			"id": "18955aa28d71803d992def836fbcae44",
 			"slug": "kandinsky-s-teaching-at-the-bauhaus",
 			"title": "Kandinsky’s Teaching at the Bauhaus",
@@ -8750,6 +9452,37 @@
 			"face": "plex-mono"
 		},
 		{
+			"id": "42555aa28d718123a39bf9adc115b78d",
+			"slug": "killing-yourself-to-live",
+			"title": "Killing Yourself to Live",
+			"format": "book",
+			"subtitle": "85% of a True Story",
+			"authors": [
+				"Chuck Klosterman"
+			],
+			"publishers": [
+				"Scribner"
+			],
+			"tags": [],
+			"year": "2006",
+			"isbn10": "0743264460",
+			"isbn13": "9780743264464",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 272,
+			"height": 8.31,
+			"thickness": 0.79,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "gray-3",
+			"shelf": "LR001",
+			"position": 4,
+			"face": "eb-garamond"
+		},
+		{
 			"id": "42455aa28d7181dbb3a5e50ee9562f0a",
 			"slug": "a-land",
 			"title": "A Land",
@@ -8780,7 +9513,7 @@
 			"tint": "orange-2",
 			"shelf": null,
 			"position": null,
-			"face": "fraunces"
+			"face": "plex-mono"
 		},
 		{
 			"id": "14a55aa28d718155ad27d9f42e462bb4",
@@ -8814,7 +9547,7 @@
 			"tint": "blue-3",
 			"shelf": null,
 			"position": null,
-			"face": "eb-garamond"
+			"face": "fraunces"
 		},
 		{
 			"id": "14a55aa28d718101abb2d68f6dc1d0f9",
@@ -8958,6 +9691,37 @@
 			"face": "bricolage"
 		},
 		{
+			"id": "42555aa28d71813bbe97de7a29365484",
+			"slug": "leave-only-footprints",
+			"title": "Leave Only Footprints",
+			"format": "book",
+			"subtitle": "My Acadia-to-Zion Journey Through Every National Park",
+			"authors": [
+				"Conor Knighton"
+			],
+			"publishers": [
+				"Crown"
+			],
+			"tags": [],
+			"year": "2020",
+			"isbn10": "198482354X",
+			"isbn13": "9781984823540",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 336,
+			"height": 8.03,
+			"thickness": 0.99,
+			"measured": false,
+			"sized": "pages",
+			"tint": "yellow-3",
+			"shelf": "LR003",
+			"position": 7,
+			"face": "crimson-pro"
+		},
+		{
 			"id": "14a55aa28d7181798845d2e9cca730bb",
 			"slug": "leo-loden-une-prive-a-marseille-pizza-aux-pruneaux",
 			"title": "Leo Loden, Une Privé à Marseille: Pizza aux Pruneaux",
@@ -8986,7 +9750,7 @@
 			"tint": "cornflower-3",
 			"shelf": null,
 			"position": null,
-			"face": "crimson-pro"
+			"face": "space-mono"
 		},
 		{
 			"id": "14a55aa28d7181699469cfca64f828e9",
@@ -9089,6 +9853,68 @@
 			"face": "basteleur"
 		},
 		{
+			"id": "42555aa28d7181818a98e455daea930f",
+			"slug": "livre-de-la-jungle-the-jungle-book",
+			"title": "Livre de La Jungle / The Jungle Book",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Rudyard Kipling"
+			],
+			"publishers": [
+				"Schoenhof Foreign Books"
+			],
+			"tags": [],
+			"year": "1987",
+			"isbn10": "2070334562",
+			"isbn13": "9782070334568",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": null,
+			"height": 6.69,
+			"thickness": 0.39,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "yellow-3",
+			"shelf": "LR002",
+			"position": 6,
+			"face": "plex-mono"
+		},
+		{
+			"id": "42555aa28d718149ba9ee3117be9cf9a",
+			"slug": "a-long-way-down",
+			"title": "A Long Way Down",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Nick Hornby"
+			],
+			"publishers": [
+				"Riverhead Books"
+			],
+			"tags": [],
+			"year": "2005",
+			"isbn10": "1573223026",
+			"isbn13": "9781573223027",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 352,
+			"height": 8.41,
+			"thickness": 1.03,
+			"measured": false,
+			"sized": "pages",
+			"tint": "orange-1",
+			"shelf": "LR001",
+			"position": 2,
+			"face": "work-sans"
+		},
+		{
 			"id": "14a55aa28d7181bcbaebcceeb532f28e",
 			"slug": "looking-closer-critical-writings-on-graphic-design",
 			"title": "Looking Closer: Critical Writings on Graphic Design",
@@ -9119,7 +9945,7 @@
 			"thickness": 0.71,
 			"measured": false,
 			"sized": "open-library",
-			"tint": "yellow-1",
+			"tint": "brown-1",
 			"shelf": null,
 			"position": null,
 			"face": "young-serif"
@@ -9220,6 +10046,37 @@
 			"face": "young-serif"
 		},
 		{
+			"id": "42555aa28d718161911dc9b7a9ea8746",
+			"slug": "martha-s-flowers",
+			"title": "Martha's Flowers",
+			"format": "book",
+			"subtitle": "a practical guide to growing, gathering, and enjoying",
+			"authors": [
+				"Martha Stewart"
+			],
+			"publishers": [
+				"Clarkson Potter Publishers, an imprint of the Crown Publishing Group"
+			],
+			"tags": [],
+			"year": "2018",
+			"isbn10": "0307954773",
+			"isbn13": "9780307954770",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 287,
+			"height": 11.42,
+			"thickness": 0.87,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "orange-1",
+			"shelf": "LR003",
+			"position": 5,
+			"face": "space-mono"
+		},
+		{
 			"id": "14a55aa28d7181079a1ec7bc2ac59745",
 			"slug": "massive-change",
 			"title": "Massive Change",
@@ -9304,7 +10161,8 @@
 				"American Matematical Society"
 			],
 			"tags": [
-				"Typography"
+				"Typography",
+				"Open Source"
 			],
 			"year": "1991",
 			"isbn10": "0201134446",
@@ -9583,6 +10441,68 @@
 			"face": "plex-mono"
 		},
 		{
+			"id": "42555aa28d7181ffacdeda4ab2acab86",
+			"slug": "myths-of-the-norsemen",
+			"title": "Myths of the Norsemen",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Roger Lancelyn Green"
+			],
+			"publishers": [
+				"Puffin"
+			],
+			"tags": [],
+			"year": null,
+			"isbn10": "0808501224",
+			"isbn13": "9780808501220",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": null,
+			"height": 9.23,
+			"thickness": 0.62,
+			"measured": false,
+			"sized": "guessed",
+			"tint": "orange-1",
+			"shelf": "LR002",
+			"position": 7,
+			"face": "young-serif"
+		},
+		{
+			"id": "42555aa28d7181c1877ed5d535e76aaf",
+			"slug": "narrative-of-the-life-of-frederick-douglass-an-american-slav",
+			"title": "Narrative of the life of Frederick Douglass, an American slave",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Frederick Douglass"
+			],
+			"publishers": [
+				"Bedford/St. Martin's"
+			],
+			"tags": [],
+			"year": "1993",
+			"isbn10": "0312075316",
+			"isbn13": "9780312075316",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 163,
+			"height": 8.66,
+			"thickness": 0.56,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "pink-1",
+			"shelf": "LR002",
+			"position": 8,
+			"face": "space-mono"
+		},
+		{
 			"id": "14a55aa28d7181d0acc5e8e491857236",
 			"slug": "national-geographic-saving-our-world-s-oceans",
 			"title": "National Geographic: Saving Our World's Oceans",
@@ -9639,6 +10559,38 @@
 			"shelf": null,
 			"position": null,
 			"face": "basteleur"
+		},
+		{
+			"id": "42555aa28d7181329d48e9999d9617bd",
+			"slug": "the-national-parks",
+			"title": "The National Parks",
+			"format": "book",
+			"subtitle": "America's Best Idea",
+			"authors": [
+				"Dayton Duncan",
+				"Ken Burns"
+			],
+			"publishers": [
+				"Knopf"
+			],
+			"tags": [],
+			"year": "2011",
+			"isbn10": "0375712100",
+			"isbn13": "9780375712104",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 432,
+			"height": 9.59,
+			"thickness": 1.23,
+			"measured": false,
+			"sized": "pages",
+			"tint": "purple-2",
+			"shelf": "LR003",
+			"position": 12,
+			"face": "crimson-pro"
 		},
 		{
 			"id": "14a55aa28d718120969ff878d4e44677",
@@ -9989,6 +10941,68 @@
 			"shelf": null,
 			"position": null,
 			"face": "eb-garamond"
+		},
+		{
+			"id": "42555aa28d7181afacb7ea2c8cb89f42",
+			"slug": "norse-stories",
+			"title": "Norse Stories",
+			"format": "book",
+			"subtitle": "Retold from the Eddas",
+			"authors": [
+				"Hamilton Wright Mabie"
+			],
+			"publishers": [
+				"Rand McNally & Company"
+			],
+			"tags": [],
+			"year": "1902",
+			"isbn10": null,
+			"isbn13": null,
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 304,
+			"height": 7.09,
+			"thickness": 0.91,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "goldenrod-1",
+			"shelf": "LR002",
+			"position": 9,
+			"face": "crimson-pro"
+		},
+		{
+			"id": "42555aa28d7181b39975c80b0e2afcb5",
+			"slug": "norway-norge-norwegen-noruega",
+			"title": "Norway (Norge, Norwegen, Noruega)",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Udo Bernhart",
+				"Rasso Knoller",
+				"Christian Nowak"
+			],
+			"publishers": [],
+			"tags": [],
+			"year": null,
+			"isbn10": "3741925217",
+			"isbn13": "9783741925214",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": null,
+			"height": 9.87,
+			"thickness": 0.61,
+			"measured": false,
+			"sized": "guessed",
+			"tint": "yellow-2",
+			"shelf": "LR003",
+			"position": 6,
+			"face": "league-gothic"
 		},
 		{
 			"id": "14a55aa28d7181e7b995cfe3cc747aed",
@@ -10595,6 +11609,68 @@
 			"face": "space-mono"
 		},
 		{
+			"id": "42555aa28d7181e89b0be85bbd454655",
+			"slug": "peterson-first-guide-to-butterflies-and-moths",
+			"title": "Peterson first guide to butterflies and moths",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Paul A. Opler"
+			],
+			"publishers": [
+				"Houghton Mifflin Company"
+			],
+			"tags": [],
+			"year": "1994",
+			"isbn10": "0395670721",
+			"isbn13": "9780395670729",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 128,
+			"height": 7.48,
+			"thickness": 0.47,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "cornflower-1",
+			"shelf": "LR002",
+			"position": 10,
+			"face": "eb-garamond"
+		},
+		{
+			"id": "42555aa28d7181d2baa5d13b8a1ec9e7",
+			"slug": "peterson-first-guide-to-insects-of-north-america",
+			"title": "Peterson First Guide to Insects of North America",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Christopher Leahy"
+			],
+			"publishers": [
+				"Houghton Mifflin Company"
+			],
+			"tags": [],
+			"year": "1998",
+			"isbn10": "0395906644",
+			"isbn13": "9780395906644",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 128,
+			"height": 7.79,
+			"thickness": 0.47,
+			"measured": false,
+			"sized": "pages",
+			"tint": "gray-3",
+			"shelf": "LR002",
+			"position": 11,
+			"face": "young-serif"
+		},
+		{
 			"id": "14a55aa28d71816c9504daaa5b586826",
 			"slug": "phantoms-in-the-dirt",
 			"title": "Phantoms in the Dirt",
@@ -10791,6 +11867,37 @@
 			"face": "eb-garamond"
 		},
 		{
+			"id": "42555aa28d71818a9a7ecc8aec42b4d8",
+			"slug": "pocket-architecture-minneapolis",
+			"title": "Pocket architecture, Minneapolis",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Bernard Jacob"
+			],
+			"publishers": [
+				"Minnesota Society, American Institute of Architects"
+			],
+			"tags": [],
+			"year": "1984",
+			"isbn10": null,
+			"isbn13": null,
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 131,
+			"height": 8.17,
+			"thickness": 0.48,
+			"measured": false,
+			"sized": "pages",
+			"tint": "gray-2",
+			"shelf": "LR003",
+			"position": 9,
+			"face": "newsreader"
+		},
+		{
 			"id": "14a55aa28d7181348520f36b70a0843a",
 			"slug": "the-poetics-of-space",
 			"title": "The Poetics of Space",
@@ -10816,7 +11923,7 @@
 			"thickness": 0.49,
 			"measured": false,
 			"sized": "guessed",
-			"tint": "blue-2",
+			"tint": "orange-2",
 			"shelf": null,
 			"position": null,
 			"face": "plex-mono"
@@ -11216,6 +12323,37 @@
 			"face": "plex-mono"
 		},
 		{
+			"id": "42555aa28d71813f8b2ad0d53797bf41",
+			"slug": "reinventing-you",
+			"title": "Reinventing You",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Dorie Clark"
+			],
+			"publishers": [
+				"Harvard Business School Press"
+			],
+			"tags": [],
+			"year": "2013",
+			"isbn10": "1422144135",
+			"isbn13": "9781422144138",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 226,
+			"height": 8.66,
+			"thickness": 0.72,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "green-1",
+			"shelf": "LR002",
+			"position": 12,
+			"face": "fraunces"
+		},
+		{
 			"id": "42455aa28d71815297dee7156aa187ac",
 			"slug": "rene-redzepi",
 			"title": "René Redzepi",
@@ -11243,10 +12381,10 @@
 			"thickness": 1.77,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "red-3",
+			"tint": "purple-3",
 			"shelf": null,
 			"position": null,
-			"face": "fraunces"
+			"face": "eb-garamond"
 		},
 		{
 			"id": "14a55aa28d7181a68662f8a94f31c16c",
@@ -11276,7 +12414,7 @@
 			"thickness": 0.85,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "purple-1",
+			"tint": "red-1",
 			"shelf": null,
 			"position": null,
 			"face": "libre-franklin"
@@ -11327,6 +12465,69 @@
 			"face": "crimson-pro"
 		},
 		{
+			"id": "42555aa28d7181e19628e45d30ad0a8c",
+			"slug": "the-roald-dahl-treasury",
+			"title": "The Roald Dahl treasury.",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Roald Dahl"
+			],
+			"publishers": [
+				"Viking"
+			],
+			"tags": [],
+			"year": "1997",
+			"isbn10": "0670877697",
+			"isbn13": "9780670877690",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 444,
+			"height": 10.24,
+			"thickness": 1.26,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "gray-3",
+			"shelf": "LR003",
+			"position": 11,
+			"face": "work-sans"
+		},
+		{
+			"id": "42555aa28d71815fb39ee5fd0d82944d",
+			"slug": "robert-frank",
+			"title": "Robert Frank",
+			"format": "book",
+			"subtitle": "hold still - keep going",
+			"authors": [
+				"Ute Eskildsen",
+				"Christoph Ribbat"
+			],
+			"publishers": [
+				"Scalo"
+			],
+			"tags": [],
+			"year": "2001",
+			"isbn10": "3908247403",
+			"isbn13": "9783908247401",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 165,
+			"height": 9.96,
+			"thickness": 0.56,
+			"measured": false,
+			"sized": "pages",
+			"tint": "purple-3",
+			"shelf": "LR003",
+			"position": 15,
+			"face": "crimson-pro"
+		},
+		{
 			"id": "14a55aa28d7181f18faef9549babfa44",
 			"slug": "ruined-by-design-how-designers-destroyed-the-world-and-what",
 			"title": "Ruined By Design: How Designers Destroyed the World and What We Can Do to Fix It",
@@ -11355,7 +12556,7 @@
 			"thickness": 0.7,
 			"measured": false,
 			"sized": "pages",
-			"tint": "purple-2",
+			"tint": "red-2",
 			"shelf": null,
 			"position": null,
 			"face": "newsreader"
@@ -11451,8 +12652,8 @@
 			"measured": false,
 			"sized": "library-of-congress",
 			"tint": "gray-3",
-			"shelf": null,
-			"position": null,
+			"shelf": "LR002",
+			"position": 17,
 			"face": "young-serif"
 		},
 		{
@@ -11587,6 +12788,37 @@
 			"shelf": null,
 			"position": null,
 			"face": "crimson-pro"
+		},
+		{
+			"id": "42555aa28d7181638aefec8f2bf728e4",
+			"slug": "shakespeare-wrote-for-money",
+			"title": "Shakespeare wrote for money",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Nick Hornby"
+			],
+			"publishers": [
+				"Believer Books"
+			],
+			"tags": [],
+			"year": "2008",
+			"isbn10": "1934781290",
+			"isbn13": "9781934781296",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 131,
+			"height": 8.94,
+			"thickness": 0.48,
+			"measured": false,
+			"sized": "pages",
+			"tint": "goldenrod-1",
+			"shelf": "LR001",
+			"position": 5,
+			"face": "work-sans"
 		},
 		{
 			"id": "14a55aa28d71812eb930c1263fde3b03",
@@ -12048,6 +13280,68 @@
 			"face": "basteleur"
 		},
 		{
+			"id": "42555aa28d7181ddb3b0c93ba693c94d",
+			"slug": "solutions-and-other-problems",
+			"title": "Solutions and Other Problems",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Allie Brosh"
+			],
+			"publishers": [
+				"Gallery Books"
+			],
+			"tags": [],
+			"year": "2020",
+			"isbn10": "1982156945",
+			"isbn13": "9781982156947",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 528,
+			"height": 9.45,
+			"thickness": 1.47,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "green-1",
+			"shelf": "LR001",
+			"position": 6,
+			"face": "plex-mono"
+		},
+		{
+			"id": "42555aa28d71818c8992cc34d1ac4d58",
+			"slug": "songbook",
+			"title": "Songbook",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Nick Hornby"
+			],
+			"publishers": [
+				"Riverhead Trade"
+			],
+			"tags": [],
+			"year": "2003",
+			"isbn10": "1573223565",
+			"isbn13": "9781573223560",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 224,
+			"height": 7.91,
+			"thickness": 0.51,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "orange-1",
+			"shelf": "LR001",
+			"position": 7,
+			"face": "crimson-pro"
+		},
+		{
 			"id": "14a55aa28d71810ca28cee7d713f8cf5",
 			"slug": "speculative-everything-design-function-and-social-dreaming",
 			"title": "Speculative Everything: Design, Function, and Social Dreaming",
@@ -12110,8 +13404,8 @@
 			"measured": false,
 			"sized": "pages",
 			"tint": "goldenrod-3",
-			"shelf": null,
-			"position": null,
+			"shelf": "LR002",
+			"position": 18,
 			"face": "space-mono"
 		},
 		{
@@ -12273,6 +13567,37 @@
 			"shelf": null,
 			"position": null,
 			"face": "bricolage"
+		},
+		{
+			"id": "42555aa28d7181098151cb58cd423d58",
+			"slug": "stand-out-of-our-light",
+			"title": "Stand Out of Our Light",
+			"format": "book",
+			"subtitle": "Freedom and Resistance in the Attention Economy",
+			"authors": [
+				"James Williams"
+			],
+			"publishers": [
+				"Cambridge University Press"
+			],
+			"tags": [],
+			"year": "2018",
+			"isbn10": "110845299X",
+			"isbn13": "9781108452991",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 134,
+			"height": 9.45,
+			"thickness": 0.49,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "brown-3",
+			"shelf": "LR002",
+			"position": 13,
+			"face": "space-mono"
 		},
 		{
 			"id": "14a55aa28d7181b398d9d8bd415b610f",
@@ -12722,6 +14047,68 @@
 			"face": "newsreader"
 		},
 		{
+			"id": "42555aa28d7181f7967ace9bce7aa10e",
+			"slug": "tales-of-mystery-and-imagination",
+			"title": "Tales of Mystery and Imagination",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Edgar Allan Poe"
+			],
+			"publishers": [
+				"Dutton Adult"
+			],
+			"tags": [],
+			"year": "1962",
+			"isbn10": "046001336X",
+			"isbn13": "9780460013369",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 544,
+			"height": 9.17,
+			"thickness": 1.51,
+			"measured": false,
+			"sized": "pages",
+			"tint": "cornflower-2",
+			"shelf": "LR002",
+			"position": 14,
+			"face": "league-gothic"
+		},
+		{
+			"id": "42555aa28d7181b99a2bebb17d8a6b64",
+			"slug": "taylor-s-pocket-guide-to-ground-covers-for-sun",
+			"title": "Taylor's pocket guide to ground covers for sun",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Ann Reilly"
+			],
+			"publishers": [
+				"Houghton Mifflin Company"
+			],
+			"tags": [],
+			"year": "1990",
+			"isbn10": "0395522498",
+			"isbn13": "9780395522493",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 125,
+			"height": 6.3,
+			"thickness": 0.46,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "gray-1",
+			"shelf": "LR003",
+			"position": 14,
+			"face": "eb-garamond"
+		},
+		{
 			"id": "14a55aa28d71812ab39cc069fb92f163",
 			"slug": "teaching-as-a-subversive-activity",
 			"title": "Teaching as a Subversive Activity",
@@ -12804,7 +14191,10 @@
 				"American Matematical Society",
 				"Addison Wesley Publishing Company"
 			],
-			"tags": [],
+			"tags": [
+				"Typography",
+				"Open Source"
+			],
 			"year": "1989",
 			"isbn10": "0201134470",
 			"isbn13": "9780201134476",
@@ -13054,6 +14444,40 @@
 			"face": "fraunces"
 		},
 		{
+			"id": "42555aa28d718162adbcf461694e0d62",
+			"slug": "thomas-dambo-trash-trolls-and-treasure-hunts",
+			"title": "Thomas Dambo: Trash Trolls and Treasure Hunts",
+			"format": "book",
+			"subtitle": "My First One Hundred Recycled Giants",
+			"authors": [
+				"Thomas Dambo",
+				"Nina Poulsen",
+				"L. M. Klein",
+				"Jacob Keinicke"
+			],
+			"publishers": [],
+			"tags": [
+				"Sustainabilitist"
+			],
+			"year": null,
+			"isbn10": "8797316245",
+			"isbn13": "9788797316245",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": null,
+			"height": 7.72,
+			"thickness": 0.74,
+			"measured": false,
+			"sized": "guessed",
+			"tint": "brown-3",
+			"shelf": "LR003",
+			"position": 1,
+			"face": "eb-garamond"
+		},
+		{
 			"id": "14a55aa28d7181cca98aecb183ce85e6",
 			"slug": "the-timeless-way-of-building",
 			"title": "The Timeless Way of Building",
@@ -13185,6 +14609,37 @@
 			"shelf": null,
 			"position": null,
 			"face": "crimson-pro"
+		},
+		{
+			"id": "42555aa28d7181dab181e1a99316bbf8",
+			"slug": "tomorrow-and-tomorrow-and-tomorrow",
+			"title": "Tomorrow, and Tomorrow, and Tomorrow",
+			"format": "book",
+			"subtitle": "A Novel",
+			"authors": [
+				"Gabrielle Zevin"
+			],
+			"publishers": [
+				"Knopf"
+			],
+			"tags": [],
+			"year": "2022",
+			"isbn10": "0593321200",
+			"isbn13": "9780593321201",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 401,
+			"height": 9.84,
+			"thickness": 1.15,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "purple-1",
+			"shelf": "LR001",
+			"position": 1,
+			"face": "space-mono"
 		},
 		{
 			"id": "13b55aa28d7180199f17ddd31506ba85",
@@ -13835,6 +15290,37 @@
 			"face": "fraunces"
 		},
 		{
+			"id": "42555aa28d7181959b6cfe9bac4530a9",
+			"slug": "the-viking-gods-viking-series-literary-pearls-from-the-vikin",
+			"title": "The Viking Gods (Viking Series - Literary Pearls from the Viking Age)",
+			"format": "book",
+			"subtitle": "from Snorri Sturluson's Edda",
+			"authors": [
+				"Snorri Sturluson"
+			],
+			"publishers": [
+				"Gudrun Publishing"
+			],
+			"tags": [],
+			"year": "2002",
+			"isbn10": "9979856904",
+			"isbn13": "9789979856900",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 77,
+			"height": 7.91,
+			"thickness": 0.59,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "orange-1",
+			"shelf": "LR002",
+			"position": 15,
+			"face": "libre-franklin"
+		},
+		{
 			"id": "14a55aa28d71818aa0d8cb94787b618d",
 			"slug": "visual-communication-and-the-graphic-arts",
 			"title": "Visual Communication and the Graphic Arts",
@@ -14254,6 +15740,37 @@
 			"face": "space-mono"
 		},
 		{
+			"id": "42555aa28d7181268404fc0cdf2ee619",
+			"slug": "the-wet-collection",
+			"title": "The Wet Collection",
+			"format": "book",
+			"subtitle": null,
+			"authors": [
+				"Joni Tevis"
+			],
+			"publishers": [
+				"Milkweed Editions"
+			],
+			"tags": [],
+			"year": "2007",
+			"isbn10": "1571313036",
+			"isbn13": "9781571313034",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 192,
+			"height": 8.58,
+			"thickness": 0.91,
+			"measured": false,
+			"sized": "open-library",
+			"tint": "purple-1",
+			"shelf": "LR003",
+			"position": 10,
+			"face": "league-gothic"
+		},
+		{
 			"id": "14a55aa28d7181158281c7badcb54094",
 			"slug": "what-we-see-when-we-read",
 			"title": "What We See When We Read",
@@ -14284,7 +15801,7 @@
 			"tint": "yellow-2",
 			"shelf": null,
 			"position": null,
-			"face": "libre-franklin"
+			"face": "space-mono"
 		},
 		{
 			"id": "14a55aa28d71816f9d6df95b2b6365df",
@@ -14417,6 +15934,37 @@
 			"face": "fraunces"
 		},
 		{
+			"id": "42555aa28d71813681d5e15a7d5f6bb4",
+			"slug": "the-winter-solstice",
+			"title": "The Winter Solstice",
+			"format": "book",
+			"subtitle": "the sacred traditions of Christmas",
+			"authors": [
+				"Matthews, John"
+			],
+			"publishers": [
+				"Quest Books"
+			],
+			"tags": [],
+			"year": "1998",
+			"isbn10": "0835607690",
+			"isbn13": "9780835607698",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": "Home",
+			"notes": null,
+			"pages": 247,
+			"height": 10.63,
+			"thickness": 0.77,
+			"measured": false,
+			"sized": "library-of-congress",
+			"tint": "goldenrod-3",
+			"shelf": "LR003",
+			"position": 2,
+			"face": "libre-franklin"
+		},
+		{
 			"id": "14a55aa28d718149a2b7de2124321b86",
 			"slug": "woe-is-i-the-grammarphobe-s-guide-to-better-english-in-plain",
 			"title": "Woe is I: The Grammarphobe's Guide to Better English in Plain English",
@@ -14442,7 +15990,7 @@
 			"thickness": 0.75,
 			"measured": false,
 			"sized": "library-of-congress",
-			"tint": "gray-1",
+			"tint": "cornflower-1",
 			"shelf": null,
 			"position": null,
 			"face": "bricolage"

@@ -1250,5 +1250,172 @@
 	"9780743284882": {
 		"pages": 384,
 		"dimensions": "8.5 x 5.8 x 1.2 inches"
+	},
+	"9781982156947": {
+		"pages": 528,
+		"dimensions": null
+	},
+	"9780743264464": {
+		"pages": 272,
+		"dimensions": "8.3 x 5.3 x 0.8 inches"
+	},
+	"9780743406567": {
+		"pages": 288,
+		"dimensions": "8.2 x 5.3 x 0.8 inches"
+	},
+	"9781400052189": {
+		"pages": 381,
+		"dimensions": null
+	},
+	"9780593321201": {
+		"pages": 401,
+		"dimensions": null
+	},
+	"9781573223027": {
+		"pages": 352,
+		"dimensions": null
+	},
+	"9781573229326": {
+		"pages": 305,
+		"dimensions": null
+	},
+	"9781573227339": {
+		"pages": 307,
+		"dimensions": null
+	},
+	"9781573225519": {
+		"pages": 323,
+		"dimensions": null
+	},
+	"9781573223560": {
+		"pages": 224,
+		"dimensions": "7.9 x 5 x 0.5 inches"
+	},
+	"9781573226882": {
+		"pages": 247,
+		"dimensions": null
+	},
+	"9781934781296": {
+		"pages": 131,
+		"dimensions": null
+	},
+	"9780460013369": {
+		"pages": 544,
+		"dimensions": null
+	},
+	"9780870333514": {
+		"pages": 212,
+		"dimensions": null
+	},
+	"9781626560659": {
+		"pages": 164,
+		"dimensions": null
+	},
+	"9780312075316": {
+		"pages": null,
+		"dimensions": null
+	},
+	"9782070334568": {
+		"pages": null,
+		"dimensions": "6.7 x 3.9 x 0.4 inches"
+	},
+	"9780808501220": null,
+	"9789979856900": {
+		"pages": 77,
+		"dimensions": "7.9 x 4.9 x 0.6 inches"
+	},
+	"9780835607698": {
+		"pages": 247,
+		"dimensions": null
+	},
+	"9780395522493": {
+		"pages": 125,
+		"dimensions": null
+	},
+	"9781616200466": {
+		"pages": 400,
+		"dimensions": null
+	},
+	"9780964074620": {
+		"pages": 320,
+		"dimensions": null
+	},
+	"9781984823540": {
+		"pages": 336,
+		"dimensions": null
+	},
+	"9780716616191": {
+		"pages": null,
+		"dimensions": null
+	},
+	"9783741925214": null,
+	"9780967236612": {
+		"pages": null,
+		"dimensions": null
+	},
+	"9780375712104": {
+		"pages": 432,
+		"dimensions": null
+	},
+	"9783908247401": {
+		"pages": 165,
+		"dimensions": null
+	},
+	"9788797316245": null,
+	"9780972778824": {
+		"pages": 191,
+		"dimensions": null
+	},
+	"9780938491095": {
+		"pages": null,
+		"dimensions": null
+	},
+	"9780967236698": {
+		"pages": 152,
+		"dimensions": "12.5 x 9.8 x 0.9 inches"
+	},
+	"9781250122032": {
+		"pages": 206,
+		"dimensions": null
+	},
+	"9780307954770": {
+		"pages": 287,
+		"dimensions": null
+	},
+	"9781452145761": {
+		"pages": 308,
+		"dimensions": null
+	},
+	"9780670877690": {
+		"pages": 444,
+		"dimensions": null
+	},
+	"9781108452991": {
+		"pages": 134,
+		"dimensions": null
+	},
+	"9781571313034": {
+		"pages": 192,
+		"dimensions": "8.6 x 5.8 x 0.9 inches"
+	},
+	"9780395906644": {
+		"pages": 128,
+		"dimensions": null
+	},
+	"9780395670729": {
+		"pages": 128,
+		"dimensions": null
+	},
+	"9781422144138": {
+		"pages": 226,
+		"dimensions": null
+	},
+	"9781101980316": {
+		"pages": 304,
+		"dimensions": null
+	},
+	"9781565123526": {
+		"pages": 203,
+		"dimensions": "8.3 x 4.7 x 0.4 inches"
 	}
 }
