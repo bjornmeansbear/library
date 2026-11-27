@@ -1,9 +1,11 @@
 // GET  /api/scan?isbn=…   the book for an ISBN, and whether it's already here
+// GET  /api/scan?q=…      no ISBN: editions matching a title (and author)
 // POST /api/scan          { isbn, where, format }: add it, whatever is or isn't known
+// POST /api/scan          { book, where, format }: add an edition picked from a search
 // Both need the passphrase (the Worker secret SCAN_KEY) in the x-scan-key header.
 import { json, error } from '@sveltejs/kit';
 import { env as workerEnv } from 'cloudflare:workers';
-import { lookup, add } from '#lib/server/scan.ts';
+import { lookup, add, search, addFound } from '#lib/server/scan.ts';
 import type { RequestHandler } from './$types';
 
 // The Worker's own variables (its secrets), straight from the runtime.
@@ -24,10 +26,12 @@ function secrets(request: Request) {
 
 export const GET: RequestHandler = async ({ url, request }) => {
 	const token = secrets(request);
-	return json(await lookup(token, url.searchParams.get('isbn') ?? ''));
+	const q = url.searchParams.get('q');
+	return json(q != null ? await search(token, q) : await lookup(token, url.searchParams.get('isbn') ?? ''));
 };
 
 export const POST: RequestHandler = async ({ request }) => {
 	const token = secrets(request);
-	return json(await add(token, await request.json()));
+	const body = (await request.json()) as any;
+	return json(body.book ? await addFound(token, body) : await add(token, body));
 };

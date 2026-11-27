@@ -8,13 +8,17 @@
 	import BookCard from '#lib/BookCard.svelte';
 	import type { Book } from '#lib/library.ts';
 
+	type Book_ = { title: string | null; subtitle: string | null; authors: string[]; publisher: string | null; year: string | null; pages: number | null; heightCm?: number | null; widthCm?: number | null };
+	type Result = Book_ & { source: string; twin: { title: string; url: string } | null };
 	type Found = {
 		isbn?: string;
+		/** picked from a title search: no ISBN */
+		picked?: boolean;
 		error?: string;
 		where?: string[];
 		formats?: string[];
 		have?: { title: string; url: string };
-		book?: { title: string | null; subtitle: string | null; authors: string[]; publisher: string | null; year: string | null; pages: number | null };
+		book?: Book_;
 		twin?: { title: string; url: string } | null;
 	};
 
@@ -29,6 +33,10 @@
 	let added = $state<{ title: string; url: string; authors: string[]; publisher: string | null } | null>(null);
 	let where = $state(typeof localStorage === 'undefined' ? '' : (localStorage.getItem(WHERE) ?? ''));
 	let format = $state('Book');
+	// No ISBN: a title search, and the editions it found.
+	let words = $state('');
+	type Results = { where: string[]; formats: string[]; results: Result[] };
+	let results = $state<Results | null>(null);
 
 	// ---- the camera ----
 	let video = $state<HTMLVideoElement>();
@@ -82,8 +90,8 @@
 	onDestroy(stopCamera);
 
 	// ---- the lookup and the add ----
-	async function call(method: 'GET' | 'POST', body?: object) {
-		const res = await fetch(method === 'GET' ? `/api/scan?isbn=${encodeURIComponent(isbn)}` : '/api/scan', {
+	async function call(method: 'GET' | 'POST', body?: object, query = `isbn=${encodeURIComponent(isbn)}`) {
+		const res = await fetch(method === 'GET' ? `/api/scan?${query}` : '/api/scan', {
 			method,
 			headers: { 'x-scan-key': key, ...(body ? { 'Content-Type': 'application/json' } : {}) },
 			body: body ? JSON.stringify(body) : undefined
@@ -100,7 +108,7 @@
 	async function lookup() {
 		if (!isbn.trim()) return;
 		busy = true;
-		found = added = null;
+		found = added = results = null;
 		status = 'Looking it up…';
 		try {
 			found = (await call('GET')) as Found;
@@ -112,19 +120,41 @@
 		busy = false;
 	}
 
+	async function searchTitles() {
+		if (!words.trim()) return;
+		busy = true;
+		found = added = results = null;
+		status = 'Searching the Library of Congress and Open Library…';
+		try {
+			const r = (await call('GET', undefined, `q=${encodeURIComponent(words)}`)) as Results & { error?: string };
+			status = r.error ?? (r.results?.length ? '' : 'Nothing found. Try fewer words, or the author’s last name.');
+			if (!r.error) results = r;
+		} catch (e) {
+			status = (e as Error).message;
+		}
+		busy = false;
+	}
+
+	function pick(r: Result) {
+		found = { picked: true, where: results?.where, formats: results?.formats, book: r, twin: r.twin };
+		if (found.where?.length && !found.where.includes(where)) where = '';
+		results = null;
+	}
+
 	async function addIt() {
-		if (!found?.isbn) return;
+		if (!found?.isbn && !found?.picked) return;
 		busy = adding = true;
 		status = '';
 		try {
-			const r = (await call('POST', { isbn: found.isbn, where, format })) as { error?: string; added: { title: string; url: string; authors: string[]; publisher: string | null } };
+			const body = found.picked ? { book: found.book, where, format } : { isbn: found.isbn, where, format };
+			const r = (await call('POST', body)) as { error?: string; added: { title: string; url: string; authors: string[]; publisher: string | null } };
 			if (r.error) status = r.error;
 			else {
 				added = r.added;
 				localStorage.setItem(WHERE, where);
 				found = null;
 				status = `Added “${r.added.title}”.`;
-				isbn = '';
+				isbn = words = '';
 			}
 		} catch (e) {
 			status = (e as Error).message;
@@ -139,16 +169,20 @@
 		keyInput = '';
 	}
 
-	// The found book as the library's card: a pale tint picked from the ISBN.
-	// A book nobody's catalogue knows goes in as "ISBN …", to fill in later.
+	// The found book as the library's card, in a pale tint picked from its
+	// ISBN or title. A book nobody's catalogue knows goes in as "ISBN …".
 	const TINTS = ['pink-1', 'goldenrod-1', 'cornflower-1', 'green-2', 'orange-1', 'violet-1'];
-	const asBook = (f: Found): Book => ({
-		id: f.isbn!, slug: f.isbn!, title: f.book!.title ?? `ISBN ${f.isbn}`, format: 'book', subtitle: f.book!.subtitle,
-		authors: f.book!.authors, publishers: f.book!.publisher ? [f.book!.publisher] : [], tags: [],
-		year: f.book!.year, isbn10: null, isbn13: f.isbn!, where: null, notes: null, pages: f.book!.pages,
-		height: 9, thickness: 1, measured: false, sized: 'guessed',
-		tint: TINTS[Number(f.isbn!.slice(-4)) % TINTS.length], face: 'work-sans', shelf: null, position: null
-	});
+	const asBook = (f: Found): Book => {
+		const id = f.isbn ?? f.book!.title ?? 'book';
+		const hash = [...id].reduce((h, c) => h + c.charCodeAt(0), 0);
+		return {
+			id, slug: id, title: f.book!.title ?? `ISBN ${f.isbn}`, format: 'book', subtitle: f.book!.subtitle,
+			authors: f.book!.authors, publishers: f.book!.publisher ? [f.book!.publisher] : [], tags: [],
+			year: f.book!.year, isbn10: null, isbn13: f.isbn ?? null, where: null, notes: null, pages: f.book!.pages,
+			height: 9, thickness: 1, measured: false, sized: 'guessed',
+			tint: TINTS[hash % TINTS.length], face: 'work-sans', shelf: null, position: null
+		};
+	};
 </script>
 
 <svelte:head>
@@ -189,6 +223,19 @@
 			</div>
 		</form>
 
+		<!-- For a book printed before ISBNs (about 1970): search by title. -->
+		<details class="mt-4" open={!!words}>
+			<summary class="cursor-pointer py-2 text-sm">No ISBN? Search by title</summary>
+			<form class="mt-2 flex flex-col gap-3" onsubmit={(e) => (e.preventDefault(), searchTitles())}>
+				<label class="flex flex-col gap-1 text-sm">
+					Title, and the author if you know it
+					<input bind:value={words} autocomplete="off" placeholder="norse stories mabie"
+						class="w-full border-2 border-text bg-bg px-2 py-2 text-base" />
+				</label>
+				<button class="w-full border-2 border-text bg-bg px-2 py-2 text-base font-semibold hover:bg-text hover:text-bg" disabled={busy}>Search</button>
+			</form>
+		</details>
+
 		{#if scanning}
 			<!-- svelte-ignore a11y_media_has_caption -->
 			<video bind:this={video} playsinline muted class="mt-4 block aspect-[4/3] w-full border-2 border-text bg-text object-cover"></video>
@@ -199,7 +246,7 @@
 
 		{#if found?.have}
 			<p class="mt-2">Already in the library: <a href={found.have.url}>{found.have.title}</a>.</p>
-		{:else if found?.isbn && found.book}
+		{:else if (found?.isbn || found?.picked) && found.book}
 			<div class="mt-8">
 				<BookCard book={asBook(found)}>
 					{#snippet top()}
@@ -212,6 +259,23 @@
 					{/snippet}
 				</BookCard>
 			</div>
+		{/if}
+
+		{#if results?.results.length}
+			<p class="mt-2 mb-2 text-sm">Pick the edition you have:</p>
+			<ul class="m-0 flex list-none flex-col p-0">
+				{#each results.results as r, i (i)}
+					<li class="border-t-2 border-text">
+						<button type="button" class="block w-full px-1 py-3 text-left hover:bg-text hover:text-bg" onclick={() => pick(r)}>
+							<span class="block font-semibold">{r.title}{r.subtitle ? `: ${r.subtitle}` : ''}</span>
+							<span class="block text-sm">
+								{[r.authors.join(', '), r.publisher, r.year, r.pages && `${r.pages} pages`, r.heightCm && `${r.heightCm} cm`].filter(Boolean).join(' · ')}
+							</span>
+							<span class="block text-sm">From the {r.source}{r.twin ? ` · maybe already here as “${r.twin.title}”` : ''}</span>
+						</button>
+					</li>
+				{/each}
+			</ul>
 		{/if}
 
 		{#if added}
@@ -227,7 +291,7 @@
 	<div class="mt-6 flex flex-col gap-4 border-t-2 border-[var(--wjerk-black)] pt-4">
 		{#if found?.twin}
 			<p class="m-0 text-sm">
-				This might already be here as <a href={found.twin.url}>{found.twin.title}</a>, under another ISBN.
+				This might already be here as <a href={found.twin.url}>{found.twin.title}</a>{found.picked ? '' : ', under another ISBN'}.
 			</p>
 		{/if}
 		<div class="flex flex-wrap gap-x-4 gap-y-3">

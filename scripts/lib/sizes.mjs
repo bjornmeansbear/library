@@ -19,8 +19,8 @@ function to10(isbn13) {
 	return core + (c === 10 ? 'X' : String(c));
 }
 
-async function sru(isbn) {
-	const url = `https://lx2.loc.gov/sru/lcdb?version=1.1&operation=searchRetrieve&query=bath.isbn=${isbn}&recordSchema=marcxml&maximumRecords=1`;
+async function sru(query, max = 1) {
+	const url = `https://lx2.loc.gov/sru/lcdb?version=1.1&operation=searchRetrieve&query=${query}&recordSchema=marcxml&maximumRecords=${max}`;
 	for (let attempt = 0; attempt < 3; attempt++) {
 		try {
 			const res = await fetch(url, { headers: UA });
@@ -33,37 +33,52 @@ async function sru(isbn) {
 	return null;
 }
 
-// What the Library of Congress catalogue knows about a book, or null:
+// One Library of Congress catalogue record (MARC XML) as plain fields:
 // { pages, heightCm, widthCm } from its physical description (MARC 300),
-// and { title, subtitle, author, publisher, year } for filling in what Open
-// Library doesn't know (MARC 245, 100, 264 or 260).
+// and { title, subtitle, author, publisher, year } (MARC 245, 100, 264/260).
+// Older records often name the author only in the title's statement of
+// responsibility ("by Hamilton Wright Mabie"), so that's the fallback.
+export function marcBook(xml) {
+	const field = (tag) => xml.match(new RegExp(`<datafield tag="${tag}"[\\s\\S]*?</datafield>`))?.[0] ?? '';
+	const sub = (f, code) => decode(f.match(new RegExp(`<subfield code="${code}">([^<]*)<`))?.[1] ?? '').trim();
+	// Catalogue punctuation hangs off the end of each part: "Title /", "Publisher,".
+	const tidy = (t) => t.replace(/\s*[\/:;,.]\s*$/, '').replace(/^\[|\]$/g, '').trim() || null;
+	const physical = field('300');
+	const a = sub(physical, 'a'), c = sub(physical, 'c') || physical;
+	const pages = Math.max(0, ...[...a.matchAll(/(\d+)\s*(?:p\b|pages)/g)].map((m) => Number(m[1]))) || null;
+	const d = c.match(/(\d+(?:\.\d+)?)\s*(?:x\s*(\d+(?:\.\d+)?)\s*)?cm/);
+	const imprint = field('264') || field('260');
+	const title = field('245');
+	const name = tidy(sub(field('100'), 'a'));
+	const byLine = sub(title, 'c').match(/\bby\s+([^;,.]+?)(?:\s*[;,.]|$)/i)?.[1]?.trim();
+	return {
+		pages,
+		heightCm: d ? Number(d[1]) : null,
+		widthCm: d?.[2] ? Number(d[2]) : null,
+		title: tidy(sub(title, 'a')),
+		subtitle: tidy(sub(title, 'b')),
+		// "Lupton, Ellen" → "Ellen Lupton"
+		author: name ? name.replace(/^([^,]+),\s*(.+)$/, '$2 $1') : byLine || null,
+		publisher: tidy(sub(imprint, 'b')),
+		year: sub(imprint, 'c').match(/\b(1[5-9]\d\d|20\d\d)\b/)?.[1] ?? null
+	};
+}
+const decode = (t) => t.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&apos;/g, "'");
+
+// What the Library of Congress knows about one ISBN, or null.
 export async function locRecord(isbn13) {
 	for (const isbn of [isbn13, to10(isbn13)].filter(Boolean)) {
-		const xml = await sru(isbn);
-		if (!xml?.includes('<datafield')) continue;
-		const field = (tag) => xml.match(new RegExp(`<datafield tag="${tag}"[\\s\\S]*?</datafield>`))?.[0] ?? '';
-		const sub = (f, code) => f.match(new RegExp(`<subfield code="${code}">([^<]*)<`))?.[1]?.trim() ?? '';
-		// Catalogue punctuation hangs off the end of each part: "Title /", "Publisher,".
-		const tidy = (t) => t.replace(/\s*[\/:;,.]\s*$/, '').replace(/^\[|\]$/g, '').trim() || null;
-		const physical = field('300');
-		const a = sub(physical, 'a'), c = sub(physical, 'c') || physical;
-		const pages = Math.max(0, ...[...a.matchAll(/(\d+)\s*(?:p\b|pages)/g)].map((m) => Number(m[1]))) || null;
-		const d = c.match(/(\d+(?:\.\d+)?)\s*(?:x\s*(\d+(?:\.\d+)?)\s*)?cm/);
-		const imprint = field('264') || field('260');
-		const name = tidy(sub(field('100'), 'a'));
-		return {
-			pages,
-			heightCm: d ? Number(d[1]) : null,
-			widthCm: d?.[2] ? Number(d[2]) : null,
-			title: tidy(sub(field('245'), 'a')),
-			subtitle: tidy(sub(field('245'), 'b')),
-			// "Lupton, Ellen" → "Ellen Lupton"
-			author: name ? name.replace(/^([^,]+),\s*(.+)$/, '$2 $1') : null,
-			publisher: tidy(sub(imprint, 'b')),
-			year: sub(imprint, 'c').match(/\b(1[5-9]\d\d|20\d\d)\b/)?.[1] ?? null
-		};
+		const xml = await sru(`bath.isbn=${isbn}`);
+		if (xml?.includes('<datafield')) return marcBook(xml);
 	}
 	return null;
+}
+
+// Library of Congress records matching some words (title, author, both),
+// for books with no ISBN. Each is one edition: its own publisher and year.
+export async function locSearch(words, max = 8) {
+	const xml = await sru(encodeURIComponent(words.replace(/"/g, ' ')), max);
+	return (xml ?? '').split('<zs:record>').slice(1).map(marcBook).filter((b) => b.title);
 }
 
 // Open Library's "8.5 x 5.5 x 0.54 inches" → [height, width, thickness] in mm,

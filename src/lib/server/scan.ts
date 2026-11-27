@@ -1,12 +1,11 @@
-// The /scan page's server side: look a book up by ISBN and add it to the
-// Notion library, the same way `npm run add` does (scripts/add.mjs), from
-// the Worker. The Notion token and the page's passphrase are Worker
+// The /scan page's server side: look a book up by ISBN (or, for a book
+// printed before ISBNs, search by title) and add it to the Notion library,
+// the same way `npm run add` does (scripts/add.mjs), from the Worker. The Notion token and the page's passphrase are Worker
 // secrets (NOTION_TOKEN, SCAN_KEY), never in the code or the browser.
-import { edition, isbn13 } from '../../../scripts/lib/openlibrary.mjs';
-import { locRecord, sizeProps } from '../../../scripts/lib/sizes.mjs';
+import { edition, isbn13, olSearch } from '../../../scripts/lib/openlibrary.mjs';
+import { locRecord, locSearch, sizeProps } from '../../../scripts/lib/sizes.mjs';
 import { nameKey, shortPublisher } from '../../../scripts/lib/names.mjs';
 import { DS } from '../../../scripts/lib/ids.mjs';
-
 
 type Page = { id: string; url: string; properties: Record<string, any> };
 
@@ -85,44 +84,74 @@ async function whatIsKnown(isbn: string, { sizes = false } = {}) {
 export async function lookup(token: string, input: string) {
 	const isbn = isbn13(input);
 	if (!isbn) return { error: 'That isn’t a valid ISBN: the check digit doesn’t work out. Check the number.' };
-	const n = notion(token);
-	const [books, schema, known] = await Promise.all([
-		n.queryAll(DS.books),
-		n.api('GET', `data_sources/${DS.books}`),
-		whatIsKnown(isbn)
-	]);
-	const where: string[] = schema.properties?.Where?.select?.options?.map((o: any) => o.name) ?? [];
-	const formats: string[] = schema.properties?.Format?.select?.options?.map((o: any) => o.name) ?? [];
-	const same = withIsbn(books, isbn);
+	const [ctx, known] = await Promise.all([context(notion(token)), whatIsKnown(isbn)]);
+	const { where, formats } = ctx;
+	const same = withIsbn(ctx.books, isbn);
 	if (same) return { isbn, where, formats, have: { title: titleOf(same), url: same.url } };
-	const title = known.book.title;
-	const twin = title
-		? books.find((p) => {
-				const a = titleKey(titleOf(p)), b = titleKey(title);
-				return a.length > 3 && (a === b || (b.startsWith(a) && a.length > 12) || (a.startsWith(b) && b.length > 12));
-			})
-		: null;
-	return { isbn, where, formats, book: known.book, twin: twin ? { title: titleOf(twin), url: twin.url } : null };
+	return { isbn, where, formats, book: known.book, twin: twinOf(ctx.books, known.book.title) };
 }
 
-// Add it, whatever is or isn't known. Authors and publisher are matched to
-// existing pages by name or made new; a missing publisher stays blank (for
-// `npm run fill` later) and a book nobody knows goes in as "ISBN …".
-export async function add(token: string, o: { isbn: string; where?: string; format?: string }) {
-	const isbn = isbn13(o.isbn);
-	if (!isbn) return { error: 'Not a valid ISBN.' };
-	const n = notion(token);
-	const [books, people, publishers, known] = await Promise.all([
-		n.queryAll(DS.books),
-		n.queryAll(DS.people),
-		n.queryAll(DS.publishers),
-		whatIsKnown(isbn, { sizes: true })
-	]);
-	const same = withIsbn(books, isbn);
-	if (same) return { error: `Already in the library as “${titleOf(same)}”.`, url: same.url };
-	const b = known.book;
-	const title = b.title ?? `ISBN ${isbn}`;
+export type Known = {
+	title: string | null;
+	subtitle: string | null;
+	authors: string[];
+	publisher: string | null;
+	year: string | null;
+	pages: number | null;
+	heightCm?: number | null;
+	widthCm?: number | null;
+};
 
+// The library's Where and Format options, and the titles already in it.
+async function context(n: ReturnType<typeof notion>) {
+	const [books, schema] = await Promise.all([n.queryAll(DS.books), n.api('GET', `data_sources/${DS.books}`)]);
+	const options = (name: string): string[] => schema.properties?.[name]?.select?.options?.map((o: any) => o.name) ?? [];
+	return { books, where: options('Where'), formats: options('Format') };
+}
+
+// The page already here under a title that looks like the same book.
+function twinOf(books: Page[], title: string | null) {
+	if (!title) return null;
+	const b = titleKey(title);
+	const p = books.find((p) => {
+		const a = titleKey(titleOf(p));
+		return a.length > 3 && (a === b || (b.startsWith(a) && a.length > 12) || (a.startsWith(b) && b.length > 12));
+	});
+	return p ? { title: titleOf(p), url: p.url } : null;
+}
+
+// For a book with no ISBN: editions the Library of Congress has (each with
+// its own publisher, year and size), then works Open Library has, each
+// marked if a book with the same title is already in the library.
+export async function search(token: string, words: string) {
+	words = words.trim();
+	if (words.length < 3) return { error: 'Type a few words of the title, and the author if you know it.' };
+	const n = notion(token);
+	const [ctx, loc, ol] = await Promise.all([context(n), locSearch(words), olSearch(words)]);
+	const seen = new Set<string>();
+	const results = [
+		...loc.map((b: any) => ({ ...b, authors: b.author ? [b.author] : [], source: 'Library of Congress' })),
+		...ol.map((b: any) => ({ ...b, source: 'Open Library' }))
+	].filter((b) => {
+		const key = `${titleKey(b.title)}|${b.year}|${nameKey(b.publisher ?? '', true)}`;
+		return !seen.has(key) && seen.add(key);
+	});
+	return {
+		where: ctx.where,
+		formats: ctx.formats,
+		results: results.map((b) => ({ ...b, twin: twinOf(ctx.books, b.title) }))
+	};
+}
+
+// Make the Notion page for a book: authors and publisher matched to
+// existing pages by name or made new; a missing publisher stays blank (for
+// `npm run fill` later); a book with no title goes in as "ISBN …".
+async function createBook(
+	n: ReturnType<typeof notion>,
+	b: Known,
+	o: { isbn?: string; where?: string; format?: string; lcc?: string | null; sizes?: Record<string, any> }
+) {
+	const [people, publishers] = await Promise.all([n.queryAll(DS.people), n.queryAll(DS.publishers)]);
 	async function findOrCreate(kind: 'people' | 'publishers', name: string, pages: Page[]) {
 		const isPublisher = kind === 'publishers';
 		const clean = isPublisher ? shortPublisher(name) : name.trim();
@@ -138,23 +167,20 @@ export async function add(token: string, o: { isbn: string; where?: string; form
 	const authors = [];
 	for (const a of b.authors) authors.push(await findOrCreate('people', a, people));
 	const publisher = b.publisher ? await findOrCreate('publishers', b.publisher, publishers) : null;
-
-	const format = o.format || 'Book';
+	const title = b.title ?? `ISBN ${o.isbn}`;
 	const props: Record<string, any> = {
 		Name: { title: [{ text: { content: title } }] },
-		'ISBN-13': rich(isbn),
 		Publisher: { relation: publisher ? [{ id: publisher.id }] : [] },
 		Author: { relation: authors.map((a) => ({ id: a.id })) },
-		Format: { select: { name: format } },
-		'Date Added': { date: { start: new Date().toISOString().slice(0, 10) } }
+		Format: { select: { name: o.format || 'Book' } },
+		'Date Added': { date: { start: new Date().toISOString().slice(0, 10) } },
+		...o.sizes
 	};
+	if (o.isbn) props['ISBN-13'] = rich(o.isbn);
 	if (b.subtitle) props['Subtitle'] = rich(b.subtitle);
 	if (b.year) props['Year'] = rich(b.year);
-	if (known.ol?.lcc) props['LOC Call Number'] = rich(known.ol.lcc);
+	if (o.lcc) props['LOC Call Number'] = rich(o.lcc);
 	if (o.where) props['Where'] = { select: { name: o.where } };
-	if (format !== 'Film' && format !== 'Music') {
-		Object.assign(props, sizeProps({ ol: known.ol, loc: known.loc, empty: { height: true, width: true, thickness: true, pages: true } }));
-	}
 	const page = await n.api('POST', 'pages', {
 		parent: { type: 'data_source_id', data_source_id: DS.books },
 		properties: props
@@ -167,4 +193,33 @@ export async function add(token: string, o: { isbn: string; where?: string; form
 			publisher: publisher ? publisher.name + (publisher.created ? ' (new)' : '') : null
 		}
 	};
+}
+
+// Add by ISBN, whatever is or isn't known about it.
+export async function add(token: string, o: { isbn: string; where?: string; format?: string }) {
+	const isbn = isbn13(o.isbn);
+	if (!isbn) return { error: 'Not a valid ISBN.' };
+	const n = notion(token);
+	const [books, known] = await Promise.all([n.queryAll(DS.books), whatIsKnown(isbn, { sizes: true })]);
+	const same = withIsbn(books, isbn);
+	if (same) return { error: `Already in the library as “${titleOf(same)}”.`, url: same.url };
+	const physical = o.format !== 'Film' && o.format !== 'Music';
+	const sizes = physical
+		? sizeProps({ ol: known.ol, loc: known.loc, empty: { height: true, width: true, thickness: true, pages: true } })
+		: {};
+	return createBook(n, known.book, { ...o, isbn, lcc: known.ol?.lcc, sizes });
+}
+
+// Add an edition picked from a title search (no ISBN).
+export async function addFound(token: string, o: { book: Known; where?: string; format?: string }) {
+	const b = o.book;
+	if (!b?.title) return { error: 'Pick a book from the search first.' };
+	const sizes: Record<string, any> = {};
+	if (b.heightCm && b.heightCm >= 8 && b.heightCm <= 50) {
+		sizes['Height (mm)'] = { number: Math.round(b.heightCm * 10) };
+		if (b.widthCm) sizes['Width (mm)'] = { number: Math.round(b.widthCm * 10) };
+		sizes['Size from'] = { select: { name: 'Library of Congress' } };
+	}
+	if (b.pages && b.pages < 5000) sizes['Pages'] = { number: b.pages };
+	return createBook(notion(token), b, { where: o.where, format: o.format, sizes });
 }

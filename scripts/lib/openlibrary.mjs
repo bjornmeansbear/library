@@ -89,3 +89,18 @@ export async function subjects(isbn) {
 	const w = e.works?.[0]?.key ? await get(`${e.works[0].key}.json`) : null;
 	return [...new Set([...(e.subjects ?? []), ...(w?.subjects ?? [])].map((s) => (typeof s === 'string' ? s : s?.name ?? '')).filter(Boolean))];
 }
+// Open Library works matching some words, for books with no ISBN: each with
+// its first year, a publisher and a typical page count (a work can have many
+// editions; the Library of Congress search is the one with exact editions).
+export async function olSearch(words, max = 5) {
+	const fields = 'title,subtitle,author_name,publisher,first_publish_year,number_of_pages_median';
+	const r = await get(`/search.json?q=${encodeURIComponent(words)}&fields=${fields}&limit=${max}`);
+	return (r?.docs ?? []).map((d) => ({
+		title: d.title ?? null,
+		subtitle: d.subtitle ?? null,
+		authors: (d.author_name ?? []).slice(0, 3),
+		publisher: d.publisher?.[0] ?? null,
+		year: d.first_publish_year ? String(d.first_publish_year) : null,
+		pages: d.number_of_pages_median ?? null
+	}));
+}

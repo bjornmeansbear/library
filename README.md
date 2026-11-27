@@ -132,7 +132,11 @@ belong to their authors and publishers.
 
 `library.wjerk.shop/scan` is a private page for adding a book from the
 shelf: scan the barcode with the phone's camera (or type the ISBN), check
-the book it found, pick Where (and Format), and press the stamp. It does
+the book it found, pick Where (and Format), and press the stamp. A book
+printed before ISBNs (about 1970) is found by title instead: "No ISBN?
+Search by title" searches the Library of Congress (exact editions, with
+publisher, year, pages and height) and Open Library, and you pick the
+edition you have. It does
 what `npm run add` does, from the Worker (`src/lib/server/scan.ts`, using
 the same Open Library, Library of Congress and name-matching code in
 `scripts/lib/`). New books show on the site after the next sync.
