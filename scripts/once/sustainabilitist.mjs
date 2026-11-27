@@ -28,7 +28,7 @@ const decode = (s) => s
 // Titles without a leading article or anything after a colon/bracket.
 const key = (t) => nameKey(t.replace(/^(the|a|an)\s+/i, '').split(/[:(]/)[0]);
 
-// Amazon's titles (the Tumblr's) are properly capitalised but carry series
+// Amazon's titles (the Tumblr's) are properly capitalized but carry series
 // and edition notes; Open Library's are clean but often lowercase. Take the
 // words from the Tumblr, minus the notes.
 const SMALL = /^(a|an|and|as|at|but|by|for|from|in|into|nor|of|on|or|the|to|with|vs?\.?)$/i;

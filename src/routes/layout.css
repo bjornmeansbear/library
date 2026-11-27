@@ -79,8 +79,12 @@
 	--text-3xl--line-height: var(--leading-3xl);
 }
 
+/* Links are underlined: in one ink, the underline is what tells a link from
+   plain text (WCAG 1.4.1). Tailwind's reset takes it off; this puts it back.
+   The plain HTML answer for now, until a Wjerk one. Spines opt out. */
 a {
 	color: inherit;
+	text-decoration-line: underline;
 	text-decoration-thickness: 1px;
 	text-underline-offset: 0.2em;
 }
@@ -119,7 +123,7 @@ a:hover {
 	overflow-x: clip;
 }
 /* Every book lays its own board, running far off to both sides; they all
-   overlap, the same colour, so each row reads as one plank from wall to
+   overlap, the same color, so each row reads as one plank from wall to
    wall: past the first book to the left edge, past the last to the right.
    The bookcase clips the overrun sideways only. It has to be
    `overflow-x: clip`, not clip-path: clip-path hides the overrun but the
@@ -165,7 +169,7 @@ a:hover {
    front edge. Ours hangs on the first board: what's on show and how many
    ("Typography · 34 of 441"). Paper and ink like the spines, so it reads
    the same in dark mode; the holder's rim is the board's lighter top. It's
-   centred on the plank, so on a phone's thinner board it overlaps it evenly. */
+   centered on the plank, so on a phone's thinner board it overlaps it evenly. */
 .shelf-label {
 	position: absolute;
 	left: 0.25rem;
@@ -189,7 +193,7 @@ a:hover {
    From wjavelength's vote stamps: Basteleur, uppercase, tilted -8deg,
    landing with a quick scale-down; a 2px rule. It sits under the search and
    shelf menu, the tools that set the filter. Cream (Wjerk White) on Wjerk
-   Navy, 9.55:1 (AAA): the one cool colour on a warm page, so it stands out
+   Navy, 9.55:1 (AAA): the one cool color on a warm page, so it stands out
    without shouting. Paper and ink stay the same in dark mode, like the
    spines. Hover and press swap them (navy on cream); the tilt never moves.
    Reduced motion: it simply appears. */
@@ -252,11 +256,15 @@ a:hover {
 	gap: 0.75rem;
 	padding: 0.625rem 0;
 	writing-mode: vertical-rl;
+	/* Turn every character with the line, as one line of type set on its
+	   side. The default (mixed) stands curly quotes and apostrophes upright,
+	   full width, in a fallback face: The ABC ’ s. */
+	text-orientation: sideways;
 	background: var(--tint);
 	color: var(--wjerk-black);
 	border: 2px solid var(--wjerk-black);
 	border-bottom: 0;
-	margin-right: -2px; /* neighbours share one rule, like books pressed together */
+	margin-right: -2px; /* neighbors share one rule, like books pressed together */
 	text-decoration: none;
 	overflow: hidden;
 	/* type scales with the spine but never under 12px */

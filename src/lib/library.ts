@@ -20,6 +20,8 @@ export type Book = {
 	copies?: number | null;
 	where: string | null;
 	notes: string | null;
+	/** Its page on bjornpaedia.wjerk.shop, when the wiki has one. */
+	bjornpaedia?: string | null;
 	pages: number | null;
 	height: number;
 	thickness: number;
@@ -48,7 +50,7 @@ export const tags = (data.tags ?? []) as Tag[];
 export const BOOKSHOP_AFFILIATE_ID = '129137';
 
 // A direct ISBN link 404s whenever Bookshop.org doesn't stock that exact
-// edition (out of print, museum catalogues, foreign editions: much of this
+// edition (out of print, museum catalogs, foreign editions: much of this
 // library), and Bookshop.org has no public API to check. So stock is checked
 // by hand in Notion ("On Bookshop", the 🛒 view):
 //   Bookshop ISBN set   → straight to that edition

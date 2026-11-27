@@ -36,11 +36,19 @@ one file. Run it by hand with `npm run sync`.
 
 Its helpers sit next to it: `scripts/lib/notion.mjs` (talking to Notion),
 `scripts/lib/openlibrary.mjs` (talking to Open Library),
-`scripts/lib/sizes.mjs` (the Library of Congress catalogue, for heights and
+`scripts/lib/sizes.mjs` (the Library of Congress catalog, for heights and
 page counts). The other scripts, `add`, `fill`, `sizes`, `tags` and
 `isbn-fixes`, use the same helpers but write *into* Notion instead of
 reading out of it. The careful ones (`fill`, `tags`) write a plan file
 first and only change Notion when run with `--apply`.
+
+It also reads `data/bjornpaedia.json`: each book's page on
+bjornpaedia.wjerk.shop, when the wiki has one, which becomes the "My notes on
+bjornpaedia" link on the book. That file is written from the other side, by
+`sad2021tw/scripts/library-links.py` in the sentence-a-day repo, which also
+puts a "Library" row on the wiki's matching book and author pages. Run it
+there after adding books here or source pages there, then commit the file
+here; the nightly sync picks it up.
 
 **Looks broken when:** `npm run sync` prints an error in red. Read the last
 line; it usually names the field or book it choked on.
@@ -62,13 +70,13 @@ the bookcase and one per book (*prerendering*). The code:
 
 | To change… | Look in |
 |---|---|
-| Shelves, boards, spine colours and faces | `src/routes/layout.css` |
+| Shelves, boards, spine colors and faces | `src/routes/layout.css` |
 | One spine's markup | `src/lib/Spine.svelte` |
 | The book card (links, details) | `src/lib/BookCard.svelte` |
 | The popup around the card | `src/lib/BookDialog.svelte` |
 | The home page: header, search, filters, footer | `src/routes/+page.svelte` |
 | A book's own page | `src/routes/book/[slug]/+page.svelte` |
-| Wjerk tokens (colours, type) | `src/lib/kit.css`, copied from the design repo; don't edit here |
+| Wjerk tokens (colors, type) | `src/lib/kit.css`, copied from the design repo; don't edit here |
 
 A `.svelte` file is HTML with a little JavaScript in `<script>` at the top and
 CSS that only applies to that file in `<style>` at the bottom. Tailwind

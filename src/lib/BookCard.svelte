@@ -15,13 +15,41 @@
 	// Each author, publisher, year and tag links back to the bookcase showing
 	// only the books that share it.
 	const shelfOf = (kind: string, value: string) => `/?${kind}=${encodeURIComponent(value)}`;
+
+	// Where else to find the book, in order: my own notes, buying it,
+	// borrowing it, looking it up. Shops and Open Library only know books
+	// with an ISBN; anything else gets a library search by title.
+	type SeeAlso = { label: string; href: string; text: string; note?: string };
+	const seeAlso = $derived.by(() => {
+		const rows: SeeAlso[] = [];
+		if (book.bjornpaedia) rows.push({ label: 'Notes', href: book.bjornpaedia, text: 'My notes on bjornpaedia' });
+		if (isBook && isbn && bookshop)
+			rows.push({
+				label: 'Buy',
+				href: bookshop.url,
+				text: bookshop.sure ? 'Bookshop.org' : 'Search Bookshop.org',
+				note: BOOKSHOP_AFFILIATE_ID
+					? 'An affiliate link: a small share of a sale goes to me and to independent bookstores.'
+					: undefined
+			});
+		rows.push({
+			label: 'Borrow',
+			href:
+				isBook && isbn
+					? `https://search.worldcat.org/isbn/${isbn}`
+					: `https://search.worldcat.org/search?q=${encodeURIComponent(book.title)}`,
+			text: 'Find it in a library'
+		});
+		if (isBook && isbn) rows.push({ label: 'Look up', href: `https://openlibrary.org/isbn/${isbn}`, text: 'Open Library' });
+		return rows;
+	});
 </script>
 
 {#snippet facets(kind: string, values: string[])}
 	{#each values as v, i (v)}<a href={shelfOf(kind, v)}>{v}</a>{i < values.length - 1 ? ', ' : ''}{/each}
 {/snippet}
 
-<!-- The book pulled off the shelf: a card in its own spine colour, tilted a
+<!-- The book pulled off the shelf: a card in its own spine color, tilted a
      little, with a cream card offset behind it (onething's pile, oblique's
      tilt) instead of a drop shadow. Paper and ink stay the same in dark mode,
      like the spine. -->
@@ -67,23 +95,18 @@
 		<p class="mt-6 mb-0 whitespace-pre-line">{book.notes}</p>
 	{/if}
 
-	{#if !isBook}
-		<ul class="mt-6 mb-0 flex flex-wrap gap-x-6 p-0 text-sm">
-			<li class="list-none">
-				<a class="inline-block py-3" href="https://search.worldcat.org/search?q={encodeURIComponent(book.title)}">Find it in a library</a>
-			</li>
-		</ul>
-	{:else if isbn}
-		<ul class="mt-6 mb-0 flex flex-wrap gap-x-6 p-0 text-sm">
-			{#if bookshop}
-				<li class="list-none"><a class="inline-block py-3" href={bookshop.url}>{bookshop.sure ? 'Buy at Bookshop.org' : 'Find it at Bookshop.org'}</a></li>
-			{/if}
-			<li class="list-none"><a class="inline-block py-3" href="https://openlibrary.org/isbn/{isbn}">Open Library</a></li>
-			<li class="list-none"><a class="inline-block py-3" href="https://search.worldcat.org/isbn/{isbn}">Find it in a library</a></li>
-		</ul>
-		{#if BOOKSHOP_AFFILIATE_ID && bookshop}
-			<p class="m-0 text-xs">Bookshop.org links are affiliate links: a small share of a sale goes to me and to independent bookstores.</p>
-		{/if}
+	<!-- See also: where else the book can be found, like the cross-references
+	     at the foot of a catalog card. Same ruled two columns as the details. -->
+	{#if seeAlso.length}
+		<dl class="mt-6 mb-0 grid grid-cols-[auto_1fr] gap-x-6 border-t-2 pt-3 text-sm">
+			{#each seeAlso as row (row.label)}
+				<dt class="py-1">{row.label}</dt>
+				<dd class="m-0 py-1">
+					<a href={row.href}>{row.text}</a>
+					{#if row.note}<span class="mt-1 block text-xs">{row.note}</span>{/if}
+				</dd>
+			{/each}
+		</dl>
 	{/if}
 
 	{@render bottom?.()}
@@ -102,7 +125,7 @@
 	   own stacking context, so its own background would paint *under* these;
 	   drawing the face as ::after (later, so on top of ::before) keeps the
 	   order right. Behind: cream, offset down and right. Front: the spine
-	   colour. Square, ruled, no shadow. */
+	   color. Square, ruled, no shadow. */
 	.book-card::before,
 	.book-card::after {
 		content: '';
@@ -124,7 +147,7 @@
 	.book-card :global(a) {
 		color: var(--wjerk-black);
 	}
-	/* The kit's pink ring can disappear on a pink spine colour; ink always shows. */
+	/* The kit's pink ring can disappear on a pink spine color; ink always shows. */
 	.book-card :global(:focus-visible) {
 		outline-color: var(--wjerk-black);
 	}

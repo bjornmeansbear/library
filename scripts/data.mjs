@@ -23,6 +23,10 @@ loadEnv(path.join(root, '.env'));
 const useSeed = process.argv.includes('--seed') || !process.env.NOTION_TOKEN;
 
 const cache = fs.existsSync(cachePath) ? JSON.parse(fs.readFileSync(cachePath, 'utf8')) : {};
+// Each book's page on bjornpaedia, by Notion id. Written by library-links.py
+// in the sentence-a-day repo, which also links the wiki back here.
+const wikiPath = path.join(root, 'data/bjornpaedia.json');
+const wiki = fs.existsSync(wikiPath) ? JSON.parse(fs.readFileSync(wikiPath, 'utf8')).books : {};
 
 async function main() {
 	const raw = useSeed ? readSeed() : await readNotion();
@@ -67,6 +71,7 @@ function readSeed() {
 }
 
 import { DS, roomOf } from './lib/ids.mjs';
+import { typeset } from './lib/typeset.mjs';
 
 async function notion(method, url, body) {
 	for (let attempt = 0; ; attempt++) {
@@ -236,11 +241,11 @@ async function build(raw, cache) {
 		const book = {
 			id: b.id,
 			slug: uniqueSlug(slugify(title), slugs),
-			title,
+			title: typeset(title),
 			format,
-			subtitle: b.subtitle || null,
-			authors: joinNames(b.authors.map((id) => raw.people[id]).filter(Boolean)),
-			publishers: joinNames(b.publishers.map((id) => raw.publishers[id]).filter(Boolean)),
+			subtitle: typeset(b.subtitle) || null,
+			authors: joinNames(b.authors.map((id) => raw.people[id]).filter(Boolean)).map(typeset),
+			publishers: joinNames(b.publishers.map((id) => raw.publishers[id]).filter(Boolean)).map(typeset),
 			tags: b.tags.map((id) => raw.tags[id]).filter(Boolean),
 			year: /^\d{3,4}$/.test(b.year) && b.year !== '0' ? b.year : null,
 			isbn10: isbn?.isbn10 ?? null,
@@ -251,6 +256,7 @@ async function build(raw, cache) {
 			copies: b.copies > 1 ? b.copies : null,
 			where: b.where || null,
 			notes: b.notes || null,
+			bjornpaedia: wiki[b.id] ?? null,
 			pages: b.pages ?? ol?.pages ?? null,
 			// Spine size in inches. Your caliper numbers in Notion win; then
 			// Open Library's; otherwise a steady made-up size per book, so the
@@ -267,7 +273,7 @@ async function build(raw, cache) {
 			measured: Boolean(b.heightMm && b.thicknessMm && (!b.sizeFrom || b.sizeFrom === 'Measured')),
 			// Where each of the spine's two numbers came from, separately: the
 			// height, and the thickness (the spine's width on the page).
-			// measured (calipers), recorded (a catalogue or the series), pages
+			// measured (calipers), recorded (a catalog or the series), pages
 			// (thickness only: worked out from the page count), or guessed.
 			tall: b.heightMm ? (!b.sizeFrom || b.sizeFrom === 'Measured' ? 'measured' : 'recorded')
 				: dims?.[0] ? 'recorded' : 'guessed',
@@ -299,8 +305,8 @@ async function build(raw, cache) {
 
 	const books = [...byId.values()].sort((a, b) => sortKey(a.title).localeCompare(sortKey(b.title)));
 	// One bookcase, every book in title order (the office shelves are filed
-	// the same way), so colours are worked out along that single run.
-	colour([books]);
+	// the same way), so colors are worked out along that single run.
+	color([books]);
 
 	// The tags as browsable shelves, biggest first, with your Shelf intro.
 	const counts = {};
@@ -316,12 +322,12 @@ async function build(raw, cache) {
 const HUES = ['red', 'orange', 'yellow', 'goldenrod', 'green', 'blue', 'cornflower', 'purple', 'pink', 'brown', 'gray'];
 const TINTS = HUES.flatMap((hue) => [1, 2, 3].map((step) => `${hue}-${step}`));
 
-// Spine colours, the way a real shelf looks:
+// Spine colors, the way a real shelf looks:
 //   - a series (same publisher, same first word: "Dirty Furniture 1…6",
-//     "Codex…", "Are.na Annual…") is one colour, like a matched set;
+//     "Codex…", "Are.na Annual…") is one color, like a matched set;
 //   - a publisher keeps its own hue across the library, lightness varies;
-//   - two neighbours never share a hue unless they're the same series.
-function colour(rows) {
+//   - two neighbors never share a hue unless they're the same series.
+function color(rows) {
 	// "Dirty Furniture 3: Toilet" → "dirty furniture", "Are.na Annual 2022" →
 	// "are.na annual", "Codex: The Journal…" → "codex". Titles with no number,
 	// colon or comma stay their own series (two copies of a book still match).
@@ -336,7 +342,7 @@ function colour(rows) {
 	};
 	const hueOf = (t) => t.replace(/-\d$/, '');
 	// Typefaces work the same way: a series is set in one face, a publisher
-	// keeps a house face, and neighbours differ. Seeded apart from the colour,
+	// keeps a house face, and neighbors differ. Seeded apart from the color,
 	// so a publisher's hue and face don't always arrive as the same pair.
 	const seriesFace = new Map();
 	const faceFor = (b) =>

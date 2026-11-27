@@ -2,6 +2,7 @@
 	import Spine from '#lib/Spine.svelte';
 	import BookDialog from '#lib/BookDialog.svelte';
 	import { books, bySlug, generated, tags, type Book } from '#lib/library.ts';
+	import { plain } from '../../scripts/lib/typeset.mjs';
 	import { goto, pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
 	import { browser } from '$app/env';
@@ -56,14 +57,14 @@
 	const currentTag = $derived(facet?.kind === 'tag' ? facet.value : null);
 	const intro = $derived(currentTag ? (tags.find((t) => t.name === currentTag)?.intro ?? null) : null);
 
-	const words = $derived(query.toLowerCase().split(/\s+/).filter(Boolean));
+	// Titles carry typographer's marks; a search for don't still finds Don’t.
+	const words = $derived(plain(query).toLowerCase().split(/\s+/).filter(Boolean));
 	const matches = (b: Book) => {
 		if (!inFacet(b)) return false;
 		if (!words.length) return true;
-		const hay = [b.title, b.subtitle, ...b.authors, ...b.publishers, b.year, ...b.tags]
-			.filter(Boolean)
-			.join(' ')
-			.toLowerCase();
+		const hay = plain(
+			[b.title, b.subtitle, ...b.authors, ...b.publishers, b.year, ...b.tags].filter(Boolean).join(' ')
+		).toLowerCase();
 		return words.every((w) => hay.includes(w));
 	};
 	const shown = $derived(new Set(books.filter(matches).map((b) => b.slug)));
@@ -122,7 +123,7 @@
 		['Wjerk', [
 			['The studio', 'https://a.wjerk.shop/'],
 			['Every project', 'https://a.wjerk.shop/works'],
-			['Wjavelength, the colour system', 'https://wjavelength.wjerk.shop/'],
+			['Wjavelength, the color system', 'https://wjavelength.wjerk.shop/'],
 			['Bjornpaedia, the writing', 'https://bjornpaedia.wjerk.shop/']
 		]],
 		['Kristian Bjørnard', [
@@ -248,19 +249,19 @@
 		<div class="max-w-tablet">
 			<h2 class="m-0 text-sm">About</h2>
 			<p class="mt-2 mb-0">
-				Library is <a href="https://kristian.bjornard.com/">Kristian Bjørnard’s</a> design library: every book in his catalogue, drawn as a
+				Library is <a href="https://kristian.bjornard.com/">Kristian Bjørnard’s</a> design library: every book in his catalog, drawn as a
 				spine to scale, in alphabetical order. A <a href="https://a.wjerk.shop/">Wjerk</a> project.
 			</p>
 			<p class="mt-4 mb-0">
-				The catalogue lives in Notion. Each night a script reads it, looks up page counts and sizes
+				The catalog lives in Notion. Each night a script reads it, looks up page counts and sizes
 				in Open Library and the Library of Congress, and rebuilds this page. Of the spines,
 				{#if sized['measured']}{sized['measured']} are measured by hand,{/if}
-				{(sized['open-library'] ?? 0) + (sized['library-of-congress'] ?? 0)} come from those catalogues,
+				{(sized['open-library'] ?? 0) + (sized['library-of-congress'] ?? 0)} come from those catalogs,
 				{sized['pages'] ?? 0} are estimated from the page count, and
 				{sized['guessed'] ?? 0} are guessed. Updated <span class="whitespace-nowrap">{generated}</span>.
 			</p>
 			<p class="mt-4 mb-0">
-				The whole catalogue is open: <a href="/library.json">library.json</a> ({books.length} books,
+				The whole catalog is open: <a href="/library.json">library.json</a> ({books.length} books,
 				plain JSON). Take it, sort it, make something with it.
 			</p>
 			<p class="mt-4 mb-0">

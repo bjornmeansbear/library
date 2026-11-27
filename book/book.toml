@@ -30,24 +30,47 @@ date   = ""             # empty = the date of that sync
 mode   = "endless"      # one shelf through the whole book; "wall" = two shelves a spread
 scale  = 0              # 0 = by mode (0.4 endless, 0.25 wall)
 black_tags = []      # books with these tags print as black spines; none for now
+second_spines = [     # the books the essay talks about: a green block under the black spine
+  "do-it-scenarios-of-the-revolution",                          # the Jerome Agel books
+  "herman-kahnsciousness-the-megaton-ideas-of-the-one-man-think",
+  "it-s-about-time-and-it-s-about-time",
+  "climates",
+  "eternally-yours-time-in-design",
+  "how-buildings-learn-what-happens-after-they-re-built",
+  "discreet-music",
+  "ambient-1-music-for-airports",
+  "how-to-talk-about-books-you-haven-t-read",
+  "alphabeta-how-26-letters-shaped-the-western-world",
+  "design-for-the-real-world",
+  "form-code-in-design-art-and-architecture",
+  "conditional-design-workbook",
+  "the-future-of-ideas",
+  "esthetics-contemporary",
+  "six-years",
+  "tools-for-conviviality",
+  "karl-gerstner",                      # Designing Programmes (Notion title: "Karl Gerstner")
+  "the-texbook",
+  "faviken",
+]
 title_image = "images/bjornmeansbook.svg"   # the Bjorn Means Book mark on the title page
 running = "running.txt"  # one line of type across the top of every spread
 running_caps = false
 back   = ["essay.md", "index", "images/62835_book.png", "colophon.md"]
 
 [riso]                  # two drums: black, and green after Agel and Fiore's I Seem to Be a Verb
-second = "#00A95C"      # riso Green, as near as a screen gets; the quote, the mark and the engraving
+second = "#00A95C"      # riso Green, as near as a screen gets; the quote, the mark, the engraving
+                        # and the essay's books
 name   = "green"
 french_fold = true
 paper  = ["17in", "11in"]   # old one-sided 11 x 17, landscape: print the blank side, the old printing
                              # folds inside each leaf
-per_sheet = 1                # one leaf a sheet, centred: room for the riso's edge and the cuts
+per_sheet = 1                # one leaf a sheet, centered: room for the riso's edge and the cuts
 marks  = true
 
 [site]                  # `bjook site --out ~/Code/bjornmeansbook`
 text  = ["cover.md"]    # add "essay.md" here once it's ready
-links = [["library.wjerk.shop: the live catalogue", "https://library.wjerk.shop/"],
-         ["library.json: the whole catalogue as open data", "https://library.wjerk.shop/library.json"],
+links = [["library.wjerk.shop: the live catalog", "https://library.wjerk.shop/"],
+         ["library.json: the whole catalog as open data", "https://library.wjerk.shop/library.json"],
          ["Bjook, the tool that typeset it", "../bjook.html"]]
 
 [cover]

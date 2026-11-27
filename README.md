@@ -54,9 +54,9 @@ a change out, delete it from `data/fill-plan.json` before applying.
     npm run sizes -- --apply     # fill it
 
 Fills empty Pages, Height, Width and Thickness from Open Library and the
-Library of Congress catalogue (heights in whole cm, rounded up), and says
+Library of Congress catalog (heights in whole cm, rounded up), and says
 where each height came from in **Size from**. `npm run add` does the same
-for a new book. Calipers beat any catalogue: type over the number and set
+for a new book. Calipers beat any catalog: type over the number and set
 Size from to Measured. Thickness left empty is estimated from Pages.
 
 ## Shelf tags
@@ -74,13 +74,13 @@ never read.
 
 In Notion, the **🔎 Needs info** view lists books missing an ISBN-13,
 author, publisher or year; **📏 To measure** lists books you own that no
-catalogue knows the height of, A–Z like the shelves.
+catalog knows the height of, A–Z like the shelves.
 
 ## In Notion
 
 - **ISBN-13** (text) is the ISBN the site uses. The old number **ISBN**
   column is only a fallback.
-- **Height / Width / Thickness (mm)** and **Pages**: from a catalogue or
+- **Height / Width / Thickness (mm)** and **Pages**: from a catalog or
   your calipers; **Size from** says which. The spine is drawn at this size.
 - **Format**: blank or Book, Film (drawn as a DVD case), Music (a CD case),
   Journal, Zine.
@@ -119,9 +119,9 @@ Shelves, spines, tints and faces are in `src/routes/layout.css`, with the
 reasoning in comments. Findings that matter beyond this site are in
 `~/Code/color-system-and-guidelines/NOTES.md` (2026-11-26).
 
-## Licence
+## License
 
-The catalogue is open data: the site serves `src/lib/data/library.json` at
+The catalog is open data: the site serves `src/lib/data/library.json` at
 `/library.json` (`src/routes/library.json/+server.ts`), linked from the footer.
 
 Code: Apache 2.0 (`LICENSE`). Text and design: CC BY-SA 4.0. The books

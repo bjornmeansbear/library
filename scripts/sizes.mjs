@@ -1,5 +1,5 @@
 // Fill empty Pages, Height, Width and Thickness in Notion from Open Library
-// and the Library of Congress catalogue, by ISBN.
+// and the Library of Congress catalog, by ISBN.
 //
 //   npm run sizes                 show what it would write
 //   npm run sizes -- --apply      write it

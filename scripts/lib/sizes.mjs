@@ -1,9 +1,9 @@
 // @ts-nocheck: a Node script, shared with the /scan Worker; not type-checked
-// Book sizes and page counts from free catalogues, as Notion fields.
+// Book sizes and page counts from free catalogs, as Notion fields.
 //
 // Open Library sometimes records all three dimensions ("8.5 x 5.5 x 0.54
-// inches"). The Library of Congress catalogue records nearly every US book's
-// height, rounded UP to the next centimetre, and its pages, in the MARC 300
+// inches"). The Library of Congress catalog records nearly every US book's
+// height, rounded UP to the next centimeter, and its pages, in the MARC 300
 // field ("xix, 289 p. : ill. ; 24 cm"). Neither knows thickness reliably
 // except Open Library's three-number dimensions; the site estimates the rest
 // from the page count.
@@ -33,7 +33,7 @@ async function sru(query, max = 1) {
 	return null;
 }
 
-// One Library of Congress catalogue record (MARC XML) as plain fields:
+// One Library of Congress catalog record (MARC XML) as plain fields:
 // { pages, heightCm, widthCm } from its physical description (MARC 300),
 // and { title, subtitle, author, publisher, year } (MARC 245, 100, 264/260).
 // Older records often name the author only in the title's statement of
@@ -41,7 +41,7 @@ async function sru(query, max = 1) {
 export function marcBook(xml) {
 	const field = (tag) => xml.match(new RegExp(`<datafield tag="${tag}"[\\s\\S]*?</datafield>`))?.[0] ?? '';
 	const sub = (f, code) => decode(f.match(new RegExp(`<subfield code="${code}">([^<]*)<`))?.[1] ?? '').trim();
-	// Catalogue punctuation hangs off the end of each part: "Title /", "Publisher,".
+	// Catalog punctuation hangs off the end of each part: "Title /", "Publisher,".
 	const tidy = (t) => t.replace(/\s*[\/:;,.]\s*$/, '').replace(/^\[|\]$/g, '').trim() || null;
 	const physical = field('300');
 	const a = sub(physical, 'a'), c = sub(physical, 'c') || physical;
@@ -83,7 +83,7 @@ export async function locSearch(words, max = 8) {
 
 // Open Library's "8.5 x 5.5 x 0.54 inches" → [height, width, thickness] in mm,
 // largest first. Null when it isn't a believable book.
-export function olMillimetres(dimensions) {
+export function olMillimeters(dimensions) {
 	if (!dimensions) return null;
 	const nums = (dimensions.match(/[\d.]+/g) ?? []).map(Number).filter((n) => n > 0);
 	if (nums.length < 2) return null;
@@ -97,7 +97,7 @@ export function olMillimetres(dimensions) {
 // filled field; says where a height came from in "Size from".
 export function sizeProps({ ol, loc, empty }) {
 	const props = {};
-	const mm = olMillimetres(ol?.dimensions);
+	const mm = olMillimeters(ol?.dimensions);
 	if (empty.height) {
 		if (mm) {
 			props['Height (mm)'] = { number: mm[0] };

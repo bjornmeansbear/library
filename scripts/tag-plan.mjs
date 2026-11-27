@@ -75,9 +75,9 @@ const RULES = {
 		['maybe', 'title: book / publication / magazine / zine', (b) => /book design|publication|magazine|editorial|\bzines?\b|publishing/.test(b.t)]
 	],
 	'Color Design': [
-		['sure', 'title: colour', (b) => /\bcolou?rs?\b/.test(b.t)],
-		['sure', 'subjects: colour', (b) => /(^|; )colou?r( in| theory|$|;)/.test(b.s)],
-		['sure', 'call number ND1486–ND1500 / QC495 (colour)', (b) => lccIn(b.lcc, 'ND', 1486, 1500) || lccIn(b.lcc, 'QC', 494, 497)]
+		['sure', 'title: color', (b) => /\bcolou?rs?\b/.test(b.t)],
+		['sure', 'subjects: color', (b) => /(^|; )colou?r( in| theory|$|;)/.test(b.s)],
+		['sure', 'call number ND1486–ND1500 / QC495 (color)', (b) => lccIn(b.lcc, 'ND', 1486, 1500) || lccIn(b.lcc, 'QC', 494, 497)]
 	],
 	'Visual Fundamentals': [
 		['sure', 'call number N7430–N7433 (composition)', (b) => lccIn(b.lcc, 'N', 7430, 7434)],

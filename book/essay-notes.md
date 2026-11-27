@@ -27,7 +27,7 @@ Systems*. Sol LeWitt, "The idea becomes a machine that makes the art"
 Facts: Stewart Brand, *How Buildings Learn: What Happens After They're Built*
 (1994), on the shelf. "Satisficing" is Herbert Simon's word (1956): settling
 for good enough over searching for best; credit Simon if it's used.
-Link to the book: the catalogue keeps changing and the book is rebuilt from
+Link to the book: the catalog keeps changing and the book is rebuilt from
 it; low road, built to be rebuilt.
 
 ## Colophons
@@ -60,7 +60,7 @@ edition is just the date of the last sync.
 On the shelf: Design Writing Research (Lupton & Miller, 1999); What We See
 When We Read (Mendelsund, 2014); Climates (Graham et al., 2016); Eternally
 Yours (van Hinte, 2004); The Electric Information Age Book (Schnapp &
-Michaels, 2012, about Agel's paperbacks). Not in the catalogue yet: The Medium
+Michaels, 2012, about Agel's paperbacks). Not in the catalog yet: The Medium
 Is the Massage (McLuhan, Fiore, Agel, 1967): he owns it, to scan in. I Seem
 to Be a Verb (Fuller, Agel, Fiore, 1970): MICA's Decker Library copy, not
 his. Climates' thickening paper: from memory of the object,

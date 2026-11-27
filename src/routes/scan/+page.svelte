@@ -188,7 +188,7 @@
 	};
 
 	// The found book as the library's card, in a pale tint picked from its
-	// ISBN or title. A book nobody's catalogue knows goes in as "ISBN …".
+	// ISBN or title. A book nobody's catalog knows goes in as "ISBN …".
 	const TINTS = ['pink-1', 'goldenrod-1', 'cornflower-1', 'green-2', 'orange-1', 'violet-1'];
 	const asBook = (f: Found): Book => {
 		const id = f.isbn ?? f.book!.title ?? 'book';
@@ -350,7 +350,7 @@
 {/snippet}
 
 <style>
-	/* While it's being added the stamp stays pressed: the colours swap, the
+	/* While it's being added the stamp stays pressed: the colors swap, the
 	   way every Wjerk control shows it's been pressed. */
 	:global(.stamp-all[aria-busy='true']) {
 		background: var(--wjerk-white);

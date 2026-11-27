@@ -35,6 +35,7 @@ The usual after adding books in Notion or on /scan:
 | Fill them | `npm run sizes -- --apply` |
 | List ISBNs that look wrong | `npm run isbn-fixes` (writes ISBN-FIXES.md) |
 | Plan tags | `npm run tags` |
+| Link books and authors with bjornpaedia, both ways (in `~/Code/sentence-a-day`; then commit `data/bjornpaedia.json` here) | `python3 sad2021tw/scripts/library-links.py` (add `--dry-run` to preview) |
 
 ## A Library, the book (`~/Code/library/book`)
 
