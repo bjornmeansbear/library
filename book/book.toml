@@ -45,6 +45,12 @@ paper  = ["11in", "17in"]   # old one-sided 11 x 17: print the blank side, the o
 per_sheet = 1                # one leaf a sheet, centred: room for the riso's edge and the cuts
 marks  = true
 
+[site]                  # `bjook site --out ~/Code/bjornmeansbook`
+text  = ["cover.md"]    # add "essay.md" here once it's ready
+links = [["library.wjerk.shop: the live catalogue", "https://library.wjerk.shop/"],
+         ["library.json: the whole catalogue as open data", "https://library.wjerk.shop/library.json"],
+         ["Bjook, the tool that typeset it", "../bjook.html"]]
+
 [cover]
 text   = "cover.md"     # the card on the back cover
 bleed  = "0.125in"
