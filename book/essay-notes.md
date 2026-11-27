@@ -43,6 +43,68 @@ folded inside each leaf, so every copy hides something different; guessed
 sizes are steady from build to build (a calculation on the book's Notion ID, so renaming a book doesn't change it); the
 edition is just the date of the last sync.
 
+## Best-designed books
+
+> how buildings learn is unfortunately a terrible DESIGNED book, its
+> annoyingly 8.5x11 but landscape, so its cumbersome and clunky
+>
+> I relaly like medium is the massage and the subsequent jerom agel books...
+> design writing resarch... what we see when we read... Climates:
+> Architecture and the Planetary Imaginary (The Avery Review: Columbia Books
+> on Architecture and the City) -> does this cool thing where the paper gets
+> thicker as the book goes on to relate to sea level rise andc climate
+> change... Eternally Yours: Time in Design just an intersting book all
+> around, I particularly like how the left hand pages have one thing going on
+> and the right hand pages a different thing
+
+On the shelf: Design Writing Research (Lupton & Miller, 1999); What We See
+When We Read (Mendelsund, 2014); Climates (Graham et al., 2016); Eternally
+Yours (van Hinte, 2004); The Electric Information Age Book (Schnapp &
+Michaels, 2012, about Agel's paperbacks). NOT in the catalogue: The Medium
+Is the Massage (McLuhan, Fiore, Agel, 1967), I Seem to Be a Verb (Fuller,
+Agel, Fiore, 1970). Climates' thickening paper: from memory of the object,
+not checked here.
+
+## Reading
+
+> I spend so much time reading on screen these days, but ultamtely I love
+> reading real books more than anything
+
+## A book that changed my teaching
+
+> neil postman, teaching as subversive activity... do I need to actually
+> know anything about what I am teaching?
+
+Neil Postman and Charles Weingartner, 1969; on the shelf.
+
+## The unread
+
+> Way more are read... but... you just cant read everything, and its helpful
+> to still HAVE books that you know more or less what is in them, even if you
+> havent actually READ them
+
+(So the Read? box undercounts: 78 ticked.)
+
+## Lending
+
+> I used to lend a lot of books, they don't make their way back as easily
+> anymore however...
+
+## Waste = Food, books
+
+> Yeah, books are perfect objects - you buy it, do things with it, and its
+> usually pass-on-able in a useful way, the ideas also constantly find new
+> audiences, even old books can become incredibly useful with new context...
+
+## Why reading
+
+> Yes, I still think its a great way to transfer inforamtion and to collect
+> things and "prove" theyre important
+
+## What only I can do
+
+> hmmm I don't know! shoot!
+
 ## Questions still open
 
 10. "I still believe in reading": against what? Name what reading is the
