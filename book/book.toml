@@ -39,6 +39,7 @@ back   = ["essay.md", "index", "images/62835_book.png", "colophon.md"]
 second = "#00A95C"      # riso Green, as near as a screen gets; the quote, the mark and the engraving
 name   = "green"
 french_fold = true
+duplex = true            # also the ordinary version: both sides, cut apart, perfect bound
 paper  = ["12in", "18in"]   # the MICA riso's largest sheet
 
 [cover]
