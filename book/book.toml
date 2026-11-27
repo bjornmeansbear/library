@@ -41,8 +41,9 @@ name   = "green"
 french_fold = true
 duplex = false           # true: also the ordinary both-sides version, cut apart
 paper  = ["11in", "17in"]   # old one-sided 11 x 17: print the blank side, the old printing
-                             # folds inside each leaf. Two leaves a sheet, one cut across the middle
-marks  = false
+                             # folds inside each leaf
+per_sheet = 1                # one leaf a sheet, centred: room for the riso's edge and the cuts
+marks  = true
 
 [cover]
 text   = "cover.md"     # the card on the back cover
