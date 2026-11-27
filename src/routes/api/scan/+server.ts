@@ -1,5 +1,5 @@
 // GET  /api/scan?isbn=…   the book for an ISBN, and whether it's already here
-// POST /api/scan          { isbn, where, format, title?, publisher?, force? }: add it
+// POST /api/scan          { isbn, where, format, title?, publisher? }: add it
 // Both need the passphrase (the Worker secret SCAN_KEY) in the x-scan-key header.
 import { json, error } from '@sveltejs/kit';
 import { env as workerEnv } from 'cloudflare:workers';

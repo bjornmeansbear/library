@@ -5,12 +5,8 @@
 import { edition, isbn13 } from '../../../scripts/lib/openlibrary.mjs';
 import { locRecord, sizeProps } from '../../../scripts/lib/sizes.mjs';
 import { nameKey, shortPublisher } from '../../../scripts/lib/names.mjs';
+import { DS } from '../../../scripts/lib/ids.mjs';
 
-const DS = {
-	books: 'f4d45ea0-fcaf-44cb-a488-5a3e6ba3537f',
-	people: 'dcabd07d-b2e1-4af3-a0cc-51ed47cc1678',
-	publishers: '9027a079-5e5d-44c5-a5aa-a5b3abfd441a'
-} as const;
 
 type Page = { id: string; url: string; properties: Record<string, any> };
 
@@ -50,6 +46,13 @@ export function notion(token: string) {
 const plain = (p: any) => (p?.title ?? p?.rich_text ?? []).map((t: any) => t.plain_text).join('').trim();
 const titleOf = (page: Page) => plain(Object.values(page.properties).find((p: any) => p.type === 'title'));
 const rich = (s: string) => ({ rich_text: [{ text: { content: s } }] });
+// The page that already has this ISBN, in ISBN-13 or the old ISBN number field.
+const withIsbn = (books: Page[], isbn: string) =>
+	books.find((p) =>
+		[plain(p.properties['ISBN-13']), p.properties['ISBN']?.number].some(
+			(raw) => raw != null && raw !== '' && isbn13(String(raw)) === isbn
+		)
+	);
 // A leading "The"/"A" and anything after a colon don't count when matching titles.
 const titleKey = (t: string) => nameKey(t.replace(/^(the|a|an)\s+/i, '').split(/[:(]/)[0]);
 
@@ -67,9 +70,7 @@ export async function lookup(token: string, input: string) {
 	]);
 	const where: string[] = schema.properties?.Where?.select?.options?.map((o: any) => o.name) ?? [];
 	const formats: string[] = schema.properties?.Format?.select?.options?.map((o: any) => o.name) ?? [];
-	const same = books.find((p) =>
-		[plain(p.properties['ISBN-13']), p.properties['ISBN']?.number].some((raw) => raw != null && raw !== '' && isbn13(String(raw)) === isbn)
-	);
+	const same = withIsbn(books, isbn);
 	if (same) return { isbn, where, formats, have: { title: titleOf(same), url: same.url } };
 	if (!ol?.title) return { isbn, where, formats, unknown: true };
 	const b = titleKey(ol.title);
@@ -98,7 +99,7 @@ export async function lookup(token: string, input: string) {
 // publisher can be given when Open Library doesn't know them.
 export async function add(
 	token: string,
-	o: { isbn: string; where?: string; format?: string; title?: string; publisher?: string; force?: boolean }
+	o: { isbn: string; where?: string; format?: string; title?: string; publisher?: string }
 ) {
 	const isbn = isbn13(o.isbn);
 	if (!isbn) return { error: 'Not a valid ISBN.' };
@@ -109,8 +110,8 @@ export async function add(
 		n.queryAll(DS.publishers),
 		edition(isbn)
 	]);
-	const same = books.find((p) => isbn13(String(plain(p.properties['ISBN-13']) || p.properties['ISBN']?.number || '')) === isbn);
-	if (same && !o.force) return { error: `Already in the library as “${titleOf(same)}”.`, url: same.url };
+	const same = withIsbn(books, isbn);
+	if (same) return { error: `Already in the library as “${titleOf(same)}”.`, url: same.url };
 	const title = ol?.title ?? o.title?.trim();
 	if (!title) return { error: 'Open Library doesn’t know this book: give it a title.' };
 	const publisherName = ol?.publishers?.[0] ?? o.publisher?.trim();

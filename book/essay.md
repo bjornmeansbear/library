@@ -1,6 +1,6 @@
 # A Library
 
-These are the {books} books on the shelves of my office at MICA, on {date}. I file them by title, A to Z, so that is how they stand here. Every spine is drawn at {scale} of its real size. {sizes}
+These are the {books} books on the shelves of my office at MICA, on {date}. I file them by title, A to Z, so that is how they stand here. Every spine is drawn at {scale} of its real size. Library catalogues gave me the size of {catalogued}. For {from_pages} I only had a page count, so a short rule worked out the thickness from that. The other {guessed} are guesses, and a rule made those too.
 
 I didn’t draw any of it by hand. The catalogue lives in a database. A script turns it into a website, library.wjerk.shop, and the same data feeds this book. Another script lines up the spines, starts a new stretch of shelf when one fills, and cuts a title back to its last whole word when it won’t fit. I wrote the rules, and the rules made the pages. When a page looked wrong, I changed the rule that made it.
 

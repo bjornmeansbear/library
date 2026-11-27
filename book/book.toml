@@ -39,7 +39,6 @@ back   = ["essay.md", "index", "images/62835_book.png", "colophon.md"]
 second = "#00A95C"      # riso Green, as near as a screen gets; the quote, the mark and the engraving
 name   = "green"
 french_fold = true
-duplex = false           # true: also the ordinary both-sides version, cut apart
 paper  = ["17in", "11in"]   # old one-sided 11 x 17, landscape: print the blank side, the old printing
                              # folds inside each leaf
 per_sheet = 1                # one leaf a sheet, centred: room for the riso's edge and the cuts

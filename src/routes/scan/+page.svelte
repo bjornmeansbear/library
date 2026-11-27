@@ -32,7 +32,6 @@
 	let format = $state('Book');
 	let title = $state('');
 	let publisher = $state('');
-	let force = $state(false);
 
 	// ---- the camera ----
 	let video = $state<HTMLVideoElement>();
@@ -105,7 +104,6 @@
 		if (!isbn.trim()) return;
 		busy = true;
 		found = added = null;
-		force = false;
 		status = 'Looking it up…';
 		try {
 			found = (await call('GET')) as Found;
@@ -122,7 +120,7 @@
 		busy = adding = true;
 		status = '';
 		try {
-			const r = (await call('POST', { isbn: found.isbn, where, format, title, publisher, force })) as { error?: string; added: { title: string; url: string; authors: string[]; publisher: string } };
+			const r = (await call('POST', { isbn: found.isbn, where, format, title, publisher })) as { error?: string; added: { title: string; url: string; authors: string[]; publisher: string } };
 			if (r.error) status = r.error;
 			else {
 				added = r.added;

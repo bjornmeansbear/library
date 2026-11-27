@@ -1234,5 +1234,21 @@
 	"9780679750314": {
 		"pages": 209,
 		"dimensions": "7.8 x 5.2 x 0.6 inches"
+	},
+	"9780374159122": {
+		"pages": 224,
+		"dimensions": null
+	},
+	"9781594742576": {
+		"pages": 287,
+		"dimensions": null
+	},
+	"9780812222869": {
+		"pages": 456,
+		"dimensions": null
+	},
+	"9780743284882": {
+		"pages": 384,
+		"dimensions": "8.5 x 5.8 x 1.2 inches"
 	}
 }
