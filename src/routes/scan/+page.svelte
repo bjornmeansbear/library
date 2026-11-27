@@ -174,18 +174,22 @@
 		</form>
 		<p class="mt-3 text-sm">Only for adding books to Kristian’s library. This phone remembers it.</p>
 	{:else}
-		<form class="flex flex-wrap items-end gap-x-4 gap-y-2" onsubmit={(e) => (e.preventDefault(), lookup())}>
-			<label class="flex flex-[1_1_12rem] flex-col gap-1 text-sm">
+		<!-- The ISBN on its own line, then the two ways to find the book side by
+		     side, half and half. -->
+		<form class="flex flex-col gap-3" onsubmit={(e) => (e.preventDefault(), lookup())}>
+			<label class="flex flex-col gap-1 text-sm">
 				ISBN
 				<input bind:value={isbn} inputmode="numeric" autocomplete="off" placeholder="978…"
 					class="w-full border-2 border-text bg-bg px-2 py-2 text-base tabular-nums" />
 			</label>
-			<button class="border-2 border-text bg-bg px-4 py-2 text-base font-semibold hover:bg-text hover:text-bg" disabled={busy}>Look it up</button>
-			{#if scanning}
-				<button type="button" class="border-2 border-text bg-text px-4 py-2 text-base font-semibold text-bg" onclick={stopCamera}>Stop the camera</button>
-			{:else}
-				<button type="button" class="border-2 border-text bg-bg px-4 py-2 text-base font-semibold hover:bg-text hover:text-bg" onclick={startCamera} disabled={busy}>Scan the barcode</button>
-			{/if}
+			<div class="grid grid-cols-2 gap-3">
+				<button class="w-full border-2 border-text bg-bg px-2 py-2 text-base font-semibold hover:bg-text hover:text-bg" disabled={busy}>Look it up</button>
+				{#if scanning}
+					<button type="button" class="w-full border-2 border-text bg-text px-2 py-2 text-base font-semibold text-bg" onclick={stopCamera}>Stop the camera</button>
+				{:else}
+					<button type="button" class="w-full border-2 border-text bg-bg px-2 py-2 text-base font-semibold hover:bg-text hover:text-bg" onclick={startCamera} disabled={busy}>Scan the barcode</button>
+				{/if}
+			</div>
 		</form>
 
 		{#if scanning}
