@@ -30,6 +30,19 @@ for good enough over searching for best; credit Simon if it's used.
 Link to the book: the catalogue keeps changing and the book is rebuilt from
 it; low road, built to be rebuilt.
 
+## Colophons
+
+> I lawys try to find out who designed books... I like it when they include
+> weird info about their concepts
+
+Possible weird info for this colophon: the running line's size is computed
+by measuring the type so it spans the shelf exactly; each spine's face comes
+from a rule (a series shares a face, mostly a publisher too); the riso copies
+are printed on the backs of old one-sided office paper, the old printing
+folded inside each leaf, so every copy hides something different; guessed
+heights are steady from build to build (a calculation on the title); the
+edition is just the date of the last sync.
+
 ## Questions still open
 
 10. "I still believe in reading": against what? Name what reading is the
