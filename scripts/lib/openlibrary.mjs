@@ -73,11 +73,14 @@ export function to13(s10) {
 	for (let i = 0; i < 12; i++) t += Number(c[i]) * (i % 2 ? 3 : 1);
 	return c + ((10 - (t % 10)) % 10);
 }
-// Whatever was typed or scanned → a checked ISBN-13, or null.
+// Whatever was typed or scanned → a checked ISBN-13, or null. Nine digits
+// are an old ISBN-10 without its last character, which is only a check digit
+// (and sometimes an X, which a phone's number pad can't type).
 export function isbn13(input) {
 	const s = String(input).toUpperCase().replace(/[^\dX]/g, '');
 	if (valid13(s)) return s;
 	if (valid10(s)) return to13(s);
+	if (/^\d{9}$/.test(s)) return to13(s);
 	return null;
 }
 

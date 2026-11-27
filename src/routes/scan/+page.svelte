@@ -213,6 +213,7 @@
 				<input bind:value={isbn} inputmode="numeric" autocomplete="off" placeholder="978…"
 					class="w-full border-2 border-text bg-bg px-2 py-2 text-base tabular-nums" />
 			</label>
+			<p class="m-0 text-sm">An old ISBN ending in X: type just the first 9 digits.</p>
 			<div class="grid grid-cols-2 gap-3">
 				<button class="w-full border-2 border-text bg-bg px-2 py-2 text-base font-semibold hover:bg-text hover:text-bg" disabled={busy}>Look it up</button>
 				{#if scanning}
