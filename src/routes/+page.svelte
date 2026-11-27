@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Spine from '#lib/Spine.svelte';
 	import BookDialog from '#lib/BookDialog.svelte';
-	import { books, bySlug, generated, tags, type Book } from '#lib/library.ts';
+	import { books, bySlug, generated, shelfTags, tags, type Book } from '#lib/library.ts';
 	import { plain } from '../../scripts/lib/typeset.mjs';
 	import { goto, pushState, replaceState } from '$app/navigation';
 	import { page } from '$app/state';
@@ -46,6 +46,7 @@
 	});
 	const inFacet = (b: Book) => {
 		if (!facet) return true;
+		if (facet.kind === 'tag') return b.tags.some((t) => shelfTags(facet.value).includes(t));
 		const field = b[KINDS[facet.kind]];
 		return Array.isArray(field) ? field.includes(facet.value) : field === facet.value;
 	};
@@ -55,6 +56,11 @@
 	// shelf's intro (from Notion) shows when it's open.
 	const shelfHref = (name: string) => `/?tag=${encodeURIComponent(name)}`;
 	const currentTag = $derived(facet?.kind === 'tag' ? facet.value : null);
+	// The menu lists shelves of five books or more: the long tail of one- and
+	// two-book tags would bury them. Those small shelves are still a click away
+	// from any book card with that tag, and when one is open the menu shows it.
+	const MENU_MIN = 5;
+	const menuShelves = $derived(tags.filter((t) => t.count >= MENU_MIN || t.name === currentTag));
 	const intro = $derived(currentTag ? (tags.find((t) => t.name === currentTag)?.intro ?? null) : null);
 
 	// Titles carry typographer's marks; a search for don't still finds Don’t.
@@ -75,7 +81,7 @@
 	const FORMAT_PLURAL = { book: 'books', film: 'films', music: 'albums', journal: 'journals', zine: 'zines' } as Record<string, string>;
 	const scope = $derived.by(() => {
 		const parts: string[] = [];
-		if (facet?.kind === 'tag') parts.push(`the ${facet.value} shelf`);
+		if (facet?.kind === 'tag') parts.push(`${/^the /i.test(facet.value) ? '' : 'the '}${facet.value} shelf`);
 		else if (facet?.kind === 'author') parts.push(`the books by ${facet.value}`);
 		else if (facet?.kind === 'publisher') parts.push(`the books from ${facet.value}`);
 		else if (facet?.kind === 'year') parts.push(`the books published in ${facet.value}`);
@@ -191,16 +197,9 @@
 							class="w-full border-2 border-text bg-bg px-2 py-1 text-base"
 						>
 							<option value="">All {books.length} books</option>
-							<optgroup label="Shelves">
-								{#each tags.filter((t) => t.count > 1) as t (t.name)}
-									<option value={t.name}>{t.name} ({t.count})</option>
-								{/each}
-							</optgroup>
-							<optgroup label="One book each">
-								{#each tags.filter((t) => t.count === 1) as t (t.name)}
-									<option value={t.name}>{t.name}</option>
-								{/each}
-							</optgroup>
+							{#each menuShelves as t (t.name)}
+								<option value={t.name}>{t.name} ({t.count})</option>
+							{/each}
 						</select>
 					</label>
 				{/if}

@@ -43,7 +43,26 @@ export const shelves = (data.shelves as Shelf[]).map((s) => ({
 	books: s.books.map((slug) => bySlug.get(slug)!)
 }));
 export const generated = data.generated;
-export const tags = (data.tags ?? []) as Tag[];
+// Shelves that gather a few small tags under a broader one, on the site
+// only: Notion keeps each tag as it is, and a book card still shows its own
+// precise tags. Picking the broader shelf shows every book in the group.
+export const SHELF_GROUPS: Record<string, string[]> = {
+	'The Commons': ['Copyright', 'Intellectual Property', 'Public Domain'],
+	Code: ['Coding'],
+	Law: ['Law School'],
+	Form: ['Form Content Context']
+};
+/** The tags a shelf shows: itself, plus any it gathers. */
+export const shelfTags = (name: string) => [name, ...(SHELF_GROUPS[name] ?? [])];
+
+const raw = (data.tags ?? []) as Tag[];
+const booksOn = (name: string) =>
+	books.filter((b) => b.tags.some((t) => shelfTags(name).includes(t))).length;
+// A gathering shelf counts every book in its group (a book with two of its
+// tags counts once).
+export const tags: Tag[] = raw
+	.map((t) => (SHELF_GROUPS[t.name] ? { ...t, count: booksOn(t.name) } : t))
+	.sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 
 // Set this to your Bookshop.org affiliate ID to earn on links; empty means
 // plain links and no affiliate disclosure.
