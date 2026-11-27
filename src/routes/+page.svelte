@@ -263,6 +263,9 @@
 				The whole catalogue is open: <a href="/library.json">library.json</a> ({books.length} books,
 				plain JSON). Take it, sort it, make something with it.
 			</p>
+			<p class="mt-4 mb-0">
+				Some books anyone can read for free, online: <a href="https://www.are.na/bjornmeansbear/freeonlinebooks">Free Online Books</a>, a channel on Are.na.
+			</p>
 		</div>
 
 		<div class="max-w-tablet">
