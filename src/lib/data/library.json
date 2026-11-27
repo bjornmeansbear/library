@@ -24,7 +24,7 @@
 				"abstract-city",
 				"aesthetics-of-sustainable-architecture",
 				"alphabeta-how-26-letters-shaped-the-western-world",
-				"america-the-book-a-citizens-guide-to-democracy-inaction",
+				"america-the-book-a-citizen-s-guide-to-democracy-inaction",
 				"american-environmentalism-the-u-s-environmental-movement-197",
 				"american-signs-form-and-meaning-on-route-66",
 				"an-essay-on-typography",
@@ -893,7 +893,7 @@
 			"format": "book",
 			"subtitle": null,
 			"authors": [
-				"Christoph Nieman"
+				"Christoph Niemann"
 			],
 			"publishers": [
 				"Abrams"
@@ -1064,12 +1064,12 @@
 		},
 		{
 			"id": "14a55aa28d7181a689e3d42b4ae486e9",
-			"slug": "america-the-book-a-citizens-guide-to-democracy-inaction",
-			"title": "America (The Book): A Citizens Guide to Democracy Inaction",
+			"slug": "america-the-book-a-citizen-s-guide-to-democracy-inaction",
+			"title": "America (The Book): A Citizen’s Guide to Democracy Inaction",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
-				"John Stewart",
+				"Jon Stewart",
 				"Ben Karlin",
 				"David Javerbaum"
 			],
@@ -1698,7 +1698,7 @@
 			"format": "book",
 			"subtitle": null,
 			"authors": [
-				"Marylin Stokstad"
+				"Marilyn Stokstad"
 			],
 			"publishers": [
 				"Harry N. Abrams"
@@ -1839,7 +1839,7 @@
 			"format": "book",
 			"subtitle": null,
 			"authors": [
-				"Usamu Sato"
+				"Osamu Sato"
 			],
 			"publishers": [
 				"Graphic-sha Publishing Company"
@@ -5065,21 +5065,21 @@
 				"Pragmatic Utopian"
 			],
 			"year": null,
-			"isbn10": null,
-			"isbn13": null,
+			"isbn10": "0262028603",
+			"isbn13": "9780262028608",
 			"bookshopIsbn": null,
 			"onBookshop": null,
 			"copies": null,
 			"where": "GD Office",
 			"notes": null,
 			"bjornpaedia": "https://bjornpaedia.wjerk.shop/static/Design%252C%2520When%2520Everybody%2520Designs.html",
-			"pages": null,
+			"pages": 241,
 			"height": 7.98,
-			"thickness": 0.92,
+			"thickness": 0.75,
 			"measured": false,
 			"tall": "guessed",
-			"thick": "guessed",
-			"sized": "guessed",
+			"thick": "pages",
+			"sized": "pages",
 			"tint": "gray-3",
 			"shelf": "GT1S3",
 			"position": 28,
@@ -5892,7 +5892,7 @@
 			"format": "book",
 			"subtitle": null,
 			"authors": [
-				"Steve King"
+				"Steve Krug"
 			],
 			"publishers": [
 				"New Riders Publishing"
@@ -6787,8 +6787,8 @@
 		},
 		{
 			"id": "14a55aa28d7181c893f5f05866638bbf",
-			"slug": "every-book-a-tale-selections-fro-special-collections-in-the",
-			"title": "Every Book, a Tale: Selections fro, Special Collections in the Laurence McKinley Gould Library of Carleton College",
+			"slug": "every-book-a-tale-selections-from-special-collections-in-the",
+			"title": "Every Book, a Tale: Selections from Special Collections in the Laurence McKinley Gould Library of Carleton College",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -7139,8 +7139,8 @@
 		},
 		{
 			"id": "14a55aa28d7181fc9761e7687a8c055c",
-			"slug": "filters-and-lens-attachements-for-black-and-white-and-color",
-			"title": "Filters & Lens Attachements For Black-and-White and Color Pictures",
+			"slug": "filters-and-lens-attachments-for-black-and-white-and-color-p",
+			"title": "Filters & Lens Attachments For Black-and-White and Color Pictures",
 			"format": "book",
 			"subtitle": null,
 			"authors": [],
@@ -7166,7 +7166,7 @@
 			"tall": "guessed",
 			"thick": "guessed",
 			"sized": "guessed",
-			"tint": "cornflower-3",
+			"tint": "cornflower-1",
 			"shelf": null,
 			"position": null,
 			"face": "newsreader"
@@ -7250,28 +7250,28 @@
 				"Andrew J. Hoffman"
 			],
 			"publishers": [
-				"Stanford Buisnes Books"
+				"Stanford Business Books"
 			],
 			"tags": [
 				"Sustainabilitist"
 			],
 			"year": "2013",
-			"isbn10": null,
-			"isbn13": null,
+			"isbn10": "0804784140",
+			"isbn13": "9780804784146",
 			"bookshopIsbn": null,
 			"onBookshop": null,
 			"copies": null,
 			"where": null,
 			"notes": null,
 			"bjornpaedia": "https://bjornpaedia.wjerk.shop/static/Flourishing.html",
-			"pages": null,
+			"pages": 151,
 			"height": 9.21,
-			"thickness": 0.9,
+			"thickness": 0.53,
 			"measured": false,
 			"tall": "guessed",
-			"thick": "guessed",
-			"sized": "guessed",
-			"tint": "green-3",
+			"thick": "pages",
+			"sized": "pages",
+			"tint": "red-3",
 			"shelf": null,
 			"position": null,
 			"face": "space-mono"
@@ -7765,7 +7765,7 @@
 			"format": "book",
 			"subtitle": null,
 			"authors": [
-				"Alvia Toffler"
+				"Alvin Toffler"
 			],
 			"publishers": [
 				"Random House"
@@ -8531,7 +8531,7 @@
 			"format": "book",
 			"subtitle": "A Visual Communication Manual for Graphic Designers, Typographers and Three Dimensional Designers = Raster Systeme Für Die Visuelle Gestaltung : Ein Handbuch Für Grafiker, Typografen Und Ausstellungsgestalter",
 			"authors": [
-				"Josef Müller-Brockman"
+				"Josef Müller-Brockmann"
 			],
 			"publishers": [
 				"Niggili"
@@ -8599,7 +8599,7 @@
 		{
 			"id": "14a55aa28d7181b69678d0afbc46da26",
 			"slug": "hagar-the-horrible-s-very-nearly-complete-viking-handbook",
-			"title": "Hägar the Horrible;s Very Nearly Complete Viking Handbook",
+			"title": "Hägar the Horrible’s Very Nearly Complete Viking Handbook",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -8625,7 +8625,7 @@
 			"tall": "recorded",
 			"thick": "pages",
 			"sized": "library-of-congress",
-			"tint": "brown-1",
+			"tint": "brown-3",
 			"shelf": null,
 			"position": null,
 			"face": "gentium"
@@ -8708,7 +8708,7 @@
 			"format": "film",
 			"subtitle": null,
 			"authors": [
-				"Gary Huswit"
+				"Gary Hustwit"
 			],
 			"publishers": [
 				"Plexifilm"
@@ -8914,7 +8914,7 @@
 			"format": "book",
 			"subtitle": null,
 			"authors": [
-				"Josef Müller-Brockman"
+				"Josef Müller-Brockmann"
 			],
 			"publishers": [
 				"Hastings House"
@@ -9395,8 +9395,8 @@
 		},
 		{
 			"id": "14a55aa28d7181d389a4f6eb46cad365",
-			"slug": "how-to-see-a-guide-to-reading-our-man-made-enviornment",
-			"title": "How to See: A Guide to Reading Our Man-Made Enviornment",
+			"slug": "how-to-see-a-guide-to-reading-our-man-made-environment",
+			"title": "How to See: A Guide to Reading Our Man-Made Environment",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -10712,8 +10712,8 @@
 		},
 		{
 			"id": "14a55aa28d718176a1dced90e2e53d8d",
-			"slug": "leap-dialogues-career-pathways-in-design-fo-social-inovation",
-			"title": "Leap Dialogues: Career Pathways in Design fo Social Inovation",
+			"slug": "leap-dialogues-career-pathways-in-design-for-social-innovati",
+			"title": "Leap Dialogues: Career Pathways in Design for Social Innovation",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -10931,7 +10931,7 @@
 		{
 			"id": "14a55aa28d71812b866adfb6deaccd3a",
 			"slug": "life-after-television-the-coming-transformation-of-media-and",
-			"title": "Life After Television: The Coming Transformation of Media and American LIfe",
+			"title": "Life After Television: The Coming Transformation of Media and American Life",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -11542,7 +11542,7 @@
 			"format": "book",
 			"subtitle": "Personal Colors, Personal Style",
 			"authors": [
-				"Leatrice Eisman"
+				"Leatrice Eiseman"
 			],
 			"publishers": [
 				"Capital Books"
@@ -11982,8 +11982,8 @@
 		},
 		{
 			"id": "14a55aa28d7181d4ba86eb9e9d9257b0",
-			"slug": "new-mondernism-s",
-			"title": "New Mondernism(s)",
+			"slug": "new-modernism-s",
+			"title": "New Modernism(s)",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -12009,7 +12009,7 @@
 			"tall": "guessed",
 			"thick": "guessed",
 			"sized": "guessed",
-			"tint": "brown-2",
+			"tint": "brown-1",
 			"shelf": null,
 			"position": null,
 			"face": "bricolage"
@@ -12028,21 +12028,21 @@
 				"Graphic Design"
 			],
 			"year": null,
-			"isbn10": null,
-			"isbn13": null,
+			"isbn10": "1941753213",
+			"isbn13": "9781941753217",
 			"bookshopIsbn": null,
 			"onBookshop": null,
 			"copies": null,
 			"where": "GD Office",
 			"notes": null,
 			"bjornpaedia": "https://bjornpaedia.wjerk.shop/static/A%2520%252ANew%252A%2520Program%2520for%2520Graphic%2520Design.html",
-			"pages": null,
+			"pages": 255,
 			"height": 8.62,
-			"thickness": 0.83,
+			"thickness": 0.79,
 			"measured": false,
 			"tall": "guessed",
-			"thick": "guessed",
-			"sized": "guessed",
+			"thick": "pages",
+			"sized": "pages",
 			"tint": "cornflower-3",
 			"shelf": "GT1S1",
 			"position": 15,
@@ -12625,7 +12625,7 @@
 		{
 			"id": "14a55aa28d71815693bbc29f2e82d508",
 			"slug": "the-painter-of-modern-life-and-other-essays",
-			"title": "The Painter of Modern LIfe and Other Essays",
+			"title": "The Painter of Modern Life and Other Essays",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -13027,7 +13027,7 @@
 			"format": "book",
 			"subtitle": null,
 			"authors": [
-				"Brando Mitrovic"
+				"Branko Mitrović"
 			],
 			"publishers": [
 				"Princeton Architectural Press"
@@ -14642,10 +14642,10 @@
 			"format": "book",
 			"subtitle": "Economics as If People Mattered",
 			"authors": [
-				"E.F. Shumacher"
+				"E.F. Schumacher"
 			],
 			"publishers": [
-				"HarperPerennial"
+				"Harper Perennial"
 			],
 			"tags": [
 				"Sustainabilitist",
@@ -14667,7 +14667,7 @@
 			"tall": "recorded",
 			"thick": "pages",
 			"sized": "library-of-congress",
-			"tint": "red-3",
+			"tint": "orange-3",
 			"shelf": null,
 			"position": null,
 			"face": "young-serif"
@@ -14827,21 +14827,21 @@
 				"Pragmatic Utopian"
 			],
 			"year": "2013",
-			"isbn10": null,
-			"isbn13": null,
+			"isbn10": "0262019841",
+			"isbn13": "9780262019842",
 			"bookshopIsbn": null,
 			"onBookshop": null,
 			"copies": null,
 			"where": null,
 			"notes": null,
 			"bjornpaedia": "https://bjornpaedia.wjerk.shop/static/Speculative%2520Everything.html",
-			"pages": null,
+			"pages": 224,
 			"height": 9.39,
-			"thickness": 0.67,
+			"thickness": 0.71,
 			"measured": false,
 			"tall": "guessed",
-			"thick": "guessed",
-			"sized": "guessed",
+			"thick": "pages",
+			"sized": "pages",
 			"tint": "cornflower-1",
 			"shelf": null,
 			"position": null,
@@ -14961,7 +14961,7 @@
 			"format": "book",
 			"subtitle": "Being the True and Amazing Story of How a Confirmed Jewish Atheist and His Seriously Catholic Wife Explore the Meaning of Life, … Ideas)",
 			"authors": [
-				"Fred SInger"
+				"Fred Singer"
 			],
 			"publishers": [
 				"Capital Books"
@@ -15136,7 +15136,7 @@
 			"format": "book",
 			"subtitle": "A Business Manifesto",
 			"authors": [
-				"Adam Webach"
+				"Adam Werbach"
 			],
 			"publishers": [
 				"Harvard University Press"
@@ -15687,7 +15687,7 @@
 		{
 			"id": "14a55aa28d7181ef87b9f7981b3e8bfa",
 			"slug": "teaching-motion-design-course-offerings-and-class-projects-f",
-			"title": "Teaching Motion Design: Course Offerings and Class Projects from LEading Undergraduate and Graduate Programs",
+			"title": "Teaching Motion Design: Course Offerings and Class Projects from Leading Undergraduate and Graduate Programs",
 			"format": "book",
 			"subtitle": "Course Offerings and Class Projects from the Leading Undergraduate and Graduate Programs",
 			"authors": [
@@ -16679,7 +16679,7 @@
 				"Scott McCloud"
 			],
 			"publishers": [
-				"HarperPerennial"
+				"Harper Perennial"
 			],
 			"tags": [],
 			"year": "1993",
@@ -16698,10 +16698,10 @@
 			"tall": "recorded",
 			"thick": "recorded",
 			"sized": "open-library",
-			"tint": "green-3",
+			"tint": "orange-3",
 			"shelf": null,
 			"position": null,
-			"face": "young-serif"
+			"face": "eb-garamond"
 		},
 		{
 			"id": "14a55aa28d7181e782e7fd9d2c6fa194",
@@ -16780,8 +16780,8 @@
 		},
 		{
 			"id": "14a55aa28d71816a82c7c10c83341f39",
-			"slug": "the-universal-traveler-a-soft-sytems-guide-to-creativity-pro",
-			"title": "The Universal Traveler: A Soft Sytems Guide to Creativity, Problem Solving, and the Process of Reaching Goals",
+			"slug": "the-universal-traveler-a-soft-systems-guide-to-creativity-pr",
+			"title": "The Universal Traveler: A Soft Systems Guide to Creativity, Problem Solving, and the Process of Reaching Goals",
 			"format": "book",
 			"subtitle": null,
 			"authors": [
@@ -17779,7 +17779,7 @@
 			"format": "book",
 			"subtitle": null,
 			"authors": [
-				"Patricia T. O’ Connor"
+				"Patricia T. O’Conner"
 			],
 			"publishers": [
 				"Grosset/Putnam"

@@ -51,3 +51,20 @@ isbn: Speculative Everything → 9780262019842
 
 # found by npm run typos, 2026-11-27
 title: DEsign → Design
+
+# found reading the catalog, 2026-11-27
+title: Stuggart → Stuttgart
+title: Whats A Genius → What's a Genius
+title: MICA Grad Show : → MICA Grad Show:
+title: Form + Code : → Form + Code:
+person: Matthews, John → John Matthews
+person: Goodman, Richard → Richard Goodman
+
+# to check before taking the # off
+# title: des los Trigos → de los Trigos              (Spanish "de los"; check the cover)
+# person: Jaqueline Tarry → Jacqueline Tarry        (McCallum & Tarry, Bearing Witness)
+# person: Angele G. Mertig → Angela G. Mertig       (American Environmentalism)
+# Leo Loden is by two people, Christophe Arleston and Serge Carrère, typed as one
+#   "Carrere Areleston": split it by hand in Notion (two author pages).
+# Pentagram's author is "The Monacelli Press", which is its publisher: in Notion,
+#   move it to Publisher and leave Author empty (or Pentagram).
