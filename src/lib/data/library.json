@@ -11277,6 +11277,42 @@
 			"face": "fraunces"
 		},
 		{
+			"id": "42555aa28d71815ca370f134700dd6b6",
+			"slug": "the-medium-is-the-massage",
+			"title": "The Medium Is the Massage",
+			"format": "book",
+			"subtitle": "An Inventory of Effects",
+			"authors": [
+				"Marshall McLuhan",
+				"Quentin Fiore",
+				"Jerome Agel"
+			],
+			"publishers": [
+				"HardWired"
+			],
+			"tags": [],
+			"year": "1996",
+			"isbn10": "188886902X",
+			"isbn13": "9781888869026",
+			"bookshopIsbn": null,
+			"onBookshop": null,
+			"copies": null,
+			"where": null,
+			"notes": null,
+			"bjornpaedia": null,
+			"pages": 159,
+			"height": 7.09,
+			"thickness": 0.55,
+			"measured": false,
+			"tall": "recorded",
+			"thick": "pages",
+			"sized": "library-of-congress",
+			"tint": "goldenrod-1",
+			"shelf": null,
+			"position": null,
+			"face": "space-mono"
+		},
+		{
 			"id": "14a55aa28d71814b9bfbfc0cba33700d",
 			"slug": "merz-to-emigre-and-beyond-avant-garde-magazine-design-of-the",
 			"title": "Merz to Emigre and Beyond: Avant-Garde Magazine Design of the Twentieth Century",
@@ -11309,10 +11345,10 @@
 			"tall": "recorded",
 			"thick": "pages",
 			"sized": "library-of-congress",
-			"tint": "red-3",
+			"tint": "purple-3",
 			"shelf": null,
 			"position": null,
-			"face": "eb-garamond"
+			"face": "fraunces"
 		},
 		{
 			"id": "14a55aa28d71814bb422c42cfe335a31",
