@@ -1,6 +1,6 @@
 # Colophon
 
-This is a book of the books on Kristian Bjørnard’s office shelves at MICA, alphabetical order as they actual are. Each spine is drawn at {scale} of its size, from library catalogues (Open Library and the Library of Congress), from its page count, or, failing those, a guess.
+This is a book of every book in Kristian Bjørnard’s library catalogue, in alphabetical order: on his office shelves at MICA, borrowed from MICA, at home, or missing. Each spine is drawn at {scale} of its size, from library catalogues (Open Library and the Library of Congress), from its page count, or, failing those, a guess.
 
 It is also a type specimen. Each spine is set in one of thirteen free/libre and open source typefaces, most under the SIL Open Font License: anyone can use, study, change and share them. Here is each one, set in itself, and where to get it:
 
