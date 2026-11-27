@@ -33,17 +33,35 @@ async function sru(isbn) {
 	return null;
 }
 
-// { pages, heightCm, widthCm } from the Library of Congress, or null.
+// What the Library of Congress catalogue knows about a book, or null:
+// { pages, heightCm, widthCm } from its physical description (MARC 300),
+// and { title, subtitle, author, publisher, year } for filling in what Open
+// Library doesn't know (MARC 245, 100, 264 or 260).
 export async function locRecord(isbn13) {
 	for (const isbn of [isbn13, to10(isbn13)].filter(Boolean)) {
 		const xml = await sru(isbn);
-		const field = xml?.match(/<datafield tag="300"[\s\S]*?<\/datafield>/)?.[0];
-		if (!field) continue;
-		const sub = (code) => field.match(new RegExp(`<subfield code="${code}">([^<]*)<`))?.[1] ?? '';
-		const a = sub('a'), c = sub('c') || field;
+		if (!xml?.includes('<datafield')) continue;
+		const field = (tag) => xml.match(new RegExp(`<datafield tag="${tag}"[\\s\\S]*?</datafield>`))?.[0] ?? '';
+		const sub = (f, code) => f.match(new RegExp(`<subfield code="${code}">([^<]*)<`))?.[1]?.trim() ?? '';
+		// Catalogue punctuation hangs off the end of each part: "Title /", "Publisher,".
+		const tidy = (t) => t.replace(/\s*[\/:;,.]\s*$/, '').replace(/^\[|\]$/g, '').trim() || null;
+		const physical = field('300');
+		const a = sub(physical, 'a'), c = sub(physical, 'c') || physical;
 		const pages = Math.max(0, ...[...a.matchAll(/(\d+)\s*(?:p\b|pages)/g)].map((m) => Number(m[1]))) || null;
 		const d = c.match(/(\d+(?:\.\d+)?)\s*(?:x\s*(\d+(?:\.\d+)?)\s*)?cm/);
-		return { pages, heightCm: d ? Number(d[1]) : null, widthCm: d?.[2] ? Number(d[2]) : null };
+		const imprint = field('264') || field('260');
+		const name = tidy(sub(field('100'), 'a'));
+		return {
+			pages,
+			heightCm: d ? Number(d[1]) : null,
+			widthCm: d?.[2] ? Number(d[2]) : null,
+			title: tidy(sub(field('245'), 'a')),
+			subtitle: tidy(sub(field('245'), 'b')),
+			// "Lupton, Ellen" → "Ellen Lupton"
+			author: name ? name.replace(/^([^,]+),\s*(.+)$/, '$2 $1') : null,
+			publisher: tidy(sub(imprint, 'b')),
+			year: sub(imprint, 'c').match(/\b(1[5-9]\d\d|20\d\d)\b/)?.[1] ?? null
+		};
 	}
 	return null;
 }

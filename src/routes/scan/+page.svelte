@@ -14,8 +14,7 @@
 		where?: string[];
 		formats?: string[];
 		have?: { title: string; url: string };
-		unknown?: boolean;
-		book?: { title: string; subtitle: string | null; authors: string[]; publisher: string | null; year: string | null; pages: number | null };
+		book?: { title: string | null; subtitle: string | null; authors: string[]; publisher: string | null; year: string | null; pages: number | null };
 		twin?: { title: string; url: string } | null;
 	};
 
@@ -27,11 +26,9 @@
 	let busy = $state(false);
 	let adding = $state(false);
 	let found = $state<Found | null>(null);
-	let added = $state<{ title: string; url: string; authors: string[]; publisher: string } | null>(null);
+	let added = $state<{ title: string; url: string; authors: string[]; publisher: string | null } | null>(null);
 	let where = $state(typeof localStorage === 'undefined' ? '' : (localStorage.getItem(WHERE) ?? ''));
 	let format = $state('Book');
-	let title = $state('');
-	let publisher = $state('');
 
 	// ---- the camera ----
 	let video = $state<HTMLVideoElement>();
@@ -120,14 +117,14 @@
 		busy = adding = true;
 		status = '';
 		try {
-			const r = (await call('POST', { isbn: found.isbn, where, format, title, publisher })) as { error?: string; added: { title: string; url: string; authors: string[]; publisher: string } };
+			const r = (await call('POST', { isbn: found.isbn, where, format })) as { error?: string; added: { title: string; url: string; authors: string[]; publisher: string | null } };
 			if (r.error) status = r.error;
 			else {
 				added = r.added;
 				localStorage.setItem(WHERE, where);
 				found = null;
 				status = `Added “${r.added.title}”.`;
-				isbn = title = publisher = '';
+				isbn = '';
 			}
 		} catch (e) {
 			status = (e as Error).message;
@@ -143,9 +140,10 @@
 	}
 
 	// The found book as the library's card: a pale tint picked from the ISBN.
+	// A book nobody's catalogue knows goes in as "ISBN …", to fill in later.
 	const TINTS = ['pink-1', 'goldenrod-1', 'cornflower-1', 'green-2', 'orange-1', 'violet-1'];
 	const asBook = (f: Found): Book => ({
-		id: f.isbn!, slug: f.isbn!, title: f.book!.title, format: 'book', subtitle: f.book!.subtitle,
+		id: f.isbn!, slug: f.isbn!, title: f.book!.title ?? `ISBN ${f.isbn}`, format: 'book', subtitle: f.book!.subtitle,
 		authors: f.book!.authors, publishers: f.book!.publisher ? [f.book!.publisher] : [], tags: [],
 		year: f.book!.year, isbn10: null, isbn13: f.isbn!, where: null, notes: null, pages: f.book!.pages,
 		height: 9, thickness: 1, measured: false, sized: 'guessed',
@@ -201,30 +199,24 @@
 
 		{#if found?.have}
 			<p class="mt-2">Already in the library: <a href={found.have.url}>{found.have.title}</a>.</p>
-		{:else if found?.isbn && (found.book || found.unknown)}
+		{:else if found?.isbn && found.book}
 			<div class="mt-8">
-				{#if found.book}
-					<BookCard book={asBook(found)}>
-						{#snippet bottom()}
-							{@render controls()}
-						{/snippet}
-					</BookCard>
-				{:else}
-					<p class="m-0">Open Library doesn’t know {found.isbn}. Give it a title and a publisher:</p>
-					<div class="mt-4 flex flex-col gap-3">
-						<label class="flex flex-col gap-1 text-sm">Title
-							<input bind:value={title} required class="w-full border-2 border-text bg-bg px-2 py-2 text-base" /></label>
-						<label class="flex flex-col gap-1 text-sm">Publisher
-							<input bind:value={publisher} required class="w-full border-2 border-text bg-bg px-2 py-2 text-base" /></label>
-					</div>
-					{@render controls()}
-				{/if}
+				<BookCard book={asBook(found)}>
+					{#snippet top()}
+						{#if !found?.book?.title}
+							<p class="mt-0 mb-4 text-sm">Neither Open Library nor the Library of Congress knows this one. It goes in under its ISBN; fill in the rest in Notion when you can.</p>
+						{/if}
+					{/snippet}
+					{#snippet bottom()}
+						{@render controls()}
+					{/snippet}
+				</BookCard>
 			</div>
 		{/if}
 
 		{#if added}
 			<p class="mt-6">
-				<a href={added.url}>{added.title}</a> is in Notion: {added.authors.join(', ') || 'no author listed'}, {added.publisher}.
+				<a href={added.url}>{added.title}</a> is in Notion: {added.authors.join(', ') || 'no author listed'}, {added.publisher ?? 'no publisher listed'}.
 				It shows on the site after the next sync.
 			</p>
 		{/if}
@@ -254,7 +246,7 @@
 			</label>
 		</div>
 		<button type="button" class="stamp-all self-start" onclick={addIt} aria-busy={adding}
-			disabled={busy || (found?.unknown && (!title || !publisher))}>
+			disabled={busy}>
 			{adding ? 'Adding it…' : 'Add it to the library'}
 		</button>
 		<p class="m-0 text-sm" role="status">

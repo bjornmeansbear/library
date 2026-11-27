@@ -13,8 +13,10 @@
 // the Library of Congress when they know them. Existing author and publisher pages are
 // reused when the names match; new ones are made otherwise.
 //
-// A book has to have a publisher (from Open Library or --publisher), so the
-// library doesn't grow blanks again.
+// What Open Library doesn't know comes from the Library of Congress. Some
+// books aren't findable at all: a missing publisher stays blank (for
+// `npm run fill` later), and a book nobody knows goes in as "ISBN …" unless
+// --title gives it a name. The same rules as the /scan page.
 //
 // Options apply to every ISBN in the command:
 //   --where "GD Office"      the Where field (any existing option)
@@ -66,11 +68,8 @@ for (const input of inputs) {
 	}
 
 	const ol = await edition(isbn);
-	const title = ol?.title ?? opt('title');
-	if (!title) {
-		console.log(`✗ ${isbn}: Open Library doesn't know this book. Add it with --title "…" --publisher "…".`);
-		continue;
-	}
+	const loc = await locRecord(isbn);
+	const title = ol?.title ?? loc?.title ?? opt('title') ?? `ISBN ${isbn}`;
 	// Same book already here under a missing or mistyped ISBN? Match titles,
 	// ignoring a leading "The"/"A" and anything after a colon.
 	const key = (t) => nameKey(t.replace(/^(the|a|an)\s+/i, '').split(/[:(]/)[0]);
@@ -83,37 +82,36 @@ for (const input of inputs) {
 		continue;
 	}
 
-	const publisherName = ol?.publishers?.[0] ?? opt('publisher');
-	if (!publisherName) {
-		console.log(`✗ ${isbn} “${title}”: no publisher on Open Library. Run again with --publisher "…".`);
-		continue;
-	}
+	const publisherName = ol?.publishers?.[0] ?? loc?.publisher ?? opt('publisher');
 
 	const create = !dryRun;
 	const authors = [];
-	for (const a of ol?.authors ?? []) authors.push(await findOrCreate('people', a, people, { create }));
-	const publisher = await findOrCreate('publishers', publisherName, publishers, { create });
+	for (const a of ol?.authors?.length ? ol.authors : loc?.author ? [loc.author] : [])
+		authors.push(await findOrCreate('people', a, people, { create }));
+	const publisher = publisherName ? await findOrCreate('publishers', publisherName, publishers, { create }) : null;
 
 	const props = {
 		Name: { title: [{ text: { content: title } }] },
 		'ISBN-13': rich(isbn),
-		Publisher: { relation: publisher.id ? [{ id: publisher.id }] : [] },
+		Publisher: { relation: publisher?.id ? [{ id: publisher.id }] : [] },
 		Author: { relation: authors.filter((a) => a.id).map((a) => ({ id: a.id })) },
 		Format: { select: { name: opt('format') ?? 'Book' } },
 		'Date Added': { date: { start: new Date().toISOString().slice(0, 10) } }
 	};
-	if (ol?.subtitle) props['Subtitle'] = rich(ol.subtitle);
-	if (ol?.year) props['Year'] = rich(ol.year);
+	const subtitle = ol?.subtitle ?? loc?.subtitle, year = ol?.year ?? loc?.year;
+	if (subtitle) props['Subtitle'] = rich(subtitle);
+	if (year) props['Year'] = rich(year);
 	if (ol?.lcc) props['LOC Call Number'] = rich(ol.lcc);
 	if (opt('where')) props['Where'] = { select: { name: opt('where') } };
 	const format = opt('format') ?? 'Book';
 	if (format !== 'Film' && format !== 'Music') {
-		Object.assign(props, sizeProps({ ol, loc: await locRecord(isbn), empty: { height: true, width: true, thickness: true, pages: true } }));
+		Object.assign(props, sizeProps({ ol, loc, empty: { height: true, width: true, thickness: true, pages: true } }));
 	}
 
 	const who = authors.map((a) => a.name + (a.created ? ' (new)' : '')).join(', ') || 'no author listed';
 	const size = props['Height (mm)'] ? ` · ${props['Height (mm)'].number} mm tall (${props['Size from'].select.name})` : '';
-	const line = `“${title}”${ol?.subtitle ? `: ${ol.subtitle}` : ''} · ${who} · ${publisher.name}${publisher.created ? ' (new)' : ''}${ol?.year ? ` · ${ol.year}` : ''}${size}`;
+	const pub = publisher ? `${publisher.name}${publisher.created ? ' (new)' : ''}` : 'no publisher listed';
+	const line = `“${title}”${subtitle ? `: ${subtitle}` : ''} · ${who} · ${pub}${year ? ` · ${year}` : ''}${size}`;
 	if (dryRun) {
 		console.log(`○ ${isbn} would add ${line}`);
 		continue;
